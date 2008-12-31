@@ -8,9 +8,9 @@ function init(){
     btnDisplayElement.style.left='100px';
 }
 function moverandom(){
-    btnDisplayElement.style.top=Math.floor(Math.random()*window.innerHeight)+'px';
-    btnDisplayElement.style.left=Math.floor(Math.random()*window.innerWidth)+'px';
+    btnDisplayElement.style.top=Math.round(Math.random()*600)+'px';
+    btnDisplayElement.style.left=Math.round(Math.random()*800)+'px';
 
-    console.log('cao',Math.floor(Math.random()*window.innerHeight));
-    console.log('rong',Math.floor(Math.random()*window.innerWidth));
+    console.log('cao',btnDisplayElement.style.top);
+    console.log('rong', btnDisplayElement.style.left);
 }

@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <link rel="stylesheet" href="main.css"/>
+</head>
+<body>
+<div class="main">
+    <div class="inputinfo">
+        <label for="fullname">Họ và tên</label>
+        <input type="text" id="fullname" name="fullname"/>
+        <br/>
+        <br/>
+        <label for="cmnd">Số CMND</label>
+        <input type="text" id="cmnd" name="cmnd"/>
+        <br/>
+        <br/>
+        <label>Ngày tháng năm sinh</label>
+        <input type="date" id="birthday" name="birthdate"/>
+        <br/>
+        <br/>
+        <label for="">Email</label>
+        <input type="email" id="email" name="email"/>
+        <br/>
+        <br/>
+        <label for="address">Địa chỉ</label>
+        <input type="text" id="address" name="address"/>
+        <br/>
+        <br/>
+        <label>Loại Custommer</label>
+        <select name="custommer" id="custommer">
+            <option value="diamond">Diamond</option>
+            <option value="platinum">Platinum</option>
+            <option value="gold">Gold</option>
+            <option value="silver">Silver</option>
+            <option value="member">Member</option>
+        </select>
+        <br/>
+        <br/>
+        <label for="discount">Giảm giá</label>
+        <input type="text" id="discount" name="discount"/>
+        <br/>
+        <br/>
+        <label for="attach">Số người đi kèm</label>
+        <input type="text" id="attach" name="attach"/>
+        <br/>
+        <br/>
+        <label for="rentdays">Số ngày thuê</label>
+        <input type="text" id="rentdays" name="rentdays"/>
+        <br/>
+        <br/>
+        <label>Loại dịch vụ</label>
+        <select name="services" id="services">
+            <option value="500">Villa</option>
+            <option value="300">House</option>
+            <option value="100">Room</option>
+        </select>
+        <br/>
+        <br/>
+        <label>Loại phòng</label>
+        <select name="rooms" id="rooms">
+            <option value="vip">Vip</option>
+            <option value="business">Business</option>
+            <option value="nornal">Normal</option>
+        </select>
+        <br/>
+        <br/>
+        <label>&nbsp;</label>
+        <button onclick="display()">NHẬP</button>
+
+    </div>
+    <div class="displayinfo">
+        <h3 id="dpfullname"></h3>
+        <p id="dpcmnd"></p>
+        <p id="dpbirthday"></p>
+        <p id="dpemail"></p>
+        <p id="dpaddress"></p>
+        <p id="dpcustommer"></p>
+        <p id="dpdiscount"></p>
+        <p id="dpattach"></p>
+        <p id="dprentdays"></p>
+        <p id="dpservices"></p>
+        <p id="dprooms"></p>
+        <h3 id="dpmoney"></h3>
+    </div>
+</div>
+
+<script src="main.js"></script>
+</body>
+</html>

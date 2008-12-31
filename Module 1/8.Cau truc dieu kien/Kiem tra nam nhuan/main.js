@@ -23,7 +23,7 @@ function isleapYear(year){
 
  function checkIsLeapYear(){
      var yearElement=document.getElementById('year').value;
-     if (isleapYear(yearElement)===true){
+     if (isleapYear(yearElement)){
          document.getElementById('result').innerHTML='Nam nhuan'
      } else{
          document.getElementById('result').innerHTML='Nam khong nhuan'
