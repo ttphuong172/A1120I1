@@ -1,0 +1,94 @@
+
+        *{
+            margin: 0px;
+            padding: 0px;
+        }
+        /*Body*/
+        body {
+           
+            width: 50%;
+            margin: auto;
+         
+        }
+
+        /*Header*/
+        header {
+            display: flex;
+            flex-direction: row-reverse;
+            align-items: center;
+            height: 40px;
+            background-color: #17a2b8;
+            margin-top: 20px;
+        }
+
+        header h3 {
+            background-color: white;
+            padding: 10px 0px;
+            margin: 0 20px;
+
+        }
+
+        footer {
+            width: 100%;
+        }
+
+        /*Main*/
+        main {
+            width: 90%;
+            margin: auto;
+        }
+
+        .infor {
+            display: flex;
+            justify-content: space-between;
+        }
+
+        main ul {
+            list-style-type: none;
+
+        }
+
+        .infor li {
+            padding-top: 5px;
+        }
+
+        .infor img {
+            padding-right: 10px;
+        }
+
+        h3 {
+            color: #17a2b8;
+        }
+
+        footer {
+            background-color: #17a2b8;
+            height: 15px;
+        }
+
+        .education {
+            display: flex;
+            justify-content: space-between;
+        }
+        .experience{
+            display: flex;
+            justify-content: space-between;
+        }
+        .skillhobby{
+            display: flex;
+            justify-content: space-between;
+        }
+        .skill{
+            width: 50%;
+        }
+        .hobby{
+            width: 50%;
+        
+        }
+
+        .oldservice{
+            text-align: right;
+    
+        }
+        h1, h3{
+          padding-top: 20px;
+        }
