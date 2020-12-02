@@ -17,7 +17,7 @@
             flex-direction: row-reverse;
             align-items: center;
             height: 20px;
-            background-color: #17a2b8;
+            background-color: #04a08c;
             margin-top: 20px;
         }
 
@@ -56,12 +56,10 @@
             padding-right: 10px;
         }
 
-        h3 {
-            color: #17a2b8;
-        }
+
 
         footer {
-            background-color: #17a2b8;
+            background-color: #04a08c;
             height: 20px;
             margin-top: 15px;
             margin-bottom: 20px;
@@ -79,6 +77,17 @@
             display: flex;
             justify-content: space-between;
         }
+        .language{
+            display: flex;
+            justify-content: space-between;
+            font-weight: bold;
+        }
+        .language-listen-speak{
+            width: 50%;
+        }
+        .language-read-write{
+            width: 50%;
+        }
         .skill{
             width: 50%;
         }
@@ -87,10 +96,16 @@
         
         }
 
+
         .oldservice{
             text-align: right;
     
         }
-        h1, h3{
-          padding-top: 20px;
+        h1, h3, h4{
+            padding-bottom: 10px;
+            padding-top: 20px;
+            color: #04a08c;
+        }
+        .icon{
+            color: #04a08c;
         }
