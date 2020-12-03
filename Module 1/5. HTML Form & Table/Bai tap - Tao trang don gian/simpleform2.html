@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <style>
+        body{
+            width: 60%;
+            margin: auto;
+        }
+        label{
+            float: left;
+            width: 100px;
+        }
+        .register{
+            background-color: yellow;
+        }
+        h2{
+            background-color: cyan;
+
+        }
+    </style>
+</head>
+<body>
+
+    <div class="register">
+        <form action="">
+        <h2>ĐĂNG KÝ HỌC VIÊN</h2>
+        <label for="yourname">Họ và tên</label>
+        <input type="text" name="yourname" id="yourname"/>
+        <br/>
+        <br/>
+        <label for="birthday">Ngày sinh</label>
+        <input type="text" name="birthday" id="birthday"/>
+        <br/>
+        <br/>
+        <label for="">Giới tính</label>
+        <label><input type="radio" name="gender" value="nam"/>Nam</label>
+        <label><input type="radio" name="gender" value="nu"/>Nu</label>
+        <br/>
+        <br/>
+        <label for="">Địa chỉ</label>
+        <textarea name="" id="" cols="30" rows="10"></textarea>
+        <br/>
+        <br/>
+        <label for="class">Lớp</label>
+        <select name="class" id="class">
+            <option value="">--Chọn lớp--</option>
+            <option value="java1">Java 1</option>
+            <option value="java2">Java 2</option>
+            <option value="java3">Java 3</option>
+        </select>
+        <br/>
+        <br/>
+        <label for="email">Email</label>
+        <input type="email" name="email" id="email"/>
+        <br/>
+        <br/>
+        <label for="phone">Điện thoại</label>
+        <input type="text" name="phone" id="phone"/>
+         <br/>
+         <br/>
+         <label for="">&nbsp;</label>
+         <input type="submit" value="Đăng ký"/>
+         <input type="reset" value="Nhập lại"/>
+</form>
+    </div>
+
+</body>
+</html>

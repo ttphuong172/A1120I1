@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+<body>
+<form action="">
+    <fieldset>
+        <legend>Persional Information</legend>
+        First name:
+        <br/>
+        <input type="text" name="firstname" value="Mickey"/>
+        <br/>
+        Last name:
+        <br/>
+        <input type="text" name="lastname" value="Mouse"/>
+        <br/>
+        <br/>
+        <input type="submit" value="Submit"/>
+    </fieldset>
+
+</form>
+
+<form action="https://www.google.com.vn/">
+    <input type="text" name="q"/>
+    <input type="submit" name="Tim kiem"/>
+</form>
+<form action="action_page.php" method="get">
+    <input type="hidden" value="dfdsfdsf" name="secret"/>
+    Account:
+    <input type="text" name="account"/>
+    <br/>
+    Password:
+    <input type="password" name="password"/>
+    <br/>
+    <input type="submit" value="Submit"/>
+</form>
+
+<form action="action_page.php">
+    So thich:
+    <br/>
+    <label for="travel"><input id ="travel" type="checkbox" value="Travel" name="hobby"/> Du lich</label>
+    <br/>
+    <label><input type="checkbox" value="Sport" name="hobby"/> The thao</label>
+    <br/>
+    <label><input type="checkbox" value="Cooking" name="hobby"/> Nau an</label>
+    <br/>
+    Gioi tinh:
+    <br/>
+    <label for=""><input type="radio" value="nam" name="gender"/>Nam</label>
+    <br/>
+    <label for=""><input type="radio" value="nu" name="gender"/>Nu</label>
+    <br/>
+    <label for=""><input type="radio" value="bd" name="gender"/>BD</label>
+    <br/>
+    <textarea name="information" id="infor" cols="30" rows="10"></textarea>
+    <br/>
+    <input type="reset" value="Reset"/>
+</form>
+
+<br/>
+<select name="city">
+    <option value="HN">Hà Nội</option>
+    <option value="HCM">Hồ Chí Minh</option>
+    <option value="DL">Đà Lạt</option>
+    <option value="PT">Phan Thiết</option>
+    <option value="DN">Đà Nẵng</option>
+</select>
+<br/>
+
+<br/>
+<select name="city" multiple>
+    <option value="HN">Hà Nội</option>
+    <option value="HCM">Hồ Chí Minh</option>
+    <option value="DL">Đà Lạt</option>
+    <option value="PT">Phan Thiết</option>
+    <option value="DN">Đà Nẵng</option>
+    <input type="button" value="Button"/>
+    <button>Button</button>
+</select>
+
+</body>
+</html>
