@@ -40,15 +40,25 @@
             text-align: center;
         }
        tr:first-child{
-            background-color: orange;
+           background-color: orange;
            color: white;
         }
+       tr:first-child th{
+           border: 3px solid #ffffff;
+           height: 30px;
+       }
 
-        th:first-child{
+        tr:first-child th:first-child  {
             background-color: red;
         }
-        th:last-child{
+        tr:nth-child(2) th:first-child{
+            color: red;
+        }
+        tr:first-child th:last-child {
             background-color: blue;
+        }
+        tr:nth-child(2) th:last-child{
+            color: blue;
         }
     </style>
 </head>
@@ -65,13 +75,13 @@
         <th>T.Bảy</th>
     </tr>
     <tr>
-        <td>Sun</td>
-        <td>Mon</td>
-        <td>Tue</td>
-        <td>Wed</td>
-        <td>Thu</td>
-        <td>Fri</td>
-        <td>Sat</td>
+        <th>Sun</td>
+        <th>Mon</td>
+        <th>Tue</td>
+        <th>Wed</td>
+        <th>Thu</td>
+        <th>Fri</td>
+        <th>Sat</td>
     </tr>
     <tr>
         <td></td>
