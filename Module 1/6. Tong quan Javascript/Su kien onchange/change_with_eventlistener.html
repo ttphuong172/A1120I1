@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>EventListener</title>
+</head>
+<body>
+<select name="" id="mySelect">
+    <option value="audi">Audi</option>
+    <option value="toyota">Toyota</option>
+    <option value="honda">Honda</option>
+    <option value="suzuki">Suzuki</option>
+</select>
+<script>
+    document.getElementById('mySelect').addEventListener("change",do_somthing)
+    function do_somthing() {
+    selectValue=document.getElementById('mySelect').value;
+    alert(selectValue)
+    }
+</script>
+</body>
+</html>

@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Thay doi noi dung HTML</title>
+</head>
+<body>
+    <h2>What Can JavaScript Do?</h2>
+    <p id="mypara">JavaScript can change HTML content.</p>
+    <button onclick="changeContentpara()">Click Me</button>
+    <script>
+        function changeContentpara() {
+            // alert(document.getElementById('mypara').innerText)
+        document.getElementById('mypara').innerText="Hello JavaScript!";
+        }
+    </script>
+</body>
+</html>
