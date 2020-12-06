@@ -12,21 +12,24 @@
             <td>From Currency</td>
             <td>To Currency</td>
         </tr>
-        <td><input type="text" id="amount"></td>
+            <td><input type="text" id="amount"></td>
         <td>
             <select name="" id="fromcurrency">
                 <option value="vietnam">VietNam</option>
                 <option value="usd">USD</option>
+                <option value="pound">Bảng Anh</option>
             </select>
         </td>
         <td>
             <select name="" id="tocurrency">
                 <option value="usd">USD</option>
                 <option value="vietnam">VietNam</option>
+                <option value="pound">Bảng Anh</option>
             </select>
         </td>
         <td>
-            <button onclick="convert()">Convert</button></td>
+            <button id="btnconvert">Convert</button>
+        </td>
     </table>
     <p>Result:</p><p id="result"></p>
     <script src="./main.js">
