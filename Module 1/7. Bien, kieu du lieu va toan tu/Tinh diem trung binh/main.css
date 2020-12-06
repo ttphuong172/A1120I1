@@ -1,0 +1,11 @@
+body{
+    width: 60%;
+    margin: auto;
+}
+label{
+    float: left;
+    width: 150px;
+}
+p{
+    display: inline;
+}
