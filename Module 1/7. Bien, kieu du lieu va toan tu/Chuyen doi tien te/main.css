@@ -1,0 +1,19 @@
+body{
+    width: 60%;
+    margin: auto;
+}
+button{
+    background-color: mediumpurple;
+    color: white;
+    font-weight: bold;
+}
+p{
+    display: inline-block;
+    color: blue;
+}
+td{
+    text-align: center;
+}
+tr:first-child{
+    font-weight: bold;
+}
