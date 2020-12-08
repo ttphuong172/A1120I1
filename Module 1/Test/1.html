@@ -4,14 +4,21 @@
     <meta charset="UTF-8">
     <title>Title</title>
 </head>
-<body>
+<body onload="init()">
 <input type="text" id="firstname">
-<button onclick="display()">Display</button>
+<button id="btndisplay" onmouseover="moverandom()">Display</button>
     <script>
-        var firstNameElement=document.getElementById('firstname');
-        function display() {
-            console.log([firstNameElement]);
-            alert(firstNameElement.value);
+        var btnDisplayElement = document.getElementById('btndisplay');
+
+        alert()
+        function init(){
+            btnDisplayElement.style.position='relative';
+            btnDisplayElement.style.top='100px';
+            btnDisplayElement.style.left='100px';
+        }
+        function moverandom(){
+            btnDisplayElement.style.top=Math.floor(Math.random()*1000)+'px';
+            btnDisplayElement.style.left='100px'
         }
     </script>
 </body>
