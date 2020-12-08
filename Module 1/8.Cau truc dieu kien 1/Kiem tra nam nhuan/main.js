@@ -3,9 +3,9 @@
  */
 
 function isleapYear(year){
-   var isYearDivisionBy4=year%4==0;
-   var isYearDivisionBy100=year%100==0;
-   var isYearDivisionBy400=year%400==0;
+   var isYearDivisionBy4=year%4===0;
+   var isYearDivisionBy100=year%100===0;
+   var isYearDivisionBy400=year%400===0;
 
     if (isYearDivisionBy4){
         if (isYearDivisionBy100) {
@@ -23,7 +23,7 @@ function isleapYear(year){
 
  function checkIsLeapYear(){
      var yearElement=document.getElementById('year').value;
-     if (isleapYear(yearElement)==true){
+     if (isleapYear(yearElement)===true){
          document.getElementById('result').innerHTML='Nam nhuan'
      } else{
          document.getElementById('result').innerHTML='Nam khong nhuan'
