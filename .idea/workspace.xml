@@ -2,19 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="622e7c0c-5ff8-4043-a400-721579fc0735" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Module 1/8.Cau truc dieu kien 1/Kiem tra nam nhuan/index.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Module 1/8.Cau truc dieu kien 1/Luyen tap dang nhap voi if else if/index.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Module 1/8.Cau truc dieu kien 1/Luyen tap toan tu 3 ngoi/index.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Module 1/8.Cau truc dieu kien 1/Su kien chuot/index.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Module 1/8.Cau truc dieu kien 1/Kiem tra nam nhuan/main.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Module 1/8.Cau truc dieu kien 1/Luyen tap dang nhap voi if else if/main.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Module 1/8.Cau truc dieu kien 1/Luyen tap toan tu 3 ngoi/main.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Module 1/8.Cau truc dieu kien 1/Kiem tra nam nhuan/main.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Module 1/8.Cau truc dieu kien 1/Luyen tap dang nhap voi if else if/main.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Module 1/8.Cau truc dieu kien 1/Luyen tap toan tu 3 ngoi/main.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Module 1/8.Cau truc dieu kien 1/Su kien chuot/main.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Module 1/Test/1.html" afterPath="$PROJECT_DIR$/Module 1/Test/1.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Module 1/7. Bien, kieu du lieu va toan tu/Chuyen doi tien te/main.js" afterPath="$PROJECT_DIR$/Module 1/7. Bien, kieu du lieu va toan tu/Chuyen doi tien te/main.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Module 1/7. Bien, kieu du lieu va toan tu/Ung dung may tinh nang cao/index.html" afterPath="$PROJECT_DIR$/Module 1/7. Bien, kieu du lieu va toan tu/Ung dung may tinh nang cao/index.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Module 1/7. Bien, kieu du lieu va toan tu/Ung dung may tinh nang cao/main.js" afterPath="$PROJECT_DIR$/Module 1/7. Bien, kieu du lieu va toan tu/Ung dung may tinh nang cao/main.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="A1120I1-TranThanhPhuong.iws" />
@@ -37,30 +27,7 @@
     <favorites_list name="A1120I1-TranThanhPhuong" />
   </component>
   <component name="FileEditorManager">
-    <leaf>
-      <file leaf-file-name="index.html" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Module 1/8.Cau truc dieu kien 1/Su kien chuot/index.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-5.8846154" vertical-offset="0" max-vertical-offset="340">
-              <caret line="9" column="9" selection-start-line="9" selection-start-column="9" selection-end-line="9" selection-end-column="9" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="main.js" pinned="false" current="true" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/Module 1/8.Cau truc dieu kien 1/Su kien chuot/main.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.27868852" vertical-offset="0" max-vertical-offset="610">
-              <caret line="12" column="0" selection-start-line="12" selection-start-column="0" selection-end-line="12" selection-end-column="0" />
-              <folding>
-                <element signature="n#!!doc;n#init#0" expanded="false" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-    </leaf>
+    <leaf />
   </component>
   <component name="FindManager">
     <FindUsagesManager>
@@ -89,7 +56,6 @@
         <option value="$PROJECT_DIR$/Module 1/Test/index.html" />
         <option value="$PROJECT_DIR$/Module 1/5. HTML Form &amp; Table/Bai tap - Lich/index.html" />
         <option value="$PROJECT_DIR$/Module 1/7. Bien, kieu du lieu va toan tu/Chuyen doi tien te/main.js" />
-        <option value="$PROJECT_DIR$/Module 1/Test/1.html" />
         <option value="$PROJECT_DIR$/Module 1/8.Cau truc dieu kien 1/Kiem tra nam nhuan/main.css" />
         <option value="$PROJECT_DIR$/Module 1/8.Cau truc dieu kien 1/Kiem tra nam nhuan/index.html" />
         <option value="$PROJECT_DIR$/Module 1/8.Cau truc dieu kien 1/Kiem tra nam nhuan/main.js" />
@@ -101,6 +67,12 @@
         <option value="$PROJECT_DIR$/Module 1/8.Cau truc dieu kien 1/Luyen tap toan tu 3 ngoi/main.js" />
         <option value="$PROJECT_DIR$/Module 1/8.Cau truc dieu kien 1/Su kien chuot/main.js" />
         <option value="$PROJECT_DIR$/Module 1/8.Cau truc dieu kien 1/Su kien chuot/index.html" />
+        <option value="$PROJECT_DIR$/Module 1/7. Bien, kieu du lieu va toan tu/Ung dung may tinh nang cao/index.html" />
+        <option value="$PROJECT_DIR$/Module 1/7. Bien, kieu du lieu va toan tu/Ung dung may tinh nang cao/main.js" />
+        <option value="$PROJECT_DIR$/Module 1/Test/1.html" />
+        <option value="$PROJECT_DIR$/Module 1/8.Cau truc dieu kien/Do you love me/index.html" />
+        <option value="$PROJECT_DIR$/Module 1/8.Cau truc dieu kien/Do you love me/main.css" />
+        <option value="$PROJECT_DIR$/Module 1/8.Cau truc dieu kien/Do you love me/main.js" />
       </list>
     </option>
   </component>
@@ -136,7 +108,6 @@
       <sortByType />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -168,6 +139,10 @@
               <option name="myItemId" value="Module 1" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Test" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
           </PATH>
           <PATH>
             <PATH_ELEMENT>
@@ -183,7 +158,7 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="8.Cau truc dieu kien 1" />
+              <option name="myItemId" value="8.Cau truc dieu kien" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
@@ -205,7 +180,7 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="8.Cau truc dieu kien 1" />
+              <option name="myItemId" value="8.Cau truc dieu kien" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -227,8 +202,23 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="A1120I1-TranThanhPhuong" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="A1120I1-TranThanhPhuong" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Module 1" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
         </subPane>
       </pane>
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -246,20 +236,10 @@
     </key>
   </component>
   <component name="RunManager">
-    <configuration default="true" type="DartUnitRunConfigurationType" factoryName="DartUnit">
-      <method />
-    </configuration>
     <configuration default="true" type="DartCommandLineRunConfigurationType" factoryName="Dart Command Line Application">
       <method />
     </configuration>
-    <configuration default="true" type="CucumberJavaScriptRunConfigurationType" factoryName="Cucumber.js">
-      <option name="cucumberJsArguments" />
-      <option name="executablePath" />
-      <option name="filePath" />
-      <method />
-    </configuration>
-    <configuration default="true" type="JavaScriptTestRunnerKarma" factoryName="Karma" config-file="">
-      <envs />
+    <configuration default="true" type="DartUnitRunConfigurationType" factoryName="DartUnit">
       <method />
     </configuration>
     <configuration default="true" type="JSTestDriver:ConfigurationType" factoryName="JsTestDriver">
@@ -267,6 +247,16 @@
       <setting name="settingsFile" value="" />
       <setting name="serverType" value="INTERNAL" />
       <setting name="preferredDebugBrowser" value="Chrome" />
+      <method />
+    </configuration>
+    <configuration default="true" type="JavaScriptTestRunnerKarma" factoryName="Karma" config-file="">
+      <envs />
+      <method />
+    </configuration>
+    <configuration default="true" type="CucumberJavaScriptRunConfigurationType" factoryName="Cucumber.js">
+      <option name="cucumberJsArguments" />
+      <option name="executablePath" />
+      <option name="filePath" />
       <method />
     </configuration>
     <configuration default="true" type="JavascriptDebugType" factoryName="JavaScript Debug">
@@ -297,7 +287,7 @@
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.24963397" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.24963397" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
@@ -305,11 +295,11 @@
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
     </layout>
   </component>
   <component name="Vcs.Log.UiProperties">
@@ -332,6 +322,16 @@
     <breakpoint-manager />
   </component>
   <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/Module 1/8.Cau truc dieu kien/Su kien chuot/main.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="170" max-vertical-offset="272">
+          <caret line="12" column="0" selection-start-line="12" selection-start-column="0" selection-end-line="12" selection-end-column="0" />
+          <folding>
+            <element signature="n#!!doc;n#init#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/Module 1/Test/1.html">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="391">
@@ -543,120 +543,150 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Module 1/7. Bien, kieu du lieu va toan tu/Ung dung may tinh nang cao/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.46575344" vertical-offset="0" max-vertical-offset="1122">
-          <caret line="16" column="21" selection-start-line="16" selection-start-column="21" selection-end-line="16" selection-end-column="21" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Thu tien/301120.png">
       <provider selected="true" editor-type-id="images">
         <state />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Module 1/Test/1.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.40753424" vertical-offset="0" max-vertical-offset="584">
-          <caret line="14" column="29" selection-start-line="14" selection-start-column="24" selection-end-line="14" selection-end-column="29" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Module 1/8.Cau truc dieu kien 1/Kiem tra nam nhuan/main.js">
+    <entry file="file://$PROJECT_DIR$/Module 1/8.Cau truc dieu kien/Kiem tra nam nhuan/main.js">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.39016393" vertical-offset="0" max-vertical-offset="610">
           <caret line="16" column="27" selection-start-line="16" selection-start-column="27" selection-end-line="16" selection-end-column="27" />
-          <folding>
-            <element signature="n#!!doc;n#isleapYear#0" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Module 1/8.Cau truc dieu kien 1/Kiem tra nam nhuan/index.html">
+    <entry file="file://$PROJECT_DIR$/Module 1/8.Cau truc dieu kien/Kiem tra nam nhuan/index.html">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.37842464" vertical-offset="0" max-vertical-offset="584">
           <caret line="13" column="33" selection-start-line="13" selection-start-column="33" selection-end-line="13" selection-end-column="33" />
-          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Module 1/8.Cau truc dieu kien 1/Kiem tra nam nhuan/main.css">
+    <entry file="file://$PROJECT_DIR$/Module 1/8.Cau truc dieu kien/Kiem tra nam nhuan/main.css">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.11147541" vertical-offset="0" max-vertical-offset="610">
           <caret line="4" column="0" selection-start-line="4" selection-start-column="0" selection-end-line="4" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Module 1/8.Cau truc dieu kien 1/Luyen tap dang nhap voi if else if/main.js">
+    <entry file="file://$PROJECT_DIR$/Module 1/8.Cau truc dieu kien/Luyen tap dang nhap voi if else if/main.js">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.3065574" vertical-offset="0" max-vertical-offset="610">
           <caret line="13" column="5" selection-start-line="13" selection-start-column="5" selection-end-line="13" selection-end-column="5" />
-          <folding>
-            <element signature="n#!!doc;n#logIn#0" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Module 1/8.Cau truc dieu kien 1/Luyen tap dang nhap voi if else if/main.css">
+    <entry file="file://$PROJECT_DIR$/Module 1/8.Cau truc dieu kien/Luyen tap dang nhap voi if else if/main.css">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.16721311" vertical-offset="0" max-vertical-offset="610">
           <caret line="6" column="12" selection-start-line="6" selection-start-column="12" selection-end-line="6" selection-end-column="12" />
-          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Module 1/8.Cau truc dieu kien 1/Luyen tap dang nhap voi if else if/index.html">
+    <entry file="file://$PROJECT_DIR$/Module 1/8.Cau truc dieu kien/Luyen tap dang nhap voi if else if/index.html">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.34931508" vertical-offset="0" max-vertical-offset="584">
           <caret line="12" column="20" selection-start-line="12" selection-start-column="20" selection-end-line="12" selection-end-column="20" />
-          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Module 1/8.Cau truc dieu kien 1/Luyen tap toan tu 3 ngoi/main.js">
+    <entry file="file://$PROJECT_DIR$/Module 1/8.Cau truc dieu kien/Luyen tap toan tu 3 ngoi/main.js">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.11147541" vertical-offset="0" max-vertical-offset="610">
           <caret line="6" column="0" selection-start-line="6" selection-start-column="0" selection-end-line="6" selection-end-column="0" />
-          <folding>
-            <element signature="n#!!doc;n#sum#0" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Module 1/8.Cau truc dieu kien 1/Luyen tap toan tu 3 ngoi/main.css">
+    <entry file="file://$PROJECT_DIR$/Module 1/8.Cau truc dieu kien/Luyen tap toan tu 3 ngoi/main.css">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.19508196" vertical-offset="0" max-vertical-offset="610">
           <caret line="7" column="1" selection-start-line="7" selection-start-column="1" selection-end-line="7" selection-end-column="1" />
-          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Module 1/8.Cau truc dieu kien 1/Luyen tap toan tu 3 ngoi/index.html">
+    <entry file="file://$PROJECT_DIR$/Module 1/8.Cau truc dieu kien/Luyen tap toan tu 3 ngoi/index.html">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.32020548" vertical-offset="0" max-vertical-offset="584">
           <caret line="11" column="5" selection-start-line="11" selection-start-column="5" selection-end-line="11" selection-end-column="5" />
-          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Module 1/8.Cau truc dieu kien 1/Su kien chuot/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-5.8846154" vertical-offset="0" max-vertical-offset="340">
-          <caret line="9" column="9" selection-start-line="9" selection-start-column="9" selection-end-line="9" selection-end-column="9" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Module 1/8.Cau truc dieu kien 1/Su kien chuot/main.js">
+    <entry file="file://$PROJECT_DIR$/Module 1/8.Cau truc dieu kien/Su kien chuot/main.js">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.27868852" vertical-offset="0" max-vertical-offset="610">
           <caret line="12" column="0" selection-start-line="12" selection-start-column="0" selection-end-line="12" selection-end-column="0" />
           <folding>
             <element signature="n#!!doc;n#init#0" expanded="false" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Module 1/7. Bien, kieu du lieu va toan tu/Ung dung may tinh nang cao/main.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="610">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Module 1/7. Bien, kieu du lieu va toan tu/Ung dung may tinh nang cao/main.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.4147541" vertical-offset="376" max-vertical-offset="1020">
+          <caret line="37" column="0" selection-start-line="37" selection-start-column="0" selection-end-line="37" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Module 1/7. Bien, kieu du lieu va toan tu/Ung dung may tinh nang cao/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.7089041" vertical-offset="198" max-vertical-offset="782">
+          <caret line="36" column="0" selection-start-line="36" selection-start-column="0" selection-end-line="36" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Module 1/8.Cau truc dieu kien/Su kien chuot/ball.png">
+      <provider selected="true" editor-type-id="images">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Module 1/8.Cau truc dieu kien/Su kien chuot/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.05821918" vertical-offset="0" max-vertical-offset="584">
+          <caret line="2" column="16" selection-start-line="2" selection-start-column="16" selection-end-line="2" selection-end-column="16" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Module 1/8.Cau truc dieu kien/Do you love me/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.17465754" vertical-offset="0" max-vertical-offset="584">
+          <caret line="6" column="7" selection-start-line="6" selection-start-column="7" selection-end-line="6" selection-end-column="7" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Module 1/8.Cau truc dieu kien/Do you love me/main.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="610">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Module 1/Test/1.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.26198632" vertical-offset="0" max-vertical-offset="584">
+          <caret line="9" column="12" selection-start-line="9" selection-start-column="12" selection-end-line="9" selection-end-column="12" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Module 1/8.Cau truc dieu kien/Do you love me/main.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.39016393" vertical-offset="0" max-vertical-offset="610">
+          <caret line="14" column="68" selection-start-line="14" selection-start-column="68" selection-end-line="14" selection-end-column="68" />
+          <folding />
         </state>
       </provider>
     </entry>
