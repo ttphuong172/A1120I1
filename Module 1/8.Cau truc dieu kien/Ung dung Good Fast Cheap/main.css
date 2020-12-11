@@ -1,0 +1,17 @@
+body{
+    width: 60%;
+    margin: auto;
+}
+input{
+    height: 40px;
+    width: 40px;
+}
+label{
+    font-size: 20px;
+    font-weight: bold;
+}
+.elementDiv{
+    display: flex;
+    align-items: center;
+    
+}
