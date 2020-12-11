@@ -4,21 +4,20 @@
     <meta charset="UTF-8">
     <title>Title</title>
 </head>
-<body onload="init()">
-<input type="text" id="firstname">
-<button id="btndisplay" onmouseover="moverandom()">Display</button>
-    <script>
-        var btnDisplayElement = document.getElementById('btndisplay');
+<body>
 
-        function init(){
-            btnDisplayElement.style.position='relative';
-            btnDisplayElement.style.top='100px';
-            btnDisplayElement.style.left='100px';
+    <script>
+        document.write("<table border='1'>");
+        for (var i=1;i<10;i++){
+            console.log(i)
+            document.write('<tr>')
+            for (j=1;j<10;j++){
+                document.write('<td>'+j+'x'+i+'='+i*j+'</td>');
+            }
+        document.write('</tr>');
         }
-        function moverandom(){
-            btnDisplayElement.style.top=Math.floor(Math.random()*1000)+'px';
-            btnDisplayElement.style.left='100px'
-        }
+
+        document.write("</table>");
     </script>
 </body>
 </html>
