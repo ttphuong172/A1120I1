@@ -50,6 +50,5 @@ function reset(){
     resultElement.value=null
 }
 function result(){
-    alert (resultElement.value);
-
+    resultElement.value=eval(resultElement.value);
 }
