@@ -16,28 +16,27 @@ function isPrime(songuyen){
     }
     return true
 }
-//Ham in so nguyen  to
-// function printPrime(amount){
-//     for(i=1;i<=amount;i++){
-//         if (isPrime(i)){
-//             console.log(isPrime(i))
-//             console.log(i)
-//         }
-//     }
-// }
-// printPrime(10000)
+//Ham in so nguyen  to theo so luong
+
 function printPrime(amount){
     var i=1;
-    var dem=0;
-    while(dem<amount){
+    var count=0;
+    var string='';
+    while(count<amount){
         if(isPrime(i)){
-            console.log(i);
-            dem=dem+1;
+            string+=i+',';
+            //console.log(i);
+            document.getElementById('result').innerHTML=string
+            count+=1;
         }
-        isPrime(i)
         i=i+1;
     }
 }
-printPrime(20)
+//Dua ra web
+function print(){
+var amount = document.getElementById('songuyento').value
+printPrime(amount);
+}
+
 
 
