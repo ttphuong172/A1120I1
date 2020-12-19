@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        body{
+            width: 60%;
+            margin: auto;
+        }
+    </style>
+</head>
+<body>
+<h3>Tinh giai thua</h3>
+<input type="text" id="number" style="width: 20px">
+<button onclick="giaiThua()">Cal</button>
+<p id="result"></p>
+<script>
+    function giaiThua() {
+        var result=1;
+        var number=document.getElementById('number').value;
+        for (i=1;i<=number;i++){
+            result*=i;
+        }
+        document.getElementById('result').innerHTML=result;
+    }
+
+</script>
+</body>
+</html>

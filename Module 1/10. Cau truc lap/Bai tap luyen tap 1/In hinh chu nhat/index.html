@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<label>Nhap chieu dai: <input type="text" id="chieudai"></label>
+<br>
+<br>
+<label>Nhap chieu rong: <input type="text" id="chieurong"></label>
+<br>
+<br>
+<button onclick="printHCN()">In hinh chu nhat</button>
+<p id="result"></p>
+<script>
+function printHCN() {
+    var chieuDai=document.getElementById('chieudai').value;
+    var chieuRong=document.getElementById('chieurong').value;
+    var string='';
+    for(i=0;i<chieuDai;i++){
+        string=string+'*';
+    }
+        string+='<br>'
+
+    for (i=1;i<chieuRong;i++){
+        string+='*';
+        for (j=0;j<chieuDai-2;j++){
+            string+='&nbsp;&nbsp;'
+        }
+        string+='*'
+        string+='<br>';
+    }
+    for(i=0;i<chieuDai;i++){
+        string+='*';
+    }
+    document.getElementById('result').innerHTML=string;
+}
+
+
+</script>
+</body>
+</html>
