@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Tim gia tri trong mang</title>
+</head>
+<body>
+<script>
+    //Sinh 1 mang gom 20 so nguyen duong tu 1 -10
+    var array=[];
+    for (i=0;i<20;i++){
+        array[i]=Math.round(Math.random()*10);
+    }
+    console.log(array)
+
+    do{
+        var x= parseInt(prompt("Nhap vao mot so tu 1 - 10"));
+    }
+    while(x>10 || x<0 || isNaN(x))
+
+
+
+    for (j=0;j<20;j++){
+        if (x===array[j]){
+            alert('Gia tri '+ x +' tim thay o vi tri '+j)
+        }
+    }
+
+</script>
+</body>
+</html>
