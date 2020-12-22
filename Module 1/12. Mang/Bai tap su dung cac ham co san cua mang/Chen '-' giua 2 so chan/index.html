@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Chen '-' giua 2 so chan</title>
+</head>
+<body>
+
+<script>
+    var myString='025468';
+    var newMyString='';
+    for (i=0;i<myString.length;i++){
+        newMyString+=myString[i];
+        if ((myString[i]%2===0) && (myString[i+1]%2===0) ){
+
+            newMyString+='-'
+        }
+        console.log(myString[i])
+
+    }
+    document.write(myString+'<br>')
+    document.write(newMyString)
+</script>
+
+</body>
+</html>
