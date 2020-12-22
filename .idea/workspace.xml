@@ -2,33 +2,15 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="622e7c0c-5ff8-4043-a400-721579fc0735" name="Default" comment="">
-      <change afterPath="$PROJECT_DIR$/Module 1/10. Cau truc lap/Bai tap luyen tap 1/In hinh chu nhat/index.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Module 1/10. Cau truc lap/Bai tap luyen tap 1/Tinh giai thua/index.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Module 1/Case Study/Yeu cau 2/index.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Module 1/Case Study/Yeu cau 2/main.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Module 1/Case Study/Yeu cau 2/main.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.name" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/A1120I1-TranThanhPhuong.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/A1120I1-TranThanhPhuong.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/scopes/scope_settings.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Module 1/Case Study/Yeu cau 3/calc.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Module 1/Case Study/Yeu cau 3/display.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Module 1/Case Study/Yeu cau 3/edit.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Module 1/Case Study/Yeu cau 3/home.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Module 1/Case Study/Yeu cau 3/input.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Module 1/Case Study/Yeu cau 3/main.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Module 1/Case Study/Yeu cau 3/main.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Module 1/.idea/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Module 1/.idea/Module 1.iml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Module 1/.idea/misc.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Module 1/.idea/modules.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Module 1/.idea/vcs.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Module 1/10. Cau truc lap/Bai tap luyen tap 1/In tam giac vuong/3.html" beforeDir="false" afterPath="$PROJECT_DIR$/Module 1/10. Cau truc lap/Bai tap luyen tap 1/In tam giac vuong/3.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Module 1/10. Cau truc lap/Bai tap luyen tap 1/In tam giac vuong/4.html" beforeDir="false" afterPath="$PROJECT_DIR$/Module 1/10. Cau truc lap/Bai tap luyen tap 1/In tam giac vuong/4.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Module 1/Case Study/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/Module 1/Case Study/Yeu cau 1/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Module 1/Case Study/main.css" beforeDir="false" afterPath="$PROJECT_DIR$/Module 1/Case Study/Yeu cau 1/main.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Module 1/Case Study/main.js" beforeDir="false" afterPath="$PROJECT_DIR$/Module 1/Case Study/Yeu cau 1/main.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Module 1/Test/1.html" beforeDir="false" afterPath="$PROJECT_DIR$/Module 1/Test/1.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Module 1/Test/createformbasic.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Module 1/Test/index.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/projectFilesBackup/.idea/workspace.xml" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -44,9 +26,9 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="HTML File" />
         <option value="CSS File" />
         <option value="JavaScript File" />
+        <option value="HTML File" />
       </list>
     </option>
   </component>
@@ -72,21 +54,21 @@
     <property name="FullScreen" value="false" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/Module 1/Case Study/Yeu cau 3" />
     <property name="list.type.of.created.stylesheet" value="CSS" />
   </component>
   <component name="RecentsManager">
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="C:\Users\admin\Desktop\A1120I1-TranThanhPhuong\Module 1\Case Study" />
-      <recent name="C:\Users\admin\Desktop\A1120I1-TranThanhPhuong\Module 1\10. Cau truc lap\Bai tap luyen tap 1\Tinh tong cua cac so Fibonacci dau tien" />
-      <recent name="C:\Users\admin\Desktop\A1120I1-TranThanhPhuong\Module 1\8.Cau truc dieu kien\Luyen tap cau truc co dieu kien 01" />
-      <recent name="C:\Users\admin\Desktop\A1120I1-TranThanhPhuong\Module 1\8.Cau truc dieu kien\May tinh don gian" />
-      <recent name="C:\Users\admin\Desktop\A1120I1-TranThanhPhuong\Module 1\8.Cau truc dieu kien 1\Kiem tra nam nhuan" />
-    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Users\ADMIN\Desktop\A1120I1-TranThanhPhuong\Module 1\Case Study\Yeu cau 1" />
       <recent name="C:\Users\ADMIN\Desktop\A1120I1-TranThanhPhuong\Module 1\10. Cau truc lap" />
       <recent name="C:\Users\admin\Desktop\A1120I1-TranThanhPhuong\Module 1" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\ADMIN\Desktop\A1120I1-TranThanhPhuong\Module 1\Case Study\Yeu cau 3" />
+      <recent name="C:\Users\admin\Desktop\A1120I1-TranThanhPhuong\Module 1\Case Study" />
+      <recent name="C:\Users\admin\Desktop\A1120I1-TranThanhPhuong\Module 1\10. Cau truc lap\Bai tap luyen tap 1\Tinh tong cua cac so Fibonacci dau tien" />
+      <recent name="C:\Users\admin\Desktop\A1120I1-TranThanhPhuong\Module 1\8.Cau truc dieu kien\Luyen tap cau truc co dieu kien 01" />
+      <recent name="C:\Users\admin\Desktop\A1120I1-TranThanhPhuong\Module 1\8.Cau truc dieu kien\May tinh don gian" />
     </key>
   </component>
   <component name="RunManager">
@@ -138,6 +120,11 @@
       <workItem from="1608275342227" duration="2597000" />
       <workItem from="1608294738822" duration="5930000" />
       <workItem from="1608347555986" duration="1906000" />
+      <workItem from="1608513007187" duration="6690000" />
+      <workItem from="1608535147287" duration="2172000" />
+      <workItem from="1608547357417" duration="10403000" />
+      <workItem from="1608598272658" duration="4769000" />
+      <workItem from="1608619083867" duration="4616000" />
     </task>
     <servers />
   </component>
@@ -151,5 +138,11 @@
     <option name="RECENTLY_FILTERED_BRANCH_GROUPS">
       <collection />
     </option>
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="413" y="115" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1608514791280">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="413" y="115" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1366.728@0.0.1366.728" timestamp="1608514791280" />
   </component>
 </project>

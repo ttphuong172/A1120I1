@@ -1,0 +1,67 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+body{
+    width: 60%;
+    margin: auto;
+}
+.nav-menu{
+    display: flex;
+    list-style-type: none;
+    width: 100%;
+}
+li{
+    width: 20%;
+    margin-right: 5px;
+}
+li:last-child{
+    margin-right: 0px;
+}
+
+
+.nav-item{
+    display: block;
+    height: 50px;
+    width: 100%;
+    padding-top: 30px;
+    background-color: darkgreen;
+    text-align: center;
+    text-decoration: none;
+    font-weight: bold;
+    margin-top: 5px;
+    color: white;
+}
+.nav-item:hover{
+    background: darkkhaki;
+}
+header{
+    background-color: darkgreen;
+    height: 70px;
+    width: 100%;
+}
+h1 {
+    text-align: center;
+    padding: 30px 0px;
+}
+.info{
+    margin-left: 50px;
+}
+p, input{
+
+    padding-top: 20px;
+    font-size: 24px;
+}
+label{
+    padding-top: 20px;
+    font-size: 24px;
+    float: left;
+    width: 300px;
+}
+.btnSave{
+    width: 80px;
+    height: 50px;
+}
+.error{
+    color: red;
+}

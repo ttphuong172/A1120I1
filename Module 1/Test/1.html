@@ -6,10 +6,26 @@
     <link rel="stylesheet" href="">
 </head>
 <body>
-    <ul>
-        <li>Show Information Custommer</li>
-        <li>Edit Information Custommer</li>
-        <li>Show the amount to be paid after discount</li>
-    </ul>
+<script>
+ var fiat={
+     make:"Fiat",
+     model:'500',
+     year:1957,
+     color:"Medium Blue",
+     passengers:2,
+     convertible:false,
+     mileage:88000
+ };
+fiat.mileage=1000;
+fiat.needsWashing=true;
+ var miles=fiat.mileage;
+ if(miles<2000){
+     console.log("Buy it")
+ }
+
+ console.log(fiat)
+
+
+</script>
 </body>
 </html>

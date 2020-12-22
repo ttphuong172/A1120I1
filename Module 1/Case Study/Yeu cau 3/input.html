@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Input Information Custommer</title>
+    <link rel="stylesheet" href="main.css">
+</head>
+<body>
+<header>
+
+</header>
+<main>
+    <ul class="nav-menu">
+        <li ><a class="nav-item" href="./home.html">HOME</a> </li>
+        <li><a  class="nav-item" href="">NHẬP THÔNG TIN</a></li>
+        <li><a  class="nav-item" href="./display.html">DISPLAY</a></li>
+        <li ><a class="nav-item" href="./edit.html">EDIT</a></li>
+        <li ><a class="nav-item" href="./calc.html">CALC</a></li>
+        </ul>
+        <h1>Input Information Custommer</h1>
+    <div class="info">
+        <label>Họ và tên</label>
+        <input type="text" id="inputfullname">
+        <span id="errorfullname" class="error"></span>
+        <br>
+        <br>
+        <label>Số CMND</label>
+        <input type="text" id="inputcmnd">
+        <span id="errorcmnd" class="error"></span>
+        <br>
+        <br>
+        <label>Email</label>
+        <input type="text" id="inputemail">
+        <span id="erroremail" class="error"></span>
+        <br>
+        <br>
+        <label >Ngày tháng năm sinh</label>
+        <input type="text" id="inputbirthday">
+        <span id="errorbirthday" class="error"></span>
+        <br>
+        <br>
+        <label >Số ngày thuê</label>
+        <input type="text" id="inputrentdays">
+        <span id="errorrentdays" class="error"></span>
+        <br>
+        <br>
+        <button  class="btnSave" onclick="save()">Lưu thông tin</button>
+    </div>
+</main>
+<footer>
+
+</footer>
+<script src="main.js"></script>
+</body>
+</html>
