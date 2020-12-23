@@ -25,6 +25,14 @@ fiat.needsWashing=true;
 
  console.log(fiat)
 
+ var person=new Object();
+ person.firstName="Phuong";
+ person.lastName="Tran"
+ person.fullName=function (){
+     return this.firstName+this.lastName;
+ }
+ console.log(person.firstName)
+ console.log(person.fullName())
 
 </script>
 </body>
