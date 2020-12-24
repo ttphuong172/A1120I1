@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Hien thi so lon nhat va gia tri trung binh cong cac phan tu</title>
+</head>
+<body>
+<h3>Khoi tao mang so nguyen 10 phan tu</h3>
+<p id="array"></p>
+<p id="result"></p>
+<script>
+    var a=[];
+    for (i=0;i<10;i++){
+        a[i]=Math.round(Math.random()*100)
+    }
+    document.getElementById('array').innerHTML=a;
+    var max=0;
+    var sum=0;
+    var average=0;
+    for (j=0;j<a.length;j++){
+        sum+=a[j];
+        if (a[j]>max){
+            max=a[j];
+        }
+    }
+    document.getElementById('result').innerHTML=('So lon nhat la '+max+' va trung binh cong la '+ sum/a.length)
+
+</script>
+</body>
+</html>

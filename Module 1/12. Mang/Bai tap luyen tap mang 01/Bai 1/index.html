@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Bai 1</title>
+</head>
+<body>
+<h3>Khoi tao mang so nguyen 10 phan tu</h3>
+<p id="firstresult"></p>
+<h3>Cac so lon hon 10</h3>
+<p id="lastresult"></p>
+<script>
+    var a=[];
+    for (i=0;i<10;i++){
+        a[i]=Math.round(Math.random()*30)
+    }
+    document.getElementById('firstresult').innerHTML=a;
+    var myString=''
+     for(j=0;j<10;j++){
+         if (a[j]>10){
+             myString+=a[j]+','
+         }
+    }
+     document.getElementById('lastresult').innerHTML=myString;
+</script>
+</body>
+</html>

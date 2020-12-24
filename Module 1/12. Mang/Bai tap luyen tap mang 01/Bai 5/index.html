@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Dem so nguyen am trong chuoi</title>
+</head>
+<body>
+<h3>Dem so nguyen am trong chuoi</h3>
+<p id="array"></p>
+<p id="result"></p>
+<script>
+    //Sinh mang 1o phan tu co so nguyen duong va so nguyen am
+    var a=[];
+    for (i=0;i<10;i++){
+        var randomNumber=Math.round(Math.random());
+        //console.log(randomNumber)
+        if (randomNumber){
+            a[i]=Math.round(Math.random()* (-100))
+        } else{
+            a[i]=Math.round((Math.random()*100))
+        }
+    }
+        //console.log(a)
+    document.getElementById('array').innerHTML=a
+    var count=0;
+    for (j=0;j<a.length;j++){
+        if (a[j]<0){
+            count+=1
+        }
+    }
+    document.getElementById('result').innerHTML=('So luong so nguyen am trong chuoi la '+count)
+</script>
+</body>
+</html>

@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Sinh mang so nguyen va dao nguuoc cac phan tu </title>
+</head>
+<body>
+<h3>Kho tao mang so nguyen 10 phan tu</h3>
+<p id="array"></p>
+<h3>Mang sao khi dao</h3>
+<p id="result"></p>
+<script>
+    var a=[];
+    for(i=0;i<20;i++){
+        a[i]=Math.round(Math.random()*100)
+    }
+    document.getElementById('array').innerHTML=a;
+    var b=[]
+    for (j=a.length;j>=0;j--){
+    b[a.length-1-j]=a[j];
+    }
+    document.getElementById('result').innerHTML=b;
+</script>
+</body>
+</html>

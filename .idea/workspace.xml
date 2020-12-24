@@ -2,15 +2,38 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="622e7c0c-5ff8-4043-a400-721579fc0735" name="Default" comment="">
-      <change afterPath="$PROJECT_DIR$/Module 1/Case Study/Yeu cau 3/calc.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Module 1/Case Study/Yeu cau 3/display.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Module 1/Case Study/Yeu cau 3/edit.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Module 1/Case Study/Yeu cau 3/home.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Module 1/Case Study/Yeu cau 3/input.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Module 1/Case Study/Yeu cau 3/main.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Module 1/Case Study/Yeu cau 3/main.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Module 1/12. Mang/Bai tap luyen tap mang 01/Bai 1/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Module 1/12. Mang/Bai tap luyen tap mang 01/Bai 2/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Module 1/12. Mang/Bai tap luyen tap mang 01/Bai 3/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Module 1/12. Mang/Bai tap luyen tap mang 01/Bai 4/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Module 1/12. Mang/Bai tap luyen tap mang 01/Bai 5/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Module 1/12. Mang/Bai tap luyen tap mang 01/Bai 6/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Module 1/12. Mang/Bai tap luyen tap mang 01/Bai 7/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Module 1/12. Mang/Bai tap luyen tap mang 01/Bai 8/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Module 1/12. Mang/Bai tap luyen tap mang 01/Bai 8/main.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Module 1/12. Mang/Bai tap luyen tap mang 01/Bai 8/main.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Module 1/12. Mang/Bai tap luyen tap mang 01/Bai 9/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Module 1/12. Mang/Bai tap luyen tap mang 01/Bai 9/main.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Module 1/12. Mang/Bai tap luyen tap mang 01/Bai 9/main.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Module 1/12. Mang/Bai tap luyen tap mang 02/Bai 1/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Module 1/12. Mang/Bai tap luyen tap mang 02/Bai 1/main.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Module 1/12. Mang/Bai tap luyen tap mang 02/Bai 1/main.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Module 1/12. Mang/Bai tap luyen tap mang 02/Bai 2/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Module 1/12. Mang/Bai tap luyen tap mang 02/Bai 2/main.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Module 1/12. Mang/Bai tap luyen tap mang 02/Bai 2/main.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Module 1/12. Mang/Bai tap luyen tap mang 02/Bai 3/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Module 1/12. Mang/Bai tap luyen tap mang 02/Bai 3/main.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Module 1/12. Mang/Bai tap luyen tap mang 02/Bai 3/main.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Module 1/12. Mang/Bai tap luyen tap mang 02/Bai 4/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Module 1/12. Mang/Bai tap luyen tap mang 02/Bai 4/main.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Module 1/12. Mang/Bai tap luyen tap mang 02/Bai 4/main.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Module 1/12. Mang/Bai tap luyen tap mang 02/Bai 5/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Module 1/12. Mang/Bai tap luyen tap mang 02/Bai 5/main.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Module 1/12. Mang/Bai tap luyen tap mang 02/Bai 5/main.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Module 1/12. Mang/Bai tap luyen tap mang 02/Bai 6/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Module 1/12. Mang/Bai tap luyen tap mang 02/Bai 6/main.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Module 1/12. Mang/Bai tap luyen tap mang 02/Bai 6/main.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Module 1/Test/1.html" beforeDir="false" afterPath="$PROJECT_DIR$/Module 1/Test/1.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -26,9 +49,9 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
+        <option value="HTML File" />
         <option value="CSS File" />
         <option value="JavaScript File" />
-        <option value="HTML File" />
       </list>
     </option>
   </component>
@@ -58,17 +81,18 @@
     <property name="list.type.of.created.stylesheet" value="CSS" />
   </component>
   <component name="RecentsManager">
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="C:\Users\ADMIN\Desktop\A1120I1-TranThanhPhuong\Module 1\Case Study\Yeu cau 1" />
-      <recent name="C:\Users\ADMIN\Desktop\A1120I1-TranThanhPhuong\Module 1\10. Cau truc lap" />
-      <recent name="C:\Users\admin\Desktop\A1120I1-TranThanhPhuong\Module 1" />
-    </key>
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\Users\ADMIN\Desktop\A1120I1-TranThanhPhuong\Module 1\Case Study\Yeu cau 3" />
       <recent name="C:\Users\admin\Desktop\A1120I1-TranThanhPhuong\Module 1\Case Study" />
       <recent name="C:\Users\admin\Desktop\A1120I1-TranThanhPhuong\Module 1\10. Cau truc lap\Bai tap luyen tap 1\Tinh tong cua cac so Fibonacci dau tien" />
       <recent name="C:\Users\admin\Desktop\A1120I1-TranThanhPhuong\Module 1\8.Cau truc dieu kien\Luyen tap cau truc co dieu kien 01" />
       <recent name="C:\Users\admin\Desktop\A1120I1-TranThanhPhuong\Module 1\8.Cau truc dieu kien\May tinh don gian" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\ADMIN\Desktop\A1120I1-TranThanhPhuong\Module 1\12. Mang\Bai tap luyen tap mang 02" />
+      <recent name="C:\Users\ADMIN\Desktop\A1120I1-TranThanhPhuong\Module 1\Case Study\Yeu cau 1" />
+      <recent name="C:\Users\ADMIN\Desktop\A1120I1-TranThanhPhuong\Module 1\10. Cau truc lap" />
+      <recent name="C:\Users\admin\Desktop\A1120I1-TranThanhPhuong\Module 1" />
     </key>
   </component>
   <component name="RunManager">
@@ -125,6 +149,9 @@
       <workItem from="1608547357417" duration="10403000" />
       <workItem from="1608598272658" duration="4769000" />
       <workItem from="1608619083867" duration="4616000" />
+      <workItem from="1608684708572" duration="15594000" />
+      <workItem from="1608726444789" duration="597000" />
+      <workItem from="1608770945719" duration="14229000" />
     </task>
     <servers />
   </component>
@@ -144,5 +171,20 @@
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="413" y="115" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1366.728@0.0.1366.728" timestamp="1608514791280" />
+    <state x="1683" y="0" key="CommitChangelistDialog2" timestamp="1608690193950">
+      <screen x="1366" y="0" width="1366" height="728" />
+    </state>
+    <state x="1683" y="0" key="CommitChangelistDialog2/0.0.1366.728/1366.0.1366.728@1366.0.1366.728" timestamp="1608690193950" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="javascript">
+          <url>file://$PROJECT_DIR$/Module 1/12. Mang/Bai tap luyen tap mang 01/Bai 6/index.html</url>
+          <line>29</line>
+          <option name="timeStamp" value="1" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>

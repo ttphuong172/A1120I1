@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Xoa phan tu khoi mang</title>
+</head>
+<body>
+<h3>Xoa phan tu khoi mang</h3>
+<label>Mang ban dau</label>
+<p id="array"></p>
+<label for="number">So can tim</label>
+<input id="number"></input>
+<button onclick="deleteElement()">Thuc hien</button>
+<br>
+<br>
+<label>Mang sau khi xoa</label>
+<p id="result"></p>
+<script>
+    var a=[]
+    var b=[]
+    for (i=0;i<10;i++){
+        a[i]=Math.round(Math.random()*100)
+    }
+    document.getElementById('array').innerHTML=a;
+
+    function deleteElement() {
+
+        var numberCheck=parseInt(document.getElementById('number').value);
+        for(i=0;i<10;i++){
+            b[i]=a[i]
+           if (numberCheck===a[i]){
+               for (j=i;j<a.length;j++){
+                   b[j]=a[j+1]
+               }
+               b[a.length-1]=0
+               break;
+           }
+        }
+            document.getElementById('result').innerHTML=b
+    }
+</script>
+</body>
+</html>

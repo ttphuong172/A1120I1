@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Bai2</title>
+</head>
+<body>
+<h3>Tim gia tri lon nhat trong mang va vi tri cua no</h3>
+<p id="array"></p>
+<p id="result"></p>
+<script>
+    var a=[];
+    for(i=0;i<10;i++){
+        a[i]=Math.round(Math.random()*100);
+    }
+    document.getElementById('array').innerHTML=a;
+    var max=a[0];
+    var vitri=0;
+    for (j=0;j<a.length;j++){
+       if (a[j]>max){
+           max=a[j]
+           vitri=j;
+       }
+    }
+    document.getElementById('result').innerHTML=('So lon nhat la '+max+ ' o vi tri '+ vitri)
+
+</script>
+</body>
+</html>

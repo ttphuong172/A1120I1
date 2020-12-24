@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>V is in the array</title>
+</head>
+<body>
+<h3>Sinh mang tu dong 100 phan tu</h3>
+<p id="array"></p>
+<input type="text" id="number">
+<button onclick="ketqua()">Kiem tra</button>
+<script>
+
+        var a=[]
+        for (i=0;i<100;i++) {
+            a[i] = Math.round(Math.random() * 100)
+        }
+        document.getElementById('array').innerHTML=a
+
+    function check(){
+            var numberCheck=document.getElementById('number').value;
+            for(i=0;i<100;i++){
+                //console.log(a[i])
+                if (a[i]==numberCheck){
+                    return true
+                }
+            }
+            return false
+    }
+    function ketqua(){
+          if (check()){
+              alert('V is in the array')
+          } else alert('V is not in the array')
+}
+
+</script>
+</body>
+</html>
