@@ -2,9 +2,12 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="622e7c0c-5ff8-4043-a400-721579fc0735" name="Default" comment="">
-      <change afterPath="$PROJECT_DIR$/Module 1/Hackrank/Mini-Max Sum/main.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Module 1/Hackrank/Staircase/main.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Module 1/Hackrank/Grading Students/main.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Module 1/Hackrank/Number Line Jumps/main.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Module 1/Hackrank/Tiime Conversion/main.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Module 1/Test/3.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Module 1/12. Mang/Bai tap luyen tap mang 01/Bai 6/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/Module 1/12. Mang/Bai tap luyen tap mang 01/Bai 6/index.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -124,6 +127,9 @@
       <workItem from="1608726444789" duration="597000" />
       <workItem from="1608770945719" duration="14229000" />
       <workItem from="1608860791122" duration="3205000" />
+      <workItem from="1608883154340" duration="1331000" />
+      <workItem from="1608893135060" duration="2295000" />
+      <workItem from="1608950789889" duration="1353000" />
     </task>
     <servers />
   </component>
