@@ -2,20 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="622e7c0c-5ff8-4043-a400-721579fc0735" name="Default" comment="">
-      <change afterPath="$PROJECT_DIR$/Module 1/14. Ham/Bai tap luyen tap ham 01/Bai 5/index.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Module 1/14. Ham/Bai tap luyen tap ham 01/Bai 5/main.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Module 1/14. Ham/Bai tap luyen tap ham 01/Bai 5/main.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Module 1/14. Ham/Bai tap luyen tap ham 02/Bai 1/index.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Module 1/14. Ham/Bai tap luyen tap ham 02/Bai 2/index.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Module 1/14. Ham/Bai tap luyen tap ham 02/Bai 3/index.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Module 1/14. Ham/Bai tap luyen tap ham 02/Bai 4/index.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Module 1/14. Ham/Bai tap luyen tap ham 02/Bai 5/index.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Module 1/14. Ham/Bai tap luyen tap ham 02/Bai 6/index.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Module 1/14. Ham/Bai tap luyen tap ham 02/Bai 7/index.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Module 1/14. Ham/Bai tap ung dung quan ly san pham su dung ham/index.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Module 1/14. Ham/Bai tap ung dung quan ly san pham su dung ham/main.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Module 1/14. Ham/Bai tap ung dung quan ly san pham su dung ham/main.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Module 1/14. Ham/Bai tap kiem tra doi xung bang de quy/index.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Module 1/14. Ham/Bai tap ung dung quan ly san pham su dung ham/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/Module 1/14. Ham/Bai tap ung dung quan ly san pham su dung ham/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Module 1/14. Ham/Bai tap ung dung quan ly san pham su dung ham/main.js" beforeDir="false" afterPath="$PROJECT_DIR$/Module 1/14. Ham/Bai tap ung dung quan ly san pham su dung ham/main.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -31,9 +21,9 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="HTML File" />
         <option value="CSS File" />
         <option value="JavaScript File" />
+        <option value="HTML File" />
       </list>
     </option>
   </component>
@@ -139,7 +129,9 @@
       <workItem from="1608883154340" duration="1331000" />
       <workItem from="1608893135060" duration="2295000" />
       <workItem from="1608950789889" duration="1353000" />
-      <workItem from="1609122160230" duration="16899000" />
+      <workItem from="1609122160230" duration="17671000" />
+      <workItem from="1609156286492" duration="6673000" />
+      <workItem from="1609163213182" duration="663000" />
     </task>
     <servers />
   </component>
