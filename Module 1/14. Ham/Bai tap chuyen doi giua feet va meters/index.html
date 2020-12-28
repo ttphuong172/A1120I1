@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Chuyển đổi giữa feet và meters</title>
+    <link rel="stylesheet" href="./main.css">
+</head>
+<body>
+<table>
+    <tr>
+        <td>Length</td>
+        <td>From</td>
+        <td>To</td>
+    </tr>
+    <td><input type="text" id="length"></td>
+    <td>
+        <select name="" id="from">
+            <option value="meter">Meter</option>
+            <option value="feet">Feet</option>
+
+        </select>
+    </td>
+    <td>
+        <select name="" id="to">
+            <option value="feet">Feet</option>
+            <option value="meter">Meter</option>
+
+        </select>
+    </td>
+    <td>
+        <button id="btnconvert" onclick="convert()">Convert</button>
+    </td>
+</table>
+<p>Result: </p><p id="result"></p>
+<script src="./main.js">
+
+</script>
+</body>
+</html>

@@ -2,12 +2,24 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="622e7c0c-5ff8-4043-a400-721579fc0735" name="Default" comment="">
-      <change afterPath="$PROJECT_DIR$/Module 1/Hackrank/Grading Students/main.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Module 1/Hackrank/Number Line Jumps/main.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Module 1/Hackrank/Tiime Conversion/main.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Module 1/Test/3.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Module 1/14. Ham/Bai tap chuyen doi giua feet va meters/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Module 1/14. Ham/Bai tap chuyen doi giua feet va meters/main.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Module 1/14. Ham/Bai tap chuyen doi giua feet va meters/main.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Module 1/14. Ham/Bai tap kiem tra so nguyen to/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Module 1/14. Ham/Bai tap kiem tra so nguyen to/main.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Module 1/14. Ham/Bai tap kiem tra so nguyen to/main.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Module 1/14. Ham/Bai tap luyen tap ham 01/Bai 1/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Module 1/14. Ham/Bai tap luyen tap ham 01/Bai 2/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Module 1/14. Ham/Bai tap luyen tap ham 01/Bai 3/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Module 1/14. Ham/Bai tap luyen tap ham 01/Bai 3/main.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Module 1/14. Ham/Bai tap luyen tap ham 01/Bai 3/main.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Module 1/14. Ham/Thuc hanh ham chuyen doi nhiet do/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Module 1/14. Ham/Thuc hanh ham chuyen doi nhiet do/main.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Module 1/14. Ham/Thuc hanh ham chuyen doi nhiet do/main.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Module 1/14. Ham/Thuc hanh tim gia tri nho nhat trong mang/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Module 1/14. Ham/Thuc hanh tim gia tri nho nhat trong mang/main.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Module 1/14. Ham/Thuc hanh tim gia tri nho nhat trong mang/main.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Module 1/12. Mang/Bai tap luyen tap mang 01/Bai 6/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/Module 1/12. Mang/Bai tap luyen tap mang 01/Bai 6/index.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -23,8 +35,8 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="CSS File" />
         <option value="HTML File" />
+        <option value="CSS File" />
         <option value="JavaScript File" />
       </list>
     </option>
@@ -55,18 +67,19 @@
     <property name="list.type.of.created.stylesheet" value="CSS" />
   </component>
   <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\ADMIN\Desktop\A1120I1-TranThanhPhuong\Module 1\14. Ham\Tim gia tri nho nhat trong mang" />
+      <recent name="C:\Users\ADMIN\Desktop\A1120I1-TranThanhPhuong\Module 1\12. Mang\Bai tap luyen tap mang 02" />
+      <recent name="C:\Users\ADMIN\Desktop\A1120I1-TranThanhPhuong\Module 1\Case Study\Yeu cau 1" />
+      <recent name="C:\Users\ADMIN\Desktop\A1120I1-TranThanhPhuong\Module 1\10. Cau truc lap" />
+      <recent name="C:\Users\admin\Desktop\A1120I1-TranThanhPhuong\Module 1" />
+    </key>
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\Users\ADMIN\Desktop\A1120I1-TranThanhPhuong\Module 1\Case Study\Yeu cau 3" />
       <recent name="C:\Users\admin\Desktop\A1120I1-TranThanhPhuong\Module 1\Case Study" />
       <recent name="C:\Users\admin\Desktop\A1120I1-TranThanhPhuong\Module 1\10. Cau truc lap\Bai tap luyen tap 1\Tinh tong cua cac so Fibonacci dau tien" />
       <recent name="C:\Users\admin\Desktop\A1120I1-TranThanhPhuong\Module 1\8.Cau truc dieu kien\Luyen tap cau truc co dieu kien 01" />
       <recent name="C:\Users\admin\Desktop\A1120I1-TranThanhPhuong\Module 1\8.Cau truc dieu kien\May tinh don gian" />
-    </key>
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="C:\Users\ADMIN\Desktop\A1120I1-TranThanhPhuong\Module 1\12. Mang\Bai tap luyen tap mang 02" />
-      <recent name="C:\Users\ADMIN\Desktop\A1120I1-TranThanhPhuong\Module 1\Case Study\Yeu cau 1" />
-      <recent name="C:\Users\ADMIN\Desktop\A1120I1-TranThanhPhuong\Module 1\10. Cau truc lap" />
-      <recent name="C:\Users\admin\Desktop\A1120I1-TranThanhPhuong\Module 1" />
     </key>
   </component>
   <component name="RunManager">
@@ -130,6 +143,7 @@
       <workItem from="1608883154340" duration="1331000" />
       <workItem from="1608893135060" duration="2295000" />
       <workItem from="1608950789889" duration="1353000" />
+      <workItem from="1609122160230" duration="9022000" />
     </task>
     <servers />
   </component>
@@ -153,6 +167,10 @@
       <screen x="1366" y="0" width="1366" height="728" />
     </state>
     <state x="1683" y="0" key="CommitChangelistDialog2/0.0.1366.728/1366.0.1366.728@1366.0.1366.728" timestamp="1608690193950" />
+    <state x="346" y="49" width="672" height="678" key="search.everywhere.popup" timestamp="1609129749058">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="346" y="49" width="672" height="678" key="search.everywhere.popup/0.0.1366.728/1366.0.1366.728@0.0.1366.728" timestamp="1609129749058" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
