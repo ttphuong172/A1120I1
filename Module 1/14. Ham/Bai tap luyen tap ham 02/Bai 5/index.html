@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Tim so nho nhat trong 3 so</title>
+</head>
+<body>
+<script>
+    var number1=prompt('Nhap so thu nhat');
+    var number2=prompt('Nhap so thu 2');
+    var number3=prompt('Nhap sp thu 3')
+    alert('So nho nhat la: '+min(number1,number2,number3))
+
+    function min(a,b,c){
+        if ((a<b)&& (a<c)){
+            return a
+        } else {
+            if (b<c){
+                return b
+            } else
+                return c
+        }
+    }
+</script>
+</body>
+</html>

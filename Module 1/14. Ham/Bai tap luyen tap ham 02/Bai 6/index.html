@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Ham kiem tra so nguyen duong</title>
+</head>
+<body>
+<script>
+    var number=prompt('Nhap vao 1 so bat ky') ;
+   if (isNaN(number)){
+       alert(number+ ' khong la so nguyen duong')
+   } else{
+       number=number-10+10;
+    if (checkPos(number)){
+        alert(number+ ' la so nguyen duong')
+    } else
+    {
+        alert(number+ ' khong la so nguyen duong')
+    }
+   }
+
+    function checkPos(a){
+
+        if (isNaN(a)){
+            return false
+        } else {
+            if ((a>0)&&(Number.isInteger(a))){
+                return true
+            } else
+                return false
+        }
+
+    }
+
+</script>
+</body>
+</html>
