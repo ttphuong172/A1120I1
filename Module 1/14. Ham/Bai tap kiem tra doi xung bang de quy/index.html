@@ -6,24 +6,25 @@
 </head>
 <body>
 
-<!--Javascript-->
-<!--function isPalindrome(string) {-->
-<!--if (string.length <= 1) {-->
-<!--return true;-->
-<!--}-->
+<script>
+    function checkDoiXung(string){
+        if (string.length<=1){
+            return true
+        }
+        var soDauTien=string[0];
+        var soCuoiCung=string[string.length-1]
 
-<!--let [firstLetter] = string;-->
-<!--let lastLetter = string[string.length - 1];-->
+        if(soDauTien===soCuoiCung){
+            var soBenTrong=string.substring(1,string.length-1);
+            return  checkDoiXung(soBenTrong)
+        }
+        else{
+            return false
+        }
+    }
 
-<!--if (firstLetter === lastLetter) {-->
-<!--let stringWithoutFirstAndLastLetters = string.substring(-->
-<!--1,-->
-<!--string.length - 1-->
-<!--);-->
-<!--return isPalindrome(stringWithoutFirstAndLastLetters);-->
-<!--} else {-->
-<!--return false;-->
-<!--}-->
-<!--}-->
+    var myString='abcdedcba';
+   console.log(checkDoiXung(myString));
+</script>
 </body>
 </html>
