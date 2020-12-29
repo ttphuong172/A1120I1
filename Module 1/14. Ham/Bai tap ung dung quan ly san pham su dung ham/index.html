@@ -2,11 +2,12 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
+    <title>Quan ly san pham</title>
     <link rel="stylesheet" href="./main.css">
 </head>
 <body onload="displayProduct()">
 <h3>Add New Product</h3>
+
 <input type="text" placeholder="New Product" id="newproduct">
 <button onclick="addProduct()">Add</button>
 <br>
@@ -17,6 +18,8 @@
 <span id="index" style="color: white"></span>
 
 <h3>Display All Product</h3>
+<span style="float: left;font-weight: bold;font-size: 18px">Product Name</span>
+<span id="totalproduct" style="float: right;font-weight: bold;font-size: 18px;color:#a83a3d "></span>
 <p id="displayproduct"></p>
 <script src="main.js"></script>
 </body>

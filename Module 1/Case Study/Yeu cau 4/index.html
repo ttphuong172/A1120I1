@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+    <link rel="stylesheet" href="./main.css">
+</head>
+<body onload="displayCustommer()">
+
+<h3>Thêm mới khách hàng</h3>
+<label for="name">Họ và tên</label>
+<input type="text" id="name">
+<br>
+<br>
+<label for="cmnd">Số điện thoại</label>
+<input type="text" id="cmnd">
+<br>
+<br>
+<label for="address">Địa chỉ</label>
+<input type="text" id="address">
+<button onclick="addCustommer()">Thêm mới</button>
+<br>
+<br>
+<h3>Danh sách khách hàng</h3>
+
+<span id="totalcustommer" style="float: right;font-weight: bold;font-size: 18px;color:#a83a3d "></span>
+<p id="displaycustommer"></p>
+
+<script src="main.js"></script>
+</body>
+</html>

@@ -4,17 +4,99 @@
     <meta charset="UTF-8">
     <title>Title</title>
 </head>
-<body>
+<body onload="displayCustommer()">
+<label for="fullname">Ho ten</label>
+<input type="text" id="fullname">
+<br>
+<br>
+<label for="lop">Lop</label>
+<input type="text" id="lop">
+<br>
+<br>
+<label for="age">Tuoi</label>
+<input type="text" id="age">
+<br>
+<br>
+<button onclick="addCustommer()">Them</button>
+<p id="result1"></p>
+<p id="result"></p>
 <script>
+    var pupil=[
+        ['Tran Thanh Phuong','5clc',10],
+        ['Truong Bao Giang Chau','6clc',15],
+        ['Tran Thanh Lam','5clc',14]
+    ]
+function addCustommer(){
+    var name = document.getElementById('fullname').value;
+    var lop=document.getElementById('lop').value;
+    var age =document.getElementById('age').value;
+    myArray1=[]
+    myArray1.push(name)
+    myArray1.push(lop);
+    myArray1.push(age)
+
+    console.log(myArray1);
+    pupil.push(myArray1)
+    displayCustommer()
+}
+function displayCustommer(){
+    myString1='<table border="1">'
+    for(i=0;i<pupil.length;i++){
+        myString1+='<tr>'
+        for(j=0;j<pupil[0].length;j++){
+            myString1+='<td>'+pupil[i][j]+'</td>'
+            console.log(pupil[i][j])
+        }
+        myString1+='</tr>'
+    }
+    myString1+='</table>'
+
+    console.log(myString1)
+
+    document.getElementById('result1').innerHTML=myString1;
+
+}
+    pupil.push([12,12,9])
+    pupil.push(['Tran Thanh Khanh Han','4clc',9])
+    pupil.push(['Truong Bao Hoang','4clc',9]);
+    pupil.push([15,12,9])
+
+
+
+
+
     var students=[];
     var student1={
         name:'Nguyen Van A',
         class:'5clc',
         age:5
     }
+    var student2={
+        name:'Nguyen Van B',
+        class:'5clc',
+        age:10
+    }
+    var student3={
+        name:'Nguyen Van C',
+        class:'5clc',
+        age:15
+    }
     students.push(student1)
-    console.log(students);
-    console.log(student1)
+    students.push(student2)
+    students.push(student3)
+
+    myString='<table>'
+ for(i=0;i<students.length;i++){
+
+     console.log(students[i].name);
+     console.log(students[i].class);
+     console.log(students[i].age);
+     myString+='<tr> <td>'+students[i].name+'</td>'+'<td>' +students[i].class+'</td>'+'<td>'+students[i].age+'</td>'+'</tr>';
+ }
+ myString+='</table>'
+    document.getElementById('result').innerHTML=myString
+ console.log(myString);
+
 </script>
 </body>
 </html>

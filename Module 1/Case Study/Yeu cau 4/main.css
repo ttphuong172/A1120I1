@@ -1,13 +1,19 @@
 body{
-    width: 50%;
+    width: 70%;
     margin: auto;
 }
 table{
     border-collapse: collapse;
     width: 100%;
 }
+th{
+    text-align: left;
+}
 td{
     height: 50px;
+}
+tr:nth-child(even) {
+    background-color: #f2f2f2;
 }
 button{
     background-color:#50af50;
@@ -21,6 +27,9 @@ input{
     height: 30px;
     width: 340px ;
 }
-tr:nth-child(even) {
-    background-color: #f2f2f2;
+
+
+label{
+    float: left;
+    width: 150px;
 }

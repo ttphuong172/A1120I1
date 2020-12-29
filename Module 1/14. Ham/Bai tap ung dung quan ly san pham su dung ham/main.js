@@ -7,6 +7,7 @@ for (i=0;i<myProduct.length;i++){
 }
 myString=myString+'</table>';
 document.getElementById('displayproduct').innerHTML=myString;
+document.getElementById('totalproduct').innerHTML=myProduct.length+' products';
 console.log(myString)
 }
 
@@ -18,11 +19,14 @@ function addProduct(){
 }
 
 function deleteProduct(index) {
-    myProduct.splice(index,1);
+    var isDelete = confirm('Ban co muon xoa '+myProduct[index]+'?')
+    if (isDelete){
+        myProduct.splice(index,1);
+    }
     displayProduct()
 }
 function editProduct(index) {
-    alert(index);
+    //alert(index);
     document.getElementById('editproduct').value=myProduct[index];
     document.getElementById('index').innerHTML=index;
 }
