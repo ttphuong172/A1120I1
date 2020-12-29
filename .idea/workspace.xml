@@ -2,14 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="622e7c0c-5ff8-4043-a400-721579fc0735" name="Default" comment="">
-      <change afterPath="$PROJECT_DIR$/Module 1/Case Study/Yeu cau 4/index.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Module 1/Case Study/Yeu cau 4/main.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Module 1/Case Study/Yeu cau 4/main.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Module 1/14. Ham/Bai tap ung dung quan ly san pham su dung ham/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/Module 1/14. Ham/Bai tap ung dung quan ly san pham su dung ham/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Module 1/14. Ham/Bai tap ung dung quan ly san pham su dung ham/main.css" beforeDir="false" afterPath="$PROJECT_DIR$/Module 1/14. Ham/Bai tap ung dung quan ly san pham su dung ham/main.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Module 1/14. Ham/Bai tap ung dung quan ly san pham su dung ham/main.js" beforeDir="false" afterPath="$PROJECT_DIR$/Module 1/14. Ham/Bai tap ung dung quan ly san pham su dung ham/main.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Module 1/Test/3.html" beforeDir="false" afterPath="$PROJECT_DIR$/Module 1/Test/3.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Module 1/14. Ham/Bai tap kiem tra doi xung bang de quy/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/Module 1/14. Ham/Bai tap kiem tra doi xung bang de quy/index.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -58,19 +52,19 @@
     <property name="list.type.of.created.stylesheet" value="CSS" />
   </component>
   <component name="RecentsManager">
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="C:\Users\ADMIN\Desktop\A1120I1-TranThanhPhuong\Module 1\14. Ham\Tim gia tri nho nhat trong mang" />
-      <recent name="C:\Users\ADMIN\Desktop\A1120I1-TranThanhPhuong\Module 1\12. Mang\Bai tap luyen tap mang 02" />
-      <recent name="C:\Users\ADMIN\Desktop\A1120I1-TranThanhPhuong\Module 1\Case Study\Yeu cau 1" />
-      <recent name="C:\Users\ADMIN\Desktop\A1120I1-TranThanhPhuong\Module 1\10. Cau truc lap" />
-      <recent name="C:\Users\admin\Desktop\A1120I1-TranThanhPhuong\Module 1" />
-    </key>
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\Users\ADMIN\Desktop\A1120I1-TranThanhPhuong\Module 1\Case Study\Yeu cau 3" />
       <recent name="C:\Users\admin\Desktop\A1120I1-TranThanhPhuong\Module 1\Case Study" />
       <recent name="C:\Users\admin\Desktop\A1120I1-TranThanhPhuong\Module 1\10. Cau truc lap\Bai tap luyen tap 1\Tinh tong cua cac so Fibonacci dau tien" />
       <recent name="C:\Users\admin\Desktop\A1120I1-TranThanhPhuong\Module 1\8.Cau truc dieu kien\Luyen tap cau truc co dieu kien 01" />
       <recent name="C:\Users\admin\Desktop\A1120I1-TranThanhPhuong\Module 1\8.Cau truc dieu kien\May tinh don gian" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\ADMIN\Desktop\A1120I1-TranThanhPhuong\Module 1\14. Ham\Tim gia tri nho nhat trong mang" />
+      <recent name="C:\Users\ADMIN\Desktop\A1120I1-TranThanhPhuong\Module 1\12. Mang\Bai tap luyen tap mang 02" />
+      <recent name="C:\Users\ADMIN\Desktop\A1120I1-TranThanhPhuong\Module 1\Case Study\Yeu cau 1" />
+      <recent name="C:\Users\ADMIN\Desktop\A1120I1-TranThanhPhuong\Module 1\10. Cau truc lap" />
+      <recent name="C:\Users\admin\Desktop\A1120I1-TranThanhPhuong\Module 1" />
     </key>
   </component>
   <component name="RunManager">
@@ -137,7 +131,8 @@
       <workItem from="1609122160230" duration="17671000" />
       <workItem from="1609156286492" duration="6673000" />
       <workItem from="1609163213182" duration="663000" />
-      <workItem from="1609203979862" duration="12760000" />
+      <workItem from="1609203979862" duration="13094000" />
+      <workItem from="1609230914485" duration="1095000" />
     </task>
     <servers />
   </component>
