@@ -201,8 +201,11 @@ function checkEmail(){
     var email=document.getElementById('inputemail').value;
     var posa=email.indexOf('@')
     var posdot=email.lastIndexOf('.')
-    if(posa>posdot){
+    if (email.length===0){
         document.getElementById('erroremail').innerHTML="Vui lòng nhập lại email";
+        return false
+    } else if (posa>posdot){
+        document.getElementById('erroremail').innerHTML="Vui lòng nhập lại email đúng dịnh dạng";
         return false
     } else
         document.getElementById('erroremail').innerHTML="";

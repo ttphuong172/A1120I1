@@ -1,7 +1,7 @@
 var arrNameCustomers=[
-    ['Tran Thanh Phuong','0915010414','Ha Noi'],
-    ['Truong Bao Giang Chau','0935326684','Tokyo'],
-    ['Tran Thanh Lam','0789023567','New York']
+    ['Tran Thanh Phuong','205115015','ttphuong172@gmail.com','Ha Noi'],
+    ['Truong Bao Giang Chau','205115016','ttphuong172@gmail.com','Tokyo'],
+    ['Tran Thanh Lam','205115017','ttphuong172@gmail.com','New York']
 ]
 var arrNameCustomers2=sapXep()
 
@@ -9,9 +9,9 @@ function sapXep(){
     for (i=0;i<arrNameCustomers.length;i++){
         console.log(i)
         console.log(getName(arrNameCustomers[i][0]))
-        arrNameCustomers[i][3]=getName(arrNameCustomers[i][0])
+        arrNameCustomers[i][4]=getName(arrNameCustomers[i][0])
     }
-    return arrNameCustomers.sort(compareBy(3))
+    return arrNameCustomers.sort(compareBy(4))
 }
 
 
@@ -36,14 +36,18 @@ function sapXep(){
      function addCustommer(){
         var name=document.getElementById('name').value;
          var cmnd=document.getElementById('cmnd').value;
+         var email=document.getElementById('email').value;
          var address=document.getElementById('address').value;
          myArray=[]
-         myArray.push(name)
-         myArray.push(cmnd);
-         myArray.push(address);
-         arrNameCustomers.push(myArray)
-         sapXep()
-         displayCustommer()
+         if (checkFullName() && checkCMND()&& checkEmail()) {
+             myArray.push(name)
+             myArray.push(cmnd);
+             myArray.push(email);
+             myArray.push(address);
+             arrNameCustomers.push(myArray)
+             sapXep()
+             displayCustommer()
+         }
      }
 
      function deleteCustommer(index) {
@@ -77,4 +81,78 @@ function getName(string){
         }
     }
     return string.substring(string.length,index+1)
+}
+
+document.getElementById('name').addEventListener("blur",checkFullName);
+document.getElementById('name').addEventListener("blur",autoCorrect);
+document.getElementById('cmnd').addEventListener("blur",checkCMND)
+document.getElementById('email').addEventListener("blur",checkEmail)
+document.getElementById('email').addEventListener("blur",autoCorrectEmail)
+
+function checkFullName() {
+    var inputFullName= document.getElementById('name').value
+    if(inputFullName.trim().length===0){
+        document.getElementById('errorname').innerHTML="Vui lòng nhập Họ và tên"
+        return false
+    } else {
+        document.getElementById('errorname').innerHTML=""
+        return true;
+    }
+}
+function autoCorrect(){
+    var inputFullName= document.getElementById('name').value.toLowerCase().trim();
+    myString=inputFullName[0].toUpperCase();
+    for(i=1;i<inputFullName.length;i++){
+        if (inputFullName[i-1]===' '){
+            myString+=' '+inputFullName[i].toUpperCase()
+        } else{
+            myString+=inputFullName[i]
+        }
+    }
+    //Bieu thuc chinh quy, chua hoc
+    myString=myString.replace(/\s+/g, ' ')
+    document.getElementById('name').value=myString
+}
+function checkCMND(){
+
+    var inputcmnd=document.getElementById('cmnd').value;
+
+    if (isNaN(inputcmnd)) {
+        document.getElementById('errorcmnd').innerHTML = 'Vui lòng nhập lại'
+        return false
+    }else if(inputcmnd.trim().length===0){
+        document.getElementById('errorcmnd').innerHTML='Vui lòng nhập số CMND'
+        return false
+    } else if(parseInt(inputcmnd)<0){
+        document.getElementById('errorcmnd').innerHTML='Sai định dạng'
+        return false
+    }
+    else if (inputcmnd.trim().length!==10){
+        document.getElementById('errorcmnd').innerHTML='Số CMND phải 10 số'
+        return false
+    }  else{
+        document.getElementById('errorcmnd').innerHTML="";
+        return true
+    }
+}
+function checkEmail(){
+    var email=document.getElementById('email').value;
+    var posa=email.indexOf('@')
+    var posdot=email.lastIndexOf('.')
+    if (email.length===0){
+        document.getElementById('erroremail').innerHTML="Vui lòng nhập lại email";
+        return false
+    } else if((posa===-1 ||posdot===-1)){
+        document.getElementById('erroremail').innerHTML="Vui lòng nhập lại email đúng dịnh dạng";
+        return false
+    } else if (posa>posdot){
+        document.getElementById('erroremail').innerHTML="Vui lòng nhập lại email đúng dịnh dạng";
+        return false
+    } else
+        document.getElementById('erroremail').innerHTML="";
+    return true
+}
+function  autoCorrectEmail() {
+    var inputFullName= document.getElementById('email').value.toLowerCase().trim();
+    document.getElementById('email').value=inputFullName;
 }
