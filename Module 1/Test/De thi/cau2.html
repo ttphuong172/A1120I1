@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+<script>
+    do {
+        var mark=prompt('Nhap vao diem cua hoc sinh')
+    } while ((mark>100) || (mark <0) || (isNaN(mark)))
+    floorMark(mark)
+
+    function floorMark(mark) {
+        if (mark<48){
+            alert('Truot')
+        } else if(mark%5<3){
+            mark=mark
+            alert(mark)
+        }
+        else{
+            mark=Math.round(mark/5)*5
+            alert(mark)
+        }
+    }
+
+</script>
+</body>
+</html>

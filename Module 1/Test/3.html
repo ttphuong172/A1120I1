@@ -20,6 +20,8 @@
 <button onclick="addCustommer()">Them</button>
 <p id="result1"></p>
 <p id="result"></p>
+
+<button onclick="themCustommer()">Them</button>
 <script>
     var pupil=[
         ['Tran Thanh Phuong','5clc',10],
@@ -85,6 +87,8 @@ function displayCustommer(){
     students.push(student2)
     students.push(student3)
 
+
+
     myString='<table>'
  for(i=0;i<students.length;i++){
 
@@ -96,6 +100,15 @@ function displayCustommer(){
  myString+='</table>'
     document.getElementById('result').innerHTML=myString
  console.log(myString);
+
+function themCustommer(){
+    var name = document.getElementById('fullname').value;
+    var studenttemp={
+    }
+    studenttemp.name=name;
+    students.push(studenttemp)
+    console.log(students)
+}
 
 </script>
 </body>

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>cau1</title>
+</head>
+<body>
+<label>Mang nhap vao: </label>
+<span id="array"></span>
+<br>
+<label>Tong cac so chia het cho 3 va 5 la: </label>
+<span id="result"></span>
+<script>
+    var arr=[]
+    var sum=0;
+    do{
+        var soPhanTu=prompt('Nhap vao so phan tu: ')
+    } while (soPhanTu>20)
+    for (i=0;i<soPhanTu;i++){
+        arr[i]=prompt('Phan tu thu '+(parseInt(i)+1)+':')
+    }
+     for(j=0;j<soPhanTu;j++){
+         var boiChung35=(arr[j]%3===0)&&(arr[j]%5===0)
+         if (boiChung35){
+             console.log(arr[j])
+             sum+=parseInt(arr[j])
+         }
+     }
+    document.getElementById('array').innerHTML=arr;
+    document.getElementById('result').innerHTML=sum
+</script>
+</body>
+</html>

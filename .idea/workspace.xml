@@ -2,20 +2,14 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="622e7c0c-5ff8-4043-a400-721579fc0735" name="Default" comment="">
-      <change afterPath="$PROJECT_DIR$/Module 1/16. Lap trinh huong doi tuong/Thuc hanh canvas/index.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Module 1/16. Lap trinh huong doi tuong/Thuc hanh canvas/main.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Module 1/16. Lap trinh huong doi tuong/Thuc hanh xay dung lop hinh tron/index.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Module 1/16. Lap trinh huong doi tuong/Thuc hanh xay dung lop hinh tron/main.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Module 1/Test/De thi/cau1.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Module 1/Test/De thi/cau2.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Module 1/Test/De thi/cau3.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Module 1/Test/De thi/cau4/cau4.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Module 1/Test/De thi/cau4/main.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Module 1/Test/De thi/cau4/main.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Module 1/14. Ham/Bai tap luyen tap ham 02/Bai 8/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/Module 1/14. Ham/Bai tap luyen tap ham 02/Bai 8/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Module 1/14. Ham/Bai tap luyen tap ham 02/Bai 8/main.css" beforeDir="false" afterPath="$PROJECT_DIR$/Module 1/14. Ham/Bai tap luyen tap ham 02/Bai 8/main.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Module 1/14. Ham/Bai tap luyen tap ham 02/Bai 8/main.js" beforeDir="false" afterPath="$PROJECT_DIR$/Module 1/14. Ham/Bai tap luyen tap ham 02/Bai 8/main.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Module 1/14. Ham/Bai tap luyen tap ham 02/Bai 9/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/Module 1/14. Ham/Bai tap luyen tap ham 02/Bai 9/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Module 1/14. Ham/Bai tap luyen tap ham 02/Bai 9/main.css" beforeDir="false" afterPath="$PROJECT_DIR$/Module 1/14. Ham/Bai tap luyen tap ham 02/Bai 9/main.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Module 1/14. Ham/Bai tap luyen tap ham 02/Bai 9/main.js" beforeDir="false" afterPath="$PROJECT_DIR$/Module 1/14. Ham/Bai tap luyen tap ham 02/Bai 9/main.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Module 1/Case Study/Yeu cau 3/main.js" beforeDir="false" afterPath="$PROJECT_DIR$/Module 1/Case Study/Yeu cau 3/main.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Module 1/Case Study/Yeu cau 4/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/Module 1/Case Study/Yeu cau 4/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Module 1/Case Study/Yeu cau 4/main.js" beforeDir="false" afterPath="$PROJECT_DIR$/Module 1/Case Study/Yeu cau 4/main.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Module 1/Test/3.html" beforeDir="false" afterPath="$PROJECT_DIR$/Module 1/Test/3.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -31,9 +25,9 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="CSS File" />
         <option value="HTML File" />
         <option value="JavaScript File" />
+        <option value="CSS File" />
       </list>
     </option>
   </component>
@@ -65,10 +59,11 @@
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\ADMIN\Desktop\A1120I1-TranThanhPhuong\Module 1\Test\De thi\cau4" />
+      <recent name="C:\Users\ADMIN\Desktop\A1120I1-TranThanhPhuong\Module 1\Test\De thi" />
       <recent name="C:\Users\ADMIN\Desktop\A1120I1-TranThanhPhuong\Module 1\12. Mang\Bai tap luyen tap mang 02" />
       <recent name="C:\Users\ADMIN\Desktop\A1120I1-TranThanhPhuong\Module 1\Case Study\Yeu cau 1" />
       <recent name="C:\Users\ADMIN\Desktop\A1120I1-TranThanhPhuong\Module 1\10. Cau truc lap" />
-      <recent name="C:\Users\admin\Desktop\A1120I1-TranThanhPhuong\Module 1" />
     </key>
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\Users\ADMIN\Desktop\A1120I1-TranThanhPhuong\Module 1\Case Study\Yeu cau 3" />
@@ -146,7 +141,9 @@
       <workItem from="1609556961888" duration="405000" />
       <workItem from="1609724831372" duration="2134000" />
       <workItem from="1609757254933" duration="123000" />
-      <workItem from="1609757402054" duration="4650000" />
+      <workItem from="1609757402054" duration="9305000" />
+      <workItem from="1609807778574" duration="2500000" />
+      <workItem from="1609814210014" duration="7571000" />
     </task>
     <servers />
   </component>

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Thi thu</title>
+</head>
+<body>
+<script>
+    var lengthArray=prompt('Nhap do dai mang a: ');
+    var count=0;
+    var arrayTest=[]
+    for (i=0;i<lengthArray;i++){
+        arrayTest[i]=prompt('Phan tu thu '+i)
+    }
+    var k =prompt('Nhap vao k')
+    for (j=0;j<lengthArray;j++){
+        for (l=j+1;l<lengthArray;l++){
+           // console.log(arrayTest[j],arrayTest[l])
+            var tong = parseInt(arrayTest[j])+parseInt(arrayTest[l])
+            if (tong%k===0){
+                console.log(arrayTest[j]+'+' +arrayTest[l]+'='+tong)
+                count+=1;
+            }
+        }
+    }
+    alert(count)
+</script>
+</body>
+</html>
