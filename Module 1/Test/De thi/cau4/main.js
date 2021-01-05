@@ -19,9 +19,11 @@ custommer.push(customer2);
 function displayCustommer(){
     myString='<table border="1">'
     for(i=0;i<custommer.length;i++){
+        console.log(custommer[i].id);
         console.log(custommer[i].name);
-        console.log(custommer[i].class);
-        console.log(custommer[i].age);
+        console.log(custommer[i].tel);
+        console.log(custommer[i].address);
+        console.log(custommer[i].email);
         myString+='<tr> <td>'+custommer[i].id+'</td>'+ '<td>'+custommer[i].name+'</td>'+'<td>' +custommer[i].tel+'</td>'+'<td>'+custommer[i].address+'</td>' + '<td>'+custommer[i].email+'</td> </tr>';
     }
     myString+='</table>'
@@ -35,7 +37,11 @@ function addCustommer(){
     var address=document.getElementById('address').value;
     var email=document.getElementById('email').value;
     var customertemp={}
+    customertemp.id=id;
     customertemp.name=name;
+    customertemp.tel=tel
+    customertemp.address=address
+    customertemp.email=email
     custommer.push(customertemp)
     displayCustommer()
 }

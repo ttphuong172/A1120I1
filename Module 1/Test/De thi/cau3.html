@@ -6,11 +6,16 @@
 </head>
 <body>
 <script>
-    var lengthArray=prompt('Nhap do dai mang a: ');
+    do {
+        var lengthArray=prompt('Nhap do dai mang a: ');
+    } while ((lengthArray>50)|| (lengthArray<0)|| (isNaN(lengthArray)))
+
     var count=0;
     var arrayTest=[]
     for (i=0;i<lengthArray;i++){
-        arrayTest[i]=prompt('Phan tu thu '+i)
+        do{
+            arrayTest[i]=prompt('Phan tu thu '+i)
+        } while (isNaN(arrayTest[i]))
     }
     var k =prompt('Nhap vao k')
     for (j=0;j<lengthArray;j++){
