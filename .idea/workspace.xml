@@ -2,11 +2,15 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="622e7c0c-5ff8-4043-a400-721579fc0735" name="Default" comment="">
-      <change afterPath="$PROJECT_DIR$/Module 1/16. Lap trinh huong doi tuong/Bai tap xay dung lop hinh chu nhat/index.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Module 1/16. Lap trinh huong doi tuong/Bai tap xay dung lop hinh chu nhat/main.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Module 1/16. Lap trinh huong doi tuong/Bai tap xay dung lop mo ta Temperature/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Module 1/16. Lap trinh huong doi tuong/Bai tap xay dung lop mo ta Temperature/main.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Module 1/16. Lap trinh huong doi tuong/Bai tap xay dung lop mo ta dien thoai/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Module 1/16. Lap trinh huong doi tuong/Bai tap xay dung lop mo ta dien thoai/main.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Module 1/16. Lap trinh huong doi tuong/Thuc hanh xay dung lop Date/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Module 1/16. Lap trinh huong doi tuong/Thuc hanh xay dung lop Date/main.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Module 1/Test/4.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Module 1/Test/De thi/cau1.html" beforeDir="false" afterPath="$PROJECT_DIR$/Module 1/Test/De thi/cau1.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Module 1/Test/De thi/cau3.html" beforeDir="false" afterPath="$PROJECT_DIR$/Module 1/Test/De thi/cau3.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Module 1/16. Lap trinh huong doi tuong/Bai tap xay dung lop hinh chu nhat/main.js" beforeDir="false" afterPath="$PROJECT_DIR$/Module 1/16. Lap trinh huong doi tuong/Bai tap xay dung lop hinh chu nhat/main.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Module 1/Test/De thi/cau4/main.js" beforeDir="false" afterPath="$PROJECT_DIR$/Module 1/Test/De thi/cau4/main.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -85,6 +89,9 @@
       <setting name="preferredDebugBrowser" value="Chrome" />
       <method />
     </configuration>
+    <configuration name="main.js" type="NodeJSConfigurationType" temporary="true" nameIsGenerated="true" path-to-js-file="$PROJECT_DIR$/Module 1/16. Lap trinh huong doi tuong/Bai tap xay dung lop mo ta Temperature/main.js" working-dir="$PROJECT_DIR$/Module 1/16. Lap trinh huong doi tuong/Bai tap xay dung lop mo ta Temperature">
+      <method v="2" />
+    </configuration>
     <configuration default="true" type="cucumber.js" factoryName="Cucumber.js">
       <option name="myFilePath" />
       <option name="myNameFilter" />
@@ -92,6 +99,11 @@
       <option name="workingDirectory" />
       <method v="2" />
     </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Node.js.main.js" />
+      </list>
+    </recent_temporary>
   </component>
   <component name="ServiceViewManager">
     <option name="viewStates">
@@ -143,6 +155,7 @@
       <workItem from="1609807778574" duration="2500000" />
       <workItem from="1609814210014" duration="7571000" />
       <workItem from="1609852165305" duration="4909000" />
+      <workItem from="1609935045054" duration="4780000" />
     </task>
     <servers />
   </component>

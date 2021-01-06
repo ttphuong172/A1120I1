@@ -1,20 +1,16 @@
 var custommer=[]
-var customer1={
-    id:1,
-    name: 'Tran Thanh Phuong',
-    tel: '0915010414',
-    address: 'Quang Nam',
-    email:'ttphuong172@gmail.com'
+function Custommer(id,name,tel,address,email){
+    this.id=id;
+    this.name=name;
+    this.tel=tel;
+    this.address=address;
+    this.email=email;
 }
-var customer2={
-    id:2,
-    name: 'Truong Bao Giang Chau',
-    tel: '0935326684',
-    address: 'Quang Nam',
-    email:'chau.truongbg@gmail.com'
-}
+
+var customer1=new Custommer('1','Tran Thanh Phuong','0915010414','Quang Nam','ttphuong172@gmail.com')
+
 custommer.push(customer1);
-custommer.push(customer2);
+
 
 function displayCustommer(){
     myString='<table border="1">'
@@ -36,7 +32,7 @@ function addCustommer(){
     var tel=document.getElementById('tel').value;
     var address=document.getElementById('address').value;
     var email=document.getElementById('email').value;
-    var customertemp={}
+    var customertemp=new Custommer();
     customertemp.id=id;
     customertemp.name=name;
     customertemp.tel=tel

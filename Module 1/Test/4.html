@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    var array=[1,2,3,4]
+    var person = new Object();
+    person.firstName='Phuong';
+    person.lastName='Tran';
+    person.age=36;
+    person.colorEye='blue'
+    person.fullName=function () {
+        alert('Tim toi lam gi')
+    }
+    var x=person
+    x.age=10
+    console.log(person)
+    for (x in person){
+        console.log(x)
+    }
+    console.log(person.fullName())
+
+    var nyArray=Object.values(person)
+    console.log(nyArray)
+    var myString=JSON.stringify(person)
+    console.log(myString)
+</script>
+</body>
+</html>
