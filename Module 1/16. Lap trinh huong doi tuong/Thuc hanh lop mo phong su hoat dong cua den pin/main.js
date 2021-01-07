@@ -18,10 +18,10 @@ class Battery{
 class FlashLamp{
   constructor(status,battery){
     this.status=status;
-    this.battery=battery;
+    this.battery=new Battery();
   }
   setBattery(battery){
-    this.battery=Battery.battery;
+    this.battery=battery;
   }
 
   getBatteryInfo(){
@@ -52,4 +52,6 @@ flashLamp.setBattery(battery);
 console.log(battery.getEnergy())
 console.log(flashLamp.getBatteryInfo())
 flashLamp.turnOn();
+battery.decreaseEnergy()
 flashLamp.light();
+console.log(flashLamp.getBatteryInfo())

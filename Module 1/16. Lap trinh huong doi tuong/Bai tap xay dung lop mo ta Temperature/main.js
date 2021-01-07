@@ -13,6 +13,6 @@ class Temperature{
     }
 }
 
-var nhietDoNewYork=new Temperature(-290);
+var nhietDoNewYork=new Temperature(20);
 console.log(nhietDoNewYork.ctoF());
 console.log(nhietDoNewYork.ctoKenvin());

@@ -2,16 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="622e7c0c-5ff8-4043-a400-721579fc0735" name="Default" comment="">
-      <change afterPath="$PROJECT_DIR$/Module 1/16. Lap trinh huong doi tuong/Bai tap xay dung lop mo ta Temperature/index.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Module 1/16. Lap trinh huong doi tuong/Bai tap xay dung lop mo ta Temperature/main.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Module 1/16. Lap trinh huong doi tuong/Bai tap xay dung lop mo ta dien thoai/index.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Module 1/16. Lap trinh huong doi tuong/Bai tap xay dung lop mo ta dien thoai/main.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Module 1/16. Lap trinh huong doi tuong/Thuc hanh xay dung lop Date/index.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Module 1/16. Lap trinh huong doi tuong/Thuc hanh xay dung lop Date/main.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Module 1/Test/4.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Module 1/16. Lap trinh huong doi tuong/Bai tap Adam va Eva/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Module 1/16. Lap trinh huong doi tuong/Bai tap Adam va Eva/main.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Module 1/16. Lap trinh huong doi tuong/Bai tap xay dung lop hinh chu nhat/main.js" beforeDir="false" afterPath="$PROJECT_DIR$/Module 1/16. Lap trinh huong doi tuong/Bai tap xay dung lop hinh chu nhat/main.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Module 1/Test/De thi/cau4/main.js" beforeDir="false" afterPath="$PROJECT_DIR$/Module 1/Test/De thi/cau4/main.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Module 1/16. Lap trinh huong doi tuong/Bai tap xay dung lop mo ta Temperature/main.js" beforeDir="false" afterPath="$PROJECT_DIR$/Module 1/16. Lap trinh huong doi tuong/Bai tap xay dung lop mo ta Temperature/main.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Module 1/16. Lap trinh huong doi tuong/Thuc hanh lop mo phong su hoat dong cua den pin/main.js" beforeDir="false" afterPath="$PROJECT_DIR$/Module 1/16. Lap trinh huong doi tuong/Thuc hanh lop mo phong su hoat dong cua den pin/main.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -156,6 +151,7 @@
       <workItem from="1609814210014" duration="7571000" />
       <workItem from="1609852165305" duration="4909000" />
       <workItem from="1609935045054" duration="4780000" />
+      <workItem from="1610020186505" duration="6493000" />
     </task>
     <servers />
   </component>
