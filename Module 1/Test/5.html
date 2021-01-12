@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    class PhanSo{
+        constructor(tu,mau) {
+            this.tu=tu;
+            this.mau=mau
+        }
+        setTu(tu){
+            this.tu=tu
+        }
+        getTu(){
+            return this.tu
+        }
+        setMau(mau){
+            this.mau=mau
+        }
+        getMau(){
+            return this.mau
+        }
+        congPhanSo(phanso1,phanso2){
+            var phanso3 =new PhanSo();
+            phanso3.tu=phanso1.tu+phanso2.tu;
+            phanso3.mau=phanso1.mau+phanso2.mau
+            return phanso3
+        }
+    }
+    so1=new PhanSo(2,5)
+    so2=new PhanSo(3,4)
+    so3=new PhanSo()
+
+    console.log(so3.congPhanSo(so1,so2))
+</script>
+</body>
+</html>

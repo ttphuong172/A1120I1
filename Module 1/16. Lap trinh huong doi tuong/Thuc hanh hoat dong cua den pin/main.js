@@ -11,6 +11,8 @@ class Battery{
   decreaseEnergy(){
     if(this.energy>0){
       this.energy--
+    } else {
+      console.log('Pin da can. Lam on thay pin moi')
     }
   }
 }
@@ -18,21 +20,22 @@ class Battery{
 class FlashLamp{
   constructor(status,battery){
     this.status=status;
-    this.battery=new Battery();
+    this.battery=battery;
   }
   setBattery(battery){
     this.battery=battery;
   }
 
   getBatteryInfo(){
-    return this.battery.getEnergy();
+    return this.battery;
   }
 
   light(){
     if (this.status){
-      alert('Lighting');
+      this.battery.decreaseEnergy();
+      console.log('Lighting');
     } else{
-      alert('Not lighting')
+      console.log('Not lighting')
     }
   }
   turnOn(){
@@ -44,14 +47,14 @@ class FlashLamp{
 }
 
 let battery=new Battery();
-battery.setEnergy(10);
-let flashLamp=new FlashLamp;
-flashLamp.setBattery(battery);
+battery.setEnergy(100);
+let flashLamp=new FlashLamp(false,battery);
+flashLamp.turnOn()
+for (i=0;i<90;i++){
+  flashLamp.light()
+}
+flashLamp.light()
 
 
-console.log(battery.getEnergy())
-console.log(flashLamp.getBatteryInfo())
-flashLamp.turnOn();
-battery.decreaseEnergy()
-flashLamp.light();
-console.log(flashLamp.getBatteryInfo())
+console.log(flashLamp)
+

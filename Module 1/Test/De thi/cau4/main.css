@@ -1,8 +1,36 @@
-body{
-    width: 60%;
+body {
+    width: 50%;
     margin: auto;
 }
-label{
+
+label {
     float: left;
     width: 120px;
+}
+
+table {
+    border-collapse: collapse;
+    width: 100%;
+}
+
+td {
+    height: 50px;
+}
+
+button {
+    background-color: #50af50;
+    color: white;
+    width: 76px;
+    height: 37px;
+    border-radius: 7px;
+    border: none;
+}
+
+input {
+    height: 30px;
+    width: 340px;
+}
+
+tr:nth-child(even) {
+    background-color: #f2f2f2;
 }

@@ -2,11 +2,20 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="622e7c0c-5ff8-4043-a400-721579fc0735" name="Default" comment="">
-      <change afterPath="$PROJECT_DIR$/Module 1/16. Lap trinh huong doi tuong/Bai tap Adam va Eva/index.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Module 1/16. Lap trinh huong doi tuong/Bai tap Adam va Eva/main.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Module 1/16. Lap trinh huong doi tuong/Bai tap cong tac bong den/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Module 1/16. Lap trinh huong doi tuong/Bai tap cong tac bong den/main.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Module 1/Test/5.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Module 1/Test/6.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Module 1/16. Lap trinh huong doi tuong/Bai tap xay dung lop mo ta Temperature/main.js" beforeDir="false" afterPath="$PROJECT_DIR$/Module 1/16. Lap trinh huong doi tuong/Bai tap xay dung lop mo ta Temperature/main.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Module 1/16. Lap trinh huong doi tuong/Thuc hanh lop mo phong su hoat dong cua den pin/main.js" beforeDir="false" afterPath="$PROJECT_DIR$/Module 1/16. Lap trinh huong doi tuong/Thuc hanh lop mo phong su hoat dong cua den pin/main.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Module 1/16. Lap trinh huong doi tuong/Bai tap Adam va Eva/main.js" beforeDir="false" afterPath="$PROJECT_DIR$/Module 1/16. Lap trinh huong doi tuong/Bai tap Adam va Eva/main.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Module 1/16. Lap trinh huong doi tuong/Thuc hanh lop mo phong su hoat dong cua den pin/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/Module 1/16. Lap trinh huong doi tuong/Thuc hanh hoat dong cua den pin/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Module 1/16. Lap trinh huong doi tuong/Thuc hanh lop mo phong su hoat dong cua den pin/main.js" beforeDir="false" afterPath="$PROJECT_DIR$/Module 1/16. Lap trinh huong doi tuong/Thuc hanh hoat dong cua den pin/main.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Module 1/Case Study/Yeu cau 1/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/Module 1/Case Study/Yeu cau 1/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Module 1/Case Study/Yeu cau 4/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/Module 1/Case Study/Yeu cau 4/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Module 1/Case Study/Yeu cau 4/main.css" beforeDir="false" afterPath="$PROJECT_DIR$/Module 1/Case Study/Yeu cau 4/main.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Module 1/Case Study/Yeu cau 4/main.js" beforeDir="false" afterPath="$PROJECT_DIR$/Module 1/Case Study/Yeu cau 4/main.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Module 1/Test/De thi/cau4/main.css" beforeDir="false" afterPath="$PROJECT_DIR$/Module 1/Test/De thi/cau4/main.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Module 1/Test/De thi/cau4/main.js" beforeDir="false" afterPath="$PROJECT_DIR$/Module 1/Test/De thi/cau4/main.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -23,8 +32,8 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="CSS File" />
-        <option value="HTML File" />
         <option value="JavaScript File" />
+        <option value="HTML File" />
       </list>
     </option>
   </component>
@@ -51,23 +60,24 @@
     <property name="FullScreen" value="false" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/Module 1/16. Lap trinh huong doi tuong/Bai tap co caro" />
     <property name="list.type.of.created.stylesheet" value="CSS" />
+    <property name="run.code.analysis.last.selected.profile" value="pProject Default" />
   </component>
   <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\ADMIN\Desktop\A1120I1-TranThanhPhuong\Module 1\16. Lap trinh huong doi tuong\Bai tap co caro" />
+      <recent name="C:\Users\ADMIN\Desktop\A1120I1-TranThanhPhuong\Module 1\Case Study\Yeu cau 3" />
+      <recent name="C:\Users\admin\Desktop\A1120I1-TranThanhPhuong\Module 1\Case Study" />
+      <recent name="C:\Users\admin\Desktop\A1120I1-TranThanhPhuong\Module 1\10. Cau truc lap\Bai tap luyen tap 1\Tinh tong cua cac so Fibonacci dau tien" />
+      <recent name="C:\Users\admin\Desktop\A1120I1-TranThanhPhuong\Module 1\8.Cau truc dieu kien\Luyen tap cau truc co dieu kien 01" />
+    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Users\ADMIN\Desktop\A1120I1-TranThanhPhuong\Module 1\Test\De thi\cau4" />
       <recent name="C:\Users\ADMIN\Desktop\A1120I1-TranThanhPhuong\Module 1\Test\De thi" />
       <recent name="C:\Users\ADMIN\Desktop\A1120I1-TranThanhPhuong\Module 1\12. Mang\Bai tap luyen tap mang 02" />
       <recent name="C:\Users\ADMIN\Desktop\A1120I1-TranThanhPhuong\Module 1\Case Study\Yeu cau 1" />
       <recent name="C:\Users\ADMIN\Desktop\A1120I1-TranThanhPhuong\Module 1\10. Cau truc lap" />
-    </key>
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="C:\Users\ADMIN\Desktop\A1120I1-TranThanhPhuong\Module 1\Case Study\Yeu cau 3" />
-      <recent name="C:\Users\admin\Desktop\A1120I1-TranThanhPhuong\Module 1\Case Study" />
-      <recent name="C:\Users\admin\Desktop\A1120I1-TranThanhPhuong\Module 1\10. Cau truc lap\Bai tap luyen tap 1\Tinh tong cua cac so Fibonacci dau tien" />
-      <recent name="C:\Users\admin\Desktop\A1120I1-TranThanhPhuong\Module 1\8.Cau truc dieu kien\Luyen tap cau truc co dieu kien 01" />
-      <recent name="C:\Users\admin\Desktop\A1120I1-TranThanhPhuong\Module 1\8.Cau truc dieu kien\May tinh don gian" />
     </key>
   </component>
   <component name="RunManager">
@@ -152,6 +162,12 @@
       <workItem from="1609852165305" duration="4909000" />
       <workItem from="1609935045054" duration="4780000" />
       <workItem from="1610020186505" duration="6493000" />
+      <workItem from="1610103777457" duration="10469000" />
+      <workItem from="1610157788968" duration="4425000" />
+      <workItem from="1610334526500" duration="12175000" />
+      <workItem from="1610366987207" duration="5461000" />
+      <workItem from="1610414558211" duration="7268000" />
+      <workItem from="1610445120817" duration="317000" />
     </task>
     <servers />
   </component>
@@ -171,6 +187,10 @@
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="413" y="115" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1366.728@0.0.1366.728" timestamp="1608514791280" />
+    <state x="1800" y="234" key="ANALYSIS_DLG_com.intellij.analysis.BaseAnalysisAction$1" timestamp="1610334564825">
+      <screen x="1366" y="0" width="1366" height="728" />
+    </state>
+    <state x="1800" y="234" key="ANALYSIS_DLG_com.intellij.analysis.BaseAnalysisAction$1/0.0.1366.728/1366.0.1366.728@1366.0.1366.728" timestamp="1610334564825" />
     <state x="1683" y="0" key="CommitChangelistDialog2" timestamp="1608690193950">
       <screen x="1366" y="0" width="1366" height="728" />
     </state>

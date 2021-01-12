@@ -6,7 +6,13 @@
     <link rel="stylesheet" href="./main.css">
 </head>
 <body onload="displayCustommer()">
-
+<ul class="nav-menu">
+    <li ><a class="nav-item" href="">HOME</a> </li>
+    <li><a  class="nav-item" href="./input.html">NHẬP THÔNG TIN</a></li>
+    <li><a  class="nav-item" href="./display.html">DISPLAY</a></li>
+    <li ><a class="nav-item" href="./edit.html">EDIT</a></li>
+    <li ><a class="nav-item" href="./calc.html">CALC</a></li>
+</ul>
 <h3>Thêm mới khách hàng</h3>
 <label for="name">Họ và tên</label>
 <input type="text" id="name">
@@ -25,7 +31,8 @@
 <br>
 <label for="address">Địa chỉ</label>
 <input type="text" id="address">
-<button onclick="addCustommer()">Thêm mới</button>
+<button onclick="addCustommer()" id="newbutton">Thêm mới</button>
+<button id="updatebutton">Cập nhật</button>
 <br>
 <br>
 <h3>Danh sách khách hàng</h3>

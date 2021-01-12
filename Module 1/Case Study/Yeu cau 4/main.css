@@ -1,35 +1,72 @@
-body{
+*{
+    padding: 0;
+    margin: 0;
+}
+body {
     width: 70%;
     margin: auto;
 }
-table{
+.nav-menu{
+    display: flex;
+    list-style-type: none;
+    width: 100%;
+}
+li{
+    width: 20%;
+    margin-right: 5px;
+}
+li:last-child{
+    margin-right: 0px;
+}
+.nav-item{
+    display: block;
+    height: 50px;
+    width: 100%;
+    padding-top: 30px;
+    background-color: #50af50;
+    text-align: center;
+    text-decoration: none;
+    font-weight: bold;
+    margin-top: 5px;
+    color: white;
+}
+.nav-item:hover{
+    background: darkkhaki;
+}
+
+table {
     border-collapse: collapse;
     width: 100%;
 }
-th{
+
+th {
     text-align: left;
 }
-td{
+
+td {
     height: 50px;
 }
+
 tr:nth-child(even) {
     background-color: #f2f2f2;
 }
-button{
-    background-color:#50af50;
+
+button {
+    background-color: #50af50;
     color: white;
     width: 76px;
     height: 37px;
     border-radius: 7px;
     border: none;
 }
-input{
+
+input {
     height: 30px;
-    width: 340px ;
+    width: 340px;
 }
 
 
-label{
+label {
     float: left;
     width: 150px;
 }
