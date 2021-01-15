@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="./main.css">
+</head>
+<body>
+<ul>
+    <a href=""><li>THÊM KỸ SƯ</li></a>
+    <a href=""><li>HIỂN THỊ</li></a>
+    <a href=""><li>TÌM KIẾM</li></a>
+</ul>
+<label for="name">Tên kỹ sư</label>
+<input type="text" id="name">
+<br>
+<label for="age">Tuoi</label>
+<input type="text" id="age">
+<br>
+<label>Giới tính</label>
+<br>
+<input type="radio" id="male" name="gender" value="male">
+<label for="male">Nam</label><br>
+<input type="radio" id="female" name="gender" value="female">
+<label for="female">Nữ</label><br>
+<input type="radio" id="other" name="gender" value="other">
+<label for="other">Khác</label>
+<br>
+<label for="address">Địa chỉ</label>
+<input type="text" id="address">
+<br>
+<label for="training">Ngành nghề</label>
+<input type="text" id="training">
+<br>
+<button onclick="addKySu()">Thêm</button>
+<br>
+<p id="result"></p>
+
+<script src="main.js"></script>
+</body>
+</html>
