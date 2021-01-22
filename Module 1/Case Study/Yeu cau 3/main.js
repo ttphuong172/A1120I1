@@ -99,23 +99,13 @@ function save(){
 
 }
 function checkCMND(){
-
     var inputcmnd=document.getElementById('inputcmnd').value;
-
     if (isNaN(inputcmnd)) {
         document.getElementById('errorcmnd').innerHTML = 'Vui lòng nhập lại'
         return false
-    }else if(inputcmnd.trim().length===0){
-            document.getElementById('errorcmnd').innerHTML='Vui lòng nhập số CMND'
-            return false
-        } else if(parseInt(inputcmnd)<0){
-        document.getElementById('errorcmnd').innerHTML='Sai định dạng'
+    }else if((inputcmnd<100000000) || (inputcmnd>999999999)){
         return false
-    }
-    else if (inputcmnd.trim().length!==10){
-        document.getElementById('errorcmnd').innerHTML='Số CMND phải 10 số'
-        return false
-    }  else{
+    } else{
         document.getElementById('errorcmnd').innerHTML="";
         return true
     }
@@ -182,7 +172,7 @@ function checkBirthDay(){
     document.getElementById('inputemail').addEventListener("blur",checkEmail)
 //Tu dong chuan hoa du lieu
 function autoCorrect(){
-    var inputFullName= document.getElementById('inputfullname').value.toLowerCase().trim();
+    var inputFullName= document.getElementById('fullname').value.toLowerCase().trim();
 
     myString=inputFullName[0].toUpperCase();
     for(i=1;i<inputFullName.length;i++){
@@ -198,7 +188,7 @@ function autoCorrect(){
 }
 
 function checkEmail(){
-    var email=document.getElementById('inputemail').value;
+    var email=document.getElementById('email').value;
     var posa=email.indexOf('@')
     var posdot=email.lastIndexOf('.')
     if (email.length===0){

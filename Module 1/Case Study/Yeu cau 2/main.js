@@ -27,7 +27,7 @@ function display(){
 //     var loaiPhong=rooms.options[rooms.selectedIndex];
      document.getElementById('room').innerHTML=room;
 //     var money=services.value * rentDays.value*(1-(disCount.value/100));
-//     document.getElementById('dpmoney').innerHTML='Số tiền phải trả: '+money+'USD';
+//     document.getElementById('dpmoney').inn erHTML='Số tiền phải trả: '+money+'USD';
 }
 
 function edit() {

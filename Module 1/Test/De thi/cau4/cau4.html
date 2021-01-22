@@ -6,29 +6,97 @@
     <link rel="stylesheet" href="main.css">
 </head>
 <body>
-<h1>Quan ly khach hang</h1>
-<label for="id">Ma khach hang</label>
-<input type="text" id="id">
-<br>
-<br>
-<label for="name">Ten khach hang</label>
-<input type="text" id="name">
-<br>
-<br>
-<label for="tel">So dien thoai</label>
-<input type="text" id="tel">
-<br>
-<br>
-<label for="address">Dia chi</label>
-<input type="text" id="address">
-<br>
-<br>
-<label for="email">Email</label>
-<input type="text" id="email">
+<h1>QUẢN LÝ KHÁCH HÀNG</h1>
+<div class='layout'>
+    <div class="error">
+        <label for="name">Tên khách hàng(*)</label>
+        <span id="errorname" class="errornotify"></span>
+    </div>
+    <input type="text" id="name">
+    <div class="error">
+        <label for="id">Số CMND(*)</label>
+        <span id="errorid" class="errornotify"></span>
+    </div>
+    <input type="text" id="id">
+</div>
+
+<div class="layout">
+    <div class="error">
+        <label for="birthday">Ngày sinh(*)</label>
+        <span id="errorbirthday" class="errornotify"></span>
+    </div>
+    <input type="text" id="birthday">
+
+
+    <div class="error">
+        <label for="email">Email(*)</label>
+        <span id="erroremail" class="errornotify"></span>
+    </div>
+    <input type="text" id="email">
+
+
+</div>
+<div class="layout">
+    <div class="error">
+        <label for="address">Địa chỉ(*)</label>
+        <span id="erroraddress" class="errornotify"></span>
+    </div>
+
+    <input type="text" id="address">
+
+    <label>Loại KH</label>
+    <select name="customers" id="customers">
+        <option value="diamond">Diamond</option>
+        <option value="platinum">Platinum</option>
+        <option value="gold">Gold</option>
+        <option value="silver">Silver</option>
+        <option value="member">Member</option>
+    </select>
+</div>
+<div class="layout">
+    <div class="error">
+        <label>Giảm giá (%)</label>
+        <span id="errordiscount" class="errornotify"></span>
+    </div>
+    <input type="text" id="discount">
+    <div class="error">
+        <label>Số người đi kèm</label>
+        <span id="errorattach" class="errornotify"></span>
+    </div>
+
+    <input type="text" id="attach">
+</div>
+<div class="layout">
+    <div class="error">
+        <label>Số ngày thuê(*)</label>
+        <span id="errorrentdays", class="errornotify"></span>
+    </div>
+
+    <input type="text" id="rentdays">
+
+    <label>Loại DV</label>
+    <select name="services" id="services">
+        <option value="villa">Villa</option>
+        <option value="house">House</option>
+        <option value="room">Room</option>
+    </select>
+    <label>Loại phòng</label>
+    <select name="rooms" id="rooms">
+        <option value="vip">Vip</option>
+        <option value="business">Business</option>
+        <option value="normal">Normal</option>
+    </select>
+</div>
+
+
 <br>
 <br>
 <label>&nbsp;</label>
-<button onclick="addCustommer()">Them moi</button>
+
+<button onclick="addCustommer()">Thêm mới</button>
+<button onclick="updateCustomer()">Cập nhật</button>
+<button onclick="cancel()">Hủy bỏ</button>
+<span id="index" style="color: transparent"></span>
 <br>
 <br>
 <span id="result"></span>

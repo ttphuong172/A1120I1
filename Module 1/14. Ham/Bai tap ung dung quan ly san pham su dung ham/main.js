@@ -3,7 +3,7 @@ var myProduct=['Sony Eperia','Samsung Galaxy','Nokia 6','Xiaomi Redmi Note 4','A
 function displayProduct(){
 var myString='<table>'
 for (i=0;i<myProduct.length;i++){
-    myString=myString+ '<tr> <td>'+ myProduct[i] +'</td>'+'<td><button onclick="editProduct('+i+')" >Edit</button></td>'+'<td><button onclick="deleteProduct('+i+')">Delete</button></td>'
+    myString=myString+ '<tr> <td>'+ myProduct[i] +'</td>'+'<td><button onclick="editProduct('+i+')" >Edit</button></td>'+'<td><button onclick="deleteProduct('+i+')">Delete</button></td>' +'<td> <button>View</button> </td>'
 }
 myString=myString+'</table>';
 document.getElementById('displayproduct').innerHTML=myString;

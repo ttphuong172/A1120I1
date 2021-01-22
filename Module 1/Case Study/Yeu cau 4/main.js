@@ -1,7 +1,5 @@
 var arrNameCustomers = [
-    ['Tran Thanh Phuong', '205115015', 'ttphuong172@gmail.com', 'Ha Noi'],
-    ['Truong Bao Giang Chau', '205115016', 'ttphuong172@gmail.com', 'Tokyo'],
-    ['Tran Thanh Lam', '205115017', 'ttphuong172@gmail.com', 'New York']
+
 ]
 var arrNameCustomers2 = sapXep()
 
