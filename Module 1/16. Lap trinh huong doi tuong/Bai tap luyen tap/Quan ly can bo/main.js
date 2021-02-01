@@ -75,7 +75,6 @@ class QLCB{
           }
       }
       timKiemCanBo(giaTri){
-
           for (let canBo of this.listCanBo) {
             if(giaTri===canBo.getName()){
                 return console.log(canBo)

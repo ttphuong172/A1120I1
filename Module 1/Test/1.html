@@ -7,32 +7,32 @@
 </head>
 <body>
 <script>
- var fiat={
-     make:"Fiat",
-     model:'500',
-     year:1957,
-     color:"Medium Blue",
-     passengers:2,
-     convertible:false,
-     mileage:88000
- };
-fiat.mileage=1000;
-fiat.needsWashing=true;
- var miles=fiat.mileage;
- if(miles<2000){
-     console.log("Buy it")
- }
+    var fiat = {
+        make: "Fiat",
+        model: '500',
+        year: 1957,
+        color: "Medium Blue",
+        passengers: 2,
+        convertible: false,
+        mileage: 88000
+    };
+    fiat.mileage = 1000;
+    fiat.needsWashing = true;
+    var miles = fiat.mileage;
+    if (miles < 2000) {
+        console.log("Buy it")
+    }
 
- console.log(fiat)
+    console.log(fiat)
 
- var person=new Object();
- person.firstName="Phuong";
- person.lastName="Tran"
- person.fullName=function (){
-     return this.firstName+this.lastName;
- }
- console.log(person.firstName)
- console.log(person.fullName())
+    var person = new Object();
+    person.firstName = "Phuong";
+    person.lastName = "Tran"
+    person.fullName = function () {
+        return this.firstName + this.lastName;
+    }
+    console.log(person.firstName)
+    console.log(person.fullName())
 
 </script>
 </body>

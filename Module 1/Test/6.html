@@ -3,13 +3,38 @@
 <head>
     <meta charset="UTF-8">
     <title>Title</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css">
+    <style>
+        .input{
+            position: relative;
+        }
+        .far{
+            position: absolute;
+            top: 2px;
+            left: 2px;
+            color: gray;
+        }
+        .input input[type=text]{
+            padding-left: 15px;
+        }
+    </style>
 </head>
 <body>
+
+<div  class="input" >
+    <input type="text" placeholder="Name">
+    <i class="far fa-user"></i>
+
+
+
+
+</div>
 <script>
-    do{
-        input=prompt('Nhap vao bat ky co do dai bang 5')
-    }
-    while (input.length>5);
+    var array1=[2,3,4,5]
+    var isTontai=array1.every(function (x) {
+        return x>2;
+    })
+console.log(isTontai)
 </script>
 </body>
 </html>

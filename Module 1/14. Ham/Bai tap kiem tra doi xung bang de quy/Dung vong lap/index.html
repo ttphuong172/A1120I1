@@ -7,16 +7,17 @@
 <body>
 <script>
     function checkDoiXung(string) {
-        for (i=0,j=string.length-1;i<string.length,j>0;i++,j--){
-                console.log('So thu '+i+string[i])
-                console.log('So thu '+j+string[j])
-                if (string[i]!==string[j]){
+        for (i=0;i<string.length;i++){
+            console.log(string[i]);
+            console.log(string.length-i)
+            console.log(string[(string.length)-i-1])
+                if (string[i]!==string[(string.length-i-1)]){
                     return false
                 }
             }
         return true
     }
-    myString='abcddcba'
+    myString='aabcddcbaa'
     console.log(checkDoiXung(myString))
 </script>
 </body>

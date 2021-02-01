@@ -1,58 +1,30 @@
-body {
-    width: 95%;
+body{
+    width: 60%;
     margin: auto;
 }
-
-label {
-    float: left;
-    width: 150px;
-}
-
-table {
-    font-size: 16px;
+table{
     border-collapse: collapse;
     width: 100%;
 }
-
-td {
+td{
     height: 50px;
 }
-
-button {
-    background-color: #50af50;
+button{
+    background-color:#50af50;
     color: white;
     width: 76px;
     height: 37px;
     border-radius: 7px;
     border: none;
 }
-
-input {
+input{
     height: 30px;
-    width: 340px;
-    margin-bottom: 5px;
-    margin-right: 10px;
+    width: 340px ;
 }
-select{
-    height: 35px;
-    width: 100px;
-    margin-right: 10px;
-}
-
 tr:nth-child(even) {
     background-color: #f2f2f2;
 }
-
-.layout{
-    display: flex;
-
-}
-.error{
-    display: flex;
-    flex-direction: column;
-
-}
-.errornotify{
-    font-size: 10px;
-    color: red;
+label {
+    float: left;
+    width: 150px;
 }

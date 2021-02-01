@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    var arr=[];
+    do{
+       var soPhanTu=prompt('Nhap vao so phan tu cua mang')
+    } while ((soPhanTu<0)||(soPhanTu>10)|| (isNaN(soPhanTu)));
+
+    for(i=0;i<soPhanTu;i++){
+        do {
+            arr[i]=prompt('Phan tu thư '+i+1);
+
+        } while (isNaN(arr[i]))
+
+    }
+
+    function isPerfect(number) {
+        var sum = 0;
+        for (i = 1; i < number; i++) {
+            if (number % i === 0) {
+                sum += i
+            }
+        }
+        if (number !== sum) {
+            return false
+        }
+        return true
+    }
+
+console.log(isPerfect(12))
+    var couterPerfect = 0;
+    var i = 1;
+    while (couterPerfect < 5) {
+        if (isPerfect(i)) {
+            console.log(i)
+            couterPerfect++
+        }
+
+        i++;
+    }
+
+</script>
+
+</body>
+</html>

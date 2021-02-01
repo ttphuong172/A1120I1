@@ -2,22 +2,38 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>cau4</title>
+    <title>Task6</title>
     <link rel="stylesheet" href="main.css">
-</head>
+    <link href="https://fonts.googleapis.com/css?family=Roboto:300,400|Rufina:700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css">
 <body>
+<div class="main">
 <h1>QUẢN LÝ KHÁCH HÀNG</h1>
+<div id="detailinfor">
+    <h4>THÔNG TIN THANH TOÁN</h4>
+    <p>Số tiền khách hàng phải trả là: </p>
+    <p id="totalpay"></p>
+    <button onclick="closeForm()" class="btnclose">Đóng</button>
+</div>
 <div class='layout'>
     <div class="error">
         <label for="name">Tên khách hàng(*)</label>
         <span id="errorname" class="errornotify"></span>
     </div>
-    <input type="text" id="name">
+    <div class="input_icon">
+        <input type="text" id="name">
+        <i class="icon fas fa-user"></i>
+    </div>
+
     <div class="error">
         <label for="id">Số CMND(*)</label>
         <span id="errorid" class="errornotify"></span>
     </div>
-    <input type="text" id="id">
+    <div class="input_icon">
+        <input type="text" id="id">
+        <i class="icon fas fa-id-card"></i>
+    </div>
+
 </div>
 
 <div class="layout">
@@ -25,14 +41,22 @@
         <label for="birthday">Ngày sinh(*)</label>
         <span id="errorbirthday" class="errornotify"></span>
     </div>
-    <input type="text" id="birthday">
+    <div class="input_icon">
+        <input type="text" id="birthday">
+        <i class="icon far fa-calendar-alt"></i>
+    </div>
+
 
 
     <div class="error">
         <label for="email">Email(*)</label>
         <span id="erroremail" class="errornotify"></span>
     </div>
-    <input type="text" id="email">
+    <div class="input_icon">
+        <input  type="text" id="email">
+        <i class="icon fas fa-envelope"></i>
+    </div>
+
 
 
 </div>
@@ -41,8 +65,11 @@
         <label for="address">Địa chỉ(*)</label>
         <span id="erroraddress" class="errornotify"></span>
     </div>
-
+<div class="input_icon">
     <input type="text" id="address">
+    <i class="icon fas fa-map-marker-alt"></i>
+</div>
+
 
     <label>Loại KH</label>
     <select name="customers" id="customers">
@@ -58,13 +85,20 @@
         <label>Giảm giá (%)</label>
         <span id="errordiscount" class="errornotify"></span>
     </div>
-    <input type="text" id="discount">
+    <div class="input_icon">
+        <input type="text" id="discount">
+        <i class="icon fas fa-percentage"></i>
+    </div>
+
     <div class="error">
         <label>Số người đi kèm</label>
         <span id="errorattach" class="errornotify"></span>
     </div>
-
+<div class="input_icon">
     <input type="text" id="attach">
+    <i class="icon fas fa-users"></i>
+</div>
+
 </div>
 <div class="layout">
     <div class="error">
@@ -88,7 +122,7 @@
     </select>
 </div>
 
-
+</div>
 <br>
 <br>
 <label>&nbsp;</label>

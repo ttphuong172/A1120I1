@@ -22,8 +22,9 @@ function deleteProduct(index) {
     var isDelete = confirm('Ban co muon xoa '+myProduct[index]+'?')
     if (isDelete){
         myProduct.splice(index,1);
+
     }
-    displayProduct()
+
 }
 function editProduct(index) {
     //alert(index);

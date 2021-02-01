@@ -2,20 +2,26 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="622e7c0c-5ff8-4043-a400-721579fc0735" name="Default" comment="">
-      <change afterPath="$PROJECT_DIR$/Module 1/Case Study/Yeu cau 4/home.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Module 1/Case Study/Yeu cau 6/addCustomer.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Module 1/Case Study/Yeu cau 6/home.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Module 1/Case Study/Yeu cau 6/main.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Module 1/Case Study/Yeu cau 6/main.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Module 1/Test/De thi/cau4/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Module 1/Test/sohoanhao.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Module 1/Test/somanhme.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Module 1/14. Ham/Bai tap kiem tra doi xung bang de quy/Dung vong lap/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/Module 1/14. Ham/Bai tap kiem tra doi xung bang de quy/Dung vong lap/index.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Module 1/14. Ham/Bai tap ung dung quan ly san pham su dung ham/main.js" beforeDir="false" afterPath="$PROJECT_DIR$/Module 1/14. Ham/Bai tap ung dung quan ly san pham su dung ham/main.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Module 1/16. Lap trinh huong doi tuong/Bai tap luyen tap/Quan ly thu vien/main.js" beforeDir="false" afterPath="$PROJECT_DIR$/Module 1/16. Lap trinh huong doi tuong/Bai tap luyen tap/Quan ly thu vien/main.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Module 1/Case Study/Yeu cau 1/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/Module 1/Case Study/Yeu cau 1/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Module 1/Case Study/Yeu cau 2/main.js" beforeDir="false" afterPath="$PROJECT_DIR$/Module 1/Case Study/Yeu cau 2/main.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Module 1/Case Study/Yeu cau 3/main.js" beforeDir="false" afterPath="$PROJECT_DIR$/Module 1/Case Study/Yeu cau 3/main.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Module 1/Case Study/Yeu cau 4/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/Module 1/Case Study/Yeu cau 4/input.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Module 1/Case Study/Yeu cau 4/main.js" beforeDir="false" afterPath="$PROJECT_DIR$/Module 1/Case Study/Yeu cau 4/main.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Module 1/Test/De thi/cau4/cau4.html" beforeDir="false" afterPath="$PROJECT_DIR$/Module 1/Test/De thi/cau4/cau4.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Module 1/16. Lap trinh huong doi tuong/Bai tap cong tac bong den/main.js" beforeDir="false" afterPath="$PROJECT_DIR$/Module 1/16. Lap trinh huong doi tuong/Bai tap cong tac bong den/main.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Module 1/16. Lap trinh huong doi tuong/Bai tap luyen tap/Quan ly can bo/main.js" beforeDir="false" afterPath="$PROJECT_DIR$/Module 1/16. Lap trinh huong doi tuong/Bai tap luyen tap/Quan ly can bo/main.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Module 1/Case Study/Yeu cau 6/addCustomer.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Module 1/Case Study/Yeu cau 6/home.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Module 1/Case Study/Yeu cau 6/main.css" beforeDir="false" afterPath="$PROJECT_DIR$/Module 1/Case Study/Yeu cau 6/main.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Module 1/Case Study/Yeu cau 6/main.js" beforeDir="false" afterPath="$PROJECT_DIR$/Module 1/Case Study/Yeu cau 6/main.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Module 1/Case Study/~$-DN CaseStudy Furama Resort Module1_v2.0.docx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Module 1/Test/1.html" beforeDir="false" afterPath="$PROJECT_DIR$/Module 1/Test/1.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Module 1/Test/2.html" beforeDir="false" afterPath="$PROJECT_DIR$/Module 1/Test/2.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Module 1/Test/5.html" beforeDir="false" afterPath="$PROJECT_DIR$/Module 1/Test/5.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Module 1/Test/6.html" beforeDir="false" afterPath="$PROJECT_DIR$/Module 1/Test/6.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Module 1/Test/De thi/cau1.html" beforeDir="false" afterPath="$PROJECT_DIR$/Module 1/Test/De thi/cau1.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Module 1/Test/De thi/cau2.html" beforeDir="false" afterPath="$PROJECT_DIR$/Module 1/Test/De thi/cau2.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Module 1/Test/De thi/cau4/cau4.html" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/Module 1/Test/De thi/cau4/main.css" beforeDir="false" afterPath="$PROJECT_DIR$/Module 1/Test/De thi/cau4/main.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Module 1/Test/De thi/cau4/main.js" beforeDir="false" afterPath="$PROJECT_DIR$/Module 1/Test/De thi/cau4/main.js" afterDir="false" />
     </list>
@@ -82,7 +88,7 @@
       <recent name="C:\Users\ADMIN\Desktop\A1120I1-TranThanhPhuong\Module 1\Case Study\Yeu cau 1" />
     </key>
   </component>
-  <component name="RunManager">
+  <component name="RunManager" selected="JavaScript Debug.somanhme.html">
     <configuration default="true" type="DartCommandLineRunConfigurationType" factoryName="Dart Command Line Application">
       <method />
     </configuration>
@@ -96,6 +102,9 @@
       <setting name="preferredDebugBrowser" value="Chrome" />
       <method />
     </configuration>
+    <configuration name="somanhme.html" type="JavascriptDebugType" temporary="true" nameIsGenerated="true" uri="http://localhost:63342/A1120I1-TranThanhPhuong/Module 1/Test/somanhme.html" useBuiltInWebServerPort="true">
+      <method v="2" />
+    </configuration>
     <configuration name="main.js" type="NodeJSConfigurationType" temporary="true" nameIsGenerated="true" path-to-js-file="$PROJECT_DIR$/Module 1/16. Lap trinh huong doi tuong/Bai tap xay dung lop mo ta Temperature/main.js" working-dir="$PROJECT_DIR$/Module 1/16. Lap trinh huong doi tuong/Bai tap xay dung lop mo ta Temperature">
       <method v="2" />
     </configuration>
@@ -108,6 +117,7 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="JavaScript Debug.somanhme.html" />
         <item itemvalue="Node.js.main.js" />
       </list>
     </recent_temporary>
@@ -179,7 +189,26 @@
       <workItem from="1610966829407" duration="12934000" />
       <workItem from="1611017879281" duration="24777000" />
       <workItem from="1611057888794" duration="8115000" />
-      <workItem from="1611191162223" duration="25568000" />
+      <workItem from="1611191162223" duration="26518000" />
+      <workItem from="1611295233942" duration="1549000" />
+      <workItem from="1611313168366" duration="7785000" />
+      <workItem from="1611325544108" duration="1478000" />
+      <workItem from="1611363548859" duration="2813000" />
+      <workItem from="1611372898780" duration="1049000" />
+      <workItem from="1611407504186" duration="1897000" />
+      <workItem from="1611447760462" duration="949000" />
+      <workItem from="1611541797831" duration="10127000" />
+      <workItem from="1611571993652" duration="8800000" />
+      <workItem from="1611623559149" duration="2831000" />
+      <workItem from="1611716781057" duration="8285000" />
+      <workItem from="1611733840893" duration="1061000" />
+      <workItem from="1611744808417" duration="10593000" />
+      <workItem from="1611756535320" duration="116000" />
+      <workItem from="1611796995388" duration="2506000" />
+      <workItem from="1611835898953" duration="9441000" />
+      <workItem from="1611900243816" duration="1979000" />
+      <workItem from="1611917237969" duration="2807000" />
+      <workItem from="1611923916236" duration="5330000" />
     </task>
     <servers />
   </component>
@@ -211,6 +240,70 @@
       <screen x="1366" y="0" width="1366" height="728" />
     </state>
     <state x="1683" y="0" key="CommitChangelistDialog2/0.0.1366.728/1366.0.1366.728@1366.0.1366.728" timestamp="1608690193950" />
+    <state width="1345" height="223" key="GridCell.Tab.0.bottom" timestamp="1611929523425">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state width="1345" height="223" key="GridCell.Tab.0.bottom/0.0.1366.728@0.0.1366.728" timestamp="1611929523425" />
+    <state width="1345" height="223" key="GridCell.Tab.0.center" timestamp="1611929523425">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state width="1345" height="223" key="GridCell.Tab.0.center/0.0.1366.728@0.0.1366.728" timestamp="1611929523425" />
+    <state width="1345" height="223" key="GridCell.Tab.0.left" timestamp="1611929523425">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state width="1345" height="223" key="GridCell.Tab.0.left/0.0.1366.728@0.0.1366.728" timestamp="1611929523425" />
+    <state width="1345" height="223" key="GridCell.Tab.0.right" timestamp="1611929523425">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state width="1345" height="223" key="GridCell.Tab.0.right/0.0.1366.728@0.0.1366.728" timestamp="1611929523425" />
+    <state width="1345" height="223" key="GridCell.Tab.1.bottom" timestamp="1611929523425">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state width="1345" height="223" key="GridCell.Tab.1.bottom/0.0.1366.728@0.0.1366.728" timestamp="1611929523425" />
+    <state width="1345" height="223" key="GridCell.Tab.1.center" timestamp="1611929523425">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state width="1345" height="223" key="GridCell.Tab.1.center/0.0.1366.728@0.0.1366.728" timestamp="1611929523425" />
+    <state width="1345" height="223" key="GridCell.Tab.1.left" timestamp="1611929523425">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state width="1345" height="223" key="GridCell.Tab.1.left/0.0.1366.728@0.0.1366.728" timestamp="1611929523425" />
+    <state width="1345" height="223" key="GridCell.Tab.1.right" timestamp="1611929523425">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state width="1345" height="223" key="GridCell.Tab.1.right/0.0.1366.728@0.0.1366.728" timestamp="1611929523425" />
+    <state width="1345" height="223" key="GridCell.Tab.2.bottom" timestamp="1611929523425">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state width="1345" height="223" key="GridCell.Tab.2.bottom/0.0.1366.728@0.0.1366.728" timestamp="1611929523425" />
+    <state width="1345" height="223" key="GridCell.Tab.2.center" timestamp="1611929523425">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state width="1345" height="223" key="GridCell.Tab.2.center/0.0.1366.728@0.0.1366.728" timestamp="1611929523425" />
+    <state width="1345" height="223" key="GridCell.Tab.2.left" timestamp="1611929523425">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state width="1345" height="223" key="GridCell.Tab.2.left/0.0.1366.728@0.0.1366.728" timestamp="1611929523425" />
+    <state width="1345" height="223" key="GridCell.Tab.2.right" timestamp="1611929523425">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state width="1345" height="223" key="GridCell.Tab.2.right/0.0.1366.728@0.0.1366.728" timestamp="1611929523425" />
+    <state width="1345" height="223" key="GridCell.Tab.3.bottom" timestamp="1611929523426">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state width="1345" height="223" key="GridCell.Tab.3.bottom/0.0.1366.728@0.0.1366.728" timestamp="1611929523426" />
+    <state width="1345" height="223" key="GridCell.Tab.3.center" timestamp="1611929523426">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state width="1345" height="223" key="GridCell.Tab.3.center/0.0.1366.728@0.0.1366.728" timestamp="1611929523426" />
+    <state width="1345" height="223" key="GridCell.Tab.3.left" timestamp="1611929523426">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state width="1345" height="223" key="GridCell.Tab.3.left/0.0.1366.728@0.0.1366.728" timestamp="1611929523426" />
+    <state width="1345" height="223" key="GridCell.Tab.3.right" timestamp="1611929523426">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state width="1345" height="223" key="GridCell.Tab.3.right/0.0.1366.728@0.0.1366.728" timestamp="1611929523426" />
     <state x="335" y="0" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser" timestamp="1610716212466">
       <screen x="0" y="0" width="1366" height="728" />
     </state>

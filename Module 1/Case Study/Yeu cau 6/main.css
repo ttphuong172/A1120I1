@@ -1,89 +1,99 @@
 *{
-    margin: 0;
-    padding: 0;
+    box-sizing: border-box;
 }
-body{
-    width: 70%;
+body {
+    width: 95%;
     margin: auto;
-    font-size: 14px;
 }
 
-.nav-menu{
-    display: flex;
-    list-style-type: none;
-    width: 100%;
-}
-li{
-    width: 20%;
-    margin-right: 5px;
-}
-li:last-child{
-    margin-right: 0px;
-}
-.nav-item{
-    display: block;
-    height: 30px;
-    width: 100%;
-    padding-top: 10px;
-    background-color: #50af50;
-    text-align: center;
-    text-decoration: none;
-    font-size: 12px;
-    font-weight: bold;
-    margin-top: 5px;
-    color: white;
-}
-.nav-item:hover{
-    background: darkkhaki;
-}
-
-label{
+label {
     float: left;
-    width: 200px;
+    width: 150px;
 }
-input{
-    width: 80%;
-    height: 20px;
-}
-select{
-    font-size: 12px;
-    width: 80%;
-    height: 25px;
-}
-span{
-    color: red;
-    font-size: 14px;
-}
-.btnadd{
-    color: white;
-    font-weight: bold;
-    width: 120px;
-    height: 37px;
-    background-color: #50af50;
-    border-radius: 7px;
-    border: none;
-    margin-bottom: 5px;
-}
-h3{
-    margin-top:10px;
-    margin-bottom:10px;
-    text-align: center;
-}
-footer{
-    height: 60px;
-    background-color:#50af50 ;
 
-}
-table{
-    text-align: left;
-}
-.abc{
-  width: 80%;
-   margin: auto;
-}
-.tbldisplay{
-    width: 100%;
+table {
     font-size: 16px;
     border-collapse: collapse;
-    margin-bottom: 10px;
+    width: 100%;
+}
+
+td {
+    height: 50px;
+}
+
+button {
+    background-color: #50af50;
+    color: white;
+    width: 76px;
+    height: 37px;
+    border-radius: 7px;
+    border: none;
+}
+button:hover{
+    background-color: dodgerblue;
+}
+
+input {
+    height: 30px;
+    width: 340px;
+    margin-bottom: 5px;
+    margin-right: 10px;
+}
+select{
+    height: 35px;
+    width: 100px;
+    margin-right: 10px;
+}
+
+tr:nth-child(even) {
+    background-color: #f2f2f2;
+}
+
+.layout{
+    display: flex;
+
+}
+.error{
+    display: flex;
+    flex-direction: column;
+
+}
+.errornotify{
+    font-size: 10px;
+    color: red;
+}
+.main{
+    position: relative;
+}
+#detailinfor{
+    position: absolute;
+    margin: 0 auto;
+    left: 0;
+    right: 0;
+    display: none;
+    width: 500px;
+    height: 200px;
+    background-color: white;
+}
+.btnclose{
+    position: absolute;
+    right: 0px;
+    bottom: 0px;
+
+}
+.input_icon{
+    position: relative;
+}
+.icon{
+    position: absolute;
+    top: 7px;
+    left: 7px;
+    color: gray;
+}
+
+.input_icon input[type=text] {
+    padding-left: 30px;
+}
+.input_icon input[type=text]:focus + i{
+    color: #50af50;
 }
