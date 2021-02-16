@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Thamchieu</title>
+</head>
+<body>
+<script>
+    class Hocsinh{
+        constructor(name, age) {
+            this.name=name;
+            this.age=age
+        }
+    }
+    var hocsinhA=new Hocsinh('Tran Thanh Phuong',32);
+    var hocsinhB=hocsinhA;
+    console.log('Gia tri ban dau')
+    console.log(hocsinhA);
+    console.log(hocsinhB);
+    console.log('Gia tri sau khi thay doi, thì giá trị HS A va B cung deu giong nhau');
+    hocsinhA.age=35
+    console.log(hocsinhA);
+    console.log(hocsinhB);
+</script>
+</body>
+</html>

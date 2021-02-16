@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    var arr = [9, 5, 6, 3, 8, 5, 8, 7, 6, 1, 7, 4, 4, 3, 8, 5, 3];
+    for (i = 0; i < arr.length - 1; i++) {
+        for (j = 0; j < arr.length; j++) {
+            if (arr[j] < arr[j + 1]) {
+                var temp = arr[j];
+                arr[j] = arr[j + 1];
+                arr[j + 1] = temp;
+            }
+        }
+    }
+    console.log(arr);
+
+    function findmax(arr, order) {
+        var thuTu = 0;
+        for (i = 0; i < arr.length; i++) {
+            if (thuTu === order) {
+                console.log(arr[i - 1]);
+                break
+            }
+            if (arr[i] !== arr[i + 1]) {
+                thuTu = thuTu + 1
+            }
+        }
+    }
+
+    findmax(arr, 2)
+
+</script>
+</body>
+</html>
