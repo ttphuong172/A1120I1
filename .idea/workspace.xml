@@ -2,29 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="622e7c0c-5ff8-4043-a400-721579fc0735" name="Default" comment="">
-      <change afterPath="$PROJECT_DIR$/Module 1/Test/Dau nhay.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Module 1/Test/noibot.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Module 1/Test/null-empty.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Module 1/Test/string.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Module 1/Test/thamchieu.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Module 1/Test/thamtri.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Module 1/Thi het Module/cau1.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Module 1/Thi het Module/cau2.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Module 1/Thi het Module/cau3.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Module 1/Thi het Module/cau4.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Module 2/1. Introduction to Java/BMI/src/Bmi.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Module 2/1. Introduction to Java/Calendar/src/Calendar.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Module 2/1. Introduction to Java/Giaiphuongtrinh/src/LinearEquationResolver.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Module 2/1. Introduction to Java/Khai bao bien/src/Khaibaobien.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Module 2/1. Introduction to Java/LeafYear/src/Leafyear.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Module 2/1. Introduction to Java/ReadNumber/src/ReadNumber.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Module 2/1. Introduction to Java/Thuc hanh hien thi thoi gian/src/SystemTime.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Module 2/1. Introduction to Java/Toan tu/src/RectangleProgram.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Module 1/Test/1.html" beforeDir="false" afterPath="$PROJECT_DIR$/Module 1/Test/1.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Module 1/Test/somanhme.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Tai lieu/Cam-nang-lap-trinh-can-ban.pdf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Tai lieu/Head First Javascript Programming.pdf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Module2/src/IntroductiontoJava/BMI.java" beforeDir="false" afterPath="$PROJECT_DIR$/Module2/src/IntroductiontoJava/BMI.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -69,7 +49,8 @@
     <property name="FullScreen" value="false" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="C:/Documents and Settings" />
+    <property name="aspect.path.notification.shown" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="list.type.of.created.stylesheet" value="CSS" />
     <property name="run.code.analysis.last.selected.profile" value="pProject Default" />
   </component>
@@ -103,12 +84,6 @@
       <setting name="preferredDebugBrowser" value="Chrome" />
       <method />
     </configuration>
-    <configuration name="somanhme.html" type="JavascriptDebugType" temporary="true" nameIsGenerated="true" uri="http://localhost:63342/A1120I1-TranThanhPhuong/Module 1/Test/somanhme.html" useBuiltInWebServerPort="true">
-      <method v="2" />
-    </configuration>
-    <configuration name="main.js" type="NodeJSConfigurationType" temporary="true" nameIsGenerated="true" path-to-js-file="$PROJECT_DIR$/Module 1/16. Lap trinh huong doi tuong/Bai tap xay dung lop mo ta Temperature/main.js" working-dir="$PROJECT_DIR$/Module 1/16. Lap trinh huong doi tuong/Bai tap xay dung lop mo ta Temperature">
-      <method v="2" />
-    </configuration>
     <configuration default="true" type="cucumber.js" factoryName="Cucumber.js">
       <option name="myFilePath" />
       <option name="myNameFilter" />
@@ -116,9 +91,14 @@
       <option name="workingDirectory" />
       <method v="2" />
     </configuration>
+    <configuration name="somanhme.html" type="JavascriptDebugType" nameIsGenerated="true" uri="http://localhost:63342/A1120I1-TranThanhPhuong/Module 1/Test/somanhme.html" useBuiltInWebServerPort="true">
+      <method v="2" />
+    </configuration>
+    <configuration name="main.js" type="NodeJSConfigurationType" temporary="true" nameIsGenerated="true" path-to-js-file="$PROJECT_DIR$/Module 1/16. Lap trinh huong doi tuong/Bai tap xay dung lop mo ta Temperature/main.js" working-dir="$PROJECT_DIR$/Module 1/16. Lap trinh huong doi tuong/Bai tap xay dung lop mo ta Temperature">
+      <method v="2" />
+    </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="JavaScript Debug.somanhme.html" />
         <item itemvalue="Node.js.main.js" />
       </list>
     </recent_temporary>
@@ -219,6 +199,9 @@
       <workItem from="1612349492720" duration="2998000" />
       <workItem from="1612402293008" duration="800000" />
       <workItem from="1613441401868" duration="443000" />
+      <workItem from="1613913890146" duration="89000" />
+      <workItem from="1613914005248" duration="130000" />
+      <workItem from="1613914142087" duration="44000" />
     </task>
     <servers />
   </component>
@@ -234,6 +217,10 @@
     </option>
   </component>
   <component name="WindowStateProjectService">
+    <state x="137" y="18" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1613914126562">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="137" y="18" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1366.728@0.0.1366.728" timestamp="1613914126562" />
     <state x="428" y="175" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1612176871198">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
@@ -242,6 +229,10 @@
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="488" y="84" key="#com.intellij.ide.util.MemberChooser/0.0.1366.728@0.0.1366.728" timestamp="1610972142127" />
+    <state x="531" y="252" key="#com.intellij.ide.util.projectWizard.JdkChooserPanel.MyDialog" timestamp="1613913929046">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="531" y="252" key="#com.intellij.ide.util.projectWizard.JdkChooserPanel.MyDialog/0.0.1366.728@0.0.1366.728" timestamp="1613913929046" />
     <state x="413" y="115" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1612191365830">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
@@ -254,10 +245,11 @@
       <screen x="1366" y="0" width="1366" height="728" />
     </state>
     <state x="1683" y="0" key="CommitChangelistDialog2/0.0.1366.728/1366.0.1366.728@1366.0.1366.728" timestamp="1608690193950" />
-    <state x="1829" y="123" key="FileChooserDialogImpl" timestamp="1612162833800">
-      <screen x="1366" y="0" width="1366" height="728" />
+    <state x="463" y="123" key="FileChooserDialogImpl" timestamp="1613914093377">
+      <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="1829" y="123" key="FileChooserDialogImpl/0.0.1366.728/1366.0.1366.728@1366.0.1366.728" timestamp="1612162833800" />
+    <state x="463" y="123" key="FileChooserDialogImpl/0.0.1366.728@0.0.1366.728" timestamp="1613914093377" />
     <state width="1345" height="223" key="GridCell.Tab.0.bottom" timestamp="1611929523425">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
@@ -322,6 +314,10 @@
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state width="1345" height="223" key="GridCell.Tab.3.right/0.0.1366.728@0.0.1366.728" timestamp="1611929523426" />
+    <state x="184" y="0" key="SettingsEditor" timestamp="1613914151287">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="184" y="0" key="SettingsEditor/0.0.1366.728@0.0.1366.728" timestamp="1613914151287" />
     <state x="335" y="0" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser" timestamp="1610716212466">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
@@ -330,10 +326,10 @@
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="494" y="284" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1366.728/1366.0.1366.728@0.0.1366.728" timestamp="1609726778951" />
-    <state x="390" y="0" width="586" height="728" key="find.popup" timestamp="1611197509600">
+    <state x="287" y="0" width="736" height="728" key="find.popup" timestamp="1613914074432">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="390" y="0" width="586" height="728" key="find.popup/0.0.1366.728@0.0.1366.728" timestamp="1611197509600" />
+    <state x="287" y="0" width="736" height="728" key="find.popup/0.0.1366.728@0.0.1366.728" timestamp="1613914074432" />
     <state x="339" y="162" key="run.anything.popup" timestamp="1609759673034">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
