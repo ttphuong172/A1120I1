@@ -1,7 +1,5 @@
 package _4_opp.bt.phuongtrinhbachai;
 
-import _4_opp.TH.LopHinhChuNhat.Rectangle;
-
 public class QuadraticEquation {
     private double a;
     private double b;
@@ -37,14 +35,16 @@ public class QuadraticEquation {
         this.c = c;
     }
 
-    public double getDiscriminant(){
-        return this.getB()*this.getB()-4*this.getA()*this.getC();
+    public double getDiscriminant() {
+        return Math.pow(this.getB(),2)  - 4 * this.getA() * this.getC();
     }
-    public double getRoot1(){
-        return (-this.getB()+Math.sqrt(this.getB()*this.getB()-4*this.getA()*this.getC()))/2*this.getA();
+
+    public double getRoot1() {
+        return (-this.getB() + Math.sqrt(Math.pow(this.getB(),2)- 4 * this.getA() * this.getC())) / (2 * this.getA());
     }
-    public double getRoot2(){
-        return (-this.getB()-Math.sqrt(this.getB()*this.getB()-4*this.getA()*this.getC()))/2*this.getA();
+
+    public double getRoot2() {
+        return (-this.getB() - Math.sqrt(Math.pow(this.getB(),2) - 4 * this.getA() * this.getC())) / (2 * this.getA());
     }
 
 }
