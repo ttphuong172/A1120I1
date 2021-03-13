@@ -6,9 +6,8 @@ import java.util.ArrayList;
 public class Main {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
-        ArrayList<Vehicle> listCar;
-        listCar = new ArrayList<>(10);
-        Vehicle vehicle = new Vehicle();
+        ArrayList<Vehicle> listCar=new ArrayList<>();
+        Vehicle vehicle;
         double value;
         int volume;
         int choice;
