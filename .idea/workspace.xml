@@ -1,353 +1,148 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="622e7c0c-5ff8-4043-a400-721579fc0735" name="Default" comment="">
+    <list default="true" id="ebaee954-3272-4986-95a7-3b7bafaffbf6" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/Module2/src/_06_inhenritance/bt/triangle/Shape.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Module2/src/_06_inhenritance/bt/triangle/ShapeTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Module2/src/_06_inhenritance/bt/triangle/Triangle.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Module2/src/_06_inhenritance/bt/triangle/TriangleTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/A1120I1-TranThanhPhuong.iml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Module2/src/IntroductiontoJava/BMI.java" beforeDir="false" afterPath="$PROJECT_DIR$/Module2/src/IntroductiontoJava/BMI.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Module2/.idea/uiDesigner.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Module2/out/production/Module2/META-INF/Module2.kotlin_module" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Module2/out/production/Module2/_04_oop/Student.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Module2/out/production/Module2/_04_oop/Test.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Module2/out/production/Module2/_05_access_modifier/bt/cirle/Circle.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Module2/out/production/Module2/_05_access_modifier/bt/cirle/Main.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Module2/out/production/Module2/_05_access_modifier/th/access_modifier/example1/Exam1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Module2/out/production/Module2/_05_access_modifier/th/access_modifier/example1/Main.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Module2/out/production/Module2/_05_access_modifier/th/access_modifier/example2/Exam2.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Module2/out/production/Module2/_05_access_modifier/th/static_method/Main.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Module2/out/production/Module2/_05_access_modifier/th/static_method/Student.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Module2/out/production/Module2/_05_access_modifier/th/static_property/Car.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Module2/out/production/Module2/_05_access_modifier/th/static_property/Main.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Module2/out/production/Module2/_06_inhenritance/bt/circle_cylinder/Circle.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Module2/out/production/Module2/_06_inhenritance/bt/circle_cylinder/CircleTest.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Module2/out/production/Module2/_06_inhenritance/bt/circle_cylinder/Cylinder.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Module2/out/production/Module2/_06_inhenritance/bt/circle_cylinder/CylinderTest.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Module2/out/production/Module2/_06_inhenritance/bt/movablepoint/MovablePoint.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Module2/out/production/Module2/_06_inhenritance/bt/movablepoint/MovablePointTest.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Module2/out/production/Module2/_06_inhenritance/bt/movablepoint/Point.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Module2/out/production/Module2/_06_inhenritance/bt/movablepoint/TestPoint.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Module2/out/production/Module2/_06_inhenritance/bt/point/Point2D.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Module2/out/production/Module2/_06_inhenritance/bt/point/Point2DTest.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Module2/out/production/Module2/_06_inhenritance/bt/point/Point3D.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Module2/out/production/Module2/_06_inhenritance/bt/point/Point3DTest.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Module2/out/production/Module2/_06_inhenritance/th/shape/Circle.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Module2/out/production/Module2/_06_inhenritance/th/shape/Rectange.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Module2/out/production/Module2/_06_inhenritance/th/shape/Shape.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Module2/out/production/Module2/_06_inhenritance/th/shape/ShapeTest.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Module2/out/production/Module2/_06_inhenritance/th/shape/Square.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Module2/out/production/Module2/_06_inhenritance/th/shape/TestCircle.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Module2/out/production/Module2/_06_inhenritance/th/shape/TestRectange.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Module2/out/production/Module2/_06_inhenritance/th/shape/TestSquare.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Module2/out/production/Module2/_1_IntroductiontoJava/BMI.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Module2/out/production/Module2/_1_IntroductiontoJava/Calendar.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Module2/out/production/Module2/_1_IntroductiontoJava/Khaibaobien.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Module2/out/production/Module2/_1_IntroductiontoJava/Leafyear.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Module2/out/production/Module2/_1_IntroductiontoJava/LinearEquationResolver.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Module2/out/production/Module2/_1_IntroductiontoJava/ReadNumber.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Module2/out/production/Module2/_1_IntroductiontoJava/RectangleProgram.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Module2/out/production/Module2/_1_IntroductiontoJava/SystemTime.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Module2/out/production/Module2/_2_Loop/BT/HienThi20SoNguyenTo.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Module2/out/production/Module2/_2_Loop/BT/InHinhChuNhat.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Module2/out/production/Module2/_2_Loop/BT/InSoNguyenToNhoHon100.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Module2/out/production/Module2/_2_Loop/BT/InTamGiac.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Module2/out/production/Module2/_2_Loop/BT/InTamGiacNguoc.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Module2/out/production/Module2/_2_Loop/TH/KiemTraSoNguyenTo.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Module2/out/production/Module2/_2_Loop/TH/LaiSuatNganHang.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Module2/out/production/Module2/_2_Loop/TH/MenuUngDung.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Module2/out/production/Module2/_2_Loop/TH/UCLN.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Module2/out/production/Module2/_3_Array/BT/DemKyTuTrongChuoi.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Module2/out/production/Module2/_3_Array/BT/GopMang.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Module2/out/production/Module2/_3_Array/BT/ThemPhanTuVaoMang.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Module2/out/production/Module2/_3_Array/BT/TimMaxMangHaiChieu.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Module2/out/production/Module2/_3_Array/BT/TimMinTrongMang.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Module2/out/production/Module2/_3_Array/BT/TinhTongCacSoOCot.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Module2/out/production/Module2/_3_Array/BT/TongDuongCheoChinh.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Module2/out/production/Module2/_3_Array/BT/XoaPhanTuTrongMang.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Module2/out/production/Module2/_3_Array/TH/ChuyenDoiNhietDo.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Module2/out/production/Module2/_3_Array/TH/DaoNguocPhanTuMang.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Module2/out/production/Module2/_3_Array/TH/TimGiaTriLonNhatTrongMang.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Module2/out/production/Module2/_3_Array/TH/TimGiaTriNhoNhatDungPhuongThuc.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Module2/out/production/Module2/_3_Array/TH/TimGiaTriTrongMang.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Module2/out/production/Module2/_3_Array/Test/NhapMangDungFor.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Module2/out/production/Module2/_3_Array/Test/NhapMangDungWhile.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Module2/out/production/Module2/_3_Array/Test/XuatMang.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Module2/out/production/Module2/_4_opp/TH/LopHinhChuNhat/Main.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Module2/out/production/Module2/_4_opp/TH/LopHinhChuNhat/Rectangle.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Module2/out/production/Module2/_4_opp/bt/fan/Fan.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Module2/out/production/Module2/_4_opp/bt/fan/Main.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Module2/out/production/Module2/_4_opp/bt/phuongtrinhbachai/Main.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Module2/out/production/Module2/_4_opp/bt/phuongtrinhbachai/QuadraticEquation.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Module2/out/production/Module2/_4_opp/bt/stopwatch/Main.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Module2/out/production/Module2/_4_opp/bt/stopwatch/StopWatch.class" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
-  <component name="CreatePatchCommitExecutor">
-    <option name="PATCH_PATH" value="" />
-  </component>
-  <component name="FavoritesManager">
-    <favorites_list name="A1120I1-TranThanhPhuong" />
-  </component>
-  <component name="FileTemplateManagerImpl">
-    <option name="RECENT_TEMPLATES">
-      <list>
-        <option value="CSS File" />
-        <option value="JavaScript File" />
-        <option value="HTML File" />
-      </list>
-    </option>
-  </component>
-  <component name="FindManager">
-    <FindUsagesManager>
-      <setting name="OPEN_NEW_TAB" value="true" />
-    </FindUsagesManager>
-  </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
-  <component name="ProjectId" id="1lo9GmZ4b9IFiiRPU7P7YHC5NCE" />
-  <component name="ProjectReloadState">
-    <option name="STATE" value="0" />
-  </component>
+  <component name="ProjectId" id="1pcADYtgRIBluh3f6wAL6qhlutT" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showExcludedFiles" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
-    <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
-    <property name="DefaultHtmlFileTemplate" value="HTML File" />
-    <property name="FullScreen" value="false" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
-    <property name="list.type.of.created.stylesheet" value="CSS" />
-    <property name="run.code.analysis.last.selected.profile" value="pProject Default" />
-  </component>
-  <component name="RecentsManager">
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="C:\Users\ADMIN\Desktop\A1120I1-TranThanhPhuong\Module 1\Thi het Module" />
-      <recent name="C:\Users\ADMIN\Desktop\A1120I1-TranThanhPhuong\Module 1\Thi het Module\Cau1" />
-      <recent name="C:\Users\ADMIN\Desktop\A1120I1-TranThanhPhuong\Module 1\16. Lap trinh huong doi tuong\Bai tap luyen tap\Bai 1" />
-      <recent name="C:\Users\ADMIN\Desktop\A1120I1-TranThanhPhuong\Module 1\Test\De thi\cau4" />
-      <recent name="C:\Users\ADMIN\Desktop\A1120I1-TranThanhPhuong\Module 1\Test\De thi" />
-    </key>
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="C:\Users\ADMIN\Desktop\A1120I1-TranThanhPhuong\Module 1\16. Lap trinh huong doi tuong\Bai tap co caro" />
-      <recent name="C:\Users\ADMIN\Desktop\A1120I1-TranThanhPhuong\Module 1\Case Study\Yeu cau 3" />
-      <recent name="C:\Users\admin\Desktop\A1120I1-TranThanhPhuong\Module 1\Case Study" />
-      <recent name="C:\Users\admin\Desktop\A1120I1-TranThanhPhuong\Module 1\10. Cau truc lap\Bai tap luyen tap 1\Tinh tong cua cac so Fibonacci dau tien" />
-      <recent name="C:\Users\admin\Desktop\A1120I1-TranThanhPhuong\Module 1\8.Cau truc dieu kien\Luyen tap cau truc co dieu kien 01" />
-    </key>
-  </component>
-  <component name="RunManager" selected="JavaScript Debug.somanhme.html">
-    <configuration default="true" type="DartCommandLineRunConfigurationType" factoryName="Dart Command Line Application">
-      <method />
-    </configuration>
-    <configuration default="true" type="DartUnitRunConfigurationType" factoryName="DartUnit">
-      <method />
-    </configuration>
-    <configuration default="true" type="JSTestDriver:ConfigurationType" factoryName="JsTestDriver">
-      <setting name="configLocationType" value="CONFIG_FILE" />
-      <setting name="settingsFile" value="" />
-      <setting name="serverType" value="INTERNAL" />
-      <setting name="preferredDebugBrowser" value="Chrome" />
-      <method />
-    </configuration>
-    <configuration default="true" type="cucumber.js" factoryName="Cucumber.js">
-      <option name="myFilePath" />
-      <option name="myNameFilter" />
-      <option name="cucumberJsArguments" />
-      <option name="workingDirectory" />
-      <method v="2" />
-    </configuration>
-    <configuration name="somanhme.html" type="JavascriptDebugType" nameIsGenerated="true" uri="http://localhost:63342/A1120I1-TranThanhPhuong/Module 1/Test/somanhme.html" useBuiltInWebServerPort="true">
-      <method v="2" />
-    </configuration>
-    <configuration name="main.js" type="NodeJSConfigurationType" temporary="true" nameIsGenerated="true" path-to-js-file="$PROJECT_DIR$/Module 1/16. Lap trinh huong doi tuong/Bai tap xay dung lop mo ta Temperature/main.js" working-dir="$PROJECT_DIR$/Module 1/16. Lap trinh huong doi tuong/Bai tap xay dung lop mo ta Temperature">
-      <method v="2" />
-    </configuration>
-    <recent_temporary>
-      <list>
-        <item itemvalue="Node.js.main.js" />
-      </list>
-    </recent_temporary>
-  </component>
-  <component name="ServiceViewManager">
-    <option name="viewStates">
-      <list>
-        <serviceView>
-          <treeState>
-            <expand />
-            <select />
-          </treeState>
-        </serviceView>
-      </list>
-    </option>
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/Module2" />
+    <property name="project.structure.last.edited" value="Modules" />
+    <property name="project.structure.proportion" value="0.0" />
+    <property name="project.structure.side.proportion" value="0.0" />
   </component>
   <component name="SvnConfiguration">
     <configuration />
   </component>
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
-      <changelist id="622e7c0c-5ff8-4043-a400-721579fc0735" name="Default" comment="" />
-      <created>1606876951652</created>
+      <changelist id="ebaee954-3272-4986-95a7-3b7bafaffbf6" name="Default Changelist" comment="" />
+      <created>1615471885708</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
-      <updated>1606876951652</updated>
-      <workItem from="1608252486462" duration="4424000" />
-      <workItem from="1608264109851" duration="5038000" />
-      <workItem from="1608275342227" duration="2597000" />
-      <workItem from="1608294738822" duration="5930000" />
-      <workItem from="1608347555986" duration="1906000" />
-      <workItem from="1608513007187" duration="6690000" />
-      <workItem from="1608535147287" duration="2172000" />
-      <workItem from="1608547357417" duration="10403000" />
-      <workItem from="1608598272658" duration="4769000" />
-      <workItem from="1608619083867" duration="4616000" />
-      <workItem from="1608684708572" duration="15594000" />
-      <workItem from="1608726444789" duration="597000" />
-      <workItem from="1608770945719" duration="14229000" />
-      <workItem from="1608860791122" duration="3205000" />
-      <workItem from="1608883154340" duration="1331000" />
-      <workItem from="1608893135060" duration="2295000" />
-      <workItem from="1608950789889" duration="1353000" />
-      <workItem from="1608973891487" duration="1693000" />
-      <workItem from="1609249957633" duration="3158000" />
-      <workItem from="1609290731086" duration="16188000" />
-      <workItem from="1609556493220" duration="431000" />
-      <workItem from="1609556961888" duration="405000" />
-      <workItem from="1609724831372" duration="2134000" />
-      <workItem from="1609757254933" duration="123000" />
-      <workItem from="1609757402054" duration="9305000" />
-      <workItem from="1609807778574" duration="2500000" />
-      <workItem from="1609814210014" duration="7571000" />
-      <workItem from="1609852165305" duration="4909000" />
-      <workItem from="1609935045054" duration="4780000" />
-      <workItem from="1610020186505" duration="6493000" />
-      <workItem from="1610103777457" duration="10469000" />
-      <workItem from="1610157788968" duration="4425000" />
-      <workItem from="1610334526500" duration="12175000" />
-      <workItem from="1610366987207" duration="5461000" />
-      <workItem from="1610414558211" duration="7268000" />
-      <workItem from="1610445120817" duration="317000" />
-      <workItem from="1610504505666" duration="5383000" />
-      <workItem from="1610534251343" duration="13131000" />
-      <workItem from="1610585368652" duration="11979000" />
-      <workItem from="1610676074671" duration="5974000" />
-      <workItem from="1610707907737" duration="5192000" />
-      <workItem from="1610719300696" duration="1229000" />
-      <workItem from="1610966829407" duration="12934000" />
-      <workItem from="1611017879281" duration="24777000" />
-      <workItem from="1611057888794" duration="8115000" />
-      <workItem from="1611191162223" duration="26518000" />
-      <workItem from="1611295233942" duration="1549000" />
-      <workItem from="1611313168366" duration="7785000" />
-      <workItem from="1611325544108" duration="1478000" />
-      <workItem from="1611363548859" duration="2813000" />
-      <workItem from="1611372898780" duration="1049000" />
-      <workItem from="1611407504186" duration="1897000" />
-      <workItem from="1611447760462" duration="949000" />
-      <workItem from="1611541797831" duration="10127000" />
-      <workItem from="1611571993652" duration="8800000" />
-      <workItem from="1611623559149" duration="2831000" />
-      <workItem from="1611716781057" duration="8285000" />
-      <workItem from="1611733840893" duration="1061000" />
-      <workItem from="1611744808417" duration="10593000" />
-      <workItem from="1611756535320" duration="116000" />
-      <workItem from="1611796995388" duration="2506000" />
-      <workItem from="1611835898953" duration="9441000" />
-      <workItem from="1611900243816" duration="1979000" />
-      <workItem from="1611917237969" duration="2807000" />
-      <workItem from="1611923916236" duration="5330000" />
-      <workItem from="1612144001465" duration="5944000" />
-      <workItem from="1612176835488" duration="7426000" />
-      <workItem from="1612184414314" duration="772000" />
-      <workItem from="1612191033917" duration="2414000" />
-      <workItem from="1612229077232" duration="3532000" />
-      <workItem from="1612314496693" duration="8818000" />
-      <workItem from="1612349492720" duration="2998000" />
-      <workItem from="1612402293008" duration="800000" />
-      <workItem from="1613441401868" duration="443000" />
-      <workItem from="1613913890146" duration="89000" />
-      <workItem from="1613914005248" duration="130000" />
-      <workItem from="1613914142087" duration="44000" />
+      <updated>1615471885708</updated>
+      <workItem from="1615471888291" duration="24000" />
+      <workItem from="1615472485289" duration="115000" />
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
   </component>
-  <component name="Vcs.Log.UiProperties">
-    <option name="RECENTLY_FILTERED_USER_GROUPS">
-      <collection />
-    </option>
-    <option name="RECENTLY_FILTERED_BRANCH_GROUPS">
-      <collection />
-    </option>
-  </component>
   <component name="WindowStateProjectService">
-    <state x="137" y="18" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1613914126562">
+    <state x="275" y="21" key="#Project_Structure" timestamp="1615471895266">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="137" y="18" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1366.728@0.0.1366.728" timestamp="1613914126562" />
-    <state x="428" y="175" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1612176871198">
+    <state x="275" y="21" key="#Project_Structure/0.0.1366.728@0.0.1366.728" timestamp="1615471895266" />
+    <state x="137" y="18" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1615472543571">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="428" y="175" key="#com.intellij.fileTypes.FileTypeChooser/0.0.1366.728@0.0.1366.728" timestamp="1612176871198" />
-    <state x="488" y="84" key="#com.intellij.ide.util.MemberChooser" timestamp="1610972142127">
+    <state x="137" y="18" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1366.728@0.0.1366.728" timestamp="1615472543571" />
+    <state x="463" y="118" key="FileChooserDialogImpl" timestamp="1615472570146">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="488" y="84" key="#com.intellij.ide.util.MemberChooser/0.0.1366.728@0.0.1366.728" timestamp="1610972142127" />
-    <state x="531" y="252" key="#com.intellij.ide.util.projectWizard.JdkChooserPanel.MyDialog" timestamp="1613913929046">
+    <state x="463" y="118" key="FileChooserDialogImpl/0.0.1366.728@0.0.1366.728" timestamp="1615472570146" />
+    <state x="65" y="0" key="new project wizard" timestamp="1615471910696">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="531" y="252" key="#com.intellij.ide.util.projectWizard.JdkChooserPanel.MyDialog/0.0.1366.728@0.0.1366.728" timestamp="1613913929046" />
-    <state x="413" y="115" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1612191365830">
-      <screen x="0" y="0" width="1366" height="728" />
-    </state>
-    <state x="413" y="115" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1366.728@0.0.1366.728" timestamp="1612191365830" />
-    <state x="1800" y="234" key="ANALYSIS_DLG_com.intellij.analysis.BaseAnalysisAction$1" timestamp="1610334564825">
-      <screen x="1366" y="0" width="1366" height="728" />
-    </state>
-    <state x="1800" y="234" key="ANALYSIS_DLG_com.intellij.analysis.BaseAnalysisAction$1/0.0.1366.728/1366.0.1366.728@1366.0.1366.728" timestamp="1610334564825" />
-    <state x="1683" y="0" key="CommitChangelistDialog2" timestamp="1608690193950">
-      <screen x="1366" y="0" width="1366" height="728" />
-    </state>
-    <state x="1683" y="0" key="CommitChangelistDialog2/0.0.1366.728/1366.0.1366.728@1366.0.1366.728" timestamp="1608690193950" />
-    <state x="463" y="123" key="FileChooserDialogImpl" timestamp="1613914093377">
-      <screen x="0" y="0" width="1366" height="728" />
-    </state>
-    <state x="1829" y="123" key="FileChooserDialogImpl/0.0.1366.728/1366.0.1366.728@1366.0.1366.728" timestamp="1612162833800" />
-    <state x="463" y="123" key="FileChooserDialogImpl/0.0.1366.728@0.0.1366.728" timestamp="1613914093377" />
-    <state width="1345" height="223" key="GridCell.Tab.0.bottom" timestamp="1611929523425">
-      <screen x="0" y="0" width="1366" height="728" />
-    </state>
-    <state width="1345" height="223" key="GridCell.Tab.0.bottom/0.0.1366.728@0.0.1366.728" timestamp="1611929523425" />
-    <state width="1345" height="223" key="GridCell.Tab.0.center" timestamp="1611929523425">
-      <screen x="0" y="0" width="1366" height="728" />
-    </state>
-    <state width="1345" height="223" key="GridCell.Tab.0.center/0.0.1366.728@0.0.1366.728" timestamp="1611929523425" />
-    <state width="1345" height="223" key="GridCell.Tab.0.left" timestamp="1611929523425">
-      <screen x="0" y="0" width="1366" height="728" />
-    </state>
-    <state width="1345" height="223" key="GridCell.Tab.0.left/0.0.1366.728@0.0.1366.728" timestamp="1611929523425" />
-    <state width="1345" height="223" key="GridCell.Tab.0.right" timestamp="1611929523425">
-      <screen x="0" y="0" width="1366" height="728" />
-    </state>
-    <state width="1345" height="223" key="GridCell.Tab.0.right/0.0.1366.728@0.0.1366.728" timestamp="1611929523425" />
-    <state width="1345" height="223" key="GridCell.Tab.1.bottom" timestamp="1611929523425">
-      <screen x="0" y="0" width="1366" height="728" />
-    </state>
-    <state width="1345" height="223" key="GridCell.Tab.1.bottom/0.0.1366.728@0.0.1366.728" timestamp="1611929523425" />
-    <state width="1345" height="223" key="GridCell.Tab.1.center" timestamp="1611929523425">
-      <screen x="0" y="0" width="1366" height="728" />
-    </state>
-    <state width="1345" height="223" key="GridCell.Tab.1.center/0.0.1366.728@0.0.1366.728" timestamp="1611929523425" />
-    <state width="1345" height="223" key="GridCell.Tab.1.left" timestamp="1611929523425">
-      <screen x="0" y="0" width="1366" height="728" />
-    </state>
-    <state width="1345" height="223" key="GridCell.Tab.1.left/0.0.1366.728@0.0.1366.728" timestamp="1611929523425" />
-    <state width="1345" height="223" key="GridCell.Tab.1.right" timestamp="1611929523425">
-      <screen x="0" y="0" width="1366" height="728" />
-    </state>
-    <state width="1345" height="223" key="GridCell.Tab.1.right/0.0.1366.728@0.0.1366.728" timestamp="1611929523425" />
-    <state width="1345" height="223" key="GridCell.Tab.2.bottom" timestamp="1611929523425">
-      <screen x="0" y="0" width="1366" height="728" />
-    </state>
-    <state width="1345" height="223" key="GridCell.Tab.2.bottom/0.0.1366.728@0.0.1366.728" timestamp="1611929523425" />
-    <state width="1345" height="223" key="GridCell.Tab.2.center" timestamp="1611929523425">
-      <screen x="0" y="0" width="1366" height="728" />
-    </state>
-    <state width="1345" height="223" key="GridCell.Tab.2.center/0.0.1366.728@0.0.1366.728" timestamp="1611929523425" />
-    <state width="1345" height="223" key="GridCell.Tab.2.left" timestamp="1611929523425">
-      <screen x="0" y="0" width="1366" height="728" />
-    </state>
-    <state width="1345" height="223" key="GridCell.Tab.2.left/0.0.1366.728@0.0.1366.728" timestamp="1611929523425" />
-    <state width="1345" height="223" key="GridCell.Tab.2.right" timestamp="1611929523425">
-      <screen x="0" y="0" width="1366" height="728" />
-    </state>
-    <state width="1345" height="223" key="GridCell.Tab.2.right/0.0.1366.728@0.0.1366.728" timestamp="1611929523425" />
-    <state width="1345" height="223" key="GridCell.Tab.3.bottom" timestamp="1611929523426">
-      <screen x="0" y="0" width="1366" height="728" />
-    </state>
-    <state width="1345" height="223" key="GridCell.Tab.3.bottom/0.0.1366.728@0.0.1366.728" timestamp="1611929523426" />
-    <state width="1345" height="223" key="GridCell.Tab.3.center" timestamp="1611929523426">
-      <screen x="0" y="0" width="1366" height="728" />
-    </state>
-    <state width="1345" height="223" key="GridCell.Tab.3.center/0.0.1366.728@0.0.1366.728" timestamp="1611929523426" />
-    <state width="1345" height="223" key="GridCell.Tab.3.left" timestamp="1611929523426">
-      <screen x="0" y="0" width="1366" height="728" />
-    </state>
-    <state width="1345" height="223" key="GridCell.Tab.3.left/0.0.1366.728@0.0.1366.728" timestamp="1611929523426" />
-    <state width="1345" height="223" key="GridCell.Tab.3.right" timestamp="1611929523426">
-      <screen x="0" y="0" width="1366" height="728" />
-    </state>
-    <state width="1345" height="223" key="GridCell.Tab.3.right/0.0.1366.728@0.0.1366.728" timestamp="1611929523426" />
-    <state x="184" y="0" key="SettingsEditor" timestamp="1613914151287">
-      <screen x="0" y="0" width="1366" height="728" />
-    </state>
-    <state x="184" y="0" key="SettingsEditor/0.0.1366.728@0.0.1366.728" timestamp="1613914151287" />
-    <state x="335" y="0" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser" timestamp="1610716212466">
-      <screen x="0" y="0" width="1366" height="728" />
-    </state>
-    <state x="335" y="0" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser/0.0.1366.728@0.0.1366.728" timestamp="1610716212466" />
-    <state x="494" y="284" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1609726778951">
-      <screen x="0" y="0" width="1366" height="728" />
-    </state>
-    <state x="494" y="284" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1366.728/1366.0.1366.728@0.0.1366.728" timestamp="1609726778951" />
-    <state x="287" y="0" width="736" height="728" key="find.popup" timestamp="1613914074432">
-      <screen x="0" y="0" width="1366" height="728" />
-    </state>
-    <state x="287" y="0" width="736" height="728" key="find.popup/0.0.1366.728@0.0.1366.728" timestamp="1613914074432" />
-    <state x="339" y="162" key="run.anything.popup" timestamp="1609759673034">
-      <screen x="0" y="0" width="1366" height="728" />
-    </state>
-    <state x="339" y="162" key="run.anything.popup/0.0.1366.728@0.0.1366.728" timestamp="1609759673034" />
-    <state x="346" y="49" key="search.everywhere.popup" timestamp="1611199650513">
-      <screen x="0" y="0" width="1366" height="728" />
-    </state>
-    <state x="346" y="49" key="search.everywhere.popup/0.0.1366.728@0.0.1366.728" timestamp="1611199650513" />
-  </component>
-  <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" type="javascript">
-          <url>file://$PROJECT_DIR$/Module 1/12. Mang/Bai tap luyen tap mang 01/Bai 6/index.html</url>
-          <line>29</line>
-          <option name="timeStamp" value="1" />
-        </line-breakpoint>
-      </breakpoints>
-    </breakpoint-manager>
+    <state x="65" y="0" key="new project wizard/0.0.1366.728@0.0.1366.728" timestamp="1615471910696" />
   </component>
 </project>
