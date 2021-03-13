@@ -4,6 +4,7 @@ public class Vehicle {
     private double value;
     private int volume;
 
+
     public Vehicle() {
     }
     public Vehicle(double value, int volume) {
