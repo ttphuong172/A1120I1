@@ -21,9 +21,9 @@ public class Main {
 
             switch (choice) {
                 case 1:
-                    System.out.println("Nhap vao gia tri xe");
+                    System.out.println("Nhap vao gia tri xe (trieu dong)");
                     value = scanner.nextDouble();
-                    System.out.println("Nhap vao dung tich xy lanh cua xe");
+                    System.out.println("Nhap vao dung tich xy lanh cua xe (phan khoi)");
                     volume = scanner.nextInt();
                     vehicle = new Vehicle(value, volume);
                     listCar.add(vehicle);

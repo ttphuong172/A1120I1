@@ -29,9 +29,9 @@ public class Vehicle {
     }
     public double calcTax(){
         double tax;
-        if (this.volume<100){
+        if (this.volume<=100){
             tax=this.value*1/100;
-        } else if (this.volume<200){
+        } else if (this.volume<=200){
             tax=this.value*2/100;
         } else{
             tax=this.value*3/100;
@@ -39,6 +39,6 @@ public class Vehicle {
             return tax;
     }
     public void showCar(){
-        System.out.println("Gia xe: "+value+", dung tich xe: "+volume+", thue la: "+calcTax());
+        System.out.println("Gia xe: "+value+" trieu dong, dung tich xe: "+volume+" phan khoi, thue la: "+calcTax());
     }
 }
