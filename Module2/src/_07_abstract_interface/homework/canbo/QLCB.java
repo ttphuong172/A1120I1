@@ -8,4 +8,17 @@ public class QLCB {
     public void themMoiCanBo(CanBo canBo) {
         danhSachCanBo.add(canBo);
     }
+
+    public void timCanbo(String ten) {
+        for (CanBo canBo : danhSachCanBo) {
+            if (ten.equals(canBo.getTen())) {
+                System.out.println(canBo.toString());
+            }
+
+        }
+
+    }
+
 }
+
+

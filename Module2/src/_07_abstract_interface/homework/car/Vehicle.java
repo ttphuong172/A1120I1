@@ -39,6 +39,6 @@ public class Vehicle {
             return tax;
     }
     public void showCar(){
-        System.out.println("Gia xe: "+value+" trieu dong, dung tich xe: "+volume+" phan khoi, thue la: "+calcTax());
+        System.out.println("Gia xe: "+value+" dung tich xe: "+volume+". thue la: "+calcTax());
     }
 }
