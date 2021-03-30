@@ -14,10 +14,21 @@ public class QLCB {
             if (ten.equals(canBo.getTen())) {
                 System.out.println(canBo.toString());
             }
+        }
+    }
 
+    public void xoaCanBo(String ten) {
+        for (int i = 0; i < danhSachCanBo.size(); i++) {
+            if (ten.equals(danhSachCanBo.get(i).getTen())) {
+                danhSachCanBo.remove(i);
+            }
+        }
+        for (CanBo canBo : danhSachCanBo) {
+            System.out.println(canBo);
         }
 
     }
+
 
 }
 

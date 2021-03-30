@@ -81,9 +81,10 @@ public class Account {
     public void maturity(){
         this.setAmount(this.amount+(this.amount*this.INTERREST));
     }
-    public void transferMoney(long bankAccount,double transferAmount){
-        this.setAmount(this.amount-transferAmount);
 
+    public void transferMoney(Account account,double transferAmount){
+        this.setAmount(this.amount-transferAmount);
+        account.setAmount(account.getAmount()+transferAmount);
     }
 
 }

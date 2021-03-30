@@ -12,8 +12,9 @@ public class Test {
         account1.withdrawalMoney(30);
         account1.withdrawalMoney(200);
         account1.maturity();
-        account1.transferMoney(124,50);
+        account1.transferMoney(account2,100);
         System.out.println(account1);
         System.out.println(account2);
+
     }
 }

@@ -1,13 +1,26 @@
 package _07_abstract_interface.homework.car;
 
-public class Vehicle {
+import _05_access_modifier.th.static_method.Student;
+
+public class Vehicle implements Comparable{
+    private String brand;
     private double value;
     private int volume;
 
 
     public Vehicle() {
     }
-    public Vehicle(double value, int volume) {
+
+    public String getBrand() {
+        return brand;
+    }
+
+    public void setBrand(String brand) {
+        this.brand = brand;
+    }
+
+    public Vehicle(String brand, double value, int volume) {
+        this.brand=brand;
         this.value = value;
         this.volume = volume;
     }
@@ -39,6 +52,18 @@ public class Vehicle {
             return tax;
     }
     public void showCar(){
-        System.out.println("Gia xe: "+value+" dung tich xe: "+volume+". thue la: "+calcTax());
+        System.out.println("Hang xe"+brand+"Gia xe: "+value+" dung tich xe: "+volume+". thue la: "+calcTax());
+    }
+
+
+
+    @Override
+    public int compareTo(Object o) {
+
+        Vehicle vehicle= (Vehicle) o;
+        //Sap xep theo ten hang xe
+        //return this.getBrand().compareTo(((Vehicle) o).getBrand());
+        //Sắp xếp theo dung tich xi lanh
+        return (int) (this.value-vehicle.value);
     }
 }

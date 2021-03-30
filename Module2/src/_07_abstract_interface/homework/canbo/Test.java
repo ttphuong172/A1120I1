@@ -9,7 +9,11 @@ public class Test {
         QLCB qlcb1 = new QLCB();
         qlcb1.themMoiCanBo(canbo1);
         qlcb1.themMoiCanBo(canbo2);
-        qlcb1.timCanbo("Phuong");
+        qlcb1.xoaCanBo("Phuong");
+
+     /*   for(CanBo canBo:qlcb1.danhSachCanBo){
+            System.out.println(canBo);
+        }*/
 
     }
 }
