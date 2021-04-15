@@ -24,7 +24,7 @@ public class Palindrome {
 //            System.out.println(myQueue.poll());
             if (!myStack.pop().equals(myQueue.poll())) {
                 doiXung = false;
-                //break;
+                break;
             }
         }
         if (doiXung) {

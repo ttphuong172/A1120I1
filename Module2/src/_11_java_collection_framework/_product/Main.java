@@ -6,6 +6,7 @@ public class Main {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
         ProductManager productManager=new ProductManager();
+        System.out.println(productManager.listProduct);
         Product product;
         int choice;
         int id;
@@ -13,8 +14,8 @@ public class Main {
         int price;
         do {
             System.out.println("1. Them san phan \t 2. Sua thong tin san pham theo id \t 3. Xoa san pham theo id \t 4. Hien thi danh sach san pham");
-            System.out.println("5. Tim kiem san pham theo ten \t 6. Sap xep san pham tang dan theo gia \t 7. sap xep san pham giam dan theo gia");
-            System.out.println("0. Exit");
+            System.out.println("5. Tim kiem san pham theo ten \t 6. Sap xep san pham tang dan theo gia \t 7. Sap xep san pham giam dan theo gia");
+            System.out.println("8.Sap xep theo gia va ten \t 0. Exit");
             System.out.print("Enter choice: ");
             choice = scanner.nextInt();
             switch (choice) {
@@ -61,6 +62,10 @@ public class Main {
                 case 7:
                     System.out.println("Sap xep san pham giam dan theo gia");
                     productManager.sortPriceDecrease();
+                    break;
+                case 8:
+                    System.out.println("Sap xep san pham giam dan theo gia");
+                    productManager.sortPriceName();
                     break;
                 case 0:
                     System.exit(0);
