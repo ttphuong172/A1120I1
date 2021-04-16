@@ -1,6 +1,6 @@
 package _11_java_collection_framework._product;
-
 import java.util.Scanner;
+import static _11_java_collection_framework._product.FileUtils.writeCVS;
 
 public class Main {
     public static void main(String[] args) {
@@ -28,6 +28,7 @@ public class Main {
                     System.out.print("Nhap gia san pham: ");
                     price=scanner.nextInt();
                     product = new Product(id,name,price);
+                    writeCVS(product);
                     productManager.addProduct(product);
                     break;
                 case 2:

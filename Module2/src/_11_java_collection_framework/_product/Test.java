@@ -7,6 +7,7 @@ public class Test {
         Product product2 = new Product(2, "bot giat", 300);
         Product product3 = new Product(3, "a dau goi", 300);
         Product product4 = new Product(4, "a au goi", 300);
+
         productManager1.addProduct(product1);
         productManager1.addProduct(product2);
         productManager1.addProduct(product3);
