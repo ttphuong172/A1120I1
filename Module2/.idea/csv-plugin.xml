@@ -17,6 +17,27 @@
             </Attribute>
           </value>
         </entry>
+        <entry key="\src\_demo\_generic\Main.java">
+          <value>
+            <Attribute>
+              <option name="separator" value=";" />
+            </Attribute>
+          </value>
+        </entry>
+        <entry key="\src\_demo\_generic\Test.java">
+          <value>
+            <Attribute>
+              <option name="separator" value=";" />
+            </Attribute>
+          </value>
+        </entry>
+        <entry key="\src\_demo\_generic\TestTreeSet.java">
+          <value>
+            <Attribute>
+              <option name="separator" value=";" />
+            </Attribute>
+          </value>
+        </entry>
         <entry key="\src\_iotextfile\docfilecsv\Main.java">
           <value>
             <Attribute>
@@ -45,6 +66,41 @@
             </Attribute>
           </value>
         </entry>
+        <entry key="\src\furamaresort\data\customer.csv">
+          <value>
+            <Attribute>
+              <option name="separator" value="," />
+            </Attribute>
+          </value>
+        </entry>
+        <entry key="\src\furamaresort\models\Check.java">
+          <value>
+            <Attribute>
+              <option name="separator" value=";" />
+            </Attribute>
+          </value>
+        </entry>
+        <entry key="\src\furamaresort\models\Customer.java">
+          <value>
+            <Attribute>
+              <option name="separator" value=";" />
+            </Attribute>
+          </value>
+        </entry>
+        <entry key="\src\furamaresort\models\FEManager.java">
+          <value>
+            <Attribute>
+              <option name="separator" value=";" />
+            </Attribute>
+          </value>
+        </entry>
+        <entry key="\src\furamaresort\models\FileCabinet.java">
+          <value>
+            <Attribute>
+              <option name="separator" value=";" />
+            </Attribute>
+          </value>
+        </entry>
         <entry key="\src\furamaresort\models\FileUtils.java">
           <value>
             <Attribute>
@@ -67,6 +123,13 @@
           </value>
         </entry>
         <entry key="\src\furamaresort\models\Services.java">
+          <value>
+            <Attribute>
+              <option name="separator" value=";" />
+            </Attribute>
+          </value>
+        </entry>
+        <entry key="\src\furamaresort\models\SortCustomer.java">
           <value>
             <Attribute>
               <option name="separator" value=";" />

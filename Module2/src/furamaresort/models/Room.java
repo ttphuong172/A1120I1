@@ -37,4 +37,14 @@ public class Room extends Services {
         System.out.println(toString());
     }
 
+    @Override
+    public int compareTo(Services o) {
+        if (this.getServiceName().equals(o.getServiceName())){
+            return 0;
+        } else if(this.getServiceName().compareTo(o.getServiceName())<0){
+            return -1;
+        } else{
+            return 1;
+        }
+    }
 }

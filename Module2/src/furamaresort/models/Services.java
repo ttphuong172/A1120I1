@@ -1,6 +1,8 @@
 package furamaresort.models;
 
-public abstract class Services {
+import java.util.Objects;
+
+public abstract class Services implements Comparable<Services> {
     private String id;
     private String serviceName;
     private int areaUse;
@@ -69,6 +71,8 @@ public abstract class Services {
     }
     public abstract void showInfor();
 
+
+
     @Override
     public String toString() {
         return "Services{" +
@@ -80,4 +84,5 @@ public abstract class Services {
                 ", rentalForm='" + rentalForm + '\'' +
                 '}';
     }
+
 }
