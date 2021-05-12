@@ -74,7 +74,6 @@ public class FileUtils {
                 villa = new Villa(myArray[0], myArray[1], Integer.parseInt(myArray[2]), Integer.parseInt(myArray[3]), Integer.parseInt(myArray[4]), myArray[5], myArray[6], myArray[7], Integer.parseInt(myArray[8]), Integer.parseInt(myArray[9]));
                 villaList.add(villa);
             }
-
         } catch (IOException e) {
             e.printStackTrace();
         } finally {
@@ -87,6 +86,40 @@ public class FileUtils {
         return villaList;
     }
 
+    public static String getIdLastVilla(){
+        List<Villa> villaList;
+        villaList=getListVilla();
+        int indexLastElement=villaList.size()-1;
+        return villaList.get(indexLastElement).getId();
+    }
+
+    public static void deleleInVilla(String string){
+      List<Villa> villaList;
+      villaList=getListVilla();
+
+      for (int i=0;i<villaList.size();i++){
+          if (villaList.get(i).getServiceName().equals(string)){
+              villaList.remove(i);
+          }
+      }
+      File file=new File("C:\\Users\\phuongtt\\Desktop\\A1120I1-TranThanhPhuong\\Module2\\src\\furamaresort\\data\\villa.csv");
+        BufferedWriter bufferedWriter=null;
+        try {
+            FileWriter fileWriter = new FileWriter(file);
+            bufferedWriter=new BufferedWriter(fileWriter);
+            for (int i=0;i<villaList.size();i++){
+                bufferedWriter.write(villaList.get(i).getId()+","+villaList.get(i).getServiceName()+","+villaList.get(i).getAreaUse()+","+villaList.get(i).getRentalCost()+","+villaList.get(i).getMaxPerson()+","+villaList.get(i).getRentalForm()+","+villaList.get(i).getStandarRoomVilla()+","+villaList.get(i).getConvenientOtherVilla()+","+villaList.get(i).getAreaPoll()+","+villaList.get(i).getNumberFloorVilla()+"\n");
+            }
+        } catch (IOException e) {
+            e.printStackTrace();
+        } finally {
+            try {
+                bufferedWriter.close();
+            } catch (IOException e) {
+                e.printStackTrace();
+            }
+        }
+    }
     public static void readVilla() {
         List<Villa> villaList;
         villaList = getListVilla();
@@ -427,22 +460,50 @@ public class FileUtils {
             }
         }
     }
-    public static void  displayEmployee(){
-        Map<String,Employee> employeeMap = new HashMap<>();
-        File file=new File("C:\\Users\\phuongtt\\Desktop\\A1120I1-TranThanhPhuong\\Module2\\src\\furamaresort\\data\\employee.csv");
-        BufferedReader bufferedReader=null;
+
+    public static void readBooking() {
+        List<Customer> customerList=new ArrayList<>();
+        File file=new File("C:\\Users\\phuongtt\\Desktop\\A1120I1-TranThanhPhuong\\Module2\\src\\furamaresort\\data\\booking.csv");
+        BufferedReader bufferedReader= null;
+        String[] myArray;
+        Customer customer;
+        String line;
         try {
-            FileReader fileReader=new FileReader(file);
+           FileReader fileReader = new FileReader(file);
             bufferedReader=new BufferedReader(fileReader);
-            String line;
-            String [] myArray;
-            Employee employee;
-            int i=1;
             while ((line=bufferedReader.readLine())!=null){
-                String idEmployee="00"+i;
                 myArray=line.split(",");
-                employee=new Employee(myArray[0],Integer.parseInt(myArray[1]),myArray[2]);
-                employeeMap.put(idEmployee,employee);
+               // customer=new Customer(myArray[0],);
+            }
+
+        } catch (IOException e) {
+            e.printStackTrace();
+        } finally {
+            try {
+                bufferedReader.close();
+            } catch (IOException e) {
+                e.printStackTrace();
+            }
+        }
+
+    }
+
+    public static void displayEmployee() {
+        Map<String, Employee> employeeMap = new HashMap<>();
+        File file = new File("C:\\Users\\phuongtt\\Desktop\\A1120I1-TranThanhPhuong\\Module2\\src\\furamaresort\\data\\employee.csv");
+        BufferedReader bufferedReader = null;
+        try {
+            FileReader fileReader = new FileReader(file);
+            bufferedReader = new BufferedReader(fileReader);
+            String line;
+            String[] myArray;
+            Employee employee;
+            int i = 1;
+            while ((line = bufferedReader.readLine()) != null) {
+                String idEmployee = "00" + i;
+                myArray = line.split(",");
+                employee = new Employee(myArray[0], Integer.parseInt(myArray[1]), myArray[2]);
+                employeeMap.put(idEmployee, employee);
                 i++;
             }
 //            Iterator iterator = employeeMap.entrySet().iterator();
@@ -464,33 +525,7 @@ public class FileUtils {
             }
         }
     }
+}
 
-    public static Stack<Employee> getEmployee(){
-        Stack<Employee> employeeStack=new Stack<>();
-        BufferedReader bufferedReader=null;
-        Employee employee=null;
-        File file=new File("C:\\Users\\phuongtt\\Desktop\\A1120I1-TranThanhPhuong\\Module2\\src\\furamaresort\\data\\employee.csv");
-        try {
-            FileReader fileReader=new FileReader(file);
-            bufferedReader=new BufferedReader(fileReader);
-            String line;
-            String [] myArray;
 
-            while ((line=bufferedReader.readLine())!=null){
-                myArray=line.split(",");
-                employee=new Employee(myArray[0],Integer.parseInt(myArray[1]),myArray[2]);
-                employeeStack.push(employee);
-            }
-        } catch (IOException e) {
-            e.printStackTrace();
-        } finally {
-            try {
-                bufferedReader.close();
-            } catch (IOException e) {
-                e.printStackTrace();
-            }
-        }
-     return employeeStack;
-    }
-    }
 

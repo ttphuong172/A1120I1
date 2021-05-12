@@ -45,7 +45,7 @@ public class MainController {
 
         //Infor Customer
         String name = null;
-        String birthday;
+        String birthday = null;
         String idCard = null;
         String phoneNumber;
         String email = null;
@@ -53,10 +53,9 @@ public class MainController {
         String address;
         //Quan ly ve
         CinemaManager cinemaManager = new CinemaManager();
-        FileCabinet fileCabinet=new FileCabinet();
-        for (int i=0;i<getEmployee().size();i++){
-            fileCabinet.addEmployee(getEmployee().get(i));
-        }
+        FileCabinet fileCabinet = new FileCabinet();
+        fileCabinet.getEmployee();
+
 
         do {
             System.out.print("Enter parent choice: ");
@@ -67,8 +66,9 @@ public class MainController {
                         System.out.print("1. Add New Villa");
                         System.out.print("2. Add New House");
                         System.out.print("3. Add New Roome");
-                        System.out.print("4. Back to menu");
-                        System.out.println("5. Exit");
+                        System.out.println("4. Delete Villa");
+                        System.out.print("5. Back to menu");
+                        System.out.println("6. Exit");
                         System.out.print("Enter sub choice: ");
                         int subchoice = scanner.nextInt();
                         scanner.nextLine();
@@ -92,9 +92,9 @@ public class MainController {
                             System.out.print("Nhap ten dich vu : ");
                             serviceName = scanner.nextLine();
                             do {
-                                System.out.print("Dien tich su dung:");
+                                System.out.print("Dien tich su dung (>=30):");
                                 areaUse = scanner.nextInt();
-                                System.out.println(checkArea(Integer.toString(areaUse)));
+                                //System.out.println(checkArea(Integer.toString(areaUse)));
                             } while (checkArea(Integer.toString(areaUse)));
 
                             do {
@@ -102,22 +102,28 @@ public class MainController {
                                 rentalCost = scanner.nextInt();
                             } while (!checkRentalCost(Integer.toString(rentalCost)));
                             do {
-                                System.out.print("So nguoi toi da:");
+                                System.out.print("So nguoi toi da >0 & <20:");
                                 maxPerson = scanner.nextInt();
                             } while (!checkMaxPerson(maxPerson));
                             scanner.nextLine();
-                            System.out.print("Kieu thue (ngay, thang, nam): ");
-                            rentalForm = scanner.nextLine();
+                            do {
+                                System.out.print("Kieu thue (ngay, thang, nam): ");
+                                rentalForm = scanner.nextLine();
+                            } while ((!rentalForm.equals("ngay")) && (!rentalForm.equals("thang")) && (!rentalForm.equals("nam")));
+
                             if (subchoice == 1) {
                                 //serviceName = "Villa";
-                                System.out.print("Nhap tieu chuan phong (Vip, Business, Normal): ");
-                                standarRoomVilla = scanner.nextLine();
+                                do {
+                                    System.out.print("Nhap tieu chuan phong (Vip, Business, Normal): ");
+                                    standarRoomVilla = scanner.nextLine();
+                                }
+                                while ((!standarRoomVilla.equals("Vip")) && (!standarRoomVilla.equals("Business")) && (!standarRoomVilla.equals("Normal")));
                                 System.out.print("Tien nghi khac: ");
                                 convenientOtherVilla = scanner.nextLine();
                                 do {
-                                    System.out.print("Dien tich ho boi: ");
+                                    System.out.print("Dien tich ho boi (>=30): ");
                                     areaPoll = scanner.nextInt();
-                                } while (!checkArea("areaPoll"));
+                                } while (checkArea("areaPoll"));
                                 System.out.print("So tang: ");
                                 numberFloorVilla = scanner.nextInt();
                                 services = new Villa(id, serviceName, areaUse, rentalCost, maxPerson, rentalForm, standarRoomVilla, convenientOtherVilla, areaPoll, numberFloorVilla);
@@ -126,8 +132,11 @@ public class MainController {
                                 writeVilla(villa);
                             } else if (subchoice == 2) {
                                 //serviceName = "House";
-                                System.out.print("Nhap tieu chuan phong (Vip, Business, Normal): ");
-                                standarRoomHouse = scanner.nextLine();
+                                do {
+                                    System.out.print("Nhap tieu chuan phong (Vip, Business, Normal): ");
+                                    standarRoomHouse = scanner.nextLine();
+                                }
+                                while ((!standarRoomHouse.equals("Vip")) && (!standarRoomHouse.equals("Business")) && (!standarRoomHouse.equals("Normal")));
                                 System.out.print("Tien nghi khac");
                                 convenientOtherHouse = scanner.nextLine();
                                 System.out.print("So tang: ");
@@ -146,8 +155,15 @@ public class MainController {
                                 writeRoom(room);
                             }
                         } else if (subchoice == 4) {
+                            System.out.println(getIdLastVilla());
+                            displayVilla();
+                            System.out.print("Nhap vao ten Villa can xoa: ");
+                            String deleteName=scanner.nextLine();
+                            deleleInVilla(deleteName);
+                        }else if(subchoice==5){
                             break;
-                        } else if (subchoice == 5) {
+                        }
+                        else if (subchoice == 6) {
                             System.exit(0);
                         }
                     } while (true);
@@ -203,21 +219,27 @@ public class MainController {
 
                                 }
                             } while (!checkNameException(name));
+                            do {
+                                try {
+                                    System.out.print("Nhap ngay sinh:");
+                                    birthday = scanner.nextLine();
+                                    if (!checkFormatDate(birthday)) throw new DateException();
+                                } catch (DateException e) {
+                                }
+                            } while (!checkFormatDate(birthday));
 
-                            System.out.print("Nhap ngay sinh:");
-                            birthday = scanner.nextLine();
                             do {
                                 try {
                                     System.out.print("Nhap CMND: ");
                                     idCard = scanner.nextLine();
                                     if (!checkIdCardException(idCard)) throw new IdCardException();
                                 } catch (IdCardException e) {
-
                                 }
                             } while (!checkIdCardException(idCard));
 
                             System.out.print("Nhap so dien thoai");
                             phoneNumber = scanner.nextLine();
+
                             do {
                                 try {
                                     System.out.print("Nhap email: ");
@@ -228,7 +250,7 @@ public class MainController {
                             } while (!checkEmailException(email));
                             System.out.print("Nhap loai khach hang: ");
                             customerType = scanner.nextLine();
-                            System.out.println("Nhap dia chi: ");
+                            System.out.print("Nhap dia chi: ");
                             address = scanner.nextLine();
                             customer = new Customer(name, birthday, idCard, phoneNumber, email, customerType, address);
                             writeCustomer(customer);
@@ -244,6 +266,7 @@ public class MainController {
                 case 4:
                     do {
                         System.out.println("1. Add New Book");
+                        System.out.println("2. Show All Booking");
                         System.out.println("2. Back to menu");
                         System.out.println("3. Exit");
                         System.out.print("Enter sub choice: ");
@@ -296,7 +319,9 @@ public class MainController {
                                     System.exit(0);
                                 }
                             } while (true);
-                        } else if (subchoice == 2) {
+                        }else if(subchoice==2){
+
+                        } else if (subchoice == 3) {
                             break;
                         } else {
                             System.exit(0);
@@ -327,8 +352,9 @@ public class MainController {
                 case 7:
                     System.out.print("Nhap vao ten can tim: ");
                     scanner.nextLine();
-                    String nameEmployee=scanner.nextLine();
+                    String nameEmployee = scanner.nextLine();
                     fileCabinet.searchEmployee(nameEmployee);
+
             }
         } while (true);
     }
