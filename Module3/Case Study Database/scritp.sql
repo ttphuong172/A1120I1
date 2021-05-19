@@ -98,11 +98,11 @@ Unit varchar(10) not null,
 Price int not null
 );
 
-create table DetailContract(
-AttachServiceId varchar(2) unique not null,
-ContractId int not null,
-Quantity int not null,
-primary key(AttachServiceId, ContractId),
+create table detailcontract (
+DetailContractId int not null auto_increment primary key,
+AttachServiceId varchar(2),
+ContractId int,
+Quantity int,
 foreign key(AttachServiceId) references AttachServices(AttachServiceId),
 foreign key(ContractId) references Contracts(ContractId)
 );

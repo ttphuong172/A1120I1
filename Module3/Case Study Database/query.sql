@@ -36,3 +36,85 @@ select attachservices.attachservicename,detailcontract.quantity, attachservices.
 inner join detailcontract on Contracts.contractid=detailcontract.contractid
 inner join attachservices on detailcontract.attachserviceid = attachservices.attachserviceid
 where customers.address like '%Vinh%' or customers.address like '%Quang Ngai%' and CustomerTypeID='DI'
+/*12*/
+select contracts.ContractId,employees.Name,customers.CustomerName,customers.PhoneNumber,services.ServiceName,services.ServiceId,detailcontract.Quantity,contracts.FirstPayment
+from contracts
+inner join employees
+on contracts.EmployeeId=employees.EmployeeId
+inner join customers
+on contracts.CustomerId=customers.CustomerId
+inner join services
+on contracts.ServiceId=services.ServiceId
+left join detailcontract
+on contracts.ContractId=detailcontract.ContractId 
+where BeginDate between '2019-6-01' and '2019-12-31'
+and contracts.ServiceId  not in
+(select contracts.ServiceId  from services
+inner join contracts
+on services.ServiceId=contracts.ServiceId
+where BeginDate between '2019-01-01' and '2019-6-30')
+
+/*13*/
+select attachservices.*,detailcontract.Quantity from attachservices
+inner join detailcontract
+on attachservices.AttachServiceId=detailcontract.AttachServiceId
+where detailcontract.Quantity= (select max(Quantity) from detailcontract);
+
+/*14*/
+select contracts.ContractId,services.ServiceName,attachservices.AttachServiceName
+from contracts
+inner join detailcontract
+on contracts.ContractId=detailcontract.ContractId
+inner join services
+on contracts.ServiceId = services.ServiceId 
+inner join attachservices
+on detailcontract.AttachServiceId=attachservices.AttachServiceId
+where detailcontract.AttachServiceId in
+(select  AttachServiceId
+from detailContract
+group by AttachServiceId
+having count(AttachServiceId)=1)
+
+/*15*/
+select employees.EmployeeId,employees.name,diploma.DiplomaName,department.DepartmentName,level.LevelName,employees.PhoneNumber,IFNULL(a.soluong,0) as soluong from employees
+inner join level
+on employees.LevelId=level.LevelId
+inner join department 
+on employees.DepartmentId=department.DepartmentId
+inner join diploma
+on employees.DiplomaId=diploma.DiplomaId
+left join
+(select EmployeeId,count(EmployeeId) as soluong from contracts
+group by EmployeeId having soluong <=3) as a
+on employees.EmployeeId=a.EmployeeId
+/*16*/
+delete from employees
+where EmployeeId in
+(select EmployeeId from employees
+where EmployeeId not in
+(select EmployeeId from contracts
+where BeginDate between '2017-01-01' and '2019-12-31'))
+/*17*/
+update customers
+set CustomerTypeID='DI'
+where  CustomerId in
+(select CustomerId from contracts
+group by CustomerId having sum(TotalPayment)>100)
+/*18*/
+
+
+/*19*/
+update attachservices
+set Price=Price*1.1
+where AttachServiceId in
+(select AttachServiceId from contracts
+inner join detailcontract
+on contracts.ContractId=detailcontract.ContractId
+where year(contracts.BeginDate)='2019' 
+group by AttachServiceId
+having count(AttachServiceId)>4);
+
+/*20*/
+select EmployeeId,Name,Email,PhoneNumber,Birthday from employees
+union all
+select CustomerId,CustomerName,Email,PhoneNumber,Birthday from customers;
