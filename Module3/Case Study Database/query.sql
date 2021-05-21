@@ -115,6 +115,6 @@ group by AttachServiceId
 having count(AttachServiceId)>4);
 
 /*20*/
-select EmployeeId,Name,Email,PhoneNumber,Birthday from employees
+select EmployeeId,Name,Email,PhoneNumber,Birthday,Address from employees
 union all
-select CustomerId,CustomerName,Email,PhoneNumber,Birthday from customers;
+select CustomerId,CustomerName,Email,PhoneNumber,Birthday,Address from customers;
