@@ -98,8 +98,8 @@ where BeginDate between '2017-01-01' and '2019-12-31'))
 update customers
 set CustomerTypeID='DI'
 where  CustomerId in
-(select CustomerId from contracts
-group by CustomerId having sum(TotalPayment)>100)
+(select CustomerId from contracts where year(BeginDate)='2019'
+group by CustomerId having sum(TotalPayment)>500)
 /*18*/
 
 
@@ -118,3 +118,16 @@ having count(AttachServiceId)>4);
 select EmployeeId,Name,Email,PhoneNumber,Birthday,Address from employees
 union all
 select CustomerId,CustomerName,Email,PhoneNumber,Birthday,Address from customers;
+
+/*21*/
+create view V_NHANVIEN as
+select employees.* from employees
+inner join contracts
+on employees.EmployeeId=contracts.EmployeeId
+where contracts.begindate='2019-12-12' and employees.Address='Hai Chau';
+
+/*22*/
+update V_NHANVIEN
+set Address='Lien Chieu'
+where Address='Hai Chau';
+

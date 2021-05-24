@@ -2,16 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="6fcbeefd-4154-4944-94e0-8dd3b58bd873" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/6.CSS/Bai tap/Dinh dang van ban voi CSS/index.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/6.CSS/Bai tap/Dinh dang van ban voi CSS/main.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/6.CSS/Bai tap/Truyen ngan/giacmotrendoi.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/6.CSS/Bai tap/Truyen ngan/index.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/6.CSS/Bai tap/Truyen ngan/main.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/6.CSS/Bai tap/Truyen ngan/nhungvettruotsau.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/6.CSS/Bai tap/Truyen ngan/roihoacungno.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/6.CSS/Bai tap/Truyen ngan/yeuquadoinay.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/7. Layout/Thuc hanh/Box model/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/7. Layout/Thuc hanh/Tao bo cuc don gian/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Case Study Database/query.sql" beforeDir="false" afterPath="$PROJECT_DIR$/Case Study Database/query.sql" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Tai Lieu/~$-DN CaseStudy Furama Resort Module 2 Database.docx" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -67,7 +61,8 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1621502044935</updated>
-      <workItem from="1621502046148" duration="13242000" />
+      <workItem from="1621502046148" duration="14440000" />
+      <workItem from="1621860727382" duration="5114000" />
     </task>
     <servers />
   </component>

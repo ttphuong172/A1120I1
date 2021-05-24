@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Tao bo cuc don gian</title>
+    <style>
+        .container {
+            display: grid;
+        grid-gap: 10px;
+            grid-template-areas: 'logo logo logo logo banner banner banner banner banner banner banner banner'
+                                 'menu menu menu menu menu menu menu menu menu menu menu menu'
+                                 'leftside1 leftside1 leftside1 hotnews hotnews hotnews photoside photoside photoside rightside rightside rightside'
+                                'leftside2 leftside2 leftside2 news1 news1 news2 news2 news3 news3 rightside rightside rightside'
+                                'leftside2 leftside2 leftside2 news4 news4 news5 news5 news6 news6 rightside rightside rightside'
+                                'footer footer footer footer footer footer footer footer footer footer footer footer';
+
+        }
+
+        .container > div {
+            padding: 20px;
+            font-size: 30px;
+            border: 1px solid black;
+        }
+
+        .item1 {
+            grid-area: logo;
+        }
+
+        .item2 {
+            grid-area: banner;
+        }
+
+        .item3 {
+            grid-area: menu;
+        }
+
+        .item5 {
+            grid-area: leftside1;
+        }
+        .item6 {
+            grid-area: hotnews;
+        }
+        .item7{
+            grid-area: photoside;
+        }
+        .item8{
+            grid-area: rightside;
+        }
+        .item9{
+            grid-area: leftside2;
+        }
+        .item10{
+            grid-area: news1;
+        }
+        .item11{
+            grid-area: news2;
+        }
+        .item12{
+            grid-area: news3;
+        }
+        .item13{
+            grid-area: news4;
+        }
+        .item14{
+            grid-area: news5;
+        }
+        .item15{
+            grid-area: news6;
+        }
+        .item16{
+            grid-area: footer;
+        }
+        .menudoc{
+            list-style-type: none;
+
+        }
+        .menungang{
+            list-style-type: none;
+            padding-right: 100px;
+
+
+        }
+        .menungang > li{
+            display: inline-block;
+            border-right: 1px solid black;
+            margin: 0;
+            padding: 0;
+        }
+
+
+
+    </style>
+</head>
+<body>
+<div class="container">
+    <div class="item1"> logo</div>
+    <div class="item2"> banner</div>
+    <div class="item3">
+        <ul class="menungang">
+            <li>Home</li>
+            <li>Students</li>
+            <li>Courses</li>
+            <li>About Us</li>
+            <li>Contact Us</li>
+        </ul>
+    </div>
+
+    <div class="item5">
+        <ul class="menudoc">
+            <li>Introduction</li>
+            <li>News</li>
+            <li>Education</li>
+            <li>Register</li>
+            <li>Courses</li>
+        </ul>
+    </div>
+    <div class="item6"> hotnews</div>
+    <div class="item7"> photoside</div>
+    <div class="item8"> rightside</div>
+    <div class="item9"> leftside2</div>
+    <div class="item10"> news1</div>
+    <div class="item11"> news2</div>
+    <div class="item12"> news3</div>
+    <div class="item13"> news4</div>
+    <div class="item14"> news5</div>
+    <div class="item15"> news6</div>
+    <div class="item16"> footer</div>
+
+</div>
+
+</body>
+</html>
