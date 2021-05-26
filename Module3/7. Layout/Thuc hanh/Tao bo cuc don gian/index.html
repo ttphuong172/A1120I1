@@ -3,6 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <title>Tao bo cuc don gian</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <style>
         .container {
             display: grid;
@@ -70,6 +71,7 @@
         .item16{
             grid-area: footer;
         }
+
         .menudoc{
             list-style-type: none;
 
@@ -77,15 +79,18 @@
         .menungang{
             list-style-type: none;
             padding-right: 100px;
-
-
         }
+
         .menungang > li{
             display: inline-block;
             border-right: 1px solid black;
             margin: 0;
-            padding: 0;
+            padding-right: 10px;
         }
+        .menungang > li:last-child{
+            border: none ;
+        }
+
 
 
 
@@ -124,7 +129,16 @@
     <div class="item13"> news4</div>
     <div class="item14"> news5</div>
     <div class="item15"> news6</div>
-    <div class="item16"> footer</div>
+    <div class="item16">
+        <ul class="menungang">
+            <li>Home</li>
+            <li>Students</li>
+            <li>Courses</li>
+            <li>About Us</li>
+            <li>Contact Us</li>
+        </ul>
+
+    </div>
 
 </div>
 

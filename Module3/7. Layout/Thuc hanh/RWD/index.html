@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RWD</title>
+    <style>
+        .container{
+            display: grid;
+            grid-gap: 10px;
+            grid-template-areas:
+                    'logo logo logo banner banner banner banner banner banner banner banner banner'
+                    'menu menu menu menu menu menu menu menu menu menu menu menu'
+                    'leftside1 leftside1 leftside1 photo photo photo photo hotnews hotnews rightside rightside rightside'
+                    'leftside2 leftside2 leftside2 news1 news1 news2 news2 news3 news3 rightside rightside rightside'
+                    'leftside2 leftside2 leftside2 news4 news4 news5 news5 news6 news6 rightside rightside rightside'
+                    'footer footer footer footer footer footer footer footer footer footer footer footer'
+                    ;
+        }
+        .container > div {
+            padding: 20px;
+            font-size: 30px;
+            border: 1px solid black;
+        }
+        .item1{
+            grid-area: logo;
+        }
+        .item2{
+            grid-area: menu;
+        }
+        .item3{
+            grid-area: banner;
+        }
+        .item4{
+            grid-area: leftside1;
+        }
+        .item5{
+            grid-area: photo;
+        }
+        .item6{
+            grid-area: hotnews;
+        }
+        .item7{
+            grid-area: rightside;
+        }
+        .item8{
+            grid-area: leftside2;
+        }
+        .item9{
+            grid-area: news1;
+        }
+        .item10{
+            grid-area: news2;
+        }
+        .item11{
+            grid-area: news3;
+        }
+        .item12{
+            grid-area: news4;
+        }
+        .item13{
+            grid-area: news5;
+        }
+        .item14{
+            grid-area: news6;
+        }
+        .item15{
+            grid-area: footer;
+        }
+
+        @media all and (max-width: 1024px) {
+            .container{
+                grid-template-areas:
+                        'logo logo logo banner banner banner banner banner banner banner banner banner'
+                        'menu menu menu menu menu menu menu menu menu menu menu menu'
+                        'leftside1 leftside1 leftside1 photo photo photo hotnews hotnews hotnews rightside rightside rightside'
+                        'leftside2 leftside2 leftside2 news1 news1 news1 news2 news2 news2 rightside rightside rightside'
+                        'leftside2 leftside2 leftside2 news3 news3 news3 news4 news4 news4 rightside rightside rightside'
+                        'leftside2 leftside2 leftside2 news5 news5 news5 news6 news6 news6 rightside rightside rightside'
+                        'footer footer footer footer footer footer footer footer footer footer footer footer'
+            ;
+            }
+        }
+        @media all  and (max-width: 768px) {
+            .container{
+                grid-template-areas:
+                        'logo logo logo banner banner banner banner banner banner banner banner banner'
+                        'menu menu menu menu menu menu menu menu menu menu menu menu'
+                        'leftside1 leftside1 photo photo photo photo photo hotnews hotnews hotnews hotnews hotnews'
+                        'leftside2 leftside2 news1 news1 news1 news1 news1 news2 news2 news2 news2 news2'
+                        'leftside2 leftside2 news3 news3 news3 news3 news3 news4 news4 news4 news4 news4'
+                        'leftside2 leftside2 news5 news5 news5 news5 news5 news6 news6 news6 news6 news6'
+                        'footer footer footer footer footer footer footer footer footer footer footer footer'
+            ;
+            }
+            .item7{
+                display: none;
+            }
+        }
+
+        @media all and (max-width: 540px) {
+            .container{
+                grid-template-areas:
+                        'logo logo logo banner banner banner banner banner banner banner banner banner'
+                        'menu menu menu menu menu menu menu menu menu menu menu menu'
+                        'leftside1 leftside1 leftside1 photo photo photo photo photo photo photo photo photo'
+                        'leftside2 leftside2 leftside2 hotnews hotnews hotnews hotnews hotnews hotnews hotnews hotnews hotnews'
+                        'leftside2 leftside2 leftside2 news1 news1 news1 news1 news1 news1 news1 news1 news1'
+                        'leftside2 leftside2 leftside2 news2 news2 news2 news2 news2 news2 news2 news2 news2'
+                        'leftside2 leftside2 leftside2 news3 news3 news3 news3 news3 news3 news3 news3 news3'
+                        'leftside2 leftside2 leftside2 news4 news4 news4 news4 news4 news4 news4 news4 news4'
+                        'leftside2 leftside2 leftside2 news5 news5 news5 news5 news5 news5 news5 news5 news5'
+                        'leftside2 leftside2 leftside2 news6 news6 news6 news6 news6 news6 news6 news6 news6'
+                        'footer footer footer footer footer footer footer footer footer footer footer footer'
+            ;
+            }
+            .item7{
+                display: none;
+            }
+        }
+    </style>
+</head>
+<body>
+<div class="container">
+    <div class="item1">logo</div>
+    <div class="item2"> menu</div>
+    <div class="item3"> banner</div>
+    <div class="item4">leftside1</div>
+    <div class="item5">photo</div>
+    <div class="item6">hotnews</div>
+    <div class="item7">rightside</div>
+    <div class="item8">leftside2</div>
+    <div class="item9">news1</div>
+    <div class="item10">news2</div>
+    <div class="item11">news3</div>
+    <div class="item12">news4</div>
+    <div class="item13">news5</div>
+    <div class="item14">news6</div>
+    <div class="item15">footer</div>
+</div>
+
+</body>
+</html>

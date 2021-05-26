@@ -1,0 +1,17 @@
+body{
+    width: 70%;
+    margin: auto;
+    font-family: 'Roboto';font-size: 22px;
+}
+
+.title{
+    text-decoration: none;
+}
+
+.img{
+    display: flex;
+    justify-content:center ;
+}
+.img img{
+    width: 100%;
+}

@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Layout with Flex</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href='https://fonts.googleapis.com/css?family=Roboto' rel='stylesheet'>
+    <style>
+
+        body {
+            width: 70%;
+            margin: auto;
+            font-family: 'Roboto';
+            font-size: 18px;
+        }
+
+        #header {
+            display: flex;
+            background-color: black;
+            color: white;
+        }
+
+        .logo, .menu, .login, .nav, .content, .aside, #footer {
+            border: 1px solid black;
+            font-size: 22px;
+        }
+
+        .logo {
+            width: 10%;
+
+        }
+
+        .menu {
+            width: 80%;
+        }
+
+        .menu ul {
+            list-style-type: none;
+            display: flex;
+        }
+
+        ul li {
+            margin: 0 20px;
+        }
+
+        .menu ul a {
+            text-decoration: none;
+            color: white;
+        }
+
+        a {
+            text-decoration: none;
+            margin: 0;
+            padding: 0;
+        }
+
+        .login {
+            width: 10%;
+
+        }
+
+        #main {
+            display: flex;
+        }
+
+        .nav {
+            width: 20%;
+        }
+
+        .nav ul {
+            list-style-type: none;
+        }
+
+        .content {
+            width: 60%;
+        }
+
+        .aside {
+            width: 20%;
+        }
+
+        #footer {
+            text-align: center;
+        }
+
+        .img {
+            width: 30%;
+            display: flex;
+            align-self: center;
+        }
+
+        .summary {
+            width: 70%;
+        }
+
+        .story {
+            display: flex;
+        }
+
+        img {
+            width: 100%;
+            height: auto;
+        }
+
+        @media screen and (max-width: 768px) {
+            .content {
+                width: 100%;
+            }
+
+            .aside {
+                display: none;
+            }
+
+            .nav {
+                display: none;
+            }
+
+            #header {
+                display: block;
+            }
+        }
+    </style>
+</head>
+<body>
+<div id="header">
+    <div class="logo">
+        <h3>Logo</h3>
+    </div>
+    <div class="menu">
+        <ul>
+            <a href="">
+                <li>Home</li>
+            </a>
+            <a href="">
+                <li>About</li>
+            </a>
+            <a href="">
+                <li>Projects</li>
+            </a>
+            <a href="">
+                <li>Contact</li>
+            </a>
+        </ul>
+    </div>
+    <div class="login">
+        <h3>Login</h3>
+    </div>
+</div>
+<div id="main">
+    <div class="nav">
+        <ul>
+            <a href="">
+                <li>Link</li>
+            </a>
+            <a href="">
+                <li>Link</li>
+            </a>
+            <a href="">
+                <li>Link</li>
+            </a>
+        </ul>
+    </div>
+    <div class="content">
+        <div>
+            <h3>Giấc mơ trên đồi</h3>
+        </div>
+        <div class="story">
+            <div class="img">
+                <img src="./images/giacmotrendoi.jpg" alt="">
+            </div>
+            <div class="summary">
+                <p>
+                    Lần đầu anh nhìn thấy nàng, đó là một buổi chiều trong vắt nắng, cây trên đồi đang mùa trút lá trơ
+                    những cánh tay
+                    khẳng khiu.Nàng ngồi vắt vẻo trên cành duối bị bão quật đổ chắn ngang lối đi. Lần nào lên đồi nàng
+                    cũng thích vắt
+                    vẻo trên đó để váy không phết đất, lại dễ dàng trông chừng hai chú thỏ đang nhẩn nha ăn ở bãi cỏ
+                    đằng kia.
+                    <a href="./new_giacmotrendoi.html">đọc tiếp</a>
+                </p>
+            </div>
+        </div>
+
+
+        <hr style="width: 95%">
+
+        <div>
+            <h3>Rồi hoa cũng nở</h3>
+        </div>
+        <div class="story">
+            <div class="img">
+                <img src="./images/roihoacungno.jpg" alt="">
+            </div>
+            <div class="summary">
+                <p>
+                    Chiều chập choạng. Thành phố chưa kịp lên đèn. Phía đằng đông, bóng tối đang lan tỏa. Phía đằng tây,
+                    một vệt nắng
+                    cuối ngày vẽ lên bầu trời một đường hoàng hôn tím nhạt.
+                    <a href="./new_roihoacungno.html">đọc tiếp</a>
+                </p>
+            </div>
+        </div>
+        <hr style="width: 95%">
+
+        <div>
+            <h3>Những vết trượt sầu</h3>
+        </div>
+        <div class="story">
+            <div class="img">
+                <img src="./images/nhungvettruotsau.jpg" alt="">
+            </div>
+            <div class="summary">
+                <p>
+                    Hạ thường tới một mình, chỉ thỉnh thoảng tôi mới nhìn thấy người thân ngồi ngoài phòng dành cho
+                    người nhà đợi em.
+                    Mà người đi cùng cũng không phải ba hay mẹ, hình như là dì thì phải.
+                    <a href="./new_nhungvettruotsau.html">đọc tiếp</a>
+                </p>
+            </div>
+        </div>
+    </div>
+    <div class="aside">
+        aside
+    </div>
+</div>
+<div id="footer">
+    &copy;Codegym
+</div>
+</body>
+</html>

@@ -2,10 +2,29 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="6fcbeefd-4154-4944-94e0-8dd3b58bd873" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/7. Layout/Thuc hanh/Box model/index.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/7. Layout/Thuc hanh/Tao bo cuc don gian/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/7. Layout/Bai tap/Hoat hinh/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/7. Layout/Bai tap/Tao Layout voi RWD/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/7. Layout/Bai tap/Tao Layout voi RWD/index1.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/7. Layout/Bai tap/Tao Layout/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/7. Layout/Bai tap/Truyen ngan/giacmotrendoi.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/7. Layout/Bai tap/Truyen ngan/images/giacmotrendoi.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/7. Layout/Bai tap/Truyen ngan/images/nhungvettruotsau.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/7. Layout/Bai tap/Truyen ngan/images/roihoacungno.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/7. Layout/Bai tap/Truyen ngan/images/yeuquadoinay.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/7. Layout/Bai tap/Truyen ngan/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/7. Layout/Bai tap/Truyen ngan/main.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/7. Layout/Bai tap/Truyen ngan/new_giacmotrendoi.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/7. Layout/Bai tap/Truyen ngan/new_nhungvettruotsau.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/7. Layout/Bai tap/Truyen ngan/new_roihoacungno.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/7. Layout/Bai tap/Truyen ngan/nhungvettruotsau.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/7. Layout/Bai tap/Truyen ngan/roihoacungno.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/7. Layout/Bai tap/Truyen ngan/yeuquadoinay.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/7. Layout/Thuc hanh/Fixed Top Menu/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/7. Layout/Thuc hanh/RWD/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/7. Layout/Thuc hanh/Tao menu doc/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/7. Layout/Thuc hanh/Tao menu ngang/index.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Case Study Database/query.sql" beforeDir="false" afterPath="$PROJECT_DIR$/Case Study Database/query.sql" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/7. Layout/Thuc hanh/Tao bo cuc don gian/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/7. Layout/Thuc hanh/Tao bo cuc don gian/index.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -36,8 +55,16 @@
     <property name="DefaultHtmlFileTemplate" value="HTML File" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/7. Layout/Bai tap" />
     <property name="list.type.of.created.stylesheet" value="CSS" />
+  </component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\phuongtt\Desktop\A1120I1-TranThanhPhuong\Module3\7. Layout\Bai tap\Truyen ngan" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\phuongtt\Desktop\A1120I1-TranThanhPhuong\Module3\7. Layout\Bai tap" />
+    </key>
   </component>
   <component name="ServiceViewManager">
     <option name="viewStates">
@@ -62,7 +89,8 @@
       <option name="presentableId" value="Default" />
       <updated>1621502044935</updated>
       <workItem from="1621502046148" duration="14440000" />
-      <workItem from="1621860727382" duration="5114000" />
+      <workItem from="1621860727382" duration="5481000" />
+      <workItem from="1621946997653" duration="27473000" />
     </task>
     <servers />
   </component>
@@ -74,5 +102,9 @@
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="430" y="166" key="#com.intellij.fileTypes.FileTypeChooser/0.0.1366.728@0.0.1366.728" timestamp="1621587645951" />
+    <state x="1705" y="167" key="run.anything.popup" timestamp="1622014820457">
+      <screen x="1366" y="0" width="1366" height="768" />
+    </state>
+    <state x="1705" y="167" key="run.anything.popup/0.0.1366.728/1366.0.1366.768@1366.0.1366.768" timestamp="1622014820457" />
   </component>
 </project>
