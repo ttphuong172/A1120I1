@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Facebook</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <style>
+        #header{
+            height: 100px;
+            display: flex;
+            justify-content: space-between;
+        }
+        #header img{
+            width: 80px;
+            height: 80px;
+        }
+        .logosearch{
+            display: flex;
+        }
+        .logo{
+            padding: 0px 10px;
+        }
+        .search{
+            padding-top: 20px;
+            padding-left: 10px;
+        }
+        .search input{
+            height: 30px;
+            width: 300px;
+        }
+         ul{
+            display: flex;
+            list-style-type: none;
+        }
+        a{
+            padding: 0 20px;
+        }
+        .leftmenu{
+            width: 20%;
+        }
+        .right{
+            width: 20%;
+        }
+        .content{
+            width: 54%;
+        }
+        #main{
+            display: flex;
+            justify-content: space-around;
+        }
+        #main ul{
+            display: block;
+        }
+    </style>
+</head>
+<body>
+<div id="header">
+    <div class="logosearch">
+      <div class="logo">
+          <img src="./images/logo.png" alt="">
+      </div>
+        <div class="search">
+            <input type="text">
+        </div>
+    </div>
+    <div class="menu">
+        <ul>
+            <a href=""><li>
+                <i class="fa fa-home" style="font-size: 48px"></i>
+            </li></a>
+            <a href=""><li>
+                <i class="fa fa-flag" style="font-size: 48px"></i>
+            </li></a>
+            <a href=""><li>Watch</li></a>
+            <a href=""><li>Marketplace</li></a>
+            <a href=""><li>Nhóm</li></a>
+        </ul>
+
+    </div>
+    <div class="notification">
+        <ul>
+            <a href=""><li>Me</li></a>
+            <a href=""><li>Create</li></a>
+            <a href=""><li>Messenger</li></a>
+            <a href=""><li>Thông báo</li></a>
+            <a href=""><li>Tài khoản</li></a>
+        </ul>
+    </div>
+</div>
+
+<div id="main">
+    <div class="leftmenu">
+        <ul>
+            <a href=""><li>Me</li></a>
+            <a href=""><li>Bạn Bè</li></a>
+            <a href=""><li>Trang</li></a>
+            <a href=""><li>Watch</li></a>
+            <a href=""><li>Nhóm</li></a>
+            <a href=""><li>Marketplace</li></a>
+        </ul>
+    </div>
+    <div class="content">content</div>
+    <div class="right">right</div>
+</div>
+<div id="footer"></div>
+</body>
+</html>
