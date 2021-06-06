@@ -1,3 +1,4 @@
+import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
@@ -15,12 +16,11 @@ public class DemoServlet extends HttpServlet {
     }
 
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-        response.setHeader("Refresh","1");
-        PrintWriter writer=response.getWriter();
-        writer.println("<html>");
-        writer.println("<h1>Hello World</h1>");
+
         Date today =new Date();
-        writer.println("<h1>"+today+"</h1>");
-        writer.println("</html>");
+        request.setAttribute("today",today);
+        RequestDispatcher dispatcher =request.getRequestDispatcher("/index.jsp");
+        dispatcher.forward(request,response);
+
     }
 }

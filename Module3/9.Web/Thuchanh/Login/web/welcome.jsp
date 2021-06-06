@@ -1,12 +1,11 @@
 <%--
   Created by IntelliJ IDEA.
   User: phuongtt
-  Date: 6/5/2021
-  Time: 4:38 PM
+  Date: 6/6/2021
+  Time: 8:13 AM
   To change this template use File | Settings | File Templates.
 --%>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
-<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
 <html>
 <head>
     <title>Title</title>
@@ -16,18 +15,18 @@
 </head>
 <body>
 <div class="container">
-    <h2>Kết quả</h2>
-<c:if test="${not empty myError}">
-    <h3>${myError}</h3>
-</c:if>
-<c:if test="${empty myError}" >
-<c:if test="${not empty error}">
-    <h3>${error}</h3>
-</c:if>
-<c:if test="${empty error}">
-    <h3>Phép toán: ${result}</h3>
-</c:if>
-</c:if>
+    <div class="row" id="header">
+        <div class="col-sm-10" style="background-color: antiquewhite" >
+            <h3>Day la logo</h3>
+        </div>
+        <div class="col-sm-2" style="background-color: #CCCCCC">
+            ${username}
+        </div>
+    </div>
+    <div id="main">
+    </div>
+    <div id="footer"></div>
 </div>
+
 </body>
 </html>

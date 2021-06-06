@@ -1,3 +1,4 @@
+import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
@@ -6,22 +7,21 @@ import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 import java.io.PrintWriter;
 
-@WebServlet(name = "LoginServlet",urlPatterns = "/login")
+@WebServlet(name = "LoginServlet",urlPatterns = "/welcome")
 public class LoginServlet extends HttpServlet {
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         String username = request.getParameter("username");
         String password = request.getParameter("password");
 
-        PrintWriter writer = response.getWriter();
-        writer.println("<html>");
+
+        request.setAttribute("username",username);
 
         if("admin".equals(username) && "admin".equals(password)) {
-            writer.println("<h1>Welcome "+username+" to website</h1>");
+            RequestDispatcher dispatcher =request.getRequestDispatcher("/welcome.jsp");
+            dispatcher.forward(request,response);
         } else{
-            writer.println("<h1>Login Error</h1>");
+           response.sendRedirect("index.jsp");
         }
-
-        writer.println("</html>");
     }
 
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
