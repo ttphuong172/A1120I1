@@ -1,8 +1,8 @@
 <%--
   Created by IntelliJ IDEA.
   User: phuongtt
-  Date: 6/5/2021
-  Time: 4:38 PM
+  Date: 6/7/2021
+  Time: 9:21 AM
   To change this template use File | Settings | File Templates.
 --%>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
@@ -16,8 +16,22 @@
 </head>
 <body>
 <div class="container">
-    <h2>Kết quả</h2>
-    <h3>Phép toán: ${result}</h3>
+    <h3>Thanks for joining our email list</h3>
+    <p>Here is the information thay you entered</p>
+<table  class="table">
+    <tr>
+        <th>Email</th>
+        <th>FirstName</th>
+        <th>LastName</th>
+    </tr>
+    <c:forEach items="${userList}" var="user" >
+    <tr>
+        <td>${user.email}</td>
+        <td>${user.firstName}</td>
+        <td>${user.lastName}</td>
+    </tr>
+    </c:forEach>
+</table>
 </div>
 </body>
 </html>

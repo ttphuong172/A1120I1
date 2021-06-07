@@ -26,7 +26,7 @@ public class CalculateServlet extends HttpServlet {
                 if (second != 0) {
                     result = first / second;
                 } else {
-                    throw new RuntimeException("Không thể chia cho 0");
+                    throw new RuntimeException("Can not divide 0");
                 }
         }
         return first + operator + second + "=" + result;
@@ -39,31 +39,37 @@ public class CalculateServlet extends HttpServlet {
         Float first = 0.0F;
         Float second = 0.0F;
         if (firstString == "" || secondString == "") {
-            myError = "Chưa nhập dữ liệu cần tính";
+            myError = "Please enter operand1, operand 2";
             request.setAttribute("myError", myError);
-        } else if (!(firstString.matches("[+-]?\\d*(\\.\\d+)?")) || !(secondString.matches("[+-]?\\d*(\\.\\d+)?"))) {
-            System.out.println(firstString.matches("[+-]?\\d*(\\.\\d+)?"));
-            System.out.println(secondString.matches("[+-]?\\d*(\\.\\d+)?"));
-            myError = "Dữ liệu phải là kiểu số";
+        } else if (!(firstString.matches("[+-]?\\d*(\\.\\d+)?")) ) {
+            myError = "First operand 1 is not number";
             request.setAttribute("myError", myError);
-        } else {
+        } else if( !(secondString.matches("[+-]?\\d*(\\.\\d+)?"))) {
+            myError = "First operand 2 is not number";
+            request.setAttribute("myError", myError);
+        }
+        else {
             first = Float.parseFloat(request.getParameter("first"));
             second = Float.parseFloat(request.getParameter("second"));
         }
         String operator = request.getParameter("operator");
-        String error = "";
         String result = "";
         try {
             result = calculate(first, second, operator);
         } catch (Exception ex) {
-            error = ex.getMessage();
+            myError = ex.getMessage();
         }
         request.setAttribute("result", result);
-        request.setAttribute("error", error);
-        request.setAttribute("myError", myError);
-        System.out.println(error);
-        RequestDispatcher dispatcher = request.getRequestDispatcher("/calculator.jsp");
-        dispatcher.forward(request, response);
+
+        if (myError=="") {
+            RequestDispatcher dispatcher = request.getRequestDispatcher("/calculator.jsp");
+            dispatcher.forward(request, response);
+        } else{
+            request.setAttribute("myError", myError);
+            RequestDispatcher dispatcher = request.getRequestDispatcher("/index.jsp");
+            dispatcher.forward(request, response);
+        }
+
     }
 
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {

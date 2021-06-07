@@ -23,6 +23,7 @@
   <body>
 <div class="container">
   <h3>Simple Calculator</h3>
+  <p>${myError}</p>
   <form action="/calculate" method="post">
     <label for="">First Operand</label>
     <input type="text" name="first">
@@ -32,7 +33,7 @@
     <select name="operator">
       <option value="+">Addition</option>
       <option value="-">Subtraction</option>
-      <option value="x">Multiplication</option>
+      <option value="*">Multiplication</option>
       <option value="/">Division</option>
     </select>
     <br>
