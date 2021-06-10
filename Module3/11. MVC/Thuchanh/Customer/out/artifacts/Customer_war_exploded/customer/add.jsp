@@ -23,7 +23,7 @@
 <body>
 <div class="container">
     <h3>Thêm mới khách hàng</h3>
-    <form action="/add" method="post" class="from-group">
+    <form method="post" class="from-group">
         <label for=""> Mã KH</label>
         <input type="text" name="id">
         <br>

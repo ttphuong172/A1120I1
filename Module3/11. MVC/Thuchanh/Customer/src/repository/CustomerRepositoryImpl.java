@@ -3,6 +3,7 @@ package repository;
 import model.Customer;
 
 import java.util.ArrayList;
+import java.util.Iterator;
 import java.util.List;
 
 public class CustomerRepositoryImpl implements CustomerRepository{
@@ -45,10 +46,17 @@ public class CustomerRepositoryImpl implements CustomerRepository{
 
     @Override
     public void remove(int id) {
-        for (int i=0;i<customerList.size();i++){
-            if (customerList.get(i).getId()==id){
-                customerList.remove(i);
+//        for (int i=0;i<customerList.size();i++){
+//            if (customerList.get(i).getId()==id){
+//                customerList.remove(i);
+//            }
+//        }
+        Iterator<Customer> iterator=customerList.iterator();
+        while (iterator.hasNext()){
+            if(iterator.next().getId()==id){
+                iterator.remove();
             }
         }
+
     }
 }

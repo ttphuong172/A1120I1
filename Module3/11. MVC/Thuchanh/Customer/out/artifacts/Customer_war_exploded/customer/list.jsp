@@ -24,6 +24,13 @@
 <div class="container">
     <h3>Danh sách khách hàng</h3>
     <a href="?action=add">Tạo mới khách hàng</a>
+    <a href="?action=list">Danh sách KH</a>
+    <form action="/find" method="post" class="form-inline">
+    <label for="">Nhập mã KH</label>
+        <input type="text" name="find">
+        <br>
+        <input type="submit" value="Tìm kiếm" class="btn btn-primary">
+    </form>
     <table class="table">
         <tr>
             <th>Mã KH</th>
@@ -31,7 +38,7 @@
             <th>Email</th>
             <th>Địa chỉ</th>
         </tr>
-
+        <c:if test="${empty customer}">
         <c:forEach items="${customerList}" var="customer">
             <tr>
                 <td>${customer.id}</td>
@@ -46,8 +53,29 @@
                 </a></td>
             </tr>
         </c:forEach>
+        </c:if>
 
+        <c:if test="${not empty customer}">
+
+                <tr>
+                    <td>${customer.id}</td>
+                    <td>${customer.name}</td>
+                    <td>${customer.email}</td>
+                    <td>${customer.address}</td>
+                    <td><a href="?action=edit&id=${customer.id}">
+                        <button class="btn btn-warning">EDIT</button>
+                    </a></td>
+                    <td><a href="?action=delete&id=${customer.id}">
+                        <button class="btn btn-danger">DELTE</button>
+                    </a></td>
+                </tr>
+
+
+        </c:if>
     </table>
+
+
+
 </div>
 </body>
 </html>
