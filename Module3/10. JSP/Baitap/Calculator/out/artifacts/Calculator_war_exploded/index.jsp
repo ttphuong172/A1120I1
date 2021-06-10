@@ -26,7 +26,7 @@
   <p>${myError}</p>
   <form action="/calculate" method="post">
     <label for="">First Operand</label>
-    <input type="text" name="first">
+    <input type="text" name="first" value="${first}">
     <br>
     <br>
     <label for="">Operator</label>
@@ -45,6 +45,7 @@
     <label for=""></label>
     <input type="submit" value="Calculate" >
   </form>
+
 </div>
   </body>
 </html>

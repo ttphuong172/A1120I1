@@ -28,6 +28,7 @@
         <br>
         <label for="">Last Name</label>
         <input type="text" name="lastname"><br>
+
         <input type="submit" value="Join Now" class="btn btn-primary">
     </form>
 </div>

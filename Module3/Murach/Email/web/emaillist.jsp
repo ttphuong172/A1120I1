@@ -29,6 +29,7 @@
         <td>${user.email}</td>
         <td>${user.firstName}</td>
         <td>${user.lastName}</td>
+        <td><button class="btn btn-primary">Delete</button></td>
     </tr>
     </c:forEach>
 </table>

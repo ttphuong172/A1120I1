@@ -46,22 +46,22 @@
             </ul>
         </div>
         <div class="input_icon col-sm-4">
-            <input type="text" id="birthday">
+            <input type="text" id="search" placeholder="search">
             <i class="icon fas fa-search"></i>
         </div>
     </div>
 
     <div id="main" class="row">
-        <div class="sidebar col-sm-3" style="height: 500px;">
+        <div class="sidebar col-sm-2" style="height: 500px;">
             sidebar
         </div>
-        <div class="bodyarea col-sm-9" style="height: 500px;">
+        <div class="bodyarea col-sm-10" style="height: 500px;">
             bodyarea
         </div>
     </div>
 
     <div id="footer">
-        <p>&copy; Codegyme Da Nang</p>
+        <p>&copy; Codegym Da Nang</p>
     </div>
 </div>
 </body>

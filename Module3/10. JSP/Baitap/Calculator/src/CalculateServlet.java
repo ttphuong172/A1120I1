@@ -46,6 +46,7 @@ public class CalculateServlet extends HttpServlet {
             request.setAttribute("myError", myError);
         } else if( !(secondString.matches("[+-]?\\d*(\\.\\d+)?"))) {
             myError = "First operand 2 is not number";
+
             request.setAttribute("myError", myError);
         }
         else {
@@ -59,16 +60,17 @@ public class CalculateServlet extends HttpServlet {
         } catch (Exception ex) {
             myError = ex.getMessage();
         }
+
         request.setAttribute("result", result);
 
+        RequestDispatcher dispatcher;
         if (myError=="") {
-            RequestDispatcher dispatcher = request.getRequestDispatcher("/calculator.jsp");
-            dispatcher.forward(request, response);
+             dispatcher = request.getRequestDispatcher("/calculator.jsp");
         } else{
             request.setAttribute("myError", myError);
-            RequestDispatcher dispatcher = request.getRequestDispatcher("/index.jsp");
-            dispatcher.forward(request, response);
+             dispatcher = request.getRequestDispatcher("/index.jsp");
         }
+        dispatcher.forward(request, response);
 
     }
 

@@ -12,9 +12,12 @@ import java.util.List;
 
 @WebServlet(name = "EmailServlet",urlPatterns = "/emaillist")
 public class EmailServlet extends HttpServlet {
+
+    List<User> userList = new ArrayList<>();
+
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 
-        List<User> userList = new ArrayList<>();
+
         String email=request.getParameter("email");
         String firstName=request.getParameter("firstname");
         String lastName=request.getParameter("lastname");
