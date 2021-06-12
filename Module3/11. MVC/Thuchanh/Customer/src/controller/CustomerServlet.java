@@ -27,7 +27,7 @@ public class CustomerServlet extends HttpServlet {
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         response.setContentType("text/html;charset=UTF-8");
         request.setCharacterEncoding("utf-8");
-        String action = request.getParameter("action");
+        String action = request.getRequestURI();
         showCustomer(request,response);
         System.out.println(action);
 

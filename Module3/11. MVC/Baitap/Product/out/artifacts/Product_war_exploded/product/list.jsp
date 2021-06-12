@@ -22,13 +22,21 @@
     <a href="/?action=create">
         <button class="btn btn-primary">THÊM MỚI</button>
     </a>
-
-
+    <div>
+        <p>Tìm kiếm sản phẩm</p>
+    <form action="/?action=find" method="post">
+        <input type="text" name="find">
+        <input type="submit" value="TÌM KIẾM" >
+    </form>
+    </div>
+    <c:if test="${empty product}">
     <table class="table">
         <tr>
             <th>Mã SP</th>
             <th>Tên SP</th>
             <th>Giá SP</th>
+            <th>Sửa</th>
+            <th>Xóa</th>
         </tr>
 
         <c:forEach items="${productList}" var="productlist">
@@ -41,7 +49,29 @@
             </tr>
         </c:forEach>
     </table>
+    </c:if>
 
+    <c:if test="${not empty product}">
+        <table class="table">
+            <tr>
+                <th>Mã SP</th>
+                <th>Tên SP</th>
+                <th>Giá SP</th>
+                <th>Sửa</th>
+                <th>Xóa</th>
+            </tr>
+
+
+                <tr>
+                    <td>${product.id}</td>
+                    <td>${product.name}</td>
+                    <td>${product.price}</td>
+                    <td><a href="/?action=update&id=${product.id}"><button class="btn btn-warning">EDIT</button></a></td>
+                    <td><a href="/?action=delete&id=${product.id}"><button class="btn btn-danger">XÓA</button></a></td>
+                </tr>
+
+        </table>
+    </c:if>
 
 
 </div>

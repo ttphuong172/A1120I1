@@ -24,13 +24,13 @@
 <div class="container">
     <h3>CẬP NHẬT THÔNG TIN</h3>
 <form method="post" class="form-group">
-    <label for="">id</label>
+    <label for="">Mã SP</label>
     <input type="text" name="id" value="${product.id}">
     <br>
-    <label for="">name</label>
+    <label for="">Tên SP</label>
     <input type="text" name="name" value="${product.name}">
     <br>
-    <label for="">price</label>
+    <label for="">Giá SP</label>
     <input type="text" name="price" value="${product.price}">
     <br>
     <label for=""></label>

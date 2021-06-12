@@ -25,13 +25,13 @@
 <div class="container">
     <h3>THÊM MỚI SẢN PHẨM</h3>
 <form method="post" class="form-group">
-    <label for="">id</label>
+    <label for="">Mã SP</label>
     <input type="text" name="id">
     <br>
-    <label for="">name</label>
+    <label for="">Tên SP</label>
     <input type="text" name="name">
     <br>
-    <label for="">price</label>
+    <label for="">Giá SP</label>
     <input type="text" name="price">
     <br>
     <label for=""></label>
