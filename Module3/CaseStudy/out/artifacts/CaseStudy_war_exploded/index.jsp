@@ -16,7 +16,7 @@
     <link rel="stylesheet" href="./css/main.css">
 </head>
 <body>
-<div class="container pt-5">
+<div class="container-fluid pt-5">
     <div id="header" class="row">
         <div class="logo col-sm-10">
             <img src="./img/logo.jpg" alt="logo">
@@ -34,10 +34,10 @@
                 <a href="">
                     <li>Employee</li>
                 </a>
-                <a href="">
+                <a href="/customer">
                     <li>Customer</li>
                 </a>
-                <a href="">
+                <a href="/service">
                     <li>Service</li>
                 </a>
                 <a href="">

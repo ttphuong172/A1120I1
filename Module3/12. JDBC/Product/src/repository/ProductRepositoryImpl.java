@@ -2,12 +2,21 @@ package repository;
 
 import model.Product;
 import model.ProductType;
+import servive.ProductTypeService;
+import servive.ProductTypeServiceImpl;
 
 import java.sql.*;
 import java.util.ArrayList;
 import java.util.List;
 
 public class ProductRepositoryImpl implements ProductRepository {
+    //    private static List<Product> productList;
+//    static {
+//        productList=new ArrayList<>();
+//        productList.add(new Product(1,"OMO",25000));
+//        productList.add(new Product(2,"ABA",20000));
+//    }
+    ProductTypeService productTypeService=new ProductTypeServiceImpl();
 
     private String jdbcURL = "jdbc:mysql://localhost:3306/demo?useSSL=false";
     private String jdbcUsername = "root";
@@ -44,8 +53,12 @@ public class ProductRepositoryImpl implements ProductRepository {
                 int id = resultSet.getInt("id");
                 String name = resultSet.getString("name");
                 int price = resultSet.getInt("price");
-                int productType = resultSet.getInt("producttypeid");
+                int productTypeId = resultSet.getInt("producttypeid");
+                //ProductType productType=new ProductType(1,"Thuc pham");
 
+                ProductType productType=productTypeService.findProductTypeById(productTypeId);
+
+                //Product product = new Product(id, name, price,productTypeId);
                 Product product = new Product(id, name, price,productType);
                 productList.add(product);
             }
@@ -67,15 +80,14 @@ public class ProductRepositoryImpl implements ProductRepository {
             preparedStatement.setInt(1, product.getId());
             preparedStatement.setString(2, product.getName());
             preparedStatement.setInt(3, product.getPrice());
-            preparedStatement.setInt(4, product.getProductType());
+            preparedStatement.setInt(4, product.getProductType().getProductTypeId());
             preparedStatement.executeUpdate();
-            System.out.println(preparedStatement);
+
             preparedStatement.close();
             connection.close();
         } catch (SQLException e) {
             e.getMessage();
         }
-
     }
 
     @Override
@@ -89,7 +101,8 @@ public class ProductRepositoryImpl implements ProductRepository {
             while (resultSet.next()) {
                 String name = resultSet.getString("name");
                 int price = resultSet.getInt("price");
-                int productType = resultSet.getInt("producttypeid");
+                int productTypeId = resultSet.getInt("producttypeid");
+                ProductType productType=productTypeService.findProductTypeById(productTypeId);
                 product = new Product(id, name, price,productType);
             }
         } catch (SQLException e) {
@@ -101,10 +114,11 @@ public class ProductRepositoryImpl implements ProductRepository {
     @Override
     public void update(int id, Product product) {
         try (Connection connection = getConnection()) {
-            PreparedStatement preparedStatement = connection.prepareStatement("update product set name=?,price=? where id=? ");
+            PreparedStatement preparedStatement = connection.prepareStatement("update product set name=?,price=?,producttypeid=? where id=? ");
             preparedStatement.setString(1, product.getName());
             preparedStatement.setInt(2, product.getPrice());
-            preparedStatement.setInt(3, id);
+            preparedStatement.setInt(3, product.getProductType().getProductTypeId());
+            preparedStatement.setInt(4, id);
             preparedStatement.executeUpdate();
         } catch (SQLException e) {
             e.getMessage();
@@ -123,41 +137,4 @@ public class ProductRepositoryImpl implements ProductRepository {
 
     }
 
-//    @Override
-//    public List<Product> findAll() {
-//        return productList;
-//    }
-//
-//    @Override
-//    public void save(Product product) {
-//        productList.add(product);
-//    }
-//
-//    @Override
-//    public Product findById(int id) {
-//        for(int i=0;i<productList.size();i++){
-//            if(productList.get(i).getId()==id){
-//                return productList.get(i);
-//            }
-//        }
-//        return null;
-//    }
-//
-//    @Override
-//    public void update(int id, Product product) {
-//        for(int i=0;i<productList.size();i++){
-//            if(productList.get(i).getId()==id){
-//                productList.set(i,product);
-//            }
-//        }
-//    }
-//
-//    @Override
-//    public void remove(int id) {
-//        for(int i=0;i<productList.size();i++){
-//            if(productList.get(i).getId()==id){
-//                productList.remove(i);
-//            }
-//        }
-//    }
 }

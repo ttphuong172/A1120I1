@@ -4,15 +4,8 @@ public class Product {
     private int id;
     private String name;
     private int price;
-    private int productType;
-
-    public Product(int id, String name, int price,int productType) {
-        this.id = id;
-        this.name = name;
-        this.price = price;
-        this.productType = productType;
-
-    }
+    //private int productTypeId;
+    private ProductType productType;
 
     public int getId() {
         return id;
@@ -38,11 +31,26 @@ public class Product {
         this.price = price;
     }
 
-    public int getProductType() {
+    public ProductType getProductType() {
         return productType;
     }
 
-    public void setProductType(int productType) {
+    public void setProductType(ProductType productType) {
         this.productType = productType;
+    }
+//    public int getProductTypeId() {
+//        return productTypeId;
+//    }
+//
+//    public void setProductTypeId(int productTypeId) {
+//        this.productTypeId = productTypeId;
+//    }
+
+    public Product(int id, String name, int price, ProductType productType) {
+        this.id = id;
+        this.name = name;
+        this.price = price;
+        //this.productTypeId = productTypeId;
+        this.productType=productType;
     }
 }

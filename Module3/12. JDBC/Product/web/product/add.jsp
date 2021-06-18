@@ -16,7 +16,7 @@
     <style>
         label{
             display: inline-block;
-            width: 100px;
+            width: 150px;
         }
     </style>
 
@@ -39,7 +39,6 @@
         <c:forEach items="${productTypeList}" var="producttypelist">
             <option value="${producttypelist.productTypeId}">${producttypelist.productTypeName}</option>
         </c:forEach>
-
     </select>
     <br>
     <label for=""></label>

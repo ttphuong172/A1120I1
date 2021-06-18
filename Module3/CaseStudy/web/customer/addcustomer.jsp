@@ -6,6 +6,8 @@
   To change this template use File | Settings | File Templates.
 --%>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
+
 <html>
 <head>
     <title>Add Employee</title>
@@ -16,7 +18,7 @@
     <link rel="stylesheet" href="../css/main.css">
 </head>
 <body>
-<div class="container pt-5">
+<div class="container-fluid pt-5">
     <div id="header" class="row">
         <div class="logo col-sm-10">
             <img src="../img/logo.jpg" alt="logo">
@@ -34,7 +36,7 @@
                 <a href="">
                     <li>Employee</li>
                 </a>
-                <a href="">
+                <a href="/customer">
                     <li>Customer</li>
                 </a>
                 <a href="">
@@ -57,11 +59,11 @@
         </div>
         <div class="bodyarea col-sm-10">
             <h3>Thêm mới khách hàng</h3>
-            <form action="" method="post" class="form-group">
+            <form action="/customer?action=create" method="post" class="form-group">
             <table class="table">
                 <tr>
-                    <td><label for="">Họ tên khách hàng</label></td>
-                    <td><input type="text" name="namecustomer"  class="form-control" ></td>
+                    <td width="20%"><label for="">Họ tên khách hàng</label></td>
+                    <td width="80%"><input type="text" name="namecustomer"  class="form-control" ></td>
                 </tr>
                 <tr>
                     <td><label for="">Ngày sinh</label></td>
@@ -86,20 +88,20 @@
                 </tr>
                 <tr>
                     <td><label for="">Loại khách hàng</label></td>
+
                     <td>
                         <select name="customertype" class="custom-select">
-                            <option selected>Custom Select Menu</option>
-                            <option value="di">Diamond</option>
-                            <option value="go">Gold</option>
-                            <option value="me">Member</option>
-                            <option value="pl">Platinium</option>
-                            <option value="si">Silver</option>
+                            <c:forEach items="${customerTypeList}" var="customertypelist">
+                            <option value="${customertypelist.customerTypeId}"> ${customertypelist.customerTypeName}</option>
+                            </c:forEach>
                         </select>
                     </td>
+
                 </tr>
                 <tr>
                     <td></td>
                     <td> <input class="btn btn-primary" type="submit" value="Thêm mới"></td>
+
                 </tr>
 
             </table>

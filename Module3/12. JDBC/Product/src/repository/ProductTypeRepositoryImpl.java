@@ -25,13 +25,12 @@ public class ProductTypeRepositoryImpl implements ProductTypeRepository {
         }
         return connection;
     }
-
     @Override
     public List<ProductType> selectAllProductType() {
         List<ProductType> productTypeList=new ArrayList<>();
-        try (Connection connection = getConnection() ) {
+        try (Connection connection = getConnection()) {
             PreparedStatement preparedStatement = connection.prepareStatement("select * from producttype");
-            System.out.println(preparedStatement);
+
             ResultSet resultSet = preparedStatement.executeQuery();
             //Chuyen tu ResulSet sang List
             while (resultSet.next()) {
@@ -45,4 +44,22 @@ public class ProductTypeRepositoryImpl implements ProductTypeRepository {
         }
         return productTypeList;
     }
+
+    @Override
+    public ProductType findProductTypeById(int producttypeid) {
+        ProductType productType = null;
+        try (Connection connection = getConnection()) {
+            PreparedStatement preparedStatement = connection.prepareStatement("select * from producttype where producttypeid=?");
+            preparedStatement.setInt(1, producttypeid);
+
+            ResultSet resultSet = preparedStatement.executeQuery();
+            while (resultSet.next()) {
+                String producttypename = resultSet.getString("producttypename");
+                      productType = new ProductType(producttypeid, producttypename);
+            }
+        } catch (SQLException e) {
+            e.getMessage();
+        }
+        return productType;
     }
+}

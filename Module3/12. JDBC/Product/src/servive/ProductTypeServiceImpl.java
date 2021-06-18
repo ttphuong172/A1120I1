@@ -13,4 +13,9 @@ public class ProductTypeServiceImpl implements ProductTypeService {
     public List<ProductType> selectAllProductType() {
         return repository.selectAllProductType();
     }
+
+    @Override
+    public ProductType findProductTypeById(int producttypeid) {
+        return repository.findProductTypeById(producttypeid);
+    }
 }
