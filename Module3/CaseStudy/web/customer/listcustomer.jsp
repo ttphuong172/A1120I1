@@ -18,44 +18,10 @@
     <link rel="stylesheet" href="/css/main.css">
 
 
-
 </head>
 <body>
-<div class="container-fluid pt-5">
-    <div id="header" class="row" style="background-color: #50af50">
-        <div class="logo col-sm-10">
-            <img src="../img/logo.jpg" alt="logo">
-        </div>
-        <div class="name col-sm-2">
-            <h3>name</h3>
-        </div>
-    </div>
-    <div id="nav" class="row">
-        <div class="menu col-sm-8">
-            <ul>
-                <a href="">
-                    <li>Home</li>
-                </a>
-                <a href="">
-                    <li>Employee</li>
-                </a>
-                <a href="/customer">
-                    <li>Customer</li>
-                </a>
-                <a href="">
-                    <li>Service</li>
-                </a>
-                <a href="">
-                    <li>Contract</li>
-                </a>
-            </ul>
-        </div>
-        <div class="input_icon col-sm-4">
-            <input type="text" id="search" placeholder="search">
-            <i class="icon fas fa-search"></i>
-        </div>
-    </div>
-
+<div class="container-fluid">
+    <jsp:include page="../header.jsp"/>
     <div id="main" class="row">
         <div class="sidebar col-sm-2">
             sidebar
@@ -79,12 +45,13 @@
                 <tr>
                     <th>Mã KH</th>
                     <th>Tên KH</th>
-                    <th>Ngày sinh</th>
+<%--                    <th>Ngày sinh</th>--%>
                     <th>Số CMND</th>
                     <th>Số ĐT</th>
-                    <th>Email</th>
+<%--                    <th>Email</th>--%>
                     <th>Loại KH</th>
                     <th>Địa chỉ</th>
+                    <th>Chi tiết</th>
                     <th>Sửa</th>
                     <th>Xóa</th>
                 </tr>
@@ -96,32 +63,60 @@
                         <tr>
                             <td>${customerlist.customerId}</td>
                             <td>${customerlist.customerName}</td>
-                            <td>${customerlist.birthday}</td>
+<%--                            <td>${customerlist.birthday}</td>--%>
                             <td>${customerlist.idCard}</td>
                             <td>${customerlist.phoneNumber}</td>
-                            <td>${customerlist.email}</td>
-                            <c:forEach items="${customerTypeList}" var="customertypelist">
-                                <c:if test="${customertypelist.customerTypeId==customerlist.customertypeid}">
-                                    <td>${customertypelist.customerTypeName}</td>
-                                </c:if>
-                            </c:forEach>
+<%--                            <td>${customerlist.email}</td>--%>
+                            <td>${customerlist.customerType.customerTypeName}</td>
                             <td>${customerlist.address}</td>
+
+                            <td><a class="btn btn-primary" id="detail" href="" data-toggle="modal"
+                                   data-target="#modelDetail"
+                                   onclick="Value('${customerlist.customerId}','${customerlist.customerName}','${customerlist.birthday}','${customerlist.idCard}','${customerlist.phoneNumber}','${customerlist.email}','${customerlist.customerType.customerTypeName}','${customerlist.address}')">Detail</a> </td>
+
                             <td><a href="/customer?action=edit&id=${customerlist.customerId}">
                                 <button class="btn btn-warning">Edit</button>
                             </a></td>
                             <td>
-<%--                                <a href="/customer?action=delete&id=${customerlist.customerId}">--%>
-<%--                                <button class="btn btn-danger">DELETE</button>--%>
-<%--                            </a>--%>
-                            <a class="btn btn-danger" href="#" role="button" data-toggle="modal" data-target="#modelDelete" onClick="onDelete(${customerlist.customerId});nameDelete('${customerlist.customerName}')">
-                                Delete
-                            </a>
+                                <a class="btn btn-danger" href="#" role="button" data-toggle="modal"
+                                   data-target="#modelDelete"
+                                   onClick="onDelete(${customerlist.customerId});nameDelete('${customerlist.customerName}')">
+                                    Delete
+                                </a>
                             </td>
+
+                            <!-- Modal Delete-->
+                            <div class="modal fade" id="modelDelete" tabindex="-1" role="dialog"
+                                 aria-labelledby="modelTitleId" aria-hidden="true">
+                                <div class="modal-dialog" role="document">
+                                    <div class="modal-content">
+                                        <div class="modal-header">
+                                            <h5 class="modal-title">Xác nhận xóa khách hàng</h5>
+                                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                                <span aria-hidden="true">&times;</span>
+                                            </button>
+                                        </div>
+                                        <form action="/customer">
+                                            <input type="hidden" name="id" value="" id="idCustomerDelete">
+                                            <input type="hidden" name="action" value="delete">
+                                            <div class="modal-body">
+                                                <p id="body"></p>
+                                            </div>
+                                            <div class="modal-footer">
+                                                <button type="button" class="btn btn-primary" data-dismiss="modal">
+                                                    Cancel
+                                                </button>
+                                                <button type="submit" class="btn btn-danger">Delete</button>
+                                            </div>
+                                        </form>
+                                    </div>
+                                </div>
+                            </div>
                             <!-- Button trigger modal -->
 
 
-                            <!-- Modal -->
-                            <div class="modal fade" id="modelDelete" tabindex="-1" role="dialog"
+                            <!-- Modal Detail -->
+                            <div class="modal fade" id="modelDetail" tabindex="-1" role="dialog"
                                  aria-labelledby="modelTitleId" aria-hidden="true">
                                 <div class="modal-dialog" role="document">
                                     <div class="modal-content">
@@ -131,18 +126,36 @@
                                                 <span aria-hidden="true">&times;</span>
                                             </button>
                                         </div>
-                                        <form action="/customer">
-                                            <input type="hidden" name="id" value="" id="idCustomerDelete">
-                                            <input type="hidden" name="action" value="delete">
                                         <div class="modal-body">
-                                            <p id="body"></p>
+                                            <label for="">Mã KH:</label>
+                                            <span id="idmodal"></span>
+                                            <br>
+                                            <label for="">Tên KH:</label>
+                                            <span id="namemodal"></span>
+                                            <br>
+                                            <label for="">Ngày sinh:</label>
+                                            <span id="birthdaymodal"></span>
+                                            <br>
+                                            <label for="">Số CMND:</label>
+                                            <span id="idcardmodal"></span>
+                                            <br>
+                                            <label for="">Số ĐT:</label>
+                                            <span id="phonenumbermodal"></span>
+                                            <br>
+                                            <label for="">Email:</label>
+                                            <span id="emailmodal"></span>
+                                            <br>
+                                            <label for="">Loại KH:</label>
+                                            <span id="typenamemodal"></span>
+                                            <br>
+                                            <label for="">Địa chỉ:</label>
+                                            <span id="addressmodal"></span>
                                         </div>
                                         <div class="modal-footer">
-                                            <button type="button" class="btn btn-primary" data-dismiss="modal">Cancel
+                                            <button type="button" class="btn btn-secondary" data-dismiss="modal">Close
                                             </button>
-                                            <button type="submit" class="btn btn-danger">Delete</button>
+                                            <button type="button" class="btn btn-primary">Save</button>
                                         </div>
-                                        </form>
                                     </div>
                                 </div>
                             </div>
@@ -160,11 +173,9 @@
                     <td>${customer.phoneNumber}</td>
                     <td>${customer.email}</td>
 
-                    <c:forEach items="${customerTypeList}" var="customertypelist">
-                    <c:if test="${customertypelist.customerTypeId==customer.customertypeid}">
-                    <td>${customertypelist.customerTypeName}</td>
-                    </c:if>
-                    </c:forEach>
+
+                    <td>${customer.customerType.customerTypeName}</td>
+
 
                     <td>${customerlist.address}</td>
                     <td><a href="/customer?action=edit&id=${customer.customerId}">
@@ -195,12 +206,26 @@
             "dom": 'lrtip',
             'pageLength': 10
         });
+
     })
+
+    function Value(idmodal,namemodal,birthdaymodal,idcardmodal,phonenumber,email,typename,address) {
+        document.getElementById("idmodal").innerHTML = idmodal;
+        document.getElementById("namemodal").innerHTML = namemodal;
+        document.getElementById("birthdaymodal").innerHTML = birthdaymodal;
+        document.getElementById("idcardmodal").innerHTML = idcardmodal;
+        document.getElementById("phonenumbermodal").innerHTML = phonenumber;
+        document.getElementById("emailmodal").innerHTML = email;
+        document.getElementById("typenamemodal").innerHTML = typename;
+        document.getElementById("addressmodal").innerHTML = address;
+    }
+
     function onDelete(idDelete) {
         document.getElementById("idCustomerDelete").value = idDelete;
     }
+
     function nameDelete(nameDelete) {
-        document.getElementById("body").innerHTML = "Bạn có muốn xóa "+nameDelete+" ?";
+        document.getElementById("body").innerHTML = "Bạn có muốn xóa " + nameDelete + " ?";
     }
 
 </script>

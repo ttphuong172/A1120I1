@@ -14,47 +14,46 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
     <link rel="stylesheet" href="../css/main.css">
+    <script>
+        $(document).ready(function () {
+            var selectVal = $("#servicetypeid option:selected").val();
+            if (selectVal == 'RO') {
+                $('#villa').prop('disabled', true);
+                $('#room').prop('disabled', false);
+            } else if (selectVal == 'VL') {
+                $('#villa').prop('disabled', false);
+                $('#room').prop('disabled', true);
+            } else if (selectVal == 'HO') {
+                $('#villa').prop('disabled', false);
+                $('#room').prop('disabled', true);
+                $('#pollarea').prop('disabled', true);
+            }
 
+            $("#servicetypeid").on('change', function () {
+                var loadVal = $("#servicetypeid option:selected").val();
+                if (loadVal == 'RO') {
+                    $('#villa').prop('disabled', true);
+                    $('#room').prop('disabled', false);
+                } else if (loadVal == 'VL') {
+                    $('#villa').prop('disabled', false);
+                    $('#room').prop('disabled', true);
+                } else if (loadVal == 'HO') {
+                    $('#villa').prop('disabled', false);
+                    $('#room').prop('disabled', true);
+                    $('#pollarea').prop('disabled', true);
+                }
+            })
+        })
+    </script>
 
 </head>
 <body>
-<div class="container-fluid pt-5">
-    <div id="header" class="row" style="background-color: #50af50">
-        <div class="logo col-sm-10">
-            <img src="../img/logo.jpg" alt="logo">
-        </div>
-        <div class="name col-sm-2">
-            <h3>name</h3>
-        </div>
-    </div>
-    <div id="nav" class="row">
-        <div class="menu col-sm-8">
-            <ul>
-                <a href="">
-                    <li>Home</li>
-                </a>
-                <a href="">
-                    <li>Employee</li>
-                </a>
-                <a href="/customer">
-                    <li>Customer</li>
-                </a>
-                <a href="">
-                    <li>Service</li>
-                </a>
-                <a href="">
-                    <li>Contract</li>
-                </a>
-            </ul>
-        </div>
-        <div class="input_icon col-sm-4">
-            <input type="text" id="search" placeholder="search">
-            <i class="icon fas fa-search"></i>
-        </div>
-    </div>
-
+<div class="container-fluid">
+    <jsp:include page="../header.jsp"/>
     <div id="main" class="row">
         <div class="sidebar col-sm-2">
             sidebar
@@ -65,13 +64,13 @@
                 <div>
                     <fieldset class="scheduler-border">
                         <legend class="scheduler-border">Thông tin chung</legend>
-                        <table>
+                        <table class="table">
                             <tr>
                                 <td width="15%"><label for="">Mã dịch vụ</label></td>
                                 <td width="30%"><input type="text" name="serviceid" class="form-control"></td>
                                 <td width="15%"><label for="">Loại dịch vụ</label></td>
                                 <td width="30%">
-                                    <select name="servicetypeid" class="custom-select">
+                                    <select name="servicetypeid" class="custom-select" id="servicetypeid">
                                         <c:forEach items="${serviceTypeList}" var="servicetypelist">
                                             <option value="${servicetypelist.serviceTypeId}">
                                                     ${servicetypelist.serviceTypeName}
@@ -107,9 +106,9 @@
                     </fieldset>
                 </div>
                 <div>
-                    <fieldset class="scheduler-border">
+                    <fieldset class="scheduler-border" id="villa">
                         <legend class="scheduler-border">Villa</legend>
-                        <table>
+                        <table class="table">
                             <tr>
                                 <td width="15%"><label for="">Tiêu chuẩn phòng</label></td>
                                 <td width="30%">
@@ -127,15 +126,16 @@
                             </tr>
                             <tr>
                                 <td><label for="">Diện tích hồ bơi</label></td>
-                                <td><input type="number" name="pollvillaarea" class="form-control"></td>
+                                <td><input type="number" name="pollvillaarea" class="form-control" id="pollarea"></td>
                                 <td><label for="">Số tầng</label></td>
                                 <td><input type="number" name="numberfloorvillahouse" class="form-control"></td>
                             </tr>
                         </table>
                     </fieldset>
-                    <fieldset class="scheduler-border">
+
+                    <fieldset class="scheduler-border" id="room">
                         <legend class="scheduler-border">Room</legend>
-                        <table>
+                        <table class="table">
                             <tr>
                                 <td width="15%"><label for="">Dịch vụ miễn phí</label></td>
                                 <td width="30%"><input type="text" name="freeserviceroom" class="form-control"></td>
@@ -145,11 +145,7 @@
                         </table>
                     </fieldset>
                 </div>
-                <td>
-                    <a href="/">
-                        <button class="btn btn-primary">Thêm mới</button>
-                    </a>
-                </td>
+                <td><a href="/"><button class="btn btn-primary">Thêm mới</button></a></td>
             </form>
         </div>
     </div>

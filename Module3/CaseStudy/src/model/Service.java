@@ -2,69 +2,74 @@ package model;
 
 public class Service {
     private String serviceId;
-    private String serviceTypeId;
+    private ServiceType serviceType;
     private String serviceName;
     private int useArea;
     private int rentalPrice;
     private int maxPerson;
-    private String rentalFormId;
-    private String villaHouseStandardId;
+    private RentalForm rentalForm;
+    private VillaHouseStandard villaHouseStandard;
     private String otherConvenientVillaHouse;
     private int pollVillaArea;
     private int numberFloorVillaHouse;
     private String freeServiceRoom;
 
-    public Service(String serviceId, String serviceTypeId, String serviceName, int useArea, int rentalPrice, int maxPerson, String rentalFormId, String villaHouseStandardId, String otherConvenientVillaHouse, int pollVillaArea, int numberFloorVillaHouse, String freeServiceRoom) {
+    public Service(String serviceId, ServiceType serviceType, String serviceName, int useArea, int rentalPrice, int maxPerson, RentalForm rentalForm, VillaHouseStandard villaHouseStandard, String otherConvenientVillaHouse, int pollVillaArea, int numberFloorVillaHouse, String freeServiceRoom) {
         this.serviceId = serviceId;
-        this.serviceTypeId = serviceTypeId;
+        this.serviceType = serviceType;
         this.serviceName = serviceName;
         this.useArea = useArea;
         this.rentalPrice = rentalPrice;
         this.maxPerson = maxPerson;
-        this.rentalFormId = rentalFormId;
-        this.villaHouseStandardId = villaHouseStandardId;
+        this.rentalForm = rentalForm;
+        this.villaHouseStandard = villaHouseStandard;
         this.otherConvenientVillaHouse = otherConvenientVillaHouse;
         this.pollVillaArea = pollVillaArea;
         this.numberFloorVillaHouse = numberFloorVillaHouse;
         this.freeServiceRoom = freeServiceRoom;
     }
-//Contructor Villa
-    public Service(String serviceId, String serviceTypeId, String serviceName, int useArea, int rentalPrice, int maxPerson, String rentalFormId, String villaHouseStandardId, String otherConvenientVillaHouse, int pollVillaArea, int numberFloorVillaHouse) {
+
+    public Service(String serviceId, ServiceType serviceType, String serviceName, int useArea, int rentalPrice, int maxPerson, RentalForm rentalForm, VillaHouseStandard villaHouseStandard, String otherConvenientVillaHouse, int pollVillaArea, int numberFloorVillaHouse) {
         this.serviceId = serviceId;
-        this.serviceTypeId = serviceTypeId;
+        this.serviceType = serviceType;
         this.serviceName = serviceName;
         this.useArea = useArea;
         this.rentalPrice = rentalPrice;
         this.maxPerson = maxPerson;
-        this.rentalFormId = rentalFormId;
-        this.villaHouseStandardId = villaHouseStandardId;
+        this.rentalForm = rentalForm;
+        this.villaHouseStandard = villaHouseStandard;
         this.otherConvenientVillaHouse = otherConvenientVillaHouse;
         this.pollVillaArea = pollVillaArea;
         this.numberFloorVillaHouse = numberFloorVillaHouse;
     }
-//Contructor Room
-    public Service(String serviceId, String serviceTypeId, String serviceName, int useArea, int rentalPrice, int maxPerson, String rentalFormId, String freeServiceRoom) {
+
+    public Service(String serviceId, ServiceType serviceType, String serviceName, int useArea, int rentalPrice, int maxPerson, RentalForm rentalForm, VillaHouseStandard villaHouseStandard, String otherConvenientVillaHouse, int numberFloorVillaHouse) {
         this.serviceId = serviceId;
-        this.serviceTypeId = serviceTypeId;
+        this.serviceType = serviceType;
         this.serviceName = serviceName;
         this.useArea = useArea;
         this.rentalPrice = rentalPrice;
         this.maxPerson = maxPerson;
-        this.rentalFormId = rentalFormId;
-        this.freeServiceRoom = freeServiceRoom;
-    }
-//Contructor House
-    public Service(String serviceId, String serviceTypeId, String serviceName, int useArea, int rentalPrice, int maxPerson, String rentalFormId, String villaHouseStandardId, String otherConvenientVillaHouse, int numberFloorVillaHouse) {
-        this.serviceId = serviceId;
-        this.serviceTypeId = serviceTypeId;
-        this.serviceName = serviceName;
-        this.useArea = useArea;
-        this.rentalPrice = rentalPrice;
-        this.maxPerson = maxPerson;
-        this.rentalFormId = rentalFormId;
-        this.villaHouseStandardId = villaHouseStandardId;
+        this.rentalForm = rentalForm;
+        this.villaHouseStandard = villaHouseStandard;
         this.otherConvenientVillaHouse = otherConvenientVillaHouse;
         this.numberFloorVillaHouse = numberFloorVillaHouse;
+    }
+
+    public Service(String serviceId, ServiceType serviceType, String serviceName, int useArea, int rentalPrice, int maxPerson, RentalForm rentalForm, String freeServiceRoom) {
+        this.serviceId = serviceId;
+        this.serviceType = serviceType;
+        this.serviceName = serviceName;
+        this.useArea = useArea;
+        this.rentalPrice = rentalPrice;
+        this.maxPerson = maxPerson;
+        this.rentalForm = rentalForm;
+        this.freeServiceRoom = freeServiceRoom;
+    }
+
+    public Service(String serviceId, String serviceName) {
+        this.serviceId = serviceId;
+        this.serviceName = serviceName;
     }
 
     public String getServiceId() {
@@ -75,12 +80,12 @@ public class Service {
         this.serviceId = serviceId;
     }
 
-    public String getServiceTypeId() {
-        return serviceTypeId;
+    public ServiceType getServiceType() {
+        return serviceType;
     }
 
-    public void setServiceTypeId(String serviceTypeId) {
-        this.serviceTypeId = serviceTypeId;
+    public void setServiceType(ServiceType serviceType) {
+        this.serviceType = serviceType;
     }
 
     public String getServiceName() {
@@ -115,20 +120,20 @@ public class Service {
         this.maxPerson = maxPerson;
     }
 
-    public String getRentalFormId() {
-        return rentalFormId;
+    public RentalForm getRentalForm() {
+        return rentalForm;
     }
 
-    public void setRentalFormId(String rentalFormId) {
-        this.rentalFormId = rentalFormId;
+    public void setRentalForm(RentalForm rentalForm) {
+        this.rentalForm = rentalForm;
     }
 
-    public String getVillaHouseStandardId() {
-        return villaHouseStandardId;
+    public VillaHouseStandard getVillaHouseStandard() {
+        return villaHouseStandard;
     }
 
-    public void setVillaHouseStandardId(String villaHouseStandardId) {
-        this.villaHouseStandardId = villaHouseStandardId;
+    public void setVillaHouseStandard(VillaHouseStandard villaHouseStandard) {
+        this.villaHouseStandard = villaHouseStandard;
     }
 
     public String getOtherConvenientVillaHouse() {

@@ -33,4 +33,9 @@ public class CustomerServiceImpl implements CustomerService {
     public void update(int customerId, Customer customer) {
         customerRepository.update(customerId,customer);
     }
+
+    @Override
+    public String findNameCustomer(int customerId) {
+        return customerRepository.findNameCustomer(customerId);
+    }
 }

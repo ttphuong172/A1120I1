@@ -13,4 +13,6 @@ public interface ServiceService {
     Service findServiceById(String serviceId);
     void updateRoom(String serviceId, Service service);
     void updateHouse(String serviceId, Service service);
+    void updateVilla(String serviceId, Service service);
+    String findNameService(String serviceId);
 }

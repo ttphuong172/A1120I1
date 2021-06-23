@@ -18,7 +18,7 @@ public class CustomerRepositoryImpl implements CustomerRepository {
         PreparedStatement preparedStatement = null;
         ResultSet resultSet = null;
         try (Connection connection = DBConnection.getConnection()) {
-            preparedStatement = connection.prepareStatement("select * from customers");
+            preparedStatement = connection.prepareStatement("select customers.*,customertype.CustomerTypeName from customers inner join customertype on customers.CustomerTypeId=customertype.CustomerTypeId");
             resultSet = preparedStatement.executeQuery();
             while (resultSet.next()) {
                 int customerId = resultSet.getInt("customerid");
@@ -29,8 +29,9 @@ public class CustomerRepositoryImpl implements CustomerRepository {
                 String email = resultSet.getString("email");
                 String address = resultSet.getString("address");
                 String customerTypeId = resultSet.getString("customertypeid");
-                // CustomerType customerType = customerTypeService.findCustomerTypeById(customerTypeId);
-                Customer customer = new Customer(customerId, customerName, birthday, idCard, phoneNumber, email, customerTypeId, address);
+                String customerTypeName = resultSet.getString("customertypename");
+                CustomerType customerType = new CustomerType(customerTypeId,customerTypeName);
+                Customer customer = new Customer(customerId, customerName, birthday, idCard, phoneNumber, email, customerType, address);
                 customerList.add(customer);
 
             }
@@ -58,7 +59,7 @@ public class CustomerRepositoryImpl implements CustomerRepository {
             preparedStatement.setInt(3, customer.getIdCard());
             preparedStatement.setInt(4, customer.getPhoneNumber());
             preparedStatement.setString(5, customer.getEmail());
-            preparedStatement.setString(6, customer.getCustomertypeid());
+            preparedStatement.setString(6, customer.getCustomerType().getCustomerTypeId());
             preparedStatement.setString(7, customer.getAddress());
             preparedStatement.executeUpdate();
         } catch (SQLException e) {
@@ -122,9 +123,8 @@ public class CustomerRepositoryImpl implements CustomerRepository {
                 String email = resultSet.getString("email");
                 String address = resultSet.getString("address");
                 String customerTypeId = resultSet.getString("customertypeid");
-                System.out.println(customerTypeId);
-                //CustomerType customerType = customerTypeService.findCustomerTypeById(customerTypeId);
-                customer = new Customer(customerId, customerName, birthday, idCard, phoneNumber, email, customerTypeId, address);
+                CustomerType customerType = customerTypeService.findCustomerTypeById(customerTypeId);
+                customer = new Customer(customerId, customerName, birthday, idCard, phoneNumber, email, customerType, address);
             }
         } catch (SQLException e) {
             e.printStackTrace();
@@ -137,7 +137,6 @@ public class CustomerRepositoryImpl implements CustomerRepository {
             }
             DBConnection.close();
         }
-
         return customer;
     }
 
@@ -152,7 +151,7 @@ public class CustomerRepositoryImpl implements CustomerRepository {
             preparedStatement.setInt(3, customer.getIdCard());
             preparedStatement.setInt(4, customer.getPhoneNumber());
             preparedStatement.setString(5, customer.getEmail());
-            preparedStatement.setString(6, customer.getCustomertypeid());
+            preparedStatement.setString(6, customer.getCustomerType().getCustomerTypeId());
             preparedStatement.setString(7, customer.getAddress());
             preparedStatement.setInt(8, customerId);
             preparedStatement.executeUpdate();
@@ -167,5 +166,30 @@ public class CustomerRepositoryImpl implements CustomerRepository {
             }
             DBConnection.close();
         }
+    }
+
+    @Override
+    public String findNameCustomer(int customerId) {
+        Connection connection =DBConnection.getConnection();
+        CallableStatement callableStatement=null;
+        ResultSet resultSet=null;
+        String customerName=null;
+
+        try {
+            callableStatement=connection.prepareCall("call findNameCustomer(?,?)");
+            callableStatement.setInt(1,customerId);
+            callableStatement.executeQuery();
+            customerName=callableStatement.getString(2);
+        } catch (SQLException e) {
+            e.printStackTrace();
+        } finally {
+            try {
+                callableStatement.close();
+            } catch (SQLException e) {
+                e.printStackTrace();
+            }
+        }
+        DBConnection.close();
+        return  customerName;
     }
 }

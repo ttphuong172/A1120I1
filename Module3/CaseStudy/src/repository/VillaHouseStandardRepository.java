@@ -6,4 +6,5 @@ import java.util.List;
 
 public interface VillaHouseStandardRepository {
     List<VillaHouseStandard> selectAllVillaHouseStandard();
+    VillaHouseStandard findVillaHouseStandardById(String villaHouseStandardId);
 }

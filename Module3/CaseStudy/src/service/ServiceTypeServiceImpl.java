@@ -12,4 +12,9 @@ public class ServiceTypeServiceImpl implements ServiceTypeService {
     public List<ServiceType> selectAllServiceType() {
         return serviceTypeRepository.selectAllServiceType();
     }
+
+    @Override
+    public ServiceType findServiceTypeById(String serviceTypeId) {
+        return serviceTypeRepository.findServiceTypeById(serviceTypeId);
+    }
 }

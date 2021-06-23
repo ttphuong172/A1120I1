@@ -10,6 +10,13 @@
             </Attribute>
           </value>
         </entry>
+        <entry key="\src\controller\EmployeeServlet.java">
+          <value>
+            <Attribute>
+              <option name="separator" value=";" />
+            </Attribute>
+          </value>
+        </entry>
         <entry key="\src\controller\ServiceServlet.java">
           <value>
             <Attribute>
@@ -24,7 +31,28 @@
             </Attribute>
           </value>
         </entry>
+        <entry key="\src\model\Department.java">
+          <value>
+            <Attribute>
+              <option name="separator" value=";" />
+            </Attribute>
+          </value>
+        </entry>
+        <entry key="\src\model\Level.java">
+          <value>
+            <Attribute>
+              <option name="separator" value=";" />
+            </Attribute>
+          </value>
+        </entry>
         <entry key="\src\model\VillaHouseStandard.java">
+          <value>
+            <Attribute>
+              <option name="separator" value=";" />
+            </Attribute>
+          </value>
+        </entry>
+        <entry key="\src\repository\CustomerRepository.java">
           <value>
             <Attribute>
               <option name="separator" value=";" />
@@ -45,6 +73,20 @@
             </Attribute>
           </value>
         </entry>
+        <entry key="\src\repository\EmployeeRepository.java">
+          <value>
+            <Attribute>
+              <option name="separator" value=";" />
+            </Attribute>
+          </value>
+        </entry>
+        <entry key="\src\repository\EmployeeRepositoryImpl.java">
+          <value>
+            <Attribute>
+              <option name="separator" value=";" />
+            </Attribute>
+          </value>
+        </entry>
         <entry key="\src\repository\ServiceRepositoryImpl.java">
           <value>
             <Attribute>
@@ -53,6 +95,27 @@
           </value>
         </entry>
         <entry key="\src\service\CustomerServiceImpl.java">
+          <value>
+            <Attribute>
+              <option name="separator" value=";" />
+            </Attribute>
+          </value>
+        </entry>
+        <entry key="\src\service\ServiceServiceImpl.java">
+          <value>
+            <Attribute>
+              <option name="separator" value=";" />
+            </Attribute>
+          </value>
+        </entry>
+        <entry key="\web\contract\addcontract.jsp">
+          <value>
+            <Attribute>
+              <option name="separator" value=":" />
+            </Attribute>
+          </value>
+        </entry>
+        <entry key="\web\contract\listcontract.jsp">
           <value>
             <Attribute>
               <option name="separator" value=";" />
@@ -70,6 +133,41 @@
           <value>
             <Attribute>
               <option name="separator" value=":" />
+            </Attribute>
+          </value>
+        </entry>
+        <entry key="\web\customer\listcustomer.jsp">
+          <value>
+            <Attribute>
+              <option name="separator" value=":" />
+            </Attribute>
+          </value>
+        </entry>
+        <entry key="\web\employee\addemployee.jsp">
+          <value>
+            <Attribute>
+              <option name="separator" value=":" />
+            </Attribute>
+          </value>
+        </entry>
+        <entry key="\web\employee\listemployee.jsp">
+          <value>
+            <Attribute>
+              <option name="separator" value=":" />
+            </Attribute>
+          </value>
+        </entry>
+        <entry key="\web\index.jsp">
+          <value>
+            <Attribute>
+              <option name="separator" value=":" />
+            </Attribute>
+          </value>
+        </entry>
+        <entry key="\web\service\addservice.jsp">
+          <value>
+            <Attribute>
+              <option name="separator" value=";" />
             </Attribute>
           </value>
         </entry>

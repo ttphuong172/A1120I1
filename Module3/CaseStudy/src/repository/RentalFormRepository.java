@@ -6,4 +6,5 @@ import java.util.List;
 
 public interface RentalFormRepository {
     List<RentalForm> selectAllRentalForm();
+    RentalForm findRentalFormById(String rentalFormId);
 }

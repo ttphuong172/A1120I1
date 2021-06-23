@@ -16,41 +16,9 @@
     <link rel="stylesheet" href="./css/main.css">
 </head>
 <body>
-<div class="container-fluid pt-5">
-    <div id="header" class="row">
-        <div class="logo col-sm-10">
-            <img src="./img/logo.jpg" alt="logo">
-        </div>
-        <div class="name col-sm-2">
-            <h3>name</h3>
-        </div>
-    </div>
-    <div id="nav" class="row">
-        <div class="menu col-sm-8">
-            <ul>
-                <a href="">
-                    <li>Home</li>
-                </a>
-                <a href="">
-                    <li>Employee</li>
-                </a>
-                <a href="/customer">
-                    <li>Customer</li>
-                </a>
-                <a href="/service">
-                    <li>Service</li>
-                </a>
-                <a href="">
-                    <li>Contract</li>
-                </a>
-            </ul>
-        </div>
-        <div class="input_icon col-sm-4">
-            <input type="text" id="search" placeholder="search">
-            <i class="icon fas fa-search"></i>
-        </div>
-    </div>
 
+<div class="container-fluid">
+    <jsp:include page="header.jsp"/>
     <div id="main" class="row">
         <div class="sidebar col-sm-2" style="height: 500px;">
             sidebar

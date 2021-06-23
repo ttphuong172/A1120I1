@@ -12,4 +12,9 @@ public class VillaHouseStandardServiceImpl implements VillaHouseStandardService 
     public List<VillaHouseStandard> selectAllVillaHouseStandard() {
         return villaHouseStandardRepository.selectAllVillaHouseStandard();
     }
+
+    @Override
+    public VillaHouseStandard findVillaHouseStandardById(String villaHouseStandardId) {
+        return villaHouseStandardRepository.findVillaHouseStandardById(villaHouseStandardId);
+    }
 }

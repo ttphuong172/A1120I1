@@ -29,8 +29,8 @@ public class CustomerServlet extends HttpServlet {
         String email = request.getParameter("email");
         String address = request.getParameter("address");
         String customerTypeId = request.getParameter("customertype");
-        //CustomerType customerType = customerTypeService.findCustomerTypeById(customerTypeId);
-        Customer customer = new Customer(customerName, birthday, idCard, phoneNumber, email, customerTypeId, address);
+        CustomerType customerType = customerTypeService.findCustomerTypeById(customerTypeId);
+        Customer customer = new Customer(customerName, birthday, idCard, phoneNumber, email, customerType, address);
         customerService.save(customer);
     }
     private void updateCustomer(HttpServletRequest request, HttpServletResponse response){
@@ -42,8 +42,8 @@ public class CustomerServlet extends HttpServlet {
         String email = request.getParameter("email");
         String address = request.getParameter("address");
         String customerTypeId = request.getParameter("customertype");
-        //CustomerType customerType=customerTypeService.findCustomerTypeById(customerTypeId);
-        Customer customer= new Customer(customerId,customerName,birthday,idCard,phoneNumber,email,customerTypeId,address);
+        CustomerType customerType=customerTypeService.findCustomerTypeById(customerTypeId);
+        Customer customer= new Customer(customerId,customerName,birthday,idCard,phoneNumber,email,customerType,address);
         customerService.update(customerId,customer);
     }
     private void showCustomer(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
@@ -75,12 +75,10 @@ public class CustomerServlet extends HttpServlet {
         response.setContentType("text/html;charset=UTF-8");
         request.setCharacterEncoding("utf-8");
         String action = request.getParameter("action");
-        System.out.println(action);
         if (action == null) {
             showCustomer(request, response);
         } else if (action.equals("create")) {
             request.setAttribute("customerTypeList", customerTypeService.selectAllCustomerType());
-            System.out.println(customerTypeService.selectAllCustomerType());
             RequestDispatcher dispatcher = request.getRequestDispatcher("/customer/addcustomer.jsp");
             dispatcher.forward(request, response);
         } else if (action.equals("delete")) {

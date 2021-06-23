@@ -47,4 +47,14 @@ public class ServiceServiceImpl implements ServiceService {
     public void updateHouse(String serviceId, Service service) {
         serviceRepository.updateHouse(serviceId,service);
     }
+
+    @Override
+    public void updateVilla(String serviceId, Service service) {
+        serviceRepository.updateVilla(serviceId,service);
+    }
+
+    @Override
+    public String findNameService(String serviceId) {
+        return serviceRepository.findNameService(serviceId);
+    }
 }

@@ -1,5 +1,6 @@
 package repository;
 
+import model.RentalForm;
 import model.VillaHouseStandard;
 
 import java.sql.Connection;
@@ -29,5 +30,26 @@ public class VillaHouseStandardRepositoryImpl implements VillaHouseStandardRepos
             e.printStackTrace();
         }
         return villaHouseStandardList;
+    }
+
+    @Override
+    public VillaHouseStandard findVillaHouseStandardById(String villaHouseStandardId) {
+        Connection connection=DBConnection.getConnection();
+        PreparedStatement preparedStatement=null;
+        ResultSet resultSet=null;
+        VillaHouseStandard villaHouseStandard=null;
+
+        try {
+            preparedStatement=connection.prepareStatement("select * from villahousestandard where villahousestandardid=?");
+            preparedStatement.setString(1,villaHouseStandardId);
+            resultSet=preparedStatement.executeQuery();
+            while (resultSet.next()){
+                String villaHouseStandardName=resultSet.getString("villahousestandardname");
+                villaHouseStandard=new VillaHouseStandard(villaHouseStandardId,villaHouseStandardName);
+            }
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+        return villaHouseStandard;
     }
 }

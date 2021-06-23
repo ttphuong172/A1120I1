@@ -7,28 +7,34 @@ public class Customer {
     private int idCard;
     private int phoneNumber;
     private String email;
-    private String customertypeid;
+    private CustomerType customerType;
+    //private String customertypeid;
     private String address;
 
-    public Customer(int customerId, String customerName, String birthday, int idCard, int phoneNumber, String email, String customertypeid, String address) {
+    public Customer(int customerId, String customerName, String birthday, int idCard, int phoneNumber, String email, CustomerType customerType, String address) {
         this.customerId = customerId;
         this.customerName = customerName;
         this.birthday = birthday;
         this.idCard = idCard;
         this.phoneNumber = phoneNumber;
         this.email = email;
-        this.customertypeid = customertypeid;
+        this.customerType = customerType;
         this.address = address;
     }
 
-    public Customer(String customerName, String birthday, int idCard, int phoneNumber, String email, String customertypeid, String address) {
+    public Customer(String customerName, String birthday, int idCard, int phoneNumber, String email, CustomerType customerType, String address) {
         this.customerName = customerName;
         this.birthday = birthday;
         this.idCard = idCard;
         this.phoneNumber = phoneNumber;
         this.email = email;
-        this.customertypeid = customertypeid;
+        this.customerType = customerType;
         this.address = address;
+    }
+
+    public Customer(int customerId, String customerName) {
+        this.customerId = customerId;
+        this.customerName = customerName;
     }
 
     public int getCustomerId() {
@@ -79,12 +85,12 @@ public class Customer {
         this.email = email;
     }
 
-    public String getCustomertypeid() {
-        return customertypeid;
+    public CustomerType getCustomerType() {
+        return customerType;
     }
 
-    public void setCustomertypeid(String customertypeid) {
-        this.customertypeid = customertypeid;
+    public void setCustomerType(CustomerType customerType) {
+        this.customerType = customerType;
     }
 
     public String getAddress() {
@@ -93,5 +99,19 @@ public class Customer {
 
     public void setAddress(String address) {
         this.address = address;
+    }
+
+    @Override
+    public String toString() {
+        return "Customer{" +
+                "customerId=" + customerId +
+                ", customerName='" + customerName + '\'' +
+                ", birthday='" + birthday + '\'' +
+                ", idCard=" + idCard +
+                ", phoneNumber=" + phoneNumber +
+                ", email='" + email + '\'' +
+                ", customerType=" + customerType +
+                ", address='" + address + '\'' +
+                '}';
     }
 }
