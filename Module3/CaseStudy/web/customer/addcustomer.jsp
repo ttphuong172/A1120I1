@@ -26,11 +26,12 @@
         </div>
         <div class="bodyarea col-sm-10">
             <h3>Thêm mới khách hàng</h3>
+            <label for="">${msg}</label>
             <form action="/customer?action=create" method="post" class="form-group">
             <table class="table">
                 <tr>
                     <td width="15%"><label for="">Mã KH</label></td>
-                    <td width="30%"><input type="text" name="customerid" value="${customerId}"  class="form-control" readonly="readonly" ></td>
+                    <td width="30%"><input type="text" name="customerid" value="${customerId}"  class="form-control"  ></td>
                     <td width="15%"></td>
                     <td width="30%"></td>
                 </tr>

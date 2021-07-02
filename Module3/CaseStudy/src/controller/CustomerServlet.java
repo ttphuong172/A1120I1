@@ -1,5 +1,6 @@
 package controller;
 
+import common.Check;
 import model.Customer;
 import model.CustomerType;
 import service.CustomerService;
@@ -31,8 +32,20 @@ public class CustomerServlet extends HttpServlet {
         String address = request.getParameter("address");
         String customerTypeId = request.getParameter("customertype");
         CustomerType customerType = customerTypeService.findCustomerTypeById(customerTypeId);
+
         Customer customer = new Customer(customerId,customerName, birthday, idCard, phoneNumber, email, customerType, address);
-        customerService.save(customer);
+        String msg= customerService.save(customer);
+        System.out.println(msg);
+        if (msg.equals("Thanh cong")){
+            showCustomer(request,response);
+        }else{
+            request.setAttribute("msg",msg);
+            StringBuffer nextCustomerIdString=getnextCustomerId();
+            request.setAttribute("customerId",nextCustomerIdString);
+            RequestDispatcher dispatcher = request.getRequestDispatcher("/customer/addcustomer.jsp");
+            dispatcher.forward(request, response);
+        }
+
     }
     private void updateCustomer(HttpServletRequest request, HttpServletResponse response){
         String customerId=request.getParameter("idcustomer") ;
@@ -46,6 +59,26 @@ public class CustomerServlet extends HttpServlet {
         CustomerType customerType=customerTypeService.findCustomerTypeById(customerTypeId);
         Customer customer= new Customer(customerId,customerName,birthday,idCard,phoneNumber,email,customerType,address);
         customerService.update(customerId,customer);
+    }
+    private StringBuffer getnextCustomerId(){
+        StringBuffer nextCustomerIdString=new StringBuffer();
+        int  nextCustomerId= customerService.getLastCustomerId()+1 ;
+        if  (nextCustomerId<10){
+            nextCustomerIdString.append("KH-000");
+            nextCustomerIdString.append(nextCustomerId);
+        } else if(nextCustomerId<100){
+            nextCustomerIdString.append("KH-00");
+            nextCustomerIdString.append(nextCustomerId);
+        }
+        else if(nextCustomerId<1000){
+            nextCustomerIdString.append("KH-0");
+            nextCustomerIdString.append(nextCustomerId);
+        }
+        else {
+            nextCustomerIdString.append("KH-");
+            nextCustomerIdString.append(nextCustomerId);
+        }
+        return nextCustomerIdString;
     }
     private void showCustomer(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         request.setAttribute("customerList", customerService.selectAllCustomer());
@@ -79,23 +112,7 @@ public class CustomerServlet extends HttpServlet {
         if (action == null) {
             showCustomer(request, response);
         } else if (action.equals("create")) {
-            StringBuffer nextCustomerIdString=new StringBuffer();
-            int  nextCustomerId= customerService.getLastCustomerId()+1 ;
-            if  (nextCustomerId<10){
-               nextCustomerIdString.append("KH-000");
-               nextCustomerIdString.append(nextCustomerId);
-            } else if(nextCustomerId<100){
-                nextCustomerIdString.append("KH-00");
-                nextCustomerIdString.append(nextCustomerId);
-            }
-            else if(nextCustomerId<1000){
-                nextCustomerIdString.append("KH-0");
-                nextCustomerIdString.append(nextCustomerId);
-            }
-            else {
-                nextCustomerIdString.append("KH-");
-                nextCustomerIdString.append(nextCustomerId);
-            }
+            StringBuffer nextCustomerIdString=getnextCustomerId();
             request.setAttribute("customerId",nextCustomerIdString);
             request.setAttribute("customerTypeList", customerTypeService.selectAllCustomerType());
             RequestDispatcher dispatcher = request.getRequestDispatcher("/customer/addcustomer.jsp");

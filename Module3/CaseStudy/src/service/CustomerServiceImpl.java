@@ -1,5 +1,6 @@
 package service;
 
+import common.Check;
 import model.Customer;
 import repository.CustomerRepository;
 import repository.CustomerRepositoryImpl;
@@ -9,14 +10,24 @@ import java.util.List;
 
 public class CustomerServiceImpl implements CustomerService {
     CustomerRepository customerRepository = new CustomerRepositoryImpl();
+
     @Override
     public List<Customer> selectAllCustomer() {
          return customerRepository.selectAllCustomer();
     }
 
     @Override
-    public void save(Customer customer)  {
-        customerRepository.save(customer);
+    public String save(Customer customer)  {
+        String msg;
+        if (!Check.checkIdCustomer(customer.getCustomerId())){
+            return msg="Loi ID";
+        } else if(!Check.checkEmailException(customer.getEmail())){
+            return msg="Loi email";
+        } else{
+            customerRepository.save(customer);
+            return msg="Thanh cong";
+        }
+
     }
 
     @Override
@@ -31,6 +42,7 @@ public class CustomerServiceImpl implements CustomerService {
 
     @Override
     public void update(String customerId, Customer customer) {
+
         customerRepository.update(customerId,customer);
     }
 
