@@ -15,4 +15,5 @@ public interface ServiceRepository {
     void updateHouse(String serviceId,Service service);
     void updateVilla(String serviceId,Service service);
     String findNameService(String serviceId);
+    int getLastServiceId();
 }

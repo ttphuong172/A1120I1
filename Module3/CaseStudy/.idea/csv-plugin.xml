@@ -3,6 +3,20 @@
   <component name="CsvFileAttributes">
     <option name="attributeMap">
       <map>
+        <entry key="\src\controller\ContractDetailServlet.java">
+          <value>
+            <Attribute>
+              <option name="separator" value=";" />
+            </Attribute>
+          </value>
+        </entry>
+        <entry key="\src\controller\ContractServlet.java">
+          <value>
+            <Attribute>
+              <option name="separator" value=";" />
+            </Attribute>
+          </value>
+        </entry>
         <entry key="\src\controller\CustomerServlet.java">
           <value>
             <Attribute>
@@ -52,6 +66,20 @@
             </Attribute>
           </value>
         </entry>
+        <entry key="\src\repository\ContractRepository.java">
+          <value>
+            <Attribute>
+              <option name="separator" value=";" />
+            </Attribute>
+          </value>
+        </entry>
+        <entry key="\src\repository\ContractRepositoryImpl.java">
+          <value>
+            <Attribute>
+              <option name="separator" value=";" />
+            </Attribute>
+          </value>
+        </entry>
         <entry key="\src\repository\CustomerRepository.java">
           <value>
             <Attribute>
@@ -67,6 +95,13 @@
           </value>
         </entry>
         <entry key="\src\repository\CustomerTypeRepositoryImpl.java">
+          <value>
+            <Attribute>
+              <option name="separator" value=";" />
+            </Attribute>
+          </value>
+        </entry>
+        <entry key="\src\repository\DetailContractRepository.java">
           <value>
             <Attribute>
               <option name="separator" value=";" />
@@ -115,10 +150,24 @@
             </Attribute>
           </value>
         </entry>
+        <entry key="\web\contract\editcontract.jsp">
+          <value>
+            <Attribute>
+              <option name="separator" value=":" />
+            </Attribute>
+          </value>
+        </entry>
         <entry key="\web\contract\listcontract.jsp">
           <value>
             <Attribute>
               <option name="separator" value=";" />
+            </Attribute>
+          </value>
+        </entry>
+        <entry key="\web\contractdetail\editcontractdetail.jsp">
+          <value>
+            <Attribute>
+              <option name="separator" value=":" />
             </Attribute>
           </value>
         </entry>

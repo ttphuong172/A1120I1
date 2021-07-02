@@ -8,8 +8,9 @@ import java.util.List;
 public interface CustomerService {
     List<Customer> selectAllCustomer() ;
     void save (Customer customer);
-    void remove(int customerid);
-    Customer findCustomerById(int customerId);
-    void update(int customerId, Customer customer);
-    String findNameCustomer(int customerId);
+    void remove(String customerid);
+    Customer findCustomerById(String customerId);
+    void update(String customerId, Customer customer);
+    String findNameCustomer(String customerId);
+    int getLastCustomerId ();
 }

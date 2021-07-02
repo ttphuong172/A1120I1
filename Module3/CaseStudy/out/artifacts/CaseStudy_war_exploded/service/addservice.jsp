@@ -67,7 +67,7 @@
                         <table class="table">
                             <tr>
                                 <td width="15%"><label for="">Mã dịch vụ</label></td>
-                                <td width="30%"><input type="text" name="serviceid" class="form-control"></td>
+                                <td width="30%"><input type="text" name="serviceid" value="${nextServiceId}" readonly="readonly" class="form-control"></td>
                                 <td width="15%"><label for="">Loại dịch vụ</label></td>
                                 <td width="30%">
                                     <select name="servicetypeid" class="custom-select" id="servicetypeid">

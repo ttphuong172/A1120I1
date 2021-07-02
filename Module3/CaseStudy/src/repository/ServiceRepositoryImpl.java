@@ -332,5 +332,30 @@ public class ServiceRepositoryImpl implements ServiceRepository {
         return serviceName;
     }
 
+    @Override
+    public int getLastServiceId() {
+        Connection connection=DBConnection.getConnection();
+        CallableStatement callableStatement=null;
+        String lastServiceId=null;
+        int lastServiceId_Int=0;
+
+        try {
+            callableStatement =connection.prepareCall("call getLastServiceId(?)");
+            callableStatement.executeQuery();
+            lastServiceId =callableStatement.getString(1);
+            lastServiceId_Int=Integer.parseInt(lastServiceId.substring(3));
+        } catch (SQLException e) {
+            e.printStackTrace();
+        } finally {
+            try {
+                callableStatement.close();
+            } catch (SQLException e) {
+                e.printStackTrace();
+            }
+            DBConnection.close();
+        }
+        return lastServiceId_Int;
+    }
+
 
 }

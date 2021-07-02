@@ -29,10 +29,16 @@
             <form action="/customer?action=create" method="post" class="form-group">
             <table class="table">
                 <tr>
+                    <td width="15%"><label for="">Mã KH</label></td>
+                    <td width="30%"><input type="text" name="customerid" value="${customerId}"  class="form-control" readonly="readonly" ></td>
+                    <td width="15%"></td>
+                    <td width="30%"></td>
+                </tr>
+                <tr>
                     <td width="15%"><label for="">Họ tên khách hàng</label></td>
                     <td width="30%"><input type="text" name="namecustomer"  class="form-control" ></td>
                     <td><label for="">Ngày sinh</label></td>
-                    <td><input type="text" name="birthday" class="form-control"></td>
+                    <td><input type="date" name="birthday" class="form-control"></td>
                     
                 </tr>
                 <tr>

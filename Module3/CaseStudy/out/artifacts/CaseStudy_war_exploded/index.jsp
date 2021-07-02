@@ -24,7 +24,7 @@
             sidebar
         </div>
         <div class="bodyarea col-sm-10" style="height: 500px;">
-            bodyarea
+
         </div>
     </div>
 

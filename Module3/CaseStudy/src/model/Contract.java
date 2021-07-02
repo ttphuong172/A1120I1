@@ -31,6 +31,15 @@ public class Contract {
         this.totalPayment = totalPayment;
     }
 
+    public Contract(int contractId, Customer customer) {
+        this.contractId = contractId;
+        this.customer = customer;
+    }
+
+    public Contract(int contractId) {
+        this.contractId = contractId;
+    }
+
     public int getContractId() {
         return contractId;
     }
@@ -93,5 +102,19 @@ public class Contract {
 
     public void setTotalPayment(int totalPayment) {
         this.totalPayment = totalPayment;
+    }
+
+    @Override
+    public String toString() {
+        return "Contract{" +
+                "contractId=" + contractId +
+                ", customer=" + customer +
+                ", service=" + service +
+                ", employee=" + employee +
+                ", beginDate='" + beginDate + '\'' +
+                ", finishDate='" + finishDate + '\'' +
+                ", firstPayment=" + firstPayment +
+                ", totalPayment=" + totalPayment +
+                '}';
     }
 }

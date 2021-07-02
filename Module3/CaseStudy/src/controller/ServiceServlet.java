@@ -109,13 +109,29 @@ public class ServiceServlet extends HttpServlet {
         if (action == null) {
             showService(request, response);
         } else if (action.equals("create")) {
+            int nextServiceId=serviceService.getLastServiceId()+1;
+            StringBuffer nextServiceId_String= new StringBuffer();
+            if(nextServiceId<10){
+                nextServiceId_String.append("DV-000");
+                nextServiceId_String.append(nextServiceId);
+            } else if(nextServiceId<100){
+                nextServiceId_String.append("DV-00");
+                nextServiceId_String.append(nextServiceId);
+            } else if(nextServiceId<1000){
+                nextServiceId_String.append("DV-0");
+                nextServiceId_String.append(nextServiceId);
+            } else {
+                nextServiceId_String.append("DV-");
+                nextServiceId_String.append(nextServiceId);
+            }
+            request.setAttribute("nextServiceId",nextServiceId_String);
             request.setAttribute("serviceTypeList", serviceTypeService.selectAllServiceType());
             request.setAttribute("rentalFormList", rentalFormService.selectAllRentalForm());
             request.setAttribute("villaHouseStandardList", villaHouseStandardService.selectAllVillaHouseStandard());
             RequestDispatcher dispatcher = request.getRequestDispatcher("/service/addservice.jsp");
+
             dispatcher.forward(request, response);
         } else if (action.equals("delete")) {
-            System.out.println("Da xoa");
             String serviceId = request.getParameter("id");
             serviceService.remove(serviceId);
             showService(request, response);

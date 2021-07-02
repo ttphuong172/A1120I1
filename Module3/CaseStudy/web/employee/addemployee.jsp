@@ -32,7 +32,7 @@
                         <td width="15%"><label for="">Họ tên nhân viên</label></td>
                         <td width="30%"><input type="text" name="nameemployee" class="form-control"></td>
                         <td width="15%"><label for="">Ngày sinh</label></td>
-                        <td width="30%"><input type="text" name="birthday" class="form-control"></td>
+                        <td width="30%"><input type="date" name="birthday" class="form-control"></td>
                     </tr>
                     <tr>
                         <td><label for="">Số CMND</label></td>

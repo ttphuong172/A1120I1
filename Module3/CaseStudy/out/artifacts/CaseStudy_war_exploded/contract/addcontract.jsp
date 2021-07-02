@@ -17,21 +17,6 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css">
     <link rel="stylesheet" href="../css/main.css">
 
-    <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
-    <link rel="stylesheet" href="/resources/demos/style.css">
-    <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
-    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
-
-    <script>
-        $( function() {
-            $( "#begindate" ).datepicker({
-                dateFormat: 'yy-mm-dd'
-            });
-            $( "#finishdate" ).datepicker({
-                dateFormat: 'yy-mm-dd'
-            });
-        } );
-    </script>
 </head>
 <body>
 <div class="container-fluid">
@@ -46,9 +31,9 @@
                 <table class="table">
                     <tr>
                         <td width="15%">Ngày bắt đầu</td>
-                        <td width="30%"><input type="text" name="begindate" class="form-control" id="begindate"></td>
+                        <td width="30%"><input type="date" name="begindate" class="form-control" id="begindate"></td>
                         <td width="15%">Ngày kết thúc</td>
-                        <td width="30%"><input type="text"  name="finishdate" class="form-control" id="finishdate"></td>
+                        <td width="30%"><input type="date"  name="finishdate" class="form-control" id="finishdate"></td>
                     </tr>
                     <tr>
                         <td width="15%"><label for="">Dịch vụ</label></td>
@@ -79,7 +64,7 @@
                         <td><label for="">Nhân viên</label></td>
 
                         <td>
-                            <select name="employeeid" id="">
+                            <select name="employeeid" id="" class="custom-select">
                                 <c:forEach items="${employeeList}" var="employeelist">
                                 <option value="${employeelist.employeeId}">${employeelist.name}</option>
                                 </c:forEach>

@@ -57,4 +57,9 @@ public class ServiceServiceImpl implements ServiceService {
     public String findNameService(String serviceId) {
         return serviceRepository.findNameService(serviceId);
     }
+
+    @Override
+    public int getLastServiceId() {
+        return serviceRepository.getLastServiceId();
+    }
 }

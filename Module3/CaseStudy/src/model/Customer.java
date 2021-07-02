@@ -1,17 +1,17 @@
 package model;
 
 public class Customer {
-    private int customerId;
+    private String customerId;
     private String customerName;
     private String birthday;
-    private int idCard;
-    private int phoneNumber;
+    private String idCard;
+    private String phoneNumber;
     private String email;
     private CustomerType customerType;
     //private String customertypeid;
     private String address;
 
-    public Customer(int customerId, String customerName, String birthday, int idCard, int phoneNumber, String email, CustomerType customerType, String address) {
+    public Customer(String customerId, String customerName, String birthday, String idCard, String phoneNumber, String email, CustomerType customerType, String address) {
         this.customerId = customerId;
         this.customerName = customerName;
         this.birthday = birthday;
@@ -22,7 +22,7 @@ public class Customer {
         this.address = address;
     }
 
-    public Customer(String customerName, String birthday, int idCard, int phoneNumber, String email, CustomerType customerType, String address) {
+    public Customer(String customerName, String birthday, String idCard, String phoneNumber, String email, CustomerType customerType, String address) {
         this.customerName = customerName;
         this.birthday = birthday;
         this.idCard = idCard;
@@ -32,16 +32,16 @@ public class Customer {
         this.address = address;
     }
 
-    public Customer(int customerId, String customerName) {
+    public Customer(String customerId, String customerName) {
         this.customerId = customerId;
         this.customerName = customerName;
     }
 
-    public int getCustomerId() {
+    public String getCustomerId() {
         return customerId;
     }
 
-    public void setCustomerId(int customerId) {
+    public void setCustomerId(String customerId) {
         this.customerId = customerId;
     }
 
@@ -61,19 +61,19 @@ public class Customer {
         this.birthday = birthday;
     }
 
-    public int getIdCard() {
+    public String getIdCard() {
         return idCard;
     }
 
-    public void setIdCard(int idCard) {
+    public void setIdCard(String idCard) {
         this.idCard = idCard;
     }
 
-    public int getPhoneNumber() {
+    public String getPhoneNumber() {
         return phoneNumber;
     }
 
-    public void setPhoneNumber(int phoneNumber) {
+    public void setPhoneNumber(String phoneNumber) {
         this.phoneNumber = phoneNumber;
     }
 

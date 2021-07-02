@@ -10,7 +10,7 @@
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <html>
 <head>
-    <title>List Customer</title>
+    <title>List Contract</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <link rel="stylesheet" href="/css/bootstrap.css">
@@ -34,7 +34,7 @@
             <div>
                 <p>Tìm kiếm hợp đồng</p>
                 <form action="/contract?action=find" method="post">
-                    <input type="text" name="find">
+                    <input type="text" name="find" value="${valuefind}" id="find">
                     <input type="submit" value="TÌM KIẾM">
                 </form>
             </div>
@@ -59,6 +59,7 @@
                 </thead>
 
                 <tbody>
+                <c:if test="${empty contractListFind}">
                 <c:forEach items="${contractList}" var="contractlist">
                     <tr>
                         <td>${contractlist.contractId}</td>
@@ -72,12 +73,58 @@
                         <td>${contractlist.totalPayment}</td>
 
                         <td><a href="" class="btn btn-primary" role="button">Detail</a></td>
-                        <td><a href="" class="btn btn-warning" role="button">Edit</a></td>
-                        <td><a href="" class="btn btn-danger" role="button">Delete</a></td>
+                        <td><a href="/contract?action=edit&id=${contractlist.contractId}" class="btn btn-warning" role="button">Edit</a></td>
+                        <td><a href="#" data-toggle="modal" data-target="#modelDelete" class="btn btn-danger" onclick="onDelete(${contractlist.contractId})" role="button">Delete</a></td>
                     </tr>
-
+                    <!-- Button trigger modal -->
                 </c:forEach>
+                </c:if>
 
+                <c:if test="${not empty contractListFind}">
+                    <c:forEach items="${contractListFind}" var="contractlistfind">
+                        <tr>
+                            <td>${contractlistfind.contractId}</td>
+                            <td>${contractlistfind.service.serviceId}</td>
+                            <td>${contractlistfind.service.serviceName}</td>
+                            <td>${contractlistfind.customer.customerName}</td>
+                            <td>${contractlistfind.employee.name}</td>
+                            <td>${contractlistfind.beginDate}</td>
+                            <td>${contractlistfind.finishDate}</td>
+                            <td>${contractlistfind.firstPayment}</td>
+                            <td>${contractlistfind.totalPayment}</td>
+
+                            <td><a href="" class="btn btn-primary" role="button">Detail</a></td>
+                            <td><a href="/contract?action=edit&id=${contractlistfind.contractId}" class="btn btn-warning" role="button">Edit</a></td>
+                            <td><a href="#" data-toggle="modal" data-target="#modelDelete" class="btn btn-danger" onclick="onDelete(${contractlistfind.contractId})" role="button">Delete</a></td>
+                        </tr>
+                    </c:forEach>
+
+                </c:if>
+                <!-- Modal Delete -->
+                <div class="modal fade" id="modelDelete" tabindex="-1" role="dialog" aria-labelledby="modelTitleId"
+                     aria-hidden="true">
+                    <div class="modal-dialog" role="document">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h5 class="modal-title">Modal title</h5>
+                                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                    <span aria-hidden="true">&times;</span>
+                                </button>
+                            </div>
+                            <form action="/contract">
+                                <input type="hidden" name="action" value="delete">
+                                <input type="hidden" name="id" value="" id="idContractDelete">
+                                <div class="modal-body">
+                                    <p id="nameDelete"></p>
+                                </div>
+                                <div class="modal-footer">
+                                    <button type="button" class="btn btn-primary" data-dismiss="modal">Close</button>
+                                    <button type="submit" class="btn btn-danger">Delete</button>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
                 </tbody>
 
 
@@ -117,12 +164,10 @@
     }
 
     function onDelete(idDelete) {
-        document.getElementById("idCustomerDelete").value = idDelete;
+        document.getElementById("idContractDelete").value = idDelete;
+        document.getElementById("nameDelete").innerHTML = "Bạn có muốn xóa " + idDelete + " ?";
     }
 
-    function nameDelete(nameDelete) {
-        document.getElementById("body").innerHTML = "Bạn có muốn xóa " + nameDelete + " ?";
-    }
 
 </script>
 </body>

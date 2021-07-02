@@ -17,11 +17,11 @@
 </head>
 <body>
 <div id="header" class="" style="display: flex; justify-content: space-between;background-color: lightsteelblue">
-    <div class="logo col-sm-10">
+    <div class="logo col-sm-9">
         <img src="../img/logo.jpg" alt="logo">
     </div>
-    <div class="name col-sm-2">
-        <h3>name</h3>
+    <div class="name col-sm-3">
+        <h3>${sessionScope.login.employee.name}</h3>
     </div>
 </div>
 <div id="nav" class="row">
@@ -41,6 +41,9 @@
             </a>
             <a href="/contract">
                 <li>Contract</li>
+            </a>
+            <a href="/contractdetail">
+                <li>Contract Detail</li>
             </a>
         </ul>
     </div>
