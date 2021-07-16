@@ -71,5 +71,27 @@ public class DanhMucRepositoryImpl implements DanhMucRepository {
         return danhMuc;
     }
 
+    @Override
+    public void saveDanhMuc(DanhMuc danhMuc) {
+        Connection connection=DBConnection.getConnection();
+        PreparedStatement preparedStatement=null;
+        try {
+            preparedStatement=connection.prepareStatement("insert into danhmuc values (?,?)");
+            preparedStatement.setInt(1,danhMuc.getIdDanhMuc());
+            preparedStatement.setString(2,danhMuc.getTenDanhMuc());
+            preparedStatement.executeUpdate();
+        } catch (SQLException throwables) {
+            throwables.printStackTrace();
+        } finally {
+            try {
+                preparedStatement.close();
+            } catch (SQLException throwables) {
+                throwables.printStackTrace();
+            }
+            DBConnection.close();
+        }
+
+    }
+
 
 }

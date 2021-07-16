@@ -9,6 +9,9 @@ public class DanhMuc {
         this.tenDanhMuc = tenDanhMuc;
     }
 
+    public DanhMuc() {
+    }
+
     public int getIdDanhMuc() {
         return idDanhMuc;
     }

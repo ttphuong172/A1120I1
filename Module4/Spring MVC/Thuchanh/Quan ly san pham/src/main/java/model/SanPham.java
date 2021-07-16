@@ -28,6 +28,9 @@ public class SanPham {
         this.danhMuc = danhMuc;
     }
 
+    public SanPham() {
+    }
+
     public int getId() {
         return id;
     }

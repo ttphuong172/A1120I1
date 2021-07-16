@@ -7,4 +7,5 @@ import java.util.List;
 public interface DanhMucRepository {
     List<DanhMuc> selectAllDanhMuc();
     DanhMuc getDanhMucById(int idDanhMuc);
+    void saveDanhMuc(DanhMuc danhMuc);
 }
