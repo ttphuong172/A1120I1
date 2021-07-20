@@ -93,5 +93,50 @@ public class DanhMucRepositoryImpl implements DanhMucRepository {
 
     }
 
+    @Override
+    public void updateDanhMuc(DanhMuc danhMuc) {
+        Connection connection = DBConnection.getConnection();
+        PreparedStatement preparedStatement=null;
+
+        try {
+            preparedStatement=connection.prepareStatement("update danhmuc set tendanhmuc=? where iddanhmuc=?");
+            preparedStatement.setString(1,danhMuc.getTenDanhMuc());
+            preparedStatement.setInt(2,danhMuc.getIdDanhMuc());
+            preparedStatement.executeUpdate();
+        } catch (SQLException throwables) {
+            throwables.printStackTrace();
+        } finally {
+            try {
+                preparedStatement.close();
+            } catch (SQLException throwables) {
+                throwables.printStackTrace();
+            }
+            DBConnection.close();
+        }
+
+
+    }
+
+    @Override
+    public void deleteDanhMuc(int id) {
+        Connection connection=DBConnection.getConnection();
+        PreparedStatement preparedStatement=null;
+
+        try {
+            preparedStatement=connection.prepareStatement("delete from danhmuc where iddanhmuc=?");
+            preparedStatement.setInt(1,id);
+            preparedStatement.executeUpdate();
+        } catch (SQLException throwables) {
+            throwables.printStackTrace();
+        } finally {
+            try {
+                preparedStatement.close();
+            } catch (SQLException throwables) {
+                throwables.printStackTrace();
+            }
+            DBConnection.close();
+        }
+    }
+
 
 }

@@ -23,6 +23,8 @@ dependencies {
     implementation group: 'mysql', name: 'mysql-connector-java', version: '8.0.25'
 // https://mvnrepository.com/artifact/org.webjars/bootstrap
     implementation group: 'org.webjars', name: 'bootstrap', version: '4.5.3'
+// https://mvnrepository.com/artifact/org.thymeleaf/thymeleaf
+    implementation group: 'org.thymeleaf', name: 'thymeleaf', version: '3.0.11.RELEASE'
 
 
 }

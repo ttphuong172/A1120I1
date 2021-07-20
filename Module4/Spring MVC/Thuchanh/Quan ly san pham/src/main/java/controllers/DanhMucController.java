@@ -3,10 +3,7 @@ package controllers;
 import model.DanhMuc;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.ModelAttribute;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.*;
 import org.springframework.web.servlet.mvc.support.RedirectAttributes;
 import repository.DanhMucRepository;
 import repository.DanhMucRepositoryImpl;
@@ -34,5 +31,23 @@ public class DanhMucController {
                 "Create new successfully!");
 
         return "redirect:/danhmuc/list";
+    }
+    @GetMapping("/edit/{id}")
+    public String editDanhMuc(@PathVariable int id,Model model){
+        DanhMucRepository danhMucRepository=new DanhMucRepositoryImpl();
+        model.addAttribute("danhMuc",danhMucRepository.getDanhMucById(id));
+        return "danhmuc/edit";
+    }
+    @PostMapping("/update")
+    public String updateDanhMuc(@ModelAttribute DanhMuc danhMuc){
+        DanhMucRepository danhMucRepository=new DanhMucRepositoryImpl();
+        danhMucRepository.updateDanhMuc(danhMuc);
+        return  "redirect:/danhmuc/list";
+    }
+    @GetMapping("/delete/{id}")
+    public String deleteDanhMuc(@PathVariable int id){
+        DanhMucRepository danhMucRepository=new DanhMucRepositoryImpl();
+        danhMucRepository.deleteDanhMuc(id);
+        return  "redirect:/danhmuc/list";
     }
 }
