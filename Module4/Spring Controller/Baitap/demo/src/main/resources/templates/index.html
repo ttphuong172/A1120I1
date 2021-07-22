@@ -1,10 +1,14 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" xmlns:th="http://www.w3.org/1999/html">
 <head>
     <meta charset="UTF-8">
     <title>Hello World</title>
+    <link rel="stylesheet" href="/static/css/style.css">
 </head>
 <body>
-<h3>Hello World</h3>
+<h3 th:each="name:${nameList}">
+    <span>Hello</span>
+    <span th:text="${name}"></span>
+</h3>
 </body>
 </html>

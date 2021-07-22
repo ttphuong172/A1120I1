@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<html lang="en">
+<head th:replace="/layout::head">
+
+</head>
+<body>
+<div class="container">
+<h3>Danh sach san pham</h3>
+    <a href="/sanpham/create">Them moi san pham</a>
+    <div class="notify">
+        <div th:if="${msg}">
+            <span th:text="${msg}"></span>
+        </div>
+    </div>
+<table class="table">
+    <thead>
+        <th>ID</th>
+        <th>TÊN</th>
+        <th>GIÁ</th>
+        <th>SỐ LƯỢNG</th>
+        <th>ACTION</th>
+    </thead>
+    <tbody>
+        <tr th:each="sanpham:${sanPhamList}">
+            <td th:text="${sanpham.getId()}"></td>
+            <td th:text="${sanpham.getTen()}"></td>
+            <td th:text="${sanpham.getGia()}"></td>
+            <td th:text="${sanpham.getSoLuong()}"></td>
+            <td><a th:href="@{/sanpham/edit/{id}(id=${sanpham.getId()})}"><button class="btn btn-info"><i class="fa fa-edit"></i></button></a></td>
+            <td><a th:href="@{/sanpham/delete/{id}(id=${sanpham.getId()})}"><button class="btn btn-danger"><i class="fa fa-trash"></i></button></a></td>
+        </tr>
+    </tbody>
+</table>
+</div>
+</body>
+</html>

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<html lang="en">
+<head th:insert="/layout::head">
+    <meta charset="UTF-8">
+    <title>Them moi san pham</title>
+</head>
+<body>
+<div class="container">
+    <h3>Thêm mới sản phẩm</h3>
+    <a th:href="@{/sanpham}">
+        Danh sach san pham
+    </a>
+    <form th:action="@{/sanpham/save}" method="post" th:object="${sanPham}">
+        <div class="form-group">
+            <label for="">ID</label>
+            <input type="text" class="form-control" th:field="*{id}">
+            <label for="">TÊN</label>
+            <input type="text" class="form-control" th:field="*{ten}">
+
+            <label for="">GIÁ</label>
+            <input type="text" class="form-control" th:field="*{gia}">
+
+            <label for="">SỐ LƯỢNG</label>
+            <input type="text" class="form-control" th:field="*{soLuong}">
+        </div>
+        <button type="submit" class="btn btn-primary"><i class="fa fa-floppy-o"></i> &nbsp; Save</button>
+    </form>
+
+</div>
+</body>
+</html>
