@@ -26,7 +26,7 @@ public class CustomerController {
     @PostMapping("/update")
     public String updateSanPham(Customer customer, RedirectAttributes redirectAttributes){
         CustomerRepository customerRepository=new CustomerRepositoryImpl();
-        customerRepository.updateCustomer(customer);
+        customerRepository.saveCustomer(customer);
         redirectAttributes.addFlashAttribute("msg","Cap nhat thanh cong");
         return "redirect:/customer";
     }
@@ -49,17 +49,11 @@ public class CustomerController {
         return "result";
     }
     @GetMapping("/delete/{id}")
-    public String deleteSanPham(@PathVariable int id, Model model){
+    public String deleteCustomer(@PathVariable int id){
         CustomerRepository customerRepository=new CustomerRepositoryImpl();
-        model.addAttribute("customer",customerRepository.findCustomerById(id));
-        return "delete";
-    }
-    @PostMapping("/remove")
-    public String removeSanPham(Customer customer, RedirectAttributes redirectAttributes){
-        CustomerRepository customerRepository=new CustomerRepositoryImpl();
-        customerRepository.removeCustomer(customer);
-        redirectAttributes.addFlashAttribute("msg","Xoa thanh cong");
+        customerRepository.removeCustomer(id);
         return "redirect:/customer";
     }
+
 
 }

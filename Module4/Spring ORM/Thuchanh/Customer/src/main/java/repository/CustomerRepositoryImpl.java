@@ -1,82 +1,65 @@
 package repository;
 
 import model.Customer;
-import org.hibernate.Session;
-import org.hibernate.Transaction;
 
-import javax.persistence.EntityManager;
 import javax.persistence.EntityTransaction;
+import javax.persistence.NoResultException;
 import javax.persistence.TypedQuery;
 import java.util.List;
 
 public class CustomerRepositoryImpl implements CustomerRepository {
     @Override
     public List<Customer> selectAllCustomer() {
-        String queryStr = "SELECT c FROM customer AS c";
-        TypedQuery<Customer> query = BaseRepository.entityManager.createQuery(queryStr, Customer.class);
+        TypedQuery<Customer> query =BaseRepository.entityManager.createQuery("select c from customer c",Customer.class);
         return query.getResultList();
     }
 
     @Override
     public Customer findCustomerById(int id) {
-        return BaseRepository.entityManager.find(Customer.class, id);
+        TypedQuery<Customer> query=BaseRepository.entityManager.createQuery("select c from customer c where c.id=:id",Customer.class);
+        query.setParameter("id",id);
+        try{
+            return query.getSingleResult();
+        } catch (NoResultException e){
+            return null;
+        }
+
+
     }
 
     @Override
     public List<Customer> findCustomerByName(String name) {
-        String queryStr = "SELECT c FROM customer AS c WHERE c.name like :name";
-        TypedQuery<Customer> query = BaseRepository.entityManager.createQuery(queryStr, Customer.class);
-        query.setParameter("name", "%" + name + "%");
-        return query.getResultList();
+        TypedQuery<Customer> query=BaseRepository.entityManager.createQuery("select c from customer c where c.name like:name",Customer.class);
+        query.setParameter("name","%"+name+"%");
+        try{
+            return query.getResultList();
+        } catch (NoResultException e){
+            return null;
+        }
     }
-
 
     @Override
     public void updateCustomer(Customer customer) {
-        EntityTransaction entityTransaction = BaseRepository.entityManager.getTransaction();
-        entityTransaction.begin();
-        BaseRepository.entityManager.merge(customer);
-        entityTransaction.commit();
 
     }
 
     @Override
     public void saveCustomer(Customer customer) {
-        Session session=null;
-        Transaction transaction=null;
-        try{
-            session = BaseRepository.sessionFactory.openSession();
-            transaction=session.beginTransaction();
-            session.save(customer);
-            transaction.commit();
-        } catch (Exception e){
-            if (transaction != null) {
-                transaction.rollback();
-            }
-        } finally {
-            if (session != null) {
-                session.close();
-            }
+        EntityTransaction entityTransaction=BaseRepository.entityManager.getTransaction();
+        entityTransaction.begin();
+        if (customer.getId() != 0) {
+            BaseRepository.entityManager.merge(customer);
+        } else {
+            BaseRepository.entityManager.persist(customer);
         }
+        entityTransaction.commit();
     }
 
     @Override
-    public void removeCustomer(Customer customer) {
-        Session session=null;
-        Transaction transaction=null;
-        try{
-            session = BaseRepository.sessionFactory.openSession();
-            transaction=session.beginTransaction();
-            session.remove(customer);
-            transaction.commit();
-        } catch (Exception e){
-            if (transaction != null) {
-                transaction.rollback();
-            }
-        } finally {
-            if (session != null) {
-                session.close();
-            }
+    public void removeCustomer(int id) {
+        Customer customer=findCustomerById(id);
+        if (customer != null) {
+            BaseRepository.entityManager.remove(customer);
         }
     }
 }
