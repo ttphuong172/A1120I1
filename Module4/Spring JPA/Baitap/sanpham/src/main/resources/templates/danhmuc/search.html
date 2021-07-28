@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<html lang="en">
+<head th:insert="layout/layout.html::head">
+    <meta charset="UTF-8">
+    <title>Danh sach tiem kien danh muc</title>
+</head>
+<body>
+<div class="container">
+    <h3>Danh sach tim kiem danh muc</h3>
+    <a href="/danhmuc">Danh sach danh muc</a>
+    <form action="/danhmuc/search" method="get">
+        <input type="text" name="tendanhmuc">
+        <button type="submit" class="btn btn-info"><i class="fa fa-search"></i> &nbsp; Tim kiem</button>
+    </form>
+
+    <table class="table">
+        <thead>
+        <tr>
+            <th>Id</th>
+            <th>Ten danh muc</th>
+            <th>Action</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr th:each="danhmucsearch:${danhMucSearch}">
+            <td th:text="${danhmucsearch.getId()}"></td>
+            <td th:text="${danhmucsearch.getTenDanhMuc()}"></td>
+            <td><a th:href="@{/danhmuc/edit/{id} (id=${danhmucsearch.getId()})}"><button class="btn btn-info"><i class="fa fa-edit"></i></button></a></td>
+            <td><a th:href="@{/danhmuc/delete/{id} (id=${danhmucsearch.getId()})}"><button class="btn btn-danger"><i class="fa fa-trash"></i></button></a></td>
+        </tr>
+        </tbody>
+    </table>
+</div>
+</body>
+</html>

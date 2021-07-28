@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<html lang="en">
+<head th:replace="/layout::head">
+
+</head>
+<body>
+<div class="container">
+<h3>Danh sach khach hang</h3>
+    <a href="/customer/create">Them moi khach hang</a>
+    <div class="notify">
+        <div th:if="${msg}">
+            <span th:text="${msg}"></span>
+        </div>
+    </div>
+    <div>
+        <form action="/customer/search" method="get">
+            <input type="text" name="search">
+            <button type="submit">Tim kiem</button>
+        </form>
+
+
+    </div>
+<table class="table">
+    <thead>
+        <th>Id</th>
+        <th>Ten</th>
+        <th>Email</th>
+        <th>Dia chi</th>
+        <th>ACTION</th>
+    </thead>
+    <tbody>
+        <tr th:each="customer:${customerList}">
+            <td th:text="${customer.getId()}"></td>
+            <td th:text="${customer.getName()}"></td>
+            <td th:text="${customer.getEmail()}"></td>
+            <td th:text="${customer.getAddress()}"></td>
+            <td><a th:href="@{/customer/edit/{id}(id=${customer.getId()})}"><button class="btn btn-info"><i class="fa fa-edit"></i></button></a></td>
+            <td><a th:href="@{/customer/delete/{id}(id=${customer.getId()})}"><button class="btn btn-danger"><i class="fa fa-trash"></i></button></a></td>
+        </tr>
+    </tbody>
+</table>
+</div>
+</body>
+</html>

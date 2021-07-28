@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<html lang="en">
+<head th:insert="layout/layout.html::head">
+    <meta charset="UTF-8">
+    <title>Them moi danh muc</title>
+</head>
+<body>
+<div class="container">
+    <h3>Them moi danh muc</h3>
+    <a href="/danhmuc/">Danh sach danh muc</a>
+    <form action="/danhmuc/save" method="post" th:object="${danhMuc}">
+        <div class="form-group">
+            <label>Id</label>
+            <input type="text"  class="form-control" th:field="*{id}" th:readonly="readonly">
+            <label>Ten danh muc</label>
+            <input type="text" class="form-control" th:field="*{tenDanhMuc}">
+        </div>
+        <button type="submit" class="btn btn-success"><i class="fa fa-floppy-o"></i> &nbsp;Save</button>
+    </form>
+
+</div>
+</body>
+</html>

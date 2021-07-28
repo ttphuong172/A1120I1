@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<html lang="en">
+<head th:insert="layout/layout.html::head">
+    <meta charset="UTF-8">
+    <title>Danh sach san pham</title>
+</head>
+<body>
+<div class="container">
+    <h3>Danh sach san pham</h3>
+    <a href="/sanpham/create">Them moi san pham</a>
+    <form action="/sanpham/search" method="get">
+        <input type="text" name="ten">
+        <button type="submit">Tim kiem</button>
+    </form>
+<table class="table">
+    <thead>
+        <tr>
+            <th>Id</th>
+            <th>Ten</th>
+            <th>Gia</th>
+            <th>Soluong</th>
+            <th>Mausac</th>
+            <th>Mota</th>
+            <th>Danhmuc</th>
+            <th>Action</th>
+
+        </tr>
+    </thead>
+    <tbody>
+        <tr th:each="sanphamlist:${sanPhamList}" >
+            <td th:text="${sanphamlist.getId()}"></td>
+            <td th:text="${sanphamlist.getTen()}"></td>
+            <td th:text="${sanphamlist.getGia()}"></td>
+            <td th:text="${sanphamlist.getSoLuong()}"></td>
+            <td th:text="${sanphamlist.getMauSac()}"></td>
+            <td th:text="${sanphamlist.getMoTa()}"></td>
+            <td th:text="${sanphamlist.danhMuc.getTenDanhMuc()}"></td>
+            <td><a th:href="@{/sanpham/edit/{id}(id=${sanphamlist.getId()})}"><button class="btn btn-info"><i class="fa fa-edit"></i></button></a></td>
+            <td><a th:href="@{/sanpham/delete/{id}(id=${sanphamlist.getId()})}"><button class="btn btn-danger"><i class="fa fa-trash"></i></button></a></td>
+        </tr>
+
+
+
+    </tbody>
+</table>
+</div>
+</body>
+</html>

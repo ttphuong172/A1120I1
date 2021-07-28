@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<html lang="en">
+<head th:insert="layout/layout.html::head">
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+<div class="container">
+    <h3>Tao moi san pham</h3>
+    <a href="/sanpham/">Danh sach san pham</a>
+    <form th:action="@{/sanpham/save}" method="post" th:object="${sanPham}">
+        <div class="form-group">
+            <label>Id</label>
+            <input type="text" class="form-control" th:field="*{id}">
+            <label>Ten</label>
+            <input type="text" class="form-control" th:field="*{ten}">
+            <label>Gia</label>
+            <input type="text" class="form-control" th:field="*{gia}">
+            <label>Soluong</label>
+            <input type="text" class="form-control" th:field="*{soLuong}">
+            <label>Mausac</label>
+            <input type="text" class="form-control" th:field="*{mauSac}">
+            <label>Mota</label>
+            <input type="text" class="form-control" th:field="*{moTa}">
+            <label>Danhmuc</label>
+            <select class="custom-select" th:field="*{danhMuc}">
+                <option th:each="danhmuclist: ${danhMucList}" th:text="${danhmuclist.getTenDanhMuc()}"
+                        th:value="${danhmuclist.getId()}">
+                </option>
+            </select>
+        </div>
+        <label></label>
+        <button type="submit" class="btn btn-success"><i class="fa fa-floppy-o"></i> &nbsp; Save</button>
+
+</form>
+</div>
+</body>
+</html>

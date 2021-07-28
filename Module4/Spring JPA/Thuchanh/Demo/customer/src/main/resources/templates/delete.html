@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<html lang="en">
+<head th:insert="layout::head">
+    <meta charset="UTF-8">
+    <title>Xoa san pham</title>
+</head>
+<body>
+<div class="container">
+    <h3>Xoa khach hang</h3>
+    <a th:href="@{/customer}">
+        Danh sach khach hang
+    </a>
+    <form th:action="@{/customer/remove}" method="post" th:object="${customer}">
+        <div class="form-group">
+            <label for="">Id</label>
+            <input type="text" class="form-control" th:field="*{id}">
+            <label for="">Ten</label>
+            <input type="text" class="form-control" th:field="*{name}">
+
+            <label for="">Email</label>
+            <input type="text" class="form-control" th:field="*{email}">
+
+            <label for="">Dia chi</label>
+            <input type="text" class="form-control" th:field="*{address}">
+        </div>
+        <button type="submit" class="btn btn-danger"><i class="fa fa-trash"></i> &nbsp; Remove</button>
+    </form>
+</div>
+</body>
+</html>

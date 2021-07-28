@@ -1,3 +1,4 @@
 <i class="fa fa-trash"></i>
 <i class="fa fa-edit"></i>
 <i class="fa fa-floppy-o"></i>
+<i class="fa fa-search"></i>

@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<html lang="en">
+<head th:insert="layout/layout.html::head">
+    <meta charset="UTF-8">
+    <title>Danh sach san pham tim kiem</title>
+</head>
+<body>
+<div class="container">
+    <h3>Danh sach san pham tim kiem</h3>
+    <a href="/sanpham/">Danh sach san pham</a>
+    <form action="/sanpham/search" method="get">
+        <input type="text" name="ten">
+        <button type="submit">Tim kiem</button>
+    </form>
+    <table class="table">
+        <thead>
+        <tr>
+            <th>Id</th>
+            <th>Ten</th>
+            <th>Gia</th>
+            <th>Soluong</th>
+            <th>Mausac</th>
+            <th>Mota</th>
+            <th>Danhmuc</th>
+            <th>Action</th>
+
+        </tr>
+        </thead>
+        <tbody>
+        <tr th:each="searchlist:${searchList}" >
+            <td th:text="${searchlist.getId()}"></td>
+            <td th:text="${searchlist.getTen()}"></td>
+            <td th:text="${searchlist.getGia()}"></td>
+            <td th:text="${searchlist.getSoLuong()}"></td>
+            <td th:text="${searchlist.getMauSac()}"></td>
+            <td th:text="${searchlist.getMoTa()}"></td>
+            <td th:text="${searchlist.danhMuc.getTenDanhMuc()}"></td>
+            <td><a th:href="@{/sanpham/edit/{id}(id=${searchlist.getId()})}"><button class="btn btn-info"><i class="fa fa-edit"></i></button></a></td>
+            <td><a th:href="@{/sanpham/delete/{id}(id=${searchlist.getId()})}"><button class="btn btn-danger"><i class="fa fa-trash"></i></button></a></td>
+        </tr>
+
+
+
+        </tbody>
+    </table>
+</div>
+</body>
+</html>
