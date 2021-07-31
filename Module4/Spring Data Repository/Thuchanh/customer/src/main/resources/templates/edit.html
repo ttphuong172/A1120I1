@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<html lang="en">
+<head th:insert="layout::head">
+    <meta charset="UTF-8">
+    <title>Chinh sua khach hang</title>
+</head>
+<body>
+<div class="container">
+    <h3>Chinh sua khach hang</h3>
+    <form action="/customer/update" method="post" th:object="${customer}">
+        <div class="form-group">
+            <input type="hidden"  class="form-control" th:field="*{id}" >
+            <label>Name</label>
+            <input type="text"  class="form-control" th:field="*{name}">
+            <label>Email</label>
+            <input type="text"  class="form-control" th:field="*{email}">
+            <label>Address</label>
+            <select name="" id="" class="custom-select" th:field="*{address}">
+                <option value="" th:each="addresslist:${addressList}" th:text="${addresslist.city}"
+                        th:value="${addresslist.id}"></option>
+            </select>
+        </div>
+        <button type="submit" class="btn btn-success"><i class="fa fa-floppy-o"></i>&nbsp;Update</button>
+    </form>
+</div>
+</body>
+</html>

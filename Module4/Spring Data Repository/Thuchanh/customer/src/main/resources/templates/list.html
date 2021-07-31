@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<html lang="en">
+<head th:insert="layout::head">
+    <meta charset="UTF-8">
+    <title>Danh sach khach hang</title>
+</head>
+<body>
+<div class="container">
+    <h3>Danh sach khach hang</h3>
+    <a href="/customer/create">Them moi khach hang</a>
+    <form action="/customer/search">
+        <input type="text" name="name">
+        <button type="submit">Tim kiem</button>
+    </form>
+    <p th:if="${msg}" th:text="${msg}"></p>
+    <table class="table">
+        <thead>
+        <tr>
+            <th>Id</th>
+            <th>Name</th>
+            <th>Email</th>
+            <th>Address</th>
+            <th>Action</th>
+
+        </tr>
+        </thead>
+        <tbody>
+        <tr th:each="customerlist:${customerList}">
+            <td th:text="${customerlist.id}"></td>
+            <td th:text="${customerlist.name}"></td>
+            <td th:text="${customerlist.email}"></td>
+            <td th:text="${customerlist.address.city}"></td>
+            <td><a th:href="@{/customer/edit/{id} (id=${customerlist.id})}"><button class="btn btn-info">
+                <i class="fa fa-edit"></i>&nbsp;Edit</button></a></td>
+            <td><a th:href="@{/customer/delete/{id} (id=${customerlist.id})}"><button class="btn btn-danger">
+                <i class="fa fa-trash"></i> &nbsp;Delete
+            </button></a></td>
+        </tr>
+        </tbody>
+    </table>
+
+    <span>
+        <a th:if="${customerList.hasPrevious()}" th:href="@{/customer (page=${customerList.number}-1)}">
+            Previous
+        </a>
+    </span>
+
+    <span th:each="abc:${#numbers.sequence(0,customerList.totalPages - 1)}">
+        <a th:href="@{/customer (page=${abc})}" th:text="${abc}"></a>
+    </span>
+    <span>
+        <a th:if="${customerList.hasNext()}" th:href="@{/customer (page=${customerList.number}+1)}">
+            Next
+        </a>
+    </span>
+</div>
+</body>
+</html>

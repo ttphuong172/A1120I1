@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<html lang="en">
+<head th:insert="layout::head">
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<div class="container">
+    <h3>Tao moi User</h3>
+    <form action="/user/save" method="post" th:object="${user}">
+        <label>Name</label>
+        <div class="form-group">
+        <input type="text" class="form-control" th:field="*{name}">
+        <p style="color: red" th:if = "${#fields.hasErrors('name')}" th:errors = "*{name}"></p>
+        <label>Age</label>
+        <input type="text" class="form-control" th:field="*{age}">
+        <p style="color: red" th:if = "${#fields.hasErrors('age')}" th:errors = "*{age}"></p>
+        <label for="">Phone Number</label>
+        <input type="text" class="form-control" th:field="*{phoneNumber}">
+        <p style="color: red" th:if = "${#fields.hasErrors('phoneNumber')}" th:errors = "*{phoneNumber}"></p>
+        </div>
+        <button type="submit" class="btn btn-success">Save</button>
+    </form>
+</div>
+</body>
+</html>

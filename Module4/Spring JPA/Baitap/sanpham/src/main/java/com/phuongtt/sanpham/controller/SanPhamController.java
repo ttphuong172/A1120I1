@@ -9,6 +9,7 @@ import org.springframework.stereotype.Controller;
 import org.springframework.stereotype.Service;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.*;
+import org.springframework.web.servlet.mvc.support.RedirectAttributes;
 
 @Controller
 @Service
@@ -31,8 +32,9 @@ public class SanPhamController {
         return "sanpham/edit";
     }
     @PostMapping("/update")
-    public String updateSanPham(SanPham sanPham){
+    public String updateSanPham(SanPham sanPham,RedirectAttributes redirectAttributes){
         sanPhamService.saveSanPham(sanPham);
+        redirectAttributes.addFlashAttribute("msg","Cap nhat thanh cong");
         return "redirect:/sanpham";
     }
 
@@ -44,8 +46,9 @@ public class SanPhamController {
         return "sanpham/create";
     }
     @PostMapping("/save")
-    public String saveSanPham(SanPham sanPham){
+    public String saveSanPham(SanPham sanPham,RedirectAttributes redirectAttributes){
         sanPhamService.saveSanPham(sanPham);
+        redirectAttributes.addFlashAttribute("msg","Them moi thanh cong");
         return "redirect:/sanpham";
     }
     @GetMapping("/delete/{id}")
@@ -55,8 +58,9 @@ public class SanPhamController {
         return "sanpham/delete";
     }
     @GetMapping("/remove")
-    public String removeSanPham(SanPham sanPham){
+    public String removeSanPham(SanPham sanPham, RedirectAttributes redirectAttributes){
         sanPhamService.removeSanPham(sanPham);
+        redirectAttributes.addFlashAttribute("msg","Xoa thanh cong");
         return "redirect:/sanpham";
     }
     @GetMapping("/search")
