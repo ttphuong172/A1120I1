@@ -30,6 +30,7 @@ public class User implements Validator {
     private int age;
     @Column(name = "email")
     @Email
+    @NotBlank
     private String email;
 
     public User() {
