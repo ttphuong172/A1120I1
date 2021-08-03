@@ -43,4 +43,9 @@ public class NewsServiceImpl implements NewsService {
     public Page<News> findByHeaderContaining(String value,Pageable pageable) {
         return newsRepository.findByHeaderContaining(value,pageable);
     }
+
+    @Override
+    public Page<News> findByCategory_Id(int categoryid, Pageable pageable) {
+        return newsRepository.findByCategory_Id(categoryid, pageable);
+    }
 }

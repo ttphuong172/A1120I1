@@ -6,13 +6,20 @@
     <title>Title</title>
 </head>
 <body>
+
 <div class="container">
+    <header th:insert="header::header"></header>
     <h3>Danh sach tin tuc</h3>
     <a href="/news/create">Them moi tin tuc</a>
     <form action="/news/search" method="get">
         <input type="text" name="value">
         <button type="submit" class="btn btn-info">Tim kiem</button>
+
+    <select name="" id="" onchange="this.form.submit()" th:name="idcategory">
+        <option value="" th:each="categorylist:${categoryList}" th:text="${categorylist.name}" th:value="${categorylist.id}" ></option>
+    </select>
     </form>
+
     <p th:text="${msg}"></p>
     <table class="table">
     <tr th:each="newslist:${newsList}">

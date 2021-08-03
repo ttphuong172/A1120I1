@@ -1,5 +1,6 @@
 package com.example.form.model;
 
+import com.example.form.Validate.MinAgeConstaint;
 import org.springframework.validation.Errors;
 import org.springframework.validation.Validator;
 
@@ -26,7 +27,7 @@ public class User implements Validator {
     @NotBlank
     private String phoneNumber;
     @Column(name = "age")
-    @Min(18)
+    @MinAgeConstaint
     private int age;
     @Column(name = "email")
     @Email

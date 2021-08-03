@@ -9,4 +9,5 @@ import java.util.List;
 
 public interface NewsRepository extends JpaRepository<News,Integer> {
     Page<News> findByHeaderContaining(String value, Pageable pageable);
+    Page<News> findByCategory_Id(int categoryid,Pageable pageable);
 }

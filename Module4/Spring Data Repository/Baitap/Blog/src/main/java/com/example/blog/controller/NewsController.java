@@ -13,6 +13,7 @@ import org.springframework.web.bind.annotation.*;
 import org.springframework.web.servlet.mvc.support.RedirectAttributes;
 
 import java.time.LocalDateTime;
+import java.util.Optional;
 
 @Controller
 @Service
@@ -29,7 +30,8 @@ public class NewsController {
     }
     @GetMapping("/list")
     public String listNews(@RequestParam(value = "page",defaultValue = "0") int page,Model model){
-        model.addAttribute("newsList",newsService.selectAllNews(PageRequest.of(page,2)));
+        model.addAttribute("categoryList",categoryService.selectAllCategory());
+        model.addAttribute("newsList",newsService.selectAllNews(PageRequest.of(page,4)));
         return "list";
     }
     @GetMapping("/edit/{id}")
@@ -71,9 +73,16 @@ public class NewsController {
         return "redirect:/news/list";
     }
     @GetMapping("/search")
-    public String searchNews(@RequestParam(value = "page",defaultValue = "0") int page,@RequestParam("value") String value, Model model, Pageable pageable){
-        model.addAttribute("newsSearch",newsService.findByHeaderContaining(value,PageRequest.of(page,2)));
-        model.addAttribute("value",value);
+    public String searchNews(@RequestParam(value = "page",defaultValue = "0") int page, Optional<String> value,Optional<Integer> idcategory, Model model, Pageable pageable){
+        if(value.isPresent()){
+            model.addAttribute("newsSearch",newsService.findByHeaderContaining(value.get(),PageRequest.of(page,2)));
+            model.addAttribute("value",value);
+        }
+        else {
+            model.addAttribute("newsSearch",newsService.findByCategory_Id(idcategory.get(),pageable));
+        }
+
+
         return "search";
     }
     @GetMapping("/detail/{id}")
@@ -81,7 +90,6 @@ public class NewsController {
         model.addAttribute("news",newsService.findNewsById(id));
         return "detail";
     }
-
 
 
 }

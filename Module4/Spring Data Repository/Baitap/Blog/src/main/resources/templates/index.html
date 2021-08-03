@@ -6,6 +6,7 @@
     <title>Title</title>
 </head>
 <body>
+<header th:insert="header::header"></header>
 <div class="container">
     <div th:each="newslist:${newsList}">
         <a th:href="@{/news/detail/{id} (id=${newslist.getId()})}">

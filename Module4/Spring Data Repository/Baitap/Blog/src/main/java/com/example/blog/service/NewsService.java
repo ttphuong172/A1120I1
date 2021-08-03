@@ -13,4 +13,5 @@ public interface NewsService {
     void saveNews(News news);
     void removeNews(News news);
     Page<News> findByHeaderContaining(String value,Pageable pageable);
+    Page<News> findByCategory_Id(int categoryid,Pageable pageable);
 }
