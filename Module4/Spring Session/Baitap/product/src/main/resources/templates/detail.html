@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Chi tiet hang</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</head>
+<body>
+<div class="container">
+<h3>Chi tiet</h3>
+    <div class="row">
+        <div class="col-md-4" style="text-align: center">
+            <img th:src="@{'/images/' + ${flower.image}}" alt="" style="width: 200px;height: 200px; margin: 20px">
+            <p>
+                <span>Ten san pham:</span>
+                <span th:text="${flower.name}"></span>
+            </p>
+            <p style="font-weight: bold;font-size: 20px;text-decoration: line-through">
+                <span>Gia cu:</span>
+                <span th:text="${flower.oldprice}"></span>
+            </p>
+            <p style="font-weight: bold;font-size: 22px">
+                <span>Gia moi:</span>
+                <span th:text="${flower.price}"></span>
+            </p>
+            <button class="btn btn-warning" style="width: 80%;">MUA NGAY</button>
+        </div>
+        <div class="col-md-8">
+           <div style="border: 1px solid red; border-radius: 20px;margin: 70px 0">
+               <h4 th:text="${flower.name.toUpperCase()}"></h4>
+               <hr style="width: 90%;">
+               <p>ABC</p>
+               <p>ABC</p>
+               <p>ABC</p>
+               <p>ABC</p>
+               <p>ABC</p>
+               <p>ABC</p>
+               <p>ABC</p>
+           </div>
+        </div>
+    </div>
+</div>
+</body>
+</html>

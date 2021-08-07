@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<html lang="en">
+<a href="/customer/create">Them moi khach hang</a>
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<table>
+    <thead>
+        <th>Id</th>
+        <th>Name</th>
+        <th>Age</th>
+    </thead>
+    <tbody>
+        <tr th:each="customerlist:${customerList}">
+            <td th:text="${customerlist.id}"></td>
+            <td th:text="${customerlist.name}"></td>
+            <td th:text="${customerlist.age}"></td>
+            <td><a th:href="@{/customer/muonsach/{id} (id=${customerlist.id})}">Muon sach</a></td>
+        </tr>
+    </tbody>
+</table>
+
+</body>
+</html>

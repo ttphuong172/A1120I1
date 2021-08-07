@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Danh sach sach</title>
+</head>
+<body>
+<table>
+    <thead>
+    <th>Id</th>
+    <th>Ten sach</th>
+    <th>So luong</th>
+    </thead>
+    <tbody>
+    <tr th:each="sachlist:${sachList}">
+        <td th:text="${sachlist.id}"></td>
+        <td th:text="${sachlist.tenSach}"></td>
+        <td th:text="${sachlist.soLuong}"></td>
+        <td><a th:href="@{/sach/muonsach/{id} (id=${sachlist.id})}">Muon Sach</a></td>
+        <td><a th:href="@{/sach/trasach/{id} (id=${sachlist.id})}">Tra Sach</a></td>
+    </tr>
+    </tbody>
+</table>
+
+</body>
+</html>

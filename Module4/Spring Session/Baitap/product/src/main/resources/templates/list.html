@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</head>
+<body>
+<div class="container">
+    <div class="row">
+        <div class="col-md-3" th:each="flowerlist : ${flowerList}" style="text-align: center">
+            <div style="border: silver solid 1px; margin: 20px;position: relative">
+                <img th:if="${flowerlist.isNew}" src="/images/new.png" style="position: absolute;top: 0;right: 0"></img>
+                <a th:href="@{/flower/detail/{id} (id=${flowerlist.id})}" style="text-decoration: none">
+                    <div>
+                        <img style="width: 150px;height: 150px" th:src="@{'/images/' + ${flowerlist.image}}" alt="">
+                    </div>
+                    <div th:text="${flowerlist.name}">
+                    </div>
+                    <div>
+                        <span th:text="${flowerlist.oldprice}" style="text-decoration: line-through"></span>
+                        <span th:text="${flowerlist.price}" style="font-size: 20px;font-weight: bold;color: brown"></span>
+                    </div>
+                </a>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+</body>
+</html>
