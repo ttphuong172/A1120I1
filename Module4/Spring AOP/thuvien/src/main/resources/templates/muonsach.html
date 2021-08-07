@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Muon Tra Sach</title>
+</head>
+<body>
+    <p th:text="${sach.id}"></p>
+    <p th:text="${sach.tenSach}"></p>
+    <p th:text="${sach.soLuong}"></p>
+    <a th:href="@{/sach/xacnhanmuonsach/{id}(id=${sach.id})}"><button type="submit">Muon sach</button></a>
+</body>
+</html>
