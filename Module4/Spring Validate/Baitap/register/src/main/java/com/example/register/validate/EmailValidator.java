@@ -8,17 +8,11 @@ import org.springframework.stereotype.Service;
 
 import javax.validation.ConstraintValidator;
 import javax.validation.ConstraintValidatorContext;
-import java.util.ArrayList;
-import java.util.List;
-import java.util.Optional;
-
 
 public class EmailValidator implements ConstraintValidator<EmailConstaint, String> {
     @Autowired
     private UserService userService;
 
-    @Autowired
-    UserRepository userRepository;
     @Override
     public void initialize(EmailConstaint constraintAnnotation) {
         constraintAnnotation.message();
@@ -26,9 +20,11 @@ public class EmailValidator implements ConstraintValidator<EmailConstaint, Strin
 
     @Override
     public boolean isValid(String email, ConstraintValidatorContext context) {
-//            Do cái findByEmail nó null a
-//        Nó phải là findBYNameEmail. vì lúc này email chưa được tạo.
-        return !userRepository.existsUserByEmail(email);
+
+        if(userService!=null){
+            return userService.findByEmail(email) ==null;
+        }
+        return true;
     }
 
 }

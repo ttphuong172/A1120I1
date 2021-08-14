@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+</head>
+<body>
+<div class="container">
+<h3>Tim kiem nhan vien</h3>
+<a href="/employee/">Danh sach nhan vien</a>
+<table class="table table-bordered">
+    <thead>
+    <th>id</th>
+    <th>name</th>
+    <th>birthday</th>
+    <th>idcard</th>
+    <th>salary</th>
+    <th>phone</th>
+    <th>email</th>
+    <th>address</th>
+    <th>position</th>
+    <th>education</th>
+    <th>division</th>
+    </thead>
+    <tbody>
+    <tr th:each="employeelistsearch:${employeeListSearch}">
+        <td th:text="${employeelistsearch.employeeId}"></td>
+        <td th:text="${employeelistsearch.employeeName}"></td>
+        <td th:text="${employeelistsearch.employeeBirthday}"></td>
+        <td th:text="${employeelistsearch.employeeIdCard}"></td>
+        <td th:text="${employeelistsearch.employeeSalary}"></td>
+        <td th:text="${employeelistsearch.employeePhone}"></td>
+        <td th:text="${employeelistsearch.employeeEmail}"></td>
+        <td th:text="${employeelistsearch.employeeAddress}"></td>
+        <td th:text="${employeelistsearch.position.positionName}"></td>
+        <td th:text="${employeelistsearch.educationDegree.educationDegreeName}"></td>
+        <td th:text="${employeelistsearch.division.divisionName}"></td>
+        <td><a th:href="@{/employee/edit/{employeeId} (employeeId=${employeelistsearch.employeeId})}">edit</a></td>
+        <td><a th:href="@{/employee/delete/{employeeId} (employeeId=${employeelistsearch.employeeId})}">delete</a></td>
+    </tr>
+    </tbody>
+</table>
+<span>
+        <a th:if="${employeeListSearch.hasPrevious()}" th:href="@{/employee/search (page=${employeeListSearch.number}-1,searchValue=${searchValue})}">
+            Previous
+        </a>
+    </span>
+
+<span th:each="abc:${#numbers.sequence(0,employeeListSearch.totalPages - 1)}">
+        <a th:href="@{/employee/search (page=${abc},searchValue=${searchValue})}" th:text="${abc}"></a>
+    </span>
+<span>
+        <a th:if="${employeeListSearch.hasNext()}" th:href="@{/employee/search (page=${employeeListSearch.number}+1,searchValue=${searchValue})}">
+            Next
+        </a>
+    </span>
+</div>
+</body>
+</html>

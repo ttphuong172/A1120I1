@@ -28,7 +28,8 @@
                 <span>Gia moi:</span>
                 <span th:text="${flower.price}"></span>
             </p>
-            <button class="btn btn-warning" style="width: 80%;">MUA NGAY</button>
+            <a th:href="@{/flower/addCart/{id} (id=${flower.id})}"><button class="btn btn-warning" style="width: 80%;">MUA NGAY</button></a>
+
         </div>
         <div class="col-md-8">
            <div style="border: 1px solid red; border-radius: 20px;margin: 70px 0">

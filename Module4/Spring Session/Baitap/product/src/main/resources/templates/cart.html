@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</head>
+<body>
+<div class="container">
+    <h3>Danh sach gio hang</h3>
+    <table class="table table-borderless">
+        <thead>
+        <tr>
+            <th colspan="2">San pham</th>
+            <th>Gia</th>
+            <th>So luong</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr th:each="flowerlistcart:${flowerListCart}" >
+            <td th:text="${flowerlistcart.flower.name}"></td>
+            <td th:text="${flowerlistcart.flower.price}"></td>
+            <td th:text="${flowerlistcart.quantity}"></td>
+            <td><a th:href="@{/flower/delete/{name} (name=${flowerlistcart.flower.name})}">Xoa</a></td>
+        </tr>
+        <a href=""><button>Mua hang</button></a>
+
+        </tbody>
+    </table>
+
+</div>
+
+</body>
+</html>

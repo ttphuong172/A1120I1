@@ -17,6 +17,6 @@ public class FlowerServiceImpl implements FlowerService {
 
     @Override
     public Flower findFlowerById(int id) {
-        return flowerRepository.getById(id);
+        return flowerRepository.findById(id).orElse(null);
     }
 }

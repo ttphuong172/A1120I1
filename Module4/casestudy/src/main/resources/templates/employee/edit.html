@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Chinh sua nhan vien</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body>
+<div class="container">
+<h3>Chinh sua nhan vien</h3>
+<a href="/employee/">Danh sach nhan vien</a>
+<form action="/employee/update" method="post" th:object="${employee}" >
+    <div class="row">
+        <div class="col-md-6">
+            <p>Ho va ten</p>
+            <input class="form-control" type="hidden" th:field="*{employeeId}">
+            <input class="form-control" type="text" th:field="*{employeeName}">
+        </div>
+        <div class="col-md-6">
+            <p>Ngay sinh</p>
+            <input class="form-control" type="date" th:field="*{employeeBirthday}">
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-6">
+            <p>So CMND</p>
+            <input class="form-control" type="number" th:field="*{employeeIdCard}">
+        </div>
+        <div class="col-md-6">
+            <p>Luong</p>
+            <input class="form-control" type="number" th:field="*{employeeSalary}">
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-6">
+            <p>Phone</p>
+            <input class="form-control" type="text" th:field="*{employeePhone}">
+        </div>
+        <div class="col-md-6">
+            <p>Email</p>
+            <input class="form-control" type="text" th:field="*{employeeEmail}">
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-12">
+            <p>Dia chi</p>
+            <input class="form-control" type="text" th:field="*{employeeAddress}">
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-4">
+            <p>Vi tri</p>
+            <select class="form-control" name="" id="" th:field="*{position}">
+                <option value="" th:each="positionlist:${positionList}" th:text="${positionlist.positionName}"
+                        th:value="${positionlist.positionId}"></option>
+            </select>
+        </div>
+        <div class="col-md-4">
+            <p>Hoc van</p>
+            <select class="form-control" name="" id="" th:field="*{educationDegree}">
+                <option value="" th:each="educationdegreelist:${educationDegreeList}"
+                        th:text="${educationdegreelist.educationDegreeName}"
+                        th:value="${educationdegreelist.educationDegreeId}"></option>
+            </select>
+        </div>
+        <div class="col-md-4">
+            <p>Bo phan</p>
+            <select class="form-control" name="" id="" th:field="*{division}">
+                <option value="" th:each="divisionlist:${divisionList}" th:text="${divisionlist.divisionName}"
+                        th:value="${divisionlist.divisionId}"></option>
+            </select>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-2"></div>
+        <div class="col-md-2"></div>
+        <div class="col-md-2"></div>
+        <div class="col-md-2"></div>
+        <div class="col-md-2">
+            <p></p>
+            <button style="width: 100%;" class="btn btn-primary" type="submit"><i class="fa fa-floppy-o"></i> &nbsp; Update</button>
+        </div>
+        <div class="col-md-2">
+            <p></p>
+            <a href="/employee/">
+                <button style="width: 100%;" class="btn btn-success" type="button">Cancel</button>
+            </a>
+        </div>
+    </div>
+</form>
+</div>
+</body>
+
+</html>

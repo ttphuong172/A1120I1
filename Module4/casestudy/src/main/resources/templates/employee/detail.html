@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Chi tiet nhan vien</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+</head>
+<body>
+<div class="container">
+    <h3>Chi tiet nhan vien</h3>
+    <div class="row">
+        <div class="col-md-4" style="text-align: center">
+            <img src="" alt="" style="width: 150px;height:200px" >
+        </div>
+        <div class="col-md-8" style="font-size: 20px">
+           <div>
+               <span>Ma Nhan Vien:</span>
+               <span th:text="${employee.employeeId}"></span>
+           </div>
+            <div>
+                <span>Ten Nhan Vien:</span>
+                <span th:text="${employee.employeeName}"></span>
+            </div>
+            <div>
+                <span>Ngay Sinh:</span>
+                <span th:text="${employee.employeeBirthday}"></span>
+            </div>
+            <div>
+                <span>So CMND:</span>
+                <span th:text="${employee.employeeIdCard}"></span>
+            </div>
+            <div>
+                <span>Luong:</span>
+                <span th:text="${employee.employeeSalary}"></span>
+            </div>
+            <div>
+                <span>So Dien Thoai:</span>
+                <span th:text="${employee.employeePhone}"></span>
+            </div>
+            <div>
+                <span>Email:</span>
+                <span th:text="${employee.employeeName}"></span>
+            </div>
+            <div>
+                <span>Dia Chi:</span>
+                <span th:text="${employee.employeeAddress}"></span>
+            </div>
+            <div>
+                <span>Vi Tri:</span>
+                <span th:text="${employee.position.positionName}"></span>
+            </div>
+            <div>
+                <span>Hoc Van:</span>
+                <span th:text="${employee.educationDegree.educationDegreeName}"></span>
+            </div>
+            <div>
+                <span>Bo Phan:</span>
+                <span th:text="${employee.division.divisionName}"></span>
+            </div>
+
+
+        </div>
+    </div>
+</div>
+</body>
+</html>

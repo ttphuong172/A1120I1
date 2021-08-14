@@ -1,0 +1,42 @@
+ @GetMapping("/addCart/{id}")
+    public String addToCart(@PathVariable int id,
+                            @ModelAttribute(name = "flowerListCart") List<Cart> cart) {
+
+        Flower flower = flowerService.findFlowerById(id);
+        Cart itemCart=new Cart();
+        boolean isExist=false;
+        int index=0;
+        for(int i=0;i<cart.size();i++){
+            if(cart.get(i).getFlower().getName().equals(flower.getName())){
+                isExist=true;
+                index=i;
+                break;
+            }
+        }
+        if(isExist){
+            itemCart=cart.get(index);
+            itemCart.setQuantity(itemCart.getQuantity()+1);
+            cart.set(index,itemCart);
+        } else{
+            itemCart.setFlower(flower);
+            itemCart.setQuantity(1);
+            cart.add(itemCart);
+        }
+        return "redirect:/flower";
+    }
+    @GetMapping("/delete/{name}")
+    public String removeCart(@PathVariable String name,@ModelAttribute(name = "flowerListCart") List<Cart> cart){
+        int index=0;
+        for(int i=0;i<cart.size();i++){
+            if(cart.get(i).getFlower().getName().equals(name)){
+                index =i;
+                break;
+            }
+        }
+        cart.remove(index);
+        return "redirect:/cart";
+    }
+    @GetMapping("/buy")
+    public String buyCart(@ModelAttribute(name = "flowerListCart") List<Cart> cart){
+        return "success";
+    }

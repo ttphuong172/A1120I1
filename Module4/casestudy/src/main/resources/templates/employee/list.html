@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Danh sach nhan vien</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body>
+<div class="container">
+<h3>Danh sach nhan vien</h3>
+<form action="/employee/search" method="get">
+    <label for="">Ten nhan vien</label>
+    <input type="text" name="searchValue">
+    <button type="submit">Tim kiem</button>
+</form>
+<a href="/employee/create">Tao moi nhan vien</a>
+<p th:text="${msg}"></p>
+    <div class="table-responsive">
+<table class="table table-bordered">
+    <thead>
+    <th>id</th>
+    <th>name</th>
+    <th>birthday</th>
+    <th>idcard</th>
+    <th>salary</th>
+    <th>phone</th>
+    <th>email</th>
+    <th>address</th>
+    <th>position</th>
+    <th>education</th>
+    <th>division</th>
+    </thead>
+    <tbody>
+    <tr th:each="employeelist:${employeeList}">
+        <td th:text="${employeelist.employeeId}"></td>
+        <td th:text="${employeelist.employeeName}"></td>
+        <td th:text="${employeelist.employeeBirthday}"></td>
+        <td th:text="${employeelist.employeeIdCard}"></td>
+        <td th:text="${employeelist.employeeSalary}"></td>
+        <td th:text="${employeelist.employeePhone}"></td>
+        <td th:text="${employeelist.employeeEmail}"></td>
+        <td th:text="${employeelist.employeeAddress}"></td>
+        <td th:text="${employeelist.position.positionName}"></td>
+        <td th:text="${employeelist.educationDegree.educationDegreeName}"></td>
+        <td th:text="${employeelist.division.divisionName}"></td>
+        <td><a th:href="@{/employee/detail/{employeeId} (employeeId=${employeelist.employeeId})}"><button class="btn btn-success">Detail</button></a></td>
+        <td><a th:href="@{/employee/edit/{employeeId} (employeeId=${employeelist.employeeId})}"><button class="btn btn-info">Edit</button></a></td>
+        <td><a th:href="@{/employee/delete/{employeeId} (employeeId=${employeelist.employeeId})}"><button class="btn btn-danger">Delete</button></a></td>
+    </tr>
+    </tbody>
+</table>
+    </div>
+<span>
+        <a th:if="${employeeList.hasPrevious()}" th:href="@{/employee (page=${employeeList.number}-1)}">
+            Previous
+        </a>
+    </span>
+
+<span th:each="abc:${#numbers.sequence(0,employeeList.totalPages - 1)}">
+        <a th:href="@{/employee (page=${abc})}" th:text="${abc}"></a>
+    </span>
+<span>
+        <a th:if="${employeeList.hasNext()}" th:href="@{/employee (page=${employeeList.number}+1)}">
+            Next
+        </a>
+    </span>
+</div>
+</body>
+</html>

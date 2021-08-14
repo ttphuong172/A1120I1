@@ -19,18 +19,15 @@ public class UserServiceImpl implements UserService {
     }
 
     @Override
-    public Optional<User> findByEmail(String email) {
+    public User findByEmail(String email) {
         return userRepository.findByEmail(email);
     }
 
 
     @Override
     public void saveUser(User user){
-            userRepository.save(user);
+
+        userRepository.save(user);
     }
 
-    @Override
-    public Boolean existsUserByEmail(String email) {
-        return userRepository.existsUserByEmail(email);
-    }
 }

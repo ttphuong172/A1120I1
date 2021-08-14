@@ -1,15 +1,13 @@
 package com.example.flower.model;
 
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
+import javax.persistence.*;
 
 @Entity
 public class Flower {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int id;
+    @Column(name="name")
     private String name;
     private int oldprice;
     private int price;
@@ -74,6 +72,18 @@ public class Flower {
 
     public void setNew(boolean aNew) {
         isNew = aNew;
+    }
+
+    @Override
+    public String toString() {
+        return "Flower{" +
+                "id=" + id +
+                ", name='" + name + '\'' +
+                ", oldprice=" + oldprice +
+                ", price=" + price +
+                ", image='" + image + '\'' +
+                ", isNew=" + isNew +
+                '}';
     }
 }
 
