@@ -17,6 +17,7 @@
         <div class="col-md-6">
             <p>Ho va ten</p>
             <input class="form-control" type="text" th:field="*{employeeName}">
+            <p th:if = "${#fields.hasErrors('employeeName')}" th:errors = "*{employeeName}"></p>
         </div>
         <div class="col-md-6">
             <p>Ngay sinh</p>
@@ -27,6 +28,7 @@
         <div class="col-md-6">
             <p>So CMND</p>
             <input class="form-control" type="number" th:field="*{employeeIdCard}">
+
         </div>
         <div class="col-md-6">
             <p>Luong</p>
@@ -41,6 +43,7 @@
         <div class="col-md-6">
             <p>Email</p>
             <input class="form-control" type="text" th:field="*{employeeEmail}">
+            <p th:if = "${#fields.hasErrors('employeeEmail')}" th:errors = "*{employeeEmail}"></p>
         </div>
     </div>
     <div class="row">

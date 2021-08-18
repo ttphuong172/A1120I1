@@ -40,8 +40,8 @@ public class CustomerController {
             return new ResponseEntity<>(HttpStatus.NOT_FOUND);
         }
         currentCustomer.setName(customer.getName());
-        currentCustomer.setEmail(currentCustomer.getEmail());
-        customerService.saveCustomer(customer);
+        currentCustomer.setEmail(customer.getEmail());
+        customerService.saveCustomer(currentCustomer);
         return new ResponseEntity<>(currentCustomer,HttpStatus.OK);
     }
     @DeleteMapping("delete/{id}")

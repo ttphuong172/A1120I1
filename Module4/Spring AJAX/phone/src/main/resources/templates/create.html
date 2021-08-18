@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Create new a phone</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</head>
+<body>
+<div class="container pt-3">
+
+
+    <!--New Phone Button trigger modal -->
+
+    <a href="" data-toggle="modal" data-target="#newModal">Tao moi dien thoai</a>
+
+    <!-- Modal New Phone -->
+    <div class="modal fade" id="newModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+         aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="newModalLabel">Thêm mới điện thoại</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+
+                    <label for="model"> Model</label>
+                    <input class="form-control" type="text" id="model">
+                    <label for="price"> Price</label>
+                    <input class="form-control" type="text" id="price">
+                    <label for="producer"> Producer</label>
+                    <input class="form-control" type="text" id="producer">
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                    <button type="button" class="btn btn-primary" onclick="saveCustomer()" data-dismiss="modal">Save
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- Modal Edit Phone -->
+    <div class="modal fade" id="editModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+         aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="editModalLabel">Cập nhật thông tin sản phẩm</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <label for="model"> Id</label>
+                    <input class="form-control" type="text" id="id1" readonly="readonly">
+                    <label for="model"> Model</label>
+                    <input class="form-control" type="text" id="model1">
+                    <label for="price"> Price</label>
+                    <input class="form-control" type="text" id="price1">
+                    <label for="producer"> Producer</label>
+                    <input class="form-control" type="text" id="producer1">
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                    <button type="button" class="btn btn-success" onclick="updateCustomer()" data-dismiss="modal">
+                        Update
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal Delete Phone -->
+    <div class="modal fade" id="deleteModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+         aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="deleteModalLabel">Xóa sản phẩm</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <p id="deleteid" hidden></p>
+                    <span>Ban co muon xoa: </span>
+                    <span id="deletemodel"></span>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                    <button type="button" class="btn btn-danger" onclick="deleteCustomer($('#deleteid').html())"
+                            data-dismiss="modal">Delete
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <p id="listphone"></p>
+
+</div>
+<script>
+    function editCustomer(id) {
+        $.ajax({
+            type: 'get',
+            url: 'edit/' + id,
+            dataType: 'json',
+            success: function (phone) {
+                $('#id1').val(phone.id);
+                $('#model1').val(phone.model);
+                $('#price1').val(phone.price);
+                $('#producer1').val(phone.producer);
+            }
+        })
+    }
+
+    function prepareDelete(id, model) {
+
+        $('#deleteid').html(id)
+        $('#deletemodel').html(model)
+    }
+
+    function deleteCustomer(id) {
+        $.ajax({
+            type: 'delete',
+            url: 'delete/' + id,
+            success: function () {
+                showCustomer()
+            }
+        })
+    }
+
+    function showCustomer() {
+        $('#id').val("");
+        $('#model').val("");
+        $('#price').val("");
+        $('#producer').val("");
+        $.ajax({
+            type: 'get',
+            url: 'list',
+            dataType: 'json',
+            success: function (listphone) {
+                var myString = '<table class="table table-bordered">'
+                for (i = 0; i < listphone.length; i++) {
+                    myString = myString + '<tr> <td>' + listphone[i].id + '</td>' + '<td>' + listphone[i].model + '</td>' + '<td>' + listphone[i].price + '</td>' + '<td>' + listphone[i].producer + '</td>' +
+                        '<td>' +
+                        '<button type="button" class="btn btn-info" onclick="editCustomer(' + listphone[i].id + ')" data-toggle="modal" data-target="#editModal">' +
+                        'Edit' +
+                        '</button>' +
+                        '</td>' +
+                        '<td>' +
+                        '<button type="button" class="btn btn-danger" onclick="prepareDelete(' + listphone[i].id + ',' + '\'' + listphone[i].model + '\'' + ')" data-toggle="modal" data-target="#deleteModal">' +
+                        'Delete' +
+                        '</button>' +
+                        '</td>';
+                }
+                myString = myString + '</table>';
+                $("#listphone").html(myString);
+
+            }
+        })
+    }
+
+    function saveCustomer() {
+        var model = $("#model").val();
+        var price = $("#price").val();
+        var producer = $("#producer").val();
+        var phone = {
+            "producer": producer,
+            "model": model,
+            "price": price
+        }
+        $.ajax({
+            headers: {
+                'Content-Type': 'application/json'     //kieu gia tri gui den
+            },
+            type: 'post',
+            url: 'save',
+            data: JSON.stringify(phone),
+            success: function () {
+                showCustomer()
+            }
+        })
+
+    }
+
+    function updateCustomer() {
+        var model = $("#model1").val();
+        var price = $("#price1").val();
+        var producer = $("#producer1").val();
+        var phone = {
+            "producer": producer,
+            "model": model,
+            "price": price
+        }
+
+        $.ajax({
+            headers: {
+                'Content-Type': 'application/json'     //kieu gia tri gui den
+            },
+            type: 'put',
+            url: 'update/' + $("#id1").val(),
+            data: JSON.stringify(phone),
+            success: function () {
+                showCustomer()
+
+            }
+        })
+    }
+
+    window.onload = function () {
+        showCustomer();
+    }
+
+
+</script>
+</body>
+</html>

@@ -8,10 +8,12 @@ import com.example.casestudy.service.PositionService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.PageRequest;
 import org.springframework.stereotype.Controller;
-import org.springframework.stereotype.Service;
 import org.springframework.ui.Model;
+import org.springframework.validation.BindingResult;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.servlet.mvc.support.RedirectAttributes;
+
+import javax.validation.Valid;
 
 @Controller
 
@@ -54,7 +56,13 @@ public class EmployeeController {
         return "employee/create";
     }
     @PostMapping("save")
-    public String saveEmployee(Employee employee,RedirectAttributes redirectAttributes){
+    public String saveEmployee(@Valid Employee employee,BindingResult bindingResult,RedirectAttributes redirectAttributes,Model model){
+        if (bindingResult.hasErrors()) {
+            model.addAttribute("positionList",positionService.selectAllPosition());
+            model.addAttribute("divisionList", divisionService.selectAllDivision());
+            model.addAttribute("educationDegreeList", educationDegreeService.selectAllEducationDegree());
+            return "employee/create";
+        }
         employeeService.saveEmployee(employee);
         redirectAttributes.addFlashAttribute("msg","Them moi thanh cong");
         return "redirect:/employee";

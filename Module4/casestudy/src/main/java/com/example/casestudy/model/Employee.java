@@ -3,19 +3,27 @@ package com.example.casestudy.model;
 import org.springframework.format.annotation.DateTimeFormat;
 
 import javax.persistence.*;
+import javax.validation.constraints.Email;
+import javax.validation.constraints.NotBlank;
+import javax.validation.constraints.Size;
+
 import java.time.LocalDate;
-import java.time.LocalDateTime;
+
 @Entity
 public class Employee {
     @Id
     @GeneratedValue (strategy = GenerationType.IDENTITY)
     private int employeeId;
+    @NotBlank
+    @Size(min = 3, max = 50)
     private String employeeName;
     @DateTimeFormat(pattern = "yyyy-MM-dd")
     private LocalDate employeeBirthday;
     private String employeeIdCard;
     private double employeeSalary;
     private String employeePhone;
+    @NotBlank
+    @Email
     private String employeeEmail;
     private String employeeAddress;
     @ManyToOne
