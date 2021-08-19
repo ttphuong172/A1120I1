@@ -4,9 +4,13 @@ import com.example.phone.service.PhoneService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
+import org.springframework.validation.BindingResult;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.servlet.ModelAndView;
 
+import javax.validation.Valid;
+import java.time.LocalDate;
+import java.time.LocalDateTime;
 import java.util.List;
 
 @RestController
@@ -23,12 +27,17 @@ public class PhoneController {
     @GetMapping("create")
     public ModelAndView createPhone(){
         ModelAndView modelAndView=new ModelAndView();
+        LocalDateTime localDateTime = LocalDateTime.now();
+        modelAndView.addObject("time",localDateTime);
         modelAndView.setViewName("create.html");
         return modelAndView;
     }
 
     @PostMapping("save")
-    public ResponseEntity<?> savePhone(@RequestBody Phone phone){
+    public ResponseEntity<?> savePhone(@Valid @RequestBody Phone phone, BindingResult bindingResult){
+        if(bindingResult.hasErrors()){
+
+        }
         phoneService.savePhone(phone);
         return new ResponseEntity<>(HttpStatus.OK);
     }
