@@ -1,5 +1,6 @@
 package com.example.casestudy.model;
 
+import org.hibernate.validator.constraints.Length;
 import org.springframework.format.annotation.DateTimeFormat;
 
 import javax.persistence.*;

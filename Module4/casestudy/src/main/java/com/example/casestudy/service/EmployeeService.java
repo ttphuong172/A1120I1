@@ -9,5 +9,6 @@ public interface EmployeeService {
     Employee findEmployeeById(int employeeId);
     void saveEmployee(Employee employee);
     void deleteEmployee(Employee employee);
-    Page<Employee> findByEmployeeNameContaining(Pageable pageable, String searchValue);
+    Page<Employee> findByEmployeeNameContaining(Pageable pageable,String nameemployee);
+    Page<Employee> findByEmployeeNameContainingAndDivision_DivisionId(Pageable pageable,String nameemployee, int iddivison);
 }

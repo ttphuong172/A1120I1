@@ -1,0 +1,136 @@
+ <!DOCTYPE html>
+ <html xmlns:th="http://www.thymeleaf.org">
+<html lang="en">
+<head th:insert="fragments::head">
+    <title>Title</title>
+</head>
+<body>
+<div class="container">
+    <div th:replace="fragments::header" ></div>
+    <h3>Danh sach khach hang</h3>
+    <a href="/customer/create">Them moi khach hang</a>
+    <div class="table-responsive-md">
+    <table class="table table-bordered">
+        <thead>
+        <th>id</th>
+        <th>name</th>
+        <th>birthday</th>
+        <th>gender</th>
+        <th>idcard</th>
+        <th>phone</th>
+        <th>email</th>
+        <th>address</th>
+        <th>type</th>
+        <th colspan="3">action</th>
+        </thead>
+        <tbody>
+            <tr th:each="customerlist:${customerList}">
+                <td th:text="${customerlist.customerId}"></td>
+                <td th:text="${customerlist.customerName}"></td>
+                <td th:text="${#temporals.format(customerlist.customerBirthday, 'dd-MM-yyyy')}"></td>
+                <td th:text="${customerlist.gender.genderName}"></td>
+                <td th:text="${customerlist.customerIdCard}"></td>
+                <td th:text="${customerlist.customerPhone}"></td>
+                <td th:text="${customerlist.customerEmail}"></td>
+                <td th:text="${customerlist.customerAddress}"></td>
+                <td th:text="${customerlist.customerType.customerTypeName}"></td>
+                <td><button class="btn btn-success" data-toggle="modal" data-target="#detailModal" th:onclick="'detailEmployee('+${customerlist.customerId}+')'">Detail</button></td>
+                <td><a th:href="@{/customer/edit/{customerId} (customerId=${customerlist.customerId})}"><button class="btn btn-info">Edit</button></a></td>
+                <td><button class="btn btn-danger" data-toggle="modal" data-target="#abc" th:onclick="prepareDelete([[${customerlist.customerId}]],[[${customerlist.customerName}]])">Delete</button></td>
+            </tr>
+        </tbody>
+    </table>
+    </div>
+
+    <!-- Delete Modal -->
+    <div class="modal fade" id="abc" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Xoa khach hang</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <span id="customerId" hidden></span>
+                    <span>Ban co muon xoa khach hang </span>
+                    <span id="customerName"></span>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancel</button>
+                    <button type="button" class="btn btn-danger" onclick="deleteCustomer($('#customerId').html())" data-dismiss="modal">Delete</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Detail Modal -->
+    <div class="modal fade" id="detailModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="detailModalLabel">Thong tin nhan vien</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <p id="resultDetail"></p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-info" data-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+    <span>
+        <a th:if="${customerList.hasPrevious()}" th:href="@{/customer (page=${customerList.number}-1)}">
+            Previous
+        </a>
+    </span>
+
+    <span th:each="abc:${#numbers.sequence(0,customerList.totalPages - 1)}">
+        <a th:href="@{/customer (page=${abc})}" th:text="${abc}"></a>
+    </span>
+    <span>
+        <a th:if="${customerList.hasNext()}" th:href="@{/customer (page=${customerList.number}+1)}">
+            Next
+        </a>
+    </span>
+</div>
+
+<script>
+    function detailEmployee(customerId) {
+        $.ajax({
+            type:'get',
+            url: '/customer/detail/'+ customerId,
+            dataType:'html',
+            success: function (resultData) {
+                console.log(resultData)
+
+                $('.modal-body').html(resultData);
+
+            }
+        })
+
+    }
+    function prepareDelete(customerId,customerName) {
+        $('#customerId').html(customerId)
+        $('#customerName').html(customerName)
+    }
+    function deleteCustomer(customerId){
+        $.ajax({
+            type:'get',
+            url:'/customer/delete/'+ customerId,
+            success: function () {
+                window.location.reload();
+            }
+        })
+    }
+</script>
+</body>
+</html>

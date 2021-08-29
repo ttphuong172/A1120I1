@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<html lang="en">
+<head th:insert="layout::head">
+    <meta charset="UTF-8">
+    <title>Danh sach tim kien khach hang</title>
+</head>
+<body>
+<div class="container">
+    <h3>Danh sach tim kiem khach hang</h3>
+    <a href="/customer/">Danh sach khach hang</a>
+    <table class="table">
+        <thead>
+        <tr>
+            <th>Id</th>
+            <th>Name</th>
+            <th>Email</th>
+            <th>Address</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr th:each="customersearch:${customerSearch}">
+            <td th:text="${customersearch.id}"></td>
+            <td th:text="${customersearch.name}"></td>
+            <td th:text="${customersearch.email}"></td>
+            <td th:text="${customersearch.address.city}"></td>
+        </tr>
+        </tbody>
+    </table>
+    <span>
+        <a th:if="${customerSearch.hasPrevious()}" th:href="@{/customer/search (page=${customerSearch.number}-1,name=${name})}">
+            Previous
+        </a>
+    </span>
+
+    <span>
+        <a th:if="${customerSearch.hasNext()}" th:href="@{/customer/search (page=${customerSearch.number}+1,name=${name})}">
+            Next
+        </a>
+    </span>
+</div>
+</body>
+</html>

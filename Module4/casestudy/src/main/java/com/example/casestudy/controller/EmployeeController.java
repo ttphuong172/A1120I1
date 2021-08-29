@@ -14,6 +14,7 @@ import org.springframework.web.bind.annotation.*;
 import org.springframework.web.servlet.mvc.support.RedirectAttributes;
 
 import javax.validation.Valid;
+import java.util.Optional;
 
 @Controller
 
@@ -29,7 +30,8 @@ public class EmployeeController {
     private EducationDegreeService educationDegreeService;
     @GetMapping("")
     public String listEmployee(@RequestParam(value = "page",defaultValue = "0") int page, Model model){
-        model.addAttribute("employeeList",employeeService.selectAllEmployee(PageRequest.of(page,4)));
+        model.addAttribute("employeeList",employeeService.selectAllEmployee(PageRequest.of(page,1)));
+        model.addAttribute("divisionList", divisionService.selectAllDivision());
         return "employee/list";
     }
     @GetMapping("edit/{employeeId}")
@@ -70,23 +72,24 @@ public class EmployeeController {
 
     @GetMapping("delete/{employeeId}")
     public String deleteEmployee(@PathVariable int employeeId,Model model){
-        model.addAttribute("employee",employeeService.findEmployeeById(employeeId));
-        model.addAttribute("positionList",positionService.selectAllPosition());
-        model.addAttribute("divisionList", divisionService.selectAllDivision());
-        model.addAttribute("educationDegreeList", educationDegreeService.selectAllEducationDegree());
-        return "employee/remove";
-    }
-    @PostMapping("remove")
-    public String removeEmployee(Employee employee, RedirectAttributes redirectAttributes){
+        Employee employee=employeeService.findEmployeeById(employeeId);
         employeeService.deleteEmployee(employee);
-        redirectAttributes.addFlashAttribute("msg","Da xoa thanh cong");
         return "redirect:/employee";
     }
+
     @GetMapping("search")
-    public String searchEmployee(@RequestParam(value = "page",defaultValue ="0") int page,@RequestParam("searchValue") String searchValue,Model model){
-        model.addAttribute("searchValue",searchValue);
-        model.addAttribute("employeeListSearch",employeeService.findByEmployeeNameContaining(PageRequest.of(page,3),searchValue));
-        return "employee/search";
+    public String searchEmployee(@RequestParam(value = "page",defaultValue ="0") int page,  String nameemployee,Optional<Integer> iddivision, Model model){
+        model.addAttribute("divisionList", divisionService.selectAllDivision());
+        model.addAttribute("nameemployee",nameemployee);
+        model.addAttribute("iddivision",iddivision.orElse(0));
+        if(iddivision.isPresent()){
+            model.addAttribute("employeeListSearch",employeeService.findByEmployeeNameContainingAndDivision_DivisionId(PageRequest.of(page,3),nameemployee,iddivision.get()));
+        }
+        else{
+            model.addAttribute("employeeListSearch",employeeService.findByEmployeeNameContaining(PageRequest.of(page,3),nameemployee));
+        }
+        return "employee/list";
+
     }
     @GetMapping("detail/{employeeId}")
     public String detailEmployee(@PathVariable int employeeId,Model model){

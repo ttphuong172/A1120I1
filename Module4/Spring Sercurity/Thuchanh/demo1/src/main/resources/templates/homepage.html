@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org"
+      xmlns:sec="https://www.thymeleaf.org/thymeleaf-extras-springsecurity5">
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Welcome</title>
+</head>
+<body>
+<span sec:authentication="principal.authorities">Roles</span>
+<h3>Chao mung den voi Home Page</h3>
+
+<!--<div sec:authorize="hasAnyAuthority('ROLE_ADMIN')">-->
+
+<a href="/createUser">Create New Product (ADMIN)</a>
+<!--</div>-->
+
+<!--<div sec:authorize="hasAnyAuthority('ROLE_ADMIN')">-->
+
+<a href="/access">Access (ADMIN)</a>
+<!--</div>-->
+
+<div sec:authorize="hasAnyAuthority('ROLE_USER')">
+    <a href="/test">Test (USER)</a>
+</div>
+
+<a th:href="@{/perform_logout}">Logout</a>
+</body>
+</html>

@@ -1,6 +1,8 @@
 package com.example.casestudy.service.impl;
 
+import com.example.casestudy.dao.DivisionRepository;
 import com.example.casestudy.dao.EmployeeRepository;
+import com.example.casestudy.model.Division;
 import com.example.casestudy.model.Employee;
 import com.example.casestudy.service.EmployeeService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -13,7 +15,7 @@ public class EmployeeServiceImpl implements EmployeeService {
     @Autowired
     private EmployeeRepository employeeRepository;
 
-    @Override
+
     public Page<Employee> selectAllEmployee(Pageable pageable) {
         return employeeRepository.findAll(pageable);
     }
@@ -34,7 +36,13 @@ public class EmployeeServiceImpl implements EmployeeService {
     }
 
     @Override
-    public Page<Employee> findByEmployeeNameContaining(Pageable pageable, String searchValue) {
-        return employeeRepository.findByEmployeeNameContaining(pageable,searchValue);
+    public Page<Employee> findByEmployeeNameContaining(Pageable pageable, String nameemployee) {
+        return employeeRepository.findByEmployeeNameContaining(pageable,nameemployee);
     }
+
+    @Override
+    public Page<Employee> findByEmployeeNameContainingAndDivision_DivisionId(Pageable pageable,String nameemployee, int iddivison) {
+        return employeeRepository.findByEmployeeNameContainingAndDivision_DivisionId(pageable,nameemployee,iddivison);
+    }
+
 }

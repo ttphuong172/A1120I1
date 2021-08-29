@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<html lang="en">
+<head th:insert="fragments::head">
+    <title>Danh sach dich vu</title>
+</head>
+<body>
+
+<div class="container">
+    <div th:replace="fragments::header" ></div>
+    <h3>Danh sach dich vu</h3>
+    <div class="table-responsive-md">
+<table class="table table-bordered">
+    <thead>
+        <th>ID</th>
+        <th>Name</th>
+        <th>Area</th>
+        <th>Cost</th>
+        <th>Max People</th>
+        <th>Rent Type</th>
+        <th>Service Type</th>
+        <th>Standard Room</th>
+        <th>Description Other </th>
+        <th>Pool Area</th>
+        <th>Number Floor</th>
+    </thead>
+    <tbody>
+        <tr th:each="servicelist:${serviceList}">
+            <td th:text="${servicelist.serviceId}"></td>
+            <td th:text="${servicelist.serviceName}"></td>
+            <td th:text="${servicelist.serviceArea}"></td>
+            <td th:text="${servicelist.serviceCost}"></td>
+            <td th:text="${servicelist.serviceMaxPeople}"></td>
+            <td th:text="${servicelist.rentType.rentTypeName}"></td>
+            <td th:text="${servicelist.serviceType.serviceTypeName}"></td>
+            <td th:text="${servicelist.standardRoom}"></td>
+            <td th:text="${servicelist.descriptionOtherConvenience}"></td>
+            <td th:text="${servicelist.poolArea}"></td>
+            <td th:text="${servicelist.numberOfFloors}"></td>
+        </tr>
+    </tbody>
+</table>
+    </div>
+</div>
+</body>
+</html>

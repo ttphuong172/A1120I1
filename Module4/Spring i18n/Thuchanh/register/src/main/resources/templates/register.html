@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Dang ky nguoi dung</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <style>
+        span {
+            display: inline-block;
+            width: 25%;
+        }
+
+        input {
+            width: 65%;
+        }
+    </style>
+</head>
+<body>
+<div class="container pt-5">
+    <h3 style="text-align: center" th:text="#{header.title}"></h3>
+
+    <div class="row">
+        <div class="col-md-4">
+
+        </div>
+        <div class="col-md-4">
+
+            <form action="/saveregister" method="post" th:object="${user}">
+                <span th:text="#{username.title}"></span>
+                <input type="text" th:field="*{email}">
+                <p th:if="${#fields.hasErrors('email')}" th:errors="*{email}"></p>
+                <br>
+                <br>
+                <span th:text="#{password.title}"></span>
+                <input type="text" th:field="*{password1}">
+                <br>
+                <br>
+                <span th:text="#{comfirmpassword.title}"></span>
+                <input type="text" th:field="*{password2}">
+                <p th:if="${#fields.hasErrors('password2')}" th:errors="*{password2}"></p>
+                <br>
+                <br>
+                <span></span>
+                <button type="submit" th:text="#{buttonregister.title}"></button>
+            </form>
+        </div>
+        <div class="col-md-4">
+            <div style="text-align: right">
+                <form action="" method="get">
+                    <select name="lang" onchange="this.form.submit()">
+                        <option value="" th:text="#{language.title}"></option>
+                        <option value="vi">Vietnamese</option>
+                        <option value="en">English</option>
+                    </select>
+                </form>
+            </div>
+        </div>
+
+    </div>
+</div>
+
+</body>
+</html>

@@ -1,72 +1,220 @@
 <!DOCTYPE html>
 <html xmlns:th="http://www.thymeleaf.org">
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
+<head th:insert="fragments::head">
     <title>Danh sach nhan vien</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
 <body>
 <div class="container">
-<h3>Danh sach nhan vien</h3>
-<form action="/employee/search" method="get">
-    <label for="">Ten nhan vien</label>
-    <input type="text" name="searchValue">
-    <button type="submit">Tim kiem</button>
-</form>
-<a href="/employee/create">Tao moi nhan vien</a>
-<p th:text="${msg}"></p>
-    <div class="table-responsive">
-<table class="table table-bordered">
-    <thead>
-    <th>id</th>
-    <th>name</th>
-    <th>birthday</th>
-    <th>idcard</th>
-    <th>salary</th>
-    <th>phone</th>
-    <th>email</th>
-    <th>address</th>
-    <th>position</th>
-    <th>education</th>
-    <th>division</th>
-    </thead>
-    <tbody>
-    <tr th:each="employeelist:${employeeList}">
-        <td th:text="${employeelist.employeeId}"></td>
-        <td th:text="${employeelist.employeeName}"></td>
-        <td th:text="${#temporals.format(employeelist.employeeBirthday, 'dd-MM-yyyy')}"></td>
-        <td th:text="${employeelist.employeeIdCard}"></td>
-        <td th:text="${employeelist.employeeSalary}"></td>
-        <td th:text="${employeelist.employeePhone}"></td>
-        <td th:text="${employeelist.employeeEmail}"></td>
-        <td th:text="${employeelist.employeeAddress}"></td>
-        <td th:text="${employeelist.position.positionName}"></td>
-        <td th:text="${employeelist.educationDegree.educationDegreeName}"></td>
-        <td th:text="${employeelist.division.divisionName}"></td>
-        <td><a th:href="@{/employee/detail/{employeeId} (employeeId=${employeelist.employeeId})}"><button class="btn btn-success">Detail</button></a></td>
-        <td><a th:href="@{/employee/edit/{employeeId} (employeeId=${employeelist.employeeId})}"><button class="btn btn-info">Edit</button></a></td>
-        <td><a th:href="@{/employee/delete/{employeeId} (employeeId=${employeelist.employeeId})}"><button class="btn btn-danger">Delete</button></a></td>
-    </tr>
-    </tbody>
-</table>
-    </div>
-<span>
-        <a th:if="${employeeList.hasPrevious()}" th:href="@{/employee (page=${employeeList.number}-1)}">
-            Previous
-        </a>
-    </span>
+    <div th:replace="fragments::header"></div>
+    <h3>Danh sach nhan vien</h3>
+    <form action="/employee/search" method="get">
+        <div class="row">
+            <div class="col-sm-12 col-md-6 col-lg-1">
+            </div>
+            <div class="col-sm-12 col-md-6 col-lg-1">
+                <label for="">Ten</label>
+            </div>
+            <div class="col-sm-12 col-md-6 col-lg-2">
+                <input class="form-control" type="text" name="nameemployee" th:value="${nameemployee}">
+            </div>
+            <div class="col-sm-12 col-md-6 col-lg-1">
+                <label for="">Bo phan</label>
+            </div>
+            <div class="col-sm-12 col-md-6 col-lg-2">
+                <select class="form-control" th:name="iddivision" id="">
+                    <option value="">Chon phong ban</option>
+                    <option th:if="${divisionlist.divisionId}==${iddivision}" selected value="" th:each="divisionlist:${divisionList}" th:text="${divisionlist.divisionName}"
+                            th:value="${divisionlist.divisionId}"></option>
+                    <option th:unless="${divisionlist.divisionId}==${iddivision}"  value="" th:each="divisionlist:${divisionList}" th:text="${divisionlist.divisionName}"
+                            th:value="${divisionlist.divisionId}"></option>
+                </select>
+            </div>
 
-<span th:each="abc:${#numbers.sequence(0,employeeList.totalPages - 1)}">
-        <a th:href="@{/employee (page=${abc})}" th:text="${abc}"></a>
-    </span>
-<span>
-        <a th:if="${employeeList.hasNext()}" th:href="@{/employee (page=${employeeList.number}+1)}">
-            Next
-        </a>
-    </span>
+            <div class="col-sm-12 col-md-6 col-lg-1">
+            </div>
+            <div class="col-sm-12 col-md-6 col-lg-2">
+            </div>
+
+            <div class="col-sm-12 col-md-6 col-lg-2">
+                <button class="btn btn-primary" style="width: 100%;" type="submit">Tim kiem</button>
+            </div>
+
+        </div>
+
+    </form>
+    <a href="/employee/create">Tao moi nhan vien</a>
+    <p th:text="${msg}"></p>
+    <div class="table-responsive-md">
+        <table class="table table-bordered">
+            <thead>
+            <th>id</th>
+            <th>name</th>
+            <th>birthday</th>
+<!--            <th>idcard</th>-->
+<!--            <th>salary</th>-->
+            <th>phone</th>
+<!--            <th>email</th>-->
+            <th>address</th>
+            <th>position</th>
+<!--            <th>education</th>-->
+            <th>division</th>
+            <th colspan="3">Action</th>
+            </thead>
+            <tbody>
+            <tr th:if="${employeeList}" th:each="employeelist:${employeeList}">
+                <td th:text="${employeelist.employeeId}"></td>
+                <td th:text="${employeelist.employeeName}"></td>
+                <td th:text="${#temporals.format(employeelist.employeeBirthday, 'dd-MM-yyyy')}"></td>
+<!--                <td th:text="${employeelist.employeeIdCard}"></td>-->
+<!--                <td th:text="${employeelist.employeeSalary}"></td>-->
+                <td th:text="${employeelist.employeePhone}"></td>
+<!--                <td th:text="${employeelist.employeeEmail}"></td>-->
+                <td th:text="${employeelist.employeeAddress}"></td>
+                <td th:text="${employeelist.position.positionName}"></td>
+<!--                <td th:text="${employeelist.educationDegree.educationDegreeName}"></td>-->
+                <td th:text="${employeelist.division.divisionName}"></td>
+                <td><a th:href="@{/employee/detail/{employeeId} (employeeId=${employeelist.employeeId})}">
+                    <button class="btn btn-success">Detail</button>
+                </a></td>
+                <td><a th:href="@{/employee/edit/{employeeId} (employeeId=${employeelist.employeeId})}">
+                    <button class="btn btn-info">Edit</button>
+                </a></td>
+                <td>
+                    <button class="btn btn-danger" data-toggle="modal" data-target="#exampleModal"
+                            th:onclick="prepareDelete([[${employeelist.employeeId}]],[[${employeelist.employeeName}]])">
+                        Delete
+                    </button>
+                </td>
+            </tr>
+
+            <tr th:if="${employeeListSearch}" th:each="employeelistSearch:${employeeListSearch}">
+                <td th:text="${employeelistSearch.employeeId}"></td>
+                <td th:text="${employeelistSearch.employeeName}"></td>
+                <td th:text="${#temporals.format(employeelistSearch.employeeBirthday, 'dd-MM-yyyy')}"></td>
+                <!--                <td th:text="${employeelistSearch.employeeIdCard}"></td>-->
+                <!--                <td th:text="${employeelistSearch.employeeSalary}"></td>-->
+                <td th:text="${employeelistSearch.employeePhone}"></td>
+                <!--                <td th:text="${employeelistSearch.employeeEmail}"></td>-->
+                <td th:text="${employeelistSearch.employeeAddress}"></td>
+                <td th:text="${employeelistSearch.position.positionName}"></td>
+                <!--                <td th:text="${employeelistSearch.educationDegree.educationDegreeName}"></td>-->
+                <td th:text="${employeelistSearch.division.divisionName}"></td>
+                <td><a th:href="@{/employee/detail/{employeeId} (employeeId=${employeelistSearch.employeeId})}">
+                    <button class="btn btn-success">Detail</button>
+                </a></td>
+                <td><a th:href="@{/employee/edit/{employeeId} (employeeId=${employeelistSearch.employeeId})}">
+                    <button class="btn btn-info">Edit</button>
+                </a></td>
+                <td>
+                    <button class="btn btn-danger" data-toggle="modal" data-target="#exampleModal"
+                            th:onclick="prepareDelete([[${employeelistSearch.employeeId}]],[[${employeelistSearch.employeeName}]])">
+                        Delete
+                    </button>
+                </td>
+            </tr>
+
+            </tbody>
+        </table>
+
+
+        <!-- Modal Delete Employee -->
+        <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <div class="modal-body">
+                        <span id="employeeId" hidden></span>
+                        <span>Ban co muon xoa khach hang </span>
+                        <span id="employeeName"></span>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                        <button type="button" class="btn btn-danger" onclick="deleteEmployee($('#employeeId').html())">Delete</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+<!--    Phan trang ket qua hien thi-->
+    <div th:if="${employeeList}" style="display: flex;justify-content: flex-end">
+        <div>
+            <span class="paginate_button">
+                <a th:if="${employeeList.hasPrevious()}" th:href="@{/employee (page=${employeeList.number}-1)}">
+                    Previous
+                </a>
+                <span th:unless="${employeeList.hasPrevious()}" style="color: #c8cbcf">Previous</span>
+            </span>
+        </div>
+        <div>
+            <span th:each="abc:${#numbers.sequence(0,employeeList.totalPages - 1)}">
+                <a class="paginate_button" th:href="@{/employee (page=${abc})}">
+                     <span th:unless="${employeeList.number}==${abc}" th:text="${abc} + 1">   </span>
+                     <span th:if="${employeeList.number}==${abc}" style="color: red" th:text="${abc} + 1">   </span>
+                </a>
+            </span>
+
+        </div>
+
+        <div>
+            <span class="paginate_button">
+                <a th:if="${employeeList.hasNext()}" th:href="@{/employee (page=${employeeList.number}+1)}">
+                    Next
+                 </a>
+                <span th:unless="${employeeList.hasNext()}" style="color: #c8cbcf">Next</span>
+        </span>
+        </div>
+    </div>
+<!--    Phan trang ket qua Search-->
+    <div th:if="${employeeListSearch}" style="display: flex;justify-content: flex-end">
+        <div>
+            <span class="paginate_button">
+                <a th:if="${employeeListSearch.hasPrevious()}" th:href="@{/employee/search  (page=${employeeListSearch.number}-1)}">
+                    Previous
+                </a>
+                <span th:unless="${employeeListSearch.hasPrevious()}" style="color: #c8cbcf">Previous</span>
+            </span>
+        </div>
+        <div>
+            <span th:each="abc:${#numbers.sequence(0,employeeListSearch.totalPages - 1)}">
+                <a class="paginate_button" th:href="@{/employee/search  (page=${abc})}">
+                     <span th:unless="${employeeListSearch.number}==${abc}" th:text="${abc} + 1">   </span>
+                     <span th:if="${employeeListSearch.number}==${abc}" style="color: red" th:text="${abc} + 1">   </span>
+                </a>
+            </span>
+
+        </div>
+
+        <div>
+            <span class="paginate_button">
+                <a th:if="${employeeListSearch.hasNext()}" th:href="@{/employee/search  (page=${employeeListSearch.number}+1)}">
+                    Next
+                 </a>
+                <span th:unless="${employeeListSearch.hasNext()}" style="color: #c8cbcf">Next</span>
+        </span>
+        </div>
+    </div>
 </div>
+<script>
+    function prepareDelete(employeeId,employeeName) {
+        $('#employeeId').html(employeeId)
+        $('#employeeName').html(employeeName)
+    }
+    function deleteEmployee(employeeId){
+        console.log(employeeId);
+        $.ajax({
+            type:'get',
+            url:'/employee/delete/'+ employeeId,
+            success: function () {
+                window.location.reload();
+            }
+        })
+    }
+</script>
 </body>
 </html>
