@@ -5,8 +5,8 @@ import java.util.List;
 
 @Entity
 public class TaiKhoan {
-   @Id
-   @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int id;
     @Column(unique = true)
     private String username;

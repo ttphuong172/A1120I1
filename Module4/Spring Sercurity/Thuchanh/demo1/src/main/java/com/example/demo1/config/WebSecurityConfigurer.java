@@ -8,8 +8,7 @@ import org.springframework.security.config.annotation.web.builders.HttpSecurity;
 import org.springframework.security.config.annotation.web.configuration.EnableWebSecurity;
 import org.springframework.security.config.annotation.web.configuration.WebSecurityConfigurerAdapter;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
-import org.springframework.security.web.authentication.rememberme.InMemoryTokenRepositoryImpl;
-import org.springframework.security.web.authentication.rememberme.PersistentTokenRepository;
+
 
 @Configuration
 @EnableWebSecurity
@@ -28,7 +27,7 @@ public class WebSecurityConfigurer extends WebSecurityConfigurerAdapter {
                 .csrf().disable()
                 .authorizeRequests()
                 .antMatchers("/homepage").permitAll()
-                .antMatchers("/createUser","/saveUser").hasRole("ADMIN")
+                .antMatchers("/createUser", "/saveUser").hasRole("ADMIN")
                 .antMatchers("/access").hasRole("ADMIN")
                 .antMatchers("/test").hasRole("USER")
                 .anyRequest().authenticated()
@@ -36,7 +35,7 @@ public class WebSecurityConfigurer extends WebSecurityConfigurerAdapter {
                 .formLogin()
                 .loginPage("/login")
                 .loginProcessingUrl("/j_spring_security_check")
-                .defaultSuccessUrl("/homepage",true)
+                .defaultSuccessUrl("/homepage", true)
                 .permitAll()
                 .and()
                 .rememberMe().key("uniqueAndSecret")
@@ -46,18 +45,7 @@ public class WebSecurityConfigurer extends WebSecurityConfigurerAdapter {
                 .logoutUrl("/perform_logout")
                 .logoutSuccessUrl("/login.html");
 
-//                .csrf().disable()
-//                .formLogin()
-//                .loginPage("/login")
-//                .defaultSuccessUrl("/createUser",true)
-//                .and()
-//                .authorizeRequests()
-//                .antMatchers("/createUser","/saveUser").permitAll()
-//                .antMatchers("/test").hasRole("USER")
-//                .antMatchers("/access").hasRole("ADMIN")
-//                .anyRequest().authenticated();
     }
-
 
 
     @Bean

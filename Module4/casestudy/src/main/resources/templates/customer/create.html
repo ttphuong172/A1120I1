@@ -2,14 +2,12 @@
 <html xmlns:th="http://www.thymeleaf.org">
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
+    <div th:replace="fragments::head"></div>
     <title>Tao moi khach hang</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
 <body>
 <div class="container">
+    <div th:insert="fragments::header"></div>
     <h3>Tao moi khach hang</h3>
     <form action="/customer/save" method="post" th:object="${customer}">
         <div class="row">
@@ -19,7 +17,7 @@
             </div>
             <div class="col-md-6">
                 <p>Ngay sinh</p>
-                <input class="form-control" type="date" th:field="*{customerBirthday}">
+                <input class="form-control" type="text" id="customerbirthday" th:field="*{customerBirthday}">
             </div>
         </div>
         <div class="row">
@@ -81,6 +79,12 @@
 
     </form>
 </div>
-
 </body>
+<script>
+    $(document).ready(function () {
+        $('#customerbirthday').datepicker({
+            dateFormat: 'dd/mm/yy'			// Date Format "dd/mm/yy"
+        });
+    });
+</script>
 </html>

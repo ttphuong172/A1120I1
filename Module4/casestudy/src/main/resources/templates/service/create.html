@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<html lang="en">
+<head>
+    <div th:replace="fragments::head"></div>
+    <title>Tao moi dich vu</title>
+</head>
+<body>
+<div class="container">
+    <div th:insert="fragments::header"></div>
+    <h3>Tao moi dịch vu</h3>
+    <form action="/service/save" method="post" th:object="${service}">
+        <div class="row">
+            <div class="col-md-6">
+                <p>ServiceType</p>
+                <select class="form-control" name="" id="" th:field="*{serviceType}">
+                    <option value="" th:each="servicetypelist:${serviceTypeList}"
+                    th:text="${servicetypelist.serviceTypeName}" th:value="${servicetypelist.serviceTypeId}"></option>
+                </select>
+            </div>
+            <div class="col-md-6">
+                <p>Name</p>
+                <input class="form-control" type="text" th:field="*{serviceName}">
+            </div>
+            <div class="col-md-6">
+                <p>Area</p>
+                <input class="form-control" type="text" th:field="*{serviceArea}">
+            </div>
+            <div class="col-md-6">
+                <p>Cost</p>
+                <input class="form-control" type="text" th:field="*{serviceCost}">
+            </div>
+            <div class="col-md-6">
+                <p>Max people</p>
+                <input class="form-control" type="text" th:field="*{serviceMaxPeople}">
+            </div>
+            <div class="col-md-6">
+                <p>Rent type</p>
+                <select class="form-control" name="" id="" th:field="*{rentType}">
+                    <option value="" th:each="renttypelist:${rentTypeList}"
+                            th:text="${renttypelist.rentTypeName}" th:value="${renttypelist.rentTypeId}"></option>
+                </select>
+            </div>
+            <div class="col-md-12">
+                <fieldset>
+                    <legend>Villa</legend>
+                    <div class="row">
+                        <div class="col-md-6">
+                            <p>Tieu chuan phong</p>
+                            <select class="form-control" name="" id="" th:field="*{standardRoom}">
+                                <option value="" th:each="standardroomlist:${standardRoomList}"
+                                        th:text="${standardroomlist.standardRoomName}" th:value="${standardroomlist.standardRoomId}"></option>
+                            </select>
+                        </div>
+                        <div class="col-md-6">
+                            <p>Tien nghi khac</p>
+                            <input class="form-control" type="text" th:field="*{descriptionOtherConvenience}">
+                        </div>
+                        <div class="col-md-6">
+                            <p>Area Pool</p>
+                            <input class="form-control" type="text" th:field="*{poolArea}">
+                        </div>
+                        <div class="col-md-6">
+                            <p>So tang</p>
+                            <input class="form-control" type="text" th:field="*{numberOfFloors}">
+                        </div>
+                    </div>
+                </fieldset>
+            </div>
+            <div  class="col-md-12">
+                <fieldset>
+                    <legend>Room</legend>
+                    <div class="row">
+                        <div class="col-md-6">
+                            <p>Free</p>
+                            <input class="form-control" type="text" th:field="*{freeService}">
+                        </div>
+                    </div>
+                </fieldset>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-2"></div>
+            <div class="col-md-2"></div>
+            <div class="col-md-2"></div>
+            <div class="col-md-2"></div>
+            <div class="col-md-2">
+                <p></p>
+                <button style="width: 100%;" class="btn btn-primary" type="submit"><i class="fa fa-floppy-o"></i> &nbsp; Save</button>
+            </div>
+            <div class="col-md-2">
+                <p></p>
+                <a href="/employee/">
+                    <button style="width: 100%;" class="btn btn-success" type="button">Cancel</button>
+                </a>
+            </div>
+        </div>
+    </form>
+
+</div>
+</body>
+</html>

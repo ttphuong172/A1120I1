@@ -22,37 +22,36 @@ public class MainController {
     protected BCryptPasswordEncoder bCryptPasswordEncoder;
 
 
-    @GetMapping({"","/homepage"})
-    public String loadHomepage(){
+    @GetMapping({"", "/homepage"})
+    public String loadHomepage() {
         return "homepage";
     }
 
     @GetMapping("/login")
-    public String loadLogin(){
+    public String loadLogin() {
         return "login";
     }
 
 
-
     @GetMapping("test")
-    public String test(){
+    public String test() {
         return "abc";
     }
 
     @GetMapping("access")
-    public String deny(){
+    public String deny() {
         return "access";
     }
 
     @GetMapping("createUser")
-    public String createUser(Model model){
+    public String createUser(Model model) {
         model.addAttribute("taiKhoan", new TaiKhoan());
         System.out.println();
         return "create";
     }
 
     @PostMapping("saveUser")
-    public String saveUser(TaiKhoan taiKhoan){
+    public String saveUser(TaiKhoan taiKhoan) {
         taiKhoan.setPassword(bCryptPasswordEncoder.encode(taiKhoan.getPassword()));
         userService.saveUser(taiKhoan);
         return "success";

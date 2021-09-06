@@ -23,9 +23,9 @@ public class MyUserDetails implements UserDetails {
     public Collection<? extends GrantedAuthority> getAuthorities() {
 
 
-        List<GrantedAuthority> authorities= new ArrayList<>();
-        for (int i=0;i<taiKhoan.getQuyenList().size();i++){
-            String role=taiKhoan.getQuyenList().get(i).getTenQuyen();
+        List<GrantedAuthority> authorities = new ArrayList<>();
+        for (int i = 0; i < taiKhoan.getQuyenList().size(); i++) {
+            String role = taiKhoan.getQuyenList().get(i).getTenQuyen();
             authorities.add(new SimpleGrantedAuthority(role));
         }
 

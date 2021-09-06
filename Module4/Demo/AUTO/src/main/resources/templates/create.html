@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Tao sinh vien</title>
+</head>
+<body>
+<h3>Tao moi sinh vien</h3>
+<form action="/save" method="post" th:object="${student}">
+<label for="">Ten</label>
+<input type="text" th:field="*{name}">
+<button type="submit">Add</button>
+</form>
+</body>
+</html>

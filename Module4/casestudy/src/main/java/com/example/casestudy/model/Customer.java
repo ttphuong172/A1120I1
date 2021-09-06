@@ -4,13 +4,15 @@ import org.springframework.format.annotation.DateTimeFormat;
 
 import javax.persistence.*;
 import java.time.LocalDate;
+import java.util.List;
+
 @Entity
 public class Customer {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int customerId;
     private String customerName;
-    @DateTimeFormat(pattern = "yyyy-MM-dd")
+    @DateTimeFormat(pattern = "dd/MM/yyyy")
     private LocalDate customerBirthday;
     private String customerIdCard;
     private String customerPhone;
@@ -24,6 +26,9 @@ public class Customer {
     @ManyToOne
     @JoinColumn(name = "genderId", referencedColumnName = "genderId")
     private Gender gender;
+
+    @OneToMany(mappedBy = "customer")
+    List<Contract> contractList;
 
     public Customer() {
     }

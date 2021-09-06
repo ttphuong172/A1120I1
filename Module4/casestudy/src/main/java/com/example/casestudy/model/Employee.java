@@ -2,23 +2,30 @@ package com.example.casestudy.model;
 
 import org.hibernate.validator.constraints.Length;
 import org.springframework.format.annotation.DateTimeFormat;
+import org.springframework.validation.Errors;
+import org.springframework.validation.ValidationUtils;
+import org.springframework.validation.Validator;
 
 import javax.persistence.*;
 import javax.validation.constraints.Email;
 import javax.validation.constraints.NotBlank;
 import javax.validation.constraints.Size;
 
+import java.time.Duration;
 import java.time.LocalDate;
+import java.time.temporal.ChronoUnit;
+import java.util.List;
 
 @Entity
-public class Employee {
+public class Employee implements Validator {
     @Id
     @GeneratedValue (strategy = GenerationType.IDENTITY)
     private int employeeId;
     @NotBlank
     @Size(min = 3, max = 50)
     private String employeeName;
-    @DateTimeFormat(pattern = "yyyy-MM-dd")
+
+    @DateTimeFormat(pattern = "dd/MM/yyyy")
     private LocalDate employeeBirthday;
     private String employeeIdCard;
     private double employeeSalary;
@@ -38,6 +45,10 @@ public class Employee {
     @ManyToOne
     @JoinColumn(name = "divisionId",referencedColumnName = "divisionId")
     private Division division;
+
+    @OneToMany(mappedBy = "employee")
+    List<Contract> contractList;
+
 
     public Employee() {
     }
@@ -140,5 +151,25 @@ public class Employee {
 
     public void setDivision(Division division) {
         this.division = division;
+    }
+
+    @Override
+    public boolean supports(Class<?> clazz) {
+        return false;
+    }
+
+    @Override
+    public void validate(Object target, Errors errors) {
+        Employee employee = (Employee) target;
+
+        ValidationUtils.rejectIfEmpty(errors,"employeeBirthday",null,"birthday is not null");
+
+        ValidationUtils.rejectIfEmpty(errors,"employeePhone",null,"phonenumber is not null");
+        if(employee.employeePhone.length()!=10){
+            errors.rejectValue("employeePhone",null,"phone number must 10 numbers");
+        }
+
+        ValidationUtils.rejectIfEmpty(errors,"employeeIdCard",null,"idcard is not null");
+
     }
 }

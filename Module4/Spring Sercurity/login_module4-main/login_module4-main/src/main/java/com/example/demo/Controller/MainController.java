@@ -50,7 +50,7 @@ public class MainController {
     }
 
     @PostMapping("/singup")
-    public String singUp(@RequestParam("username")String username, @RequestParam("password")String password) {
+    public String singUp(@RequestParam("username") String username, @RequestParam("password") String password) {
         AppUser appUser = new AppUser();
         appUser.setUserName(username);
         appUser.setEncrytedPassword(bCryptPasswordEncoder.encode(password));

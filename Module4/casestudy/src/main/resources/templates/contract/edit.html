@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<html lang="en">
+<head>
+    <div th:replace="fragments::head"></div>
+    <title>Chinh sua hop dong</title>
+</head>
+<body>
+<div class="container">
+    <div th:insert="fragments::header"></div>
+    <h3>Chinh sua hop dong</h3>
+    <form action="/contract/update" method="post" th:object="${contract}">
+        <div class="row">
+            <div class="col-md-6">
+                <p>Ngày bat dau</p>
+                <input class="form-control" type="hidden" th:field="*{contractId}">
+                <input class="form-control" type="text" id="startdate" th:field="*{contractStartDate}">
+            </div>
+            <div class="col-md-6">
+                <p>Ngay ket thuc</p>
+                <input class="form-control" type="text" id="enddate" th:field="*{contractEndDate}" >
+            </div>
+
+        </div>
+        <div class="row">
+            <div class="col-md-6">
+                <p>Nhan vien</p>
+                <select class="form-control" name="" id="" th:field="*{employee}">
+                    <option value="">Chon nhan vien</option>
+                    <option value="" th:each="employeelist:${employeeList}"
+                            th:value="${employeelist.employeeId}" th:text="${employeelist.employeeName}">
+                    </option>
+                </select>
+            </div>
+            <div class="col-md-6">
+                <p>Dich vu</p>
+                <select class="form-control" name="" id="" th:field="*{service}">
+                    <option value="">Chon dich vu</option>
+                    <option value="" th:each="servicelist:${serviceList}"
+                            th:value="${servicelist.serviceId}" th:text="${servicelist.serviceName}">
+                    </option>
+                </select>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-6">
+                <p>Customer</p>
+                <select class="form-control" name="" id="" th:field="*{customer}">
+                    <option value="">Chon khach hang</option>
+                    <option value="" th:each="customerlist:${customerList}"
+                            th:value="${customerlist.customerId}" th:text="${customerlist.customerName}">
+                    </option>
+                </select>
+            </div>
+            <div class="col-md-6">
+                <p>Tra truoc</p>
+                <input class="form-control" type="text" th:field="*{contractDeposit}">
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-6">
+                <p>Tong cong</p>
+                <input class="form-control" type="text" th:field="*{contractTotalMoney}" readonly>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-2"></div>
+            <div class="col-md-2"></div>
+            <div class="col-md-2"></div>
+            <div class="col-md-2"></div>
+            <div class="col-md-2">
+                <p></p>
+
+                <button style="width: 100%;" class="btn btn-primary" type="submit"><i class="fa fa-floppy-o"></i> &nbsp;
+                    Update
+                </button>
+
+            </div>
+            <div class="col-md-2">
+                <p></p>
+                <a href="/contract/">
+                    <button style="width: 100%;" class="btn btn-success" type="button">Cancel</button>
+                </a>
+            </div>
+        </div>
+    </form>
+</div>
+<script>
+    $(document).ready(function () {
+        $('#startdate').datepicker({
+            dateFormat: 'dd/mm/yy'			// Date Format "dd/mm/yy"
+        });
+    });
+    $(document).ready(function () {
+        $('#enddate').datepicker({
+            dateFormat: 'dd/mm/yy'			// Date Format "dd/mm/yy"
+        });
+    });
+</script>
+</body>
+</html>

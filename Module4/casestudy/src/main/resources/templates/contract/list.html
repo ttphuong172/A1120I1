@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <div th:replace="fragments::head"></div>
+    <title>Danh sach hop dong</title>
+</head>
+<body>
+<div class="container">
+    <div th:insert="fragments::header"></div>
+    <form action="/contract/search" method="get" >
+        <div class="row">
+            <div class="col-sm-12 col-md-6 col-lg-1">
+            </div>
+            <div class="col-sm-12 col-md-6 col-lg-1">
+                Tên KH
+            </div>
+            <div class="col-sm-12 col-md-6 col-lg-2">
+                <input type="text" name="customername" th:value="${customername}" class="form-control">
+            </div>
+            <div class="col-sm-12 col-md-6 col-lg-1">
+                StartDay
+            </div>
+            <div class="col-sm-12 col-md-6 col-lg-2">
+                <input style="text-align: center" type="text" id="startdate" name="startdate" th:value="${#temporals.format(startdate, 'dd/MM/yyyy')}"   class="form-control">
+            </div>
+            <div class="col-sm-12 col-md-6 col-lg-1">
+                EndDay
+            </div>
+            <div class="col-sm-12 col-md-6 col-lg-2">
+                <input style="text-align: center" type="text" name="enddate" id="enddate" th:value="${#temporals.format(enddate, 'dd/MM/yyyy')}" class="form-control">
+            </div>
+            <div class="col-sm-12 col-md-6 col-lg-2">
+                <button type="submit" style="width: 100%" class="btn btn-primary">Tim kiem</button>
+            </div>
+
+        </div>
+    </form>
+    <h3>Danh sach hop dong</h3>
+    <a href="/contract/create">Tao moi hop dong</a>
+    <p th:text="${msg}"></p>
+    <table class="table table-bordered">
+        <thead>
+        <th>ID</th>
+        <th>EmployeeName</th>
+        <th>ServiceName</th>
+        <th>CustomerName</th>
+        <th>StartDate</th>
+        <th>EndDate</th>
+        <th>Deposit</th>
+        <th>Total</th>
+        </thead>
+        <tbody>
+<!--        Hien thi du lieu mac dinh-->
+        <tr th:if="${contractList}" th:each="contractlist:${contractList}">
+            <td th:text="${contractlist.contractId}"></td>
+            <td th:text="${contractlist.employee.employeeName}"></td>
+            <td th:text="${contractlist.service.serviceName}"></td>
+            <td th:text="${contractlist.customer.customerName}"></td>
+            <td th:text="${#temporals.format(contractlist.contractStartDate, 'dd-MM-yyyy')}"></td>
+            <td th:text="${#temporals.format(contractlist.contractEndDate, 'dd-MM-yyyy')}"></td>
+            <td th:text="${contractlist.contractDeposit}"></td>
+            <td th:text="${contractlist.contractTotalMoney}"></td>
+            <td>
+                <a th:href="@{/contract/detail/{contractId} (contractId=${contractlist.contractId})}">
+                    <button class="btn btn-success">Detail</button>
+                </a>
+            </td>
+            <td>
+                <a th:href="@{/contract/edit/{contractId} (contractId=${contractlist.contractId})}">
+                    <button class="btn btn-info">Edit</button>
+                </a>
+            </td>
+            <td>
+                <button class="btn btn-danger" data-toggle="modal" data-target="#deleteModal"
+                        th:onclick="prepareDelete([[${contractlist.contractId}]],[[${contractlist.customer.customerName}]])">
+                    Delete
+                </button>
+            </td>
+        </tr>
+<!--Hien thi du lieu tim kiem-->
+        <tr th:if="${contractSearchList}" th:each="contractsearchlist:${contractSearchList}">
+            <td th:text="${contractsearchlist.contractId}"></td>
+            <td th:text="${contractsearchlist.employee.employeeName}"></td>
+            <td th:text="${contractsearchlist.service.serviceName}"></td>
+            <td th:text="${contractsearchlist.customer.customerName}"></td>
+            <td th:text="${#temporals.format(contractsearchlist.contractStartDate, 'dd-MM-yyyy')}"></td>
+            <td th:text="${#temporals.format(contractsearchlist.contractEndDate, 'dd-MM-yyyy')}"></td>
+            <td th:text="${contractsearchlist.contractDeposit}"></td>
+            <td th:text="${contractsearchlist.contractTotalMoney}"></td>
+            <td>
+                <a th:href="@{/contract/detail/{contractId} (contractId=${contractsearchlist.contractId})}">
+                    <button class="btn btn-success">Detail</button>
+                </a>
+            </td>
+            <td>
+                <a th:href="@{/contract/edit/{contractId} (contractId=${contractsearchlist.contractId})}">
+                    <button class="btn btn-info">Edit</button>
+                </a>
+            </td>
+            <td>
+                <button class="btn btn-danger" data-toggle="modal" data-target="#deleteModal"
+                        th:onclick="prepareDelete([[${contractsearchlist.contractId}]],[[${contractsearchlist.customer.customerName}]])">
+                    Delete
+                </button>
+            </td>
+        </tr>
+        </tbody>
+    </table>
+    <!-- Delete Modal -->
+    <div class="modal fade" id="deleteModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+         aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Xoa hop dong</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <span id="contractId"></span>
+                    <span>Ban co muon xoa hop dong </span>
+                    <span id="customerName"></span>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancel</button>
+                    <button type="button" class="btn btn-danger" onclick="deleteContract($('#contractId').html())"
+                            data-dismiss="modal"
+                    >Delete
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--    Phan trang ket qua hien thi-->
+    <div th:if="${contractList}" style="display: flex;justify-content: flex-end">
+        <div>
+            <span class="paginate_button">
+                <a th:if="${contractList.hasPrevious()}" th:href="@{/contract (page=${contractList.number}-1)}">
+                    Previous
+                </a>
+                <span th:unless="${contractList.hasPrevious()}" style="color: #c8cbcf">Previous</span>
+            </span>
+        </div>
+        <div>
+            <span th:each="abc:${#numbers.sequence(0,contractList.totalPages - 1)}">
+                <a class="paginate_button" th:href="@{/contract (page=${abc})}">
+                     <span th:unless="${contractList.number}==${abc}" th:text="${abc} + 1">   </span>
+                     <span th:if="${contractList.number}==${abc}" style="color: red" th:text="${abc} + 1">   </span>
+                </a>
+            </span>
+        </div>
+        <div>
+            <span class="paginate_button">
+                <a th:if="${contractList.hasNext()}" th:href="@{/contract (page=${contractList.number}+1)}">
+                    Next
+                 </a>
+                <span th:unless="${contractList.hasNext()}" style="color: #c8cbcf">Next</span>
+        </span>
+        </div>
+    </div>
+</div>
+<script>
+    function prepareDelete(contractId, customerName) {
+        $('#contractId').html(contractId)
+        $('#customerName').html(customerName)
+    }
+
+    function deleteContract(contractId) {
+        $.ajax({
+            type: 'get',
+            url: '/contract/delete/' + contractId,
+            success: function () {
+                window.location.reload();
+            }
+        })
+    }
+    $(document).ready(function () {
+        $('#startdate').datepicker({
+            dateFormat: 'dd/mm/yy'			// Date Format "dd/mm/yy"
+        });
+    });
+    $(document).ready(function () {
+        $('#enddate').datepicker({
+            dateFormat: 'dd/mm/yy'			// Date Format "dd/mm/yy"
+        });
+    });
+
+</script>
+</body>
+</html>

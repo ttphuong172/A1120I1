@@ -12,43 +12,43 @@ import org.springframework.security.crypto.password.PasswordEncoder;
 @Configuration
 @EnableWebSecurity
 public class SecurityConfig extends WebSecurityConfigurerAdapter {
-	@Override
-	protected void configure(HttpSecurity http) throws Exception {
-		http.authorizeRequests()
-		.antMatchers("/secure/man/**").access("hasRole('MANAGERS')")
-		.antMatchers("/secure/dev/**").access("hasRole('DEVELOPERS')")
-		.and().formLogin()
-        .loginPage("/login")
-        .loginProcessingUrl("/appLogin")
-        .usernameParameter("username")
-        .passwordParameter("password")
-        .defaultSuccessUrl("/secure/dev")	
-		.and().logout()
-		.logoutUrl("/appLogout") 
-		.logoutSuccessUrl("/login")
-		.and().exceptionHandling()
-		.accessDeniedPage("/accessDenied");
-	} 	
+    @Override
+    protected void configure(HttpSecurity http) throws Exception {
+        http.authorizeRequests()
+                .antMatchers("/secure/man/**").access("hasRole('MANAGERS')")
+                .antMatchers("/secure/dev/**").access("hasRole('DEVELOPERS')")
+                .and().formLogin()
+                .loginPage("/login")
+                .loginProcessingUrl("/appLogin")
+                .usernameParameter("username")
+                .passwordParameter("password")
+                .defaultSuccessUrl("/secure/dev")
+                .and().logout()
+                .logoutUrl("/appLogout")
+                .logoutSuccessUrl("/login")
+                .and().exceptionHandling()
+                .accessDeniedPage("/accessDenied");
+    }
 
-	@Override
-	protected void configure(AuthenticationManagerBuilder auth) throws Exception {
-	    auth.ldapAuthentication()
-	        .userDnPatterns("uid={0},ou=people")
-	        .userSearchBase("ou=people")
-	        .userSearchFilter("uid={0}")
-	        .groupSearchBase("ou=groups")
-	        .groupSearchFilter("uniqueMember={0}")
-	        .contextSource()
-	        .url("ldap://localhost:2389/dc=concretepage,dc=com")
-	        .and()
-	        .passwordCompare()
-	        .passwordEncoder(passwordEncoder())
-	        .passwordAttribute("userPassword");		
-	}
+    @Override
+    protected void configure(AuthenticationManagerBuilder auth) throws Exception {
+        auth.ldapAuthentication()
+                .userDnPatterns("uid={0},ou=people")
+                .userSearchBase("ou=people")
+                .userSearchFilter("uid={0}")
+                .groupSearchBase("ou=groups")
+                .groupSearchFilter("uniqueMember={0}")
+                .contextSource()
+                .url("ldap://localhost:2389/dc=concretepage,dc=com")
+                .and()
+                .passwordCompare()
+                .passwordEncoder(passwordEncoder())
+                .passwordAttribute("userPassword");
+    }
 
-	@Bean
-	public PasswordEncoder passwordEncoder() {
-		BCryptPasswordEncoder passwordEncoder = new BCryptPasswordEncoder();
-		return passwordEncoder;
-	}
+    @Bean
+    public PasswordEncoder passwordEncoder() {
+        BCryptPasswordEncoder passwordEncoder = new BCryptPasswordEncoder();
+        return passwordEncoder;
+    }
 } 

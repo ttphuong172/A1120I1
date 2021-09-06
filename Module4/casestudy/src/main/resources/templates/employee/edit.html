@@ -1,8 +1,8 @@
 <!DOCTYPE html>
 <html xmlns:th="http://www.thymeleaf.org">
 <html lang="en">
-<head th:insert="fragments::head">
-
+<head>
+    <div th:replace="fragments::head"></div>
     <title>Chinh sua nhan vien</title>
 
 </head>
@@ -11,7 +11,7 @@
     <div th:replace="fragments::header"></div>
 <h3>Chinh sua nhan vien</h3>
 <a href="/employee/">Danh sach nhan vien</a>
-<form action="/employee/update" method="post" th:object="${employee}" >
+<form th:action="@{/employee/update (url=${url})}" method="post" th:object="${employee}" >
     <div class="row">
         <div class="col-md-6">
             <p>Ho va ten</p>
@@ -20,7 +20,7 @@
         </div>
         <div class="col-md-6">
             <p>Ngay sinh</p>
-            <input class="form-control" type="date" th:field="*{employeeBirthday}">
+            <input class="form-control" id="birthdayemployee" type="text" th:field="*{employeeBirthday}">
         </div>
     </div>
     <div class="row">
@@ -84,13 +84,21 @@
         </div>
         <div class="col-md-2">
             <p></p>
-            <a href="/employee/">
+            <a th:href="${url}" >
                 <button style="width: 100%;" class="btn btn-success" type="button">Cancel</button>
             </a>
         </div>
     </div>
 </form>
 </div>
+<script>
+    $(document).ready(function () {
+        $('#birthdayemployee').datepicker({
+            dateFormat: 'dd/mm/yy'			// Date Format "dd/mm/yy"
+        });
+    });
+</script>
+
 </body>
 
 </html>

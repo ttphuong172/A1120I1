@@ -10,6 +10,9 @@ import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
 import org.springframework.stereotype.Service;
 
+import java.util.List;
+import java.util.Optional;
+
 @Service
 public class EmployeeServiceImpl implements EmployeeService {
     @Autowired
@@ -35,14 +38,17 @@ public class EmployeeServiceImpl implements EmployeeService {
         employeeRepository.delete(employee);
     }
 
+
+
     @Override
-    public Page<Employee> findByEmployeeNameContaining(Pageable pageable, String nameemployee) {
-        return employeeRepository.findByEmployeeNameContaining(pageable,nameemployee);
+    public Page<Employee> findByEmployeeNameContainingAndDivision_DivisionId(Pageable pageable, String nameemployee, Optional<Integer> iddivison, Optional<Integer> idposition) {
+        return employeeRepository.findByEmployeeNameContainingAndDivision_DivisionId(pageable,nameemployee,iddivison,idposition);
+//        return employeeRepository.findByEmployeeNameContainingAndDivision_DivisionId(pageable,nameemployee,iddivison,idposition);
     }
 
     @Override
-    public Page<Employee> findByEmployeeNameContainingAndDivision_DivisionId(Pageable pageable,String nameemployee, int iddivison) {
-        return employeeRepository.findByEmployeeNameContainingAndDivision_DivisionId(pageable,nameemployee,iddivison);
+    public List<Employee> selectAllEmployee() {
+        return employeeRepository.findAll();
     }
 
 }

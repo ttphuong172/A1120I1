@@ -1,6 +1,7 @@
 package com.example.casestudy.model;
 
 import javax.persistence.*;
+import java.util.List;
 
 @Entity
 public class Service {
@@ -11,10 +12,10 @@ public class Service {
     private int serviceArea;
     private double serviceCost;
     private int serviceMaxPeople;
-    private String standardRoom;
     private String descriptionOtherConvenience;
     private double poolArea;
     private int numberOfFloors;
+    private String freeService;
 
     @ManyToOne
     @JoinColumn(name = "serviceTypeId",referencedColumnName = "serviceTypeId")
@@ -24,22 +25,29 @@ public class Service {
     @JoinColumn(name = "rentTypeId",referencedColumnName = "rentTypeId")
     private RentType rentType;
 
+    @ManyToOne
+    @JoinColumn(name = "standardRoomId",referencedColumnName = "standardRoomId")
+    private StandardRoom standardRoom;
+
+    @OneToMany(mappedBy = "service")
+    List<Contract> contractList;
+
     public Service() {
     }
 
-
-    public Service(int serviceId, String serviceName, int serviceArea, double serviceCost, int serviceMaxPeople, String standardRoom, String descriptionOtherConvenience, double poolArea, int numberOfFloors, ServiceType serviceType, RentType rentType) {
+    public Service(int serviceId, String serviceName, int serviceArea, double serviceCost, int serviceMaxPeople, String descriptionOtherConvenience, double poolArea, int numberOfFloors, String freeService, ServiceType serviceType, RentType rentType, StandardRoom standardRoom) {
         this.serviceId = serviceId;
         this.serviceName = serviceName;
         this.serviceArea = serviceArea;
         this.serviceCost = serviceCost;
         this.serviceMaxPeople = serviceMaxPeople;
-        this.standardRoom = standardRoom;
         this.descriptionOtherConvenience = descriptionOtherConvenience;
         this.poolArea = poolArea;
         this.numberOfFloors = numberOfFloors;
+        this.freeService = freeService;
         this.serviceType = serviceType;
         this.rentType = rentType;
+        this.standardRoom = standardRoom;
     }
 
     public int getServiceId() {
@@ -82,14 +90,6 @@ public class Service {
         this.serviceMaxPeople = serviceMaxPeople;
     }
 
-    public String getStandardRoom() {
-        return standardRoom;
-    }
-
-    public void setStandardRoom(String standardRoom) {
-        this.standardRoom = standardRoom;
-    }
-
     public String getDescriptionOtherConvenience() {
         return descriptionOtherConvenience;
     }
@@ -114,6 +114,14 @@ public class Service {
         this.numberOfFloors = numberOfFloors;
     }
 
+    public String getFreeService() {
+        return freeService;
+    }
+
+    public void setFreeService(String freeService) {
+        this.freeService = freeService;
+    }
+
     public ServiceType getServiceType() {
         return serviceType;
     }
@@ -128,5 +136,13 @@ public class Service {
 
     public void setRentType(RentType rentType) {
         this.rentType = rentType;
+    }
+
+    public StandardRoom getStandardRoom() {
+        return standardRoom;
+    }
+
+    public void setStandardRoom(StandardRoom standardRoom) {
+        this.standardRoom = standardRoom;
     }
 }

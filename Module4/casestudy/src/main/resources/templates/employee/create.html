@@ -2,14 +2,13 @@
 <html xmlns:th="http://www.thymeleaf.org">
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
+    <div th:replace="fragments::head"></div>
     <title>Tao moi nhan vien</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
 </head>
 <body>
 <div class="container">
+    <div th:insert="fragments::header"></div>
 <h3>Tao moi nhan vien</h3>
 <a href="/employee/">Danh sach nhan vien</a>
 <form action="/employee/save" method="post" th:object="${employee}">
@@ -21,13 +20,15 @@
         </div>
         <div class="col-md-6">
             <p>Ngay sinh</p>
-            <input class="form-control" type="date" th:field="*{employeeBirthday}">
+            <input class="form-control" type="text" id="employeebirthday" th:field="*{employeeBirthday}">
+            <p th:if = "${#fields.hasErrors('employeeBirthday')}" th:errors = "*{employeeBirthday}"></p>
         </div>
     </div>
     <div class="row">
         <div class="col-md-6">
             <p>So CMND</p>
             <input class="form-control" type="number" th:field="*{employeeIdCard}">
+            <p th:if = "${#fields.hasErrors('employeeIdCard')}" th:errors = "*{employeeIdCard}"></p>
 
         </div>
         <div class="col-md-6">
@@ -39,6 +40,7 @@
         <div class="col-md-6">
             <p>Phone</p>
             <input class="form-control" type="text" th:field="*{employeePhone}">
+            <p th:if = "${#fields.hasErrors('employeePhone')}" th:errors = "*{employeePhone}"></p>
         </div>
         <div class="col-md-6">
             <p>Email</p>
@@ -94,5 +96,12 @@
     </div>
 </form>
 </div>
+<script>
+    $(document).ready(function () {
+        $('#employeebirthday').datepicker({
+            dateFormat: 'dd/mm/yy'			// Date Format "dd/mm/yy"
+        });
+    });
+</script>
 </body>
 </html>

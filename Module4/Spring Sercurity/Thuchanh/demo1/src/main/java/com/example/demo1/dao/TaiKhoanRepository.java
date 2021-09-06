@@ -8,7 +8,7 @@ import org.springframework.data.jpa.repository.Query;
 import java.util.List;
 
 
-public interface TaiKhoanRepository extends JpaRepository<TaiKhoan,Integer>  {
+public interface TaiKhoanRepository extends JpaRepository<TaiKhoan, Integer> {
     TaiKhoan findByUsername(String username);
 
 

@@ -1,46 +1,254 @@
 <!DOCTYPE html>
 <html xmlns:th="http://www.thymeleaf.org">
 <html lang="en">
-<head th:insert="fragments::head">
+<head>
+    <div th:replace="fragments::head"></div>
     <title>Danh sach dich vu</title>
 </head>
 <body>
 
 <div class="container">
-    <div th:replace="fragments::header" ></div>
+    <div th:replace="fragments::header"></div>
     <h3>Danh sach dich vu</h3>
+    <form action="/service/search" method="get">
+        <div class="row">
+            <div class="col-sm-12 col-md-6 col-lg-1">
+            </div>
+            <div class="col-sm-12 col-md-6 col-lg-1">
+                <label for="">Ten</label>
+            </div>
+            <div class="col-sm-12 col-md-6 col-lg-2">
+                <input class="form-control" type="text" name="nameservice" th:value="${nameservice}">
+            </div>
+
+            <div class="col-sm-12 col-md-6 col-lg-1">
+                <label for="">RentType</label>
+            </div>
+            <div class="col-sm-12 col-md-6 col-lg-2">
+                <select class="form-control" th:name="idrenttype" id="">
+                    <option value="">Chon kieu thue</option>
+                    <option th:if="${renttypelist.rentTypeId}==${idrenttype}" selected value="" th:each="renttypelist:${rentTypeList}" th:text="${renttypelist.rentTypeName}"
+                            th:value="${renttypelist.rentTypeId}">
+                    </option>
+                    <option th:unless="${renttypelist.rentTypeId}==${idrenttype}" value="" th:each="renttypelist:${rentTypeList}" th:text="${renttypelist.rentTypeName}"
+                            th:value="${renttypelist.rentTypeId}">
+                    </option>
+
+                </select>
+            </div>
+
+            <div class="col-sm-12 col-md-6 col-lg-1">
+                <label for="">ServiceType</label>
+            </div>
+
+            <div class="col-sm-12 col-md-6 col-lg-2">
+                <select class="form-control" th:name="idservicetype" id="">
+                    <option value="">Chon loai</option>
+                    <option th:if="${servicetypelist.serviceTypeId}==${idservicetype}" selected value="" th:each="servicetypelist:${serviceTypeList}"
+                            th:text="${servicetypelist.serviceTypeName}"
+                            th:value="${servicetypelist.serviceTypeId}">
+                    </option>
+                    <option th:unless="${servicetypelist.serviceTypeId}==${idservicetype}"  value="" th:each="servicetypelist:${serviceTypeList}"
+                            th:text="${servicetypelist.serviceTypeName}"
+                            th:value="${servicetypelist.serviceTypeId}">
+                    </option>
+
+                </select>
+            </div>
+
+
+            <div class="col-sm-12 col-md-6 col-lg-2">
+                <button class="btn btn-primary" style="width: 100%;" type="submit">Tim kiem</button>
+            </div>
+
+        </div>
+    </form>
+    <a href="/service/create">Tao moi dich vu</a>
+
+    <p th:text="${msg}"></p>
     <div class="table-responsive-md">
-<table class="table table-bordered">
-    <thead>
-        <th>ID</th>
-        <th>Name</th>
-        <th>Area</th>
-        <th>Cost</th>
-        <th>Max People</th>
-        <th>Rent Type</th>
-        <th>Service Type</th>
-        <th>Standard Room</th>
-        <th>Description Other </th>
-        <th>Pool Area</th>
-        <th>Number Floor</th>
-    </thead>
-    <tbody>
-        <tr th:each="servicelist:${serviceList}">
-            <td th:text="${servicelist.serviceId}"></td>
-            <td th:text="${servicelist.serviceName}"></td>
-            <td th:text="${servicelist.serviceArea}"></td>
-            <td th:text="${servicelist.serviceCost}"></td>
-            <td th:text="${servicelist.serviceMaxPeople}"></td>
-            <td th:text="${servicelist.rentType.rentTypeName}"></td>
-            <td th:text="${servicelist.serviceType.serviceTypeName}"></td>
-            <td th:text="${servicelist.standardRoom}"></td>
-            <td th:text="${servicelist.descriptionOtherConvenience}"></td>
-            <td th:text="${servicelist.poolArea}"></td>
-            <td th:text="${servicelist.numberOfFloors}"></td>
-        </tr>
-    </tbody>
-</table>
+        <table class="table table-bordered">
+            <thead>
+            <th>ID</th>
+            <th>Name</th>
+            <th>Area</th>
+            <th>Cost</th>
+            <th>Max People</th>
+            <th>Rent Type</th>
+            <th>Service Type</th>
+            <th>Standard Room</th>
+<!--            <th>Description Other</th>-->
+<!--            <th>Pool Area</th>-->
+<!--            <th>Number Floor</th>-->
+<!--            <th>Free Service</th>-->
+            <th colspan="3">Action</th>
+            </thead>
+            <tbody>
+            <!--            Ket qua hien thi mac dinh-->
+            <tr th:if="${serviceList}" th:each="servicelist:${serviceList}">
+                <td th:text="${servicelist.serviceId}"></td>
+                <td th:text="${servicelist.serviceName}"></td>
+                <td th:text="${servicelist.serviceArea}"></td>
+                <td th:text="${servicelist.serviceCost}"></td>
+                <td th:text="${servicelist.serviceMaxPeople}"></td>
+                <td th:text="${servicelist.rentType.rentTypeName}"></td>
+                <td th:text="${servicelist.serviceType.serviceTypeName}"></td>
+                <td th:text="${servicelist.standardRoom.standardRoomName}"></td>
+<!--                <td th:text="${servicelist.descriptionOtherConvenience}"></td>-->
+<!--                <td th:text="${servicelist.poolArea}"></td>-->
+<!--                <td th:text="${servicelist.numberOfFloors}"></td>-->
+<!--                <td th:text="${servicelist.freeService}"></td>-->
+                <td>
+                    <a th:href="@{/service/detail/{serviceId} (serviceId=${servicelist.serviceId})}">
+                        <button class="btn btn-success">Detail</button>
+                    </a>
+                </td>
+                <td>
+                    <a th:href="@{/service/edit/{serviceId} (serviceId=${servicelist.serviceId})}">
+                        <button class="btn btn-info">Edit</button>
+                    </a>
+                </td>
+                <td>
+                    <button class="btn btn-danger" data-toggle="modal" data-target="#exampleModal"
+                            th:onclick="prepareDelete([[${servicelist.serviceId}]],[[${servicelist.serviceName}]])">
+                        Delete
+                    </button>
+                </td>
+            </tr>
+            <!--Ket qua hien thi tim kiem-->
+            <tr th:if="${serviceSearchList}" th:each="servicesearchlist:${serviceSearchList}">
+                <td th:text="${servicesearchlist.serviceId}"></td>
+                <td th:text="${servicesearchlist.serviceName}"></td>
+                <td th:text="${servicesearchlist.serviceArea}"></td>
+                <td th:text="${servicesearchlist.serviceCost}"></td>
+                <td th:text="${servicesearchlist.serviceMaxPeople}"></td>
+                <td th:text="${servicesearchlist.rentType.rentTypeName}"></td>
+                <td th:text="${servicesearchlist.serviceType.serviceTypeName}"></td>
+                <td th:text="${servicesearchlist.standardRoom.standardRoomName}"></td>
+<!--                <td th:text="${servicesearchlist.descriptionOtherConvenience}"></td>-->
+<!--                <td th:text="${servicesearchlist.poolArea}"></td>-->
+<!--                <td th:text="${servicesearchlist.numberOfFloors}"></td>-->
+<!--                <td th:text="${servicesearchlist.freeService}"></td>-->
+                <td>
+                    <a th:href="@{/service/detail/{serviceId} (serviceId=${servicesearchlist.serviceId})}">
+                        <button class="btn btn-success">Detail</button>
+                    </a>
+                </td>
+                <td>
+                    <a th:href="@{/service/edit/{serviceId} (serviceId=${servicesearchlist.serviceId})}">
+                        <button class="btn btn-info">Edit</button>
+                    </a>
+                </td>
+                <td>
+                    <button class="btn btn-danger" data-toggle="modal" data-target="#exampleModal"
+                            th:onclick="prepareDelete([[${servicesearchlist.serviceId}]],[[${servicesearchlist.serviceName}]])">
+                        Delete
+                    </button>
+                </td>
+            </tr>
+            </tbody>
+        </table>
+    </div>
+    <!-- Modal Delete Service -->
+    <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+         aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Xoa dich vu</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <span id="serviceId" hidden></span>
+                    <span>Ban co muon xoa dich vu </span>
+                    <span id="serviceName"></span>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                    <button type="button" class="btn btn-danger" onclick="deleteService($('#serviceId').html())">
+                        Delete
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--    Phan trang ket qua hien thi-->
+    <div th:if="${serviceList}" style="display: flex;justify-content: flex-end">
+        <div>
+            <span class="paginate_button">
+                <a th:if="${serviceList.hasPrevious()}" th:href="@{/service (page=${serviceList.number}-1)}">
+                    Previous
+                </a>
+                <span th:unless="${serviceList.hasPrevious()}" style="color: #c8cbcf">Previous</span>
+            </span>
+        </div>
+        <div>
+            <span th:each="abc:${#numbers.sequence(0,serviceList.totalPages - 1)}">
+                <a class="paginate_button" th:href="@{/service (page=${abc})}">
+                     <span th:unless="${serviceList.number}==${abc}" th:text="${abc} + 1">   </span>
+                     <span th:if="${serviceList.number}==${abc}" style="color: red" th:text="${abc} + 1">   </span>
+                </a>
+            </span>
+
+        </div>
+
+        <div>
+            <span class="paginate_button">
+                <a th:if="${serviceList.hasNext()}" th:href="@{/service (page=${serviceList.number}+1)}">
+                    Next
+                 </a>
+                <span th:unless="${serviceList.hasNext()}" style="color: #c8cbcf">Next</span>
+        </span>
+        </div>
+    </div>
+<!--    Phan trang ket qua tim kiem-->
+
+    <div th:if="${serviceSearchList}" style="display: flex;justify-content: flex-end">
+        <div>
+            <span class="paginate_button">
+                <a th:if="${serviceSearchList.hasPrevious()}" th:href="@{/service/search  (page=${serviceSearchList.number}-1,nameservice=${nameservice},idrenttype=${idrenttype},idservicetype=${idservicetype})}">
+                    Previous
+                </a>
+                <span th:unless="${serviceSearchList.hasPrevious()}" style="color: #c8cbcf">Previous</span>
+            </span>
+        </div>
+        <div>
+            <span th:each="abc:${#numbers.sequence(0,serviceSearchList.totalPages - 1)}">
+                <a th:if="${abc}>=0"  class="paginate_button" th:href="@{/service/search  (page=${abc},nameservice=${nameservice},idrenttype=${idservicetype},idservicetype=${idservicetype})}">
+                    <span th:unless="${serviceSearchList.number}==${abc}" th:text="${abc} + 1">   </span>
+                     <span th:if="${serviceSearchList.number}==${abc}" style="color: #ff0000" th:text="${abc} + 1">   </span>
+                </a>
+            </span>
+
+        </div>
+
+        <div>
+            <span class="paginate_button">
+                <a th:if="${serviceSearchList.hasNext()}" th:href="@{/service/search  (page=${serviceSearchList.number}+1,nameservice=${nameservice},idrenttype=${idrenttype},idservicetype=${idservicetype})}">
+                    Next
+                 </a>
+                <span th:unless="${serviceSearchList.hasNext()}" style="color: #c8cbcf">Next</span>
+        </span>
+        </div>
     </div>
 </div>
+<script>
+    function prepareDelete(serviceId,serviceName) {
+        $('#serviceId').html(serviceId)
+        $('#serviceName').html(serviceName)
+    }
+    function deleteService(serviceId){
+        console.log(serviceId);
+        $.ajax({
+            type:'get',
+            url:'/service/delete/'+ serviceId,
+            success: function () {
+                window.location.reload();
+            }
+        })
+    }
+</script>
 </body>
 </html>

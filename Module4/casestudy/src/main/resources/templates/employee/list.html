@@ -1,7 +1,8 @@
 <!DOCTYPE html>
 <html xmlns:th="http://www.thymeleaf.org">
 <html lang="en">
-<head th:insert="fragments::head">
+<head>
+    <div th:replace="fragments::head"></div>
     <title>Danh sach nhan vien</title>
 </head>
 <body>
@@ -21,19 +22,32 @@
             <div class="col-sm-12 col-md-6 col-lg-1">
                 <label for="">Bo phan</label>
             </div>
+
             <div class="col-sm-12 col-md-6 col-lg-2">
                 <select class="form-control" th:name="iddivision" id="">
                     <option value="">Chon phong ban</option>
                     <option th:if="${divisionlist.divisionId}==${iddivision}" selected value="" th:each="divisionlist:${divisionList}" th:text="${divisionlist.divisionName}"
-                            th:value="${divisionlist.divisionId}"></option>
+                            th:value="${divisionlist.divisionId}">
+                    </option>
                     <option th:unless="${divisionlist.divisionId}==${iddivision}"  value="" th:each="divisionlist:${divisionList}" th:text="${divisionlist.divisionName}"
-                            th:value="${divisionlist.divisionId}"></option>
+                            th:value="${divisionlist.divisionId}">
+                    </option>
                 </select>
             </div>
 
             <div class="col-sm-12 col-md-6 col-lg-1">
+                <label for="">Vi tri</label>
             </div>
             <div class="col-sm-12 col-md-6 col-lg-2">
+                <select class="form-control" th:name="idposition" id="">
+                    <option value="">Chon vi tri</option>
+                    <option th:if="${positionlist.positionId}==${idposition}" selected value="" th:each="positionlist:${positionList}" th:text="${positionlist.positionName}"
+                            th:value="${positionlist.positionId}">
+                    </option>
+                    <option th:unless="${positionlist.positionId}==${idposition}" value="" th:each="positionlist:${positionList}" th:text="${positionlist.positionName}"
+                            th:value="${positionlist.positionId}">
+                    </option>
+                </select>
             </div>
 
             <div class="col-sm-12 col-md-6 col-lg-2">
@@ -41,9 +55,9 @@
             </div>
 
         </div>
-
     </form>
     <a href="/employee/create">Tao moi nhan vien</a>
+
     <p th:text="${msg}"></p>
     <div class="table-responsive-md">
         <table class="table table-bordered">
@@ -56,12 +70,13 @@
             <th>phone</th>
 <!--            <th>email</th>-->
             <th>address</th>
-            <th>position</th>
+            <th>bo phan</th>
 <!--            <th>education</th>-->
-            <th>division</th>
+            <th>vi tri</th>
             <th colspan="3">Action</th>
             </thead>
             <tbody>
+<!--        Hien thi ket qua mac dinh    -->
             <tr th:if="${employeeList}" th:each="employeelist:${employeeList}">
                 <td th:text="${employeelist.employeeId}"></td>
                 <td th:text="${employeelist.employeeName}"></td>
@@ -87,7 +102,7 @@
                     </button>
                 </td>
             </tr>
-
+<!--        Hien thi ket qua tim kiem-->
             <tr th:if="${employeeListSearch}" th:each="employeelistSearch:${employeeListSearch}">
                 <td th:text="${employeelistSearch.employeeId}"></td>
                 <td th:text="${employeelistSearch.employeeName}"></td>
@@ -174,7 +189,7 @@
     <div th:if="${employeeListSearch}" style="display: flex;justify-content: flex-end">
         <div>
             <span class="paginate_button">
-                <a th:if="${employeeListSearch.hasPrevious()}" th:href="@{/employee/search  (page=${employeeListSearch.number}-1)}">
+                <a th:if="${employeeListSearch.hasPrevious()}" th:href="@{/employee/search  (page=${employeeListSearch.number}-1,nameemployee=${nameemployee},iddivision=${iddivision},idposition=${idposition})}">
                     Previous
                 </a>
                 <span th:unless="${employeeListSearch.hasPrevious()}" style="color: #c8cbcf">Previous</span>
@@ -182,9 +197,9 @@
         </div>
         <div>
             <span th:each="abc:${#numbers.sequence(0,employeeListSearch.totalPages - 1)}">
-                <a class="paginate_button" th:href="@{/employee/search  (page=${abc})}">
-                     <span th:unless="${employeeListSearch.number}==${abc}" th:text="${abc} + 1">   </span>
-                     <span th:if="${employeeListSearch.number}==${abc}" style="color: red" th:text="${abc} + 1">   </span>
+                <a th:if="${abc}>=0"  class="paginate_button" th:href="@{/employee/search  (page=${abc},nameemployee=${nameemployee},iddivision=${iddivision},idposition=${idposition})}">
+                    <span th:unless="${employeeListSearch.number}==${abc}" th:text="${abc} + 1">   </span>
+                     <span th:if="${employeeListSearch.number}==${abc}" style="color: #ff0000" th:text="${abc} + 1">   </span>
                 </a>
             </span>
 
@@ -192,7 +207,7 @@
 
         <div>
             <span class="paginate_button">
-                <a th:if="${employeeListSearch.hasNext()}" th:href="@{/employee/search  (page=${employeeListSearch.number}+1)}">
+                <a th:if="${employeeListSearch.hasNext()}" th:href="@{/employee/search  (page=${employeeListSearch.number}+1,nameemployee=${nameemployee},iddivision=${iddivision},idposition=${idposition})}">
                     Next
                  </a>
                 <span th:unless="${employeeListSearch.hasNext()}" style="color: #c8cbcf">Next</span>
@@ -201,6 +216,7 @@
     </div>
 </div>
 <script>
+
     function prepareDelete(employeeId,employeeName) {
         $('#employeeId').html(employeeId)
         $('#employeeName').html(employeeName)
@@ -215,6 +231,7 @@
             }
         })
     }
+
 </script>
 </body>
 </html>

@@ -1,13 +1,57 @@
  <!DOCTYPE html>
  <html xmlns:th="http://www.thymeleaf.org">
 <html lang="en">
-<head th:insert="fragments::head">
-    <title>Title</title>
+<head>
+    <div th:replace="fragments::head"></div>
+    <title>Danh sach khach hang</title>
 </head>
 <body>
 <div class="container">
     <div th:replace="fragments::header" ></div>
     <h3>Danh sach khach hang</h3>
+
+    <form action="/customer/search" method="get">
+        <div class="row">
+            <div class="col-sm-12 col-md-6 col-lg-1">
+            </div>
+            <div class="col-sm-12 col-md-6 col-lg-1">
+                <label for="">Ten</label>
+            </div>
+            <div class="col-sm-12 col-md-6 col-lg-2">
+                <input class="form-control" type="text" name="namecustomer" th:value="${namecustomer}">
+            </div>
+            <div class="col-sm-12 col-md-6 col-lg-1">
+                <label for="">Phone</label>
+            </div>
+
+            <div class="col-sm-12 col-md-6 col-lg-2">
+                <input class="form-control" type="text" name="phonecustomer" th:value="${phonecustomer}">
+            </div>
+
+            <div class="col-sm-12 col-md-6 col-lg-1">
+                <label for="">Loai KH</label>
+            </div>
+            <div class="col-sm-12 col-md-6 col-lg-2">
+                <select class="form-control" th:name="idcustomertype" id="">
+                    <option value="">Chon loai KH</option>
+                    <option th:if="${customertypelist.customerTypeId}==${idcustomertype}" selected  th:each="customertypelist:${customerTypeList}"
+                            th:text="${customertypelist.customerTypeName}"
+                            th:value="${customertypelist.customerTypeId}">
+                    </option>
+                    <option th:unless="${customertypelist.customerTypeId}==${idcustomertype}"  th:each="customertypelist:${customerTypeList}"
+                            th:text="${customertypelist.customerTypeName}"
+                            th:value="${customertypelist.customerTypeId}">
+                    </option>
+                </select>
+            </div>
+
+            <div class="col-sm-12 col-md-6 col-lg-2">
+                <button class="btn btn-primary" style="width: 100%;" type="submit">Tim kiem</button>
+            </div>
+
+        </div>
+    </form>
+
     <a href="/customer/create">Them moi khach hang</a>
     <div class="table-responsive-md">
     <table class="table table-bordered">
@@ -16,27 +60,43 @@
         <th>name</th>
         <th>birthday</th>
         <th>gender</th>
-        <th>idcard</th>
+<!--        <th>idcard</th>-->
         <th>phone</th>
-        <th>email</th>
+<!--        <th>email</th>-->
         <th>address</th>
         <th>type</th>
         <th colspan="3">action</th>
         </thead>
         <tbody>
-            <tr th:each="customerlist:${customerList}">
+<!--        Hien thi di lieu mac dinh-->
+            <tr th:if="${customerList}" th:each="customerlist:${customerList}">
                 <td th:text="${customerlist.customerId}"></td>
                 <td th:text="${customerlist.customerName}"></td>
                 <td th:text="${#temporals.format(customerlist.customerBirthday, 'dd-MM-yyyy')}"></td>
                 <td th:text="${customerlist.gender.genderName}"></td>
-                <td th:text="${customerlist.customerIdCard}"></td>
+<!--                <td th:text="${customerlist.customerIdCard}"></td>-->
                 <td th:text="${customerlist.customerPhone}"></td>
-                <td th:text="${customerlist.customerEmail}"></td>
+<!--                <td th:text="${customerlist.customerEmail}"></td>-->
                 <td th:text="${customerlist.customerAddress}"></td>
                 <td th:text="${customerlist.customerType.customerTypeName}"></td>
                 <td><button class="btn btn-success" data-toggle="modal" data-target="#detailModal" th:onclick="'detailEmployee('+${customerlist.customerId}+')'">Detail</button></td>
                 <td><a th:href="@{/customer/edit/{customerId} (customerId=${customerlist.customerId})}"><button class="btn btn-info">Edit</button></a></td>
                 <td><button class="btn btn-danger" data-toggle="modal" data-target="#abc" th:onclick="prepareDelete([[${customerlist.customerId}]],[[${customerlist.customerName}]])">Delete</button></td>
+            </tr>
+<!--        Hien thi di lieu tiem kiem-->
+            <tr th:if="${customerListSearch}" th:each="customersearchlist:${customerListSearch}">
+                <td th:text="${customersearchlist.customerId}"></td>
+                <td th:text="${customersearchlist.customerName}"></td>
+                <td th:text="${#temporals.format(customersearchlist.customerBirthday, 'dd-MM-yyyy')}"></td>
+                <td th:text="${customersearchlist.gender.genderName}"></td>
+                <!--                <td th:text="${customersearchlist.customerIdCard}"></td>-->
+                <td th:text="${customersearchlist.customerPhone}"></td>
+                <!--                <td th:text="${customersearchlist.customerEmail}"></td>-->
+                <td th:text="${customersearchlist.customerAddress}"></td>
+                <td th:text="${customersearchlist.customerType.customerTypeName}"></td>
+                <td><button class="btn btn-success" data-toggle="modal" data-target="#detailModal" th:onclick="'detailEmployee('+${customersearchlist.customerId}+')'">Detail</button></td>
+                <td><a th:href="@{/customer/edit/{customerId} (customerId=${customersearchlist.customerId})}"><button class="btn btn-info">Edit</button></a></td>
+                <td><button class="btn btn-danger" data-toggle="modal" data-target="#abc" th:onclick="prepareDelete([[${customersearchlist.customerId}]],[[${customersearchlist.customerName}]])">Delete</button></td>
             </tr>
         </tbody>
     </table>
@@ -86,21 +146,65 @@
     </div>
 
 
+<!--    Phan trang ket qua hien thi-->
+    <div th:if="${customerList}" style="display: flex;justify-content: flex-end">
+        <div>
+            <span class="paginate_button">
+                <a th:if="${customerList.hasPrevious()}" th:href="@{/customer (page=${customerList.number}-1)}">
+                    Previous
+                </a>
+                <span th:unless="${customerList.hasPrevious()}" style="color: #c8cbcf">Previous</span>
+            </span>
+        </div>
+        <div>
+            <span th:each="abc:${#numbers.sequence(0,customerList.totalPages - 1)}">
+                <a class="paginate_button" th:href="@{/customer (page=${abc})}">
+                     <span th:unless="${customerList.number}==${abc}" th:text="${abc} + 1">   </span>
+                     <span th:if="${customerList.number}==${abc}" style="color: red" th:text="${abc} + 1">   </span>
+                </a>
+            </span>
 
-    <span>
-        <a th:if="${customerList.hasPrevious()}" th:href="@{/customer (page=${customerList.number}-1)}">
-            Previous
-        </a>
-    </span>
+        </div>
 
-    <span th:each="abc:${#numbers.sequence(0,customerList.totalPages - 1)}">
-        <a th:href="@{/customer (page=${abc})}" th:text="${abc}"></a>
-    </span>
-    <span>
-        <a th:if="${customerList.hasNext()}" th:href="@{/customer (page=${customerList.number}+1)}">
-            Next
-        </a>
-    </span>
+        <div>
+            <span class="paginate_button">
+                <a th:if="${customerList.hasNext()}" th:href="@{/customer (page=${customerList.number}+1)}">
+                    Next
+                 </a>
+                <span th:unless="${customerList.hasNext()}" style="color: #c8cbcf">Next</span>
+        </span>
+        </div>
+    </div>
+
+<!--    Phan trang tim kiem-->
+    <div th:if="${customerListSearch}" style="display: flex;justify-content: flex-end">
+        <div>
+            <span class="paginate_button">
+                <a th:if="${customerListSearch.hasPrevious()}" th:href="@{/customer/search  (page=${customerListSearch.number}-1,phonecustomer=${phonecustomer},phonecustomer=${phonecustomer},idcustomertype=${idcustomertype})}">
+                    Previous
+                </a>
+                <span th:unless="${customerListSearch.hasPrevious()}" style="color: #c8cbcf">Previous</span>
+            </span>
+        </div>
+        <div>
+            <span th:each="abc:${#numbers.sequence(0,customerListSearch.totalPages - 1)}">
+                <a th:if="${abc}>=0"  class="paginate_button" th:href="@{/customer/search  (page=${abc},namecustomer=${namecustomer},phonecustomer=${phonecustomer},idcustomertype=${idcustomertype})}">
+                    <span th:unless="${customerListSearch.number}==${abc}" th:text="${abc} + 1">   </span>
+                     <span th:if="${customerListSearch.number}==${abc}" style="color: #ff0000" th:text="${abc} + 1">   </span>
+                </a>
+            </span>
+
+        </div>
+
+        <div>
+            <span class="paginate_button">
+                <a th:if="${customerListSearch.hasNext()}" th:href="@{/customer/search  (page=${customerListSearch.number}+1,namecustomer=${namecustomer},phonecustomer=${phonecustomer},idcustomertype=${idcustomertype})}">
+                    Next
+                 </a>
+                <span th:unless="${customerListSearch.hasNext()}" style="color: #c8cbcf">Next</span>
+        </span>
+        </div>
+    </div>
 </div>
 
 <script>
