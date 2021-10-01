@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<html lang="en">
+<head>
+    <div th:replace="fragments::head"></div>
+    <title>Chỉnh sửa khu</title>
+</head>
+<body>
+<div class="container">
+    <div th:replace="fragments::header"></div>
+    <h3>Chỉnh sửa thông tin khu</h3>
+    <form action="/khu/update/ " method="post" th:object="${khu}">
+        <div class="row">
+            <div class="col-md-6">
+                <label for="">Tên khu</label>
+                <input hidden class="form-control" type="text" th:field="*{idKhu}">
+                <input class="form-control" type="text" th:field="*{tenKhu}">
+            </div>
+            <div class="col-md-6">
+                <label for="">Cơ sở</label>
+                <select class="form-control" name="" id="" th:field="*{coSo}">
+                    <option th:each="cosolist:${coSoList}" th:value="${cosolist.idCoso}"
+                            th:text="${cosolist.tenCoso}"    >
+                    </option>
+                </select>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-2"></div>
+            <div class="col-md-2"></div>
+            <div class="col-md-2"></div>
+            <div class="col-md-2"></div>
+            <div class="col-md-2">
+                <p></p>
+                <button style="width: 100%" class="btn btn-primary" type="submit">
+                    Save
+                </button>
+            </div>
+            <div class="col-md-2">
+                <p></p>
+                <a th:href="@{/khu/detail/{idKhu} (idKhu=${idKhu}) }">
+                    <button style="width: 100%" class="btn btn-success" type="button">
+                        Cancel
+                    </button>
+                </a>
+            </div>
+        </div>
+    </form>
+</div>
+
+</body>
+</html>

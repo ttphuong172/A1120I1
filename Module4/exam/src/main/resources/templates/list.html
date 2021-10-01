@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Danh sach giao dich</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <link href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.8.1/themes/base/jquery-ui.css" rel="stylesheet"/>
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.8.1/jquery-ui.min.js"></script>
+</head>
+<body>
+<div class="container">
+    <h3>Danh sach giao dich</h3>
+    <form action="/search" method="get" >
+        <div class="row">
+            <div class="col-md-2">
+
+            </div>
+            <div class="col-md-2">
+                Ten KH
+            </div>
+            <div class="col-md-2">
+                <input type="text" name="tenkhachhang" th:value="${tenkhachhang}" class="form-control">
+            </div>
+            <div class="col-md-2">
+                Loai DV
+            </div>
+            <div class="col-md-2">
+                <select class="form-control"  th:name="idloaidichvu" id="">
+                    <option value="">Chon loai DV</option>
+                    <option th:if="${loaidichvulist.idLoaiDichVu}==${idLoaiDichVu}" selected  th:each="loaidichvulist:${loaiDichVuList}"
+                            th:text="${loaidichvulist.tenLoaiDichVu}"
+                            th:value="${loaidichvulist.idLoaiDichVu}">
+                    </option>
+                    <option th:unless="${loaidichvulist.idLoaiDichVu}==${idLoaiDichVu}"  th:each="loaidichvulist:${loaiDichVuList}"
+                            th:text="${loaidichvulist.tenLoaiDichVu}"
+                            th:value="${loaidichvulist.idLoaiDichVu}">
+                    </option>
+
+                </select>
+            </div>
+            <div class="col-md-2">
+                <button class="btn btn-primary" style="width: 100%;" type="submit">Tim kiem</button>
+            </div>
+        </div>
+    </form>
+
+    <a href="/create">
+        <button class="btn btn-success">Them moi</button>
+    </a>
+
+    <table class="table table-bordered">
+        <thead>
+        <th>ID</th>
+        <th>Ten khach hang</th>
+        <th>Ngay giao dich</th>
+        <th>Loai dich vu</th>
+        <th>Don gia</th>
+        <th>Dien tich</th>
+        <th>Actions</th>
+        </thead>
+        <tbody>
+        <tr th:if="${giaoDichList}" th:each="giaodichlist:${giaoDichList}">
+            <td th:text="${giaodichlist.maGiaoDich}"></td>
+            <td th:text="${giaodichlist.khachHang.tenKhachHang}"></td>
+            <td th:text="${giaodichlist.ngayGiaoDich}"></td>
+            <td th:text="${giaodichlist.loaiDichVu.tenLoaiDichVu}"></td>
+            <td th:text="${giaodichlist.donGia}"></td>
+            <td th:text="${giaodichlist.dienTich}"></td>
+            <td>
+                <a th:href="@{/detail/{maGiaoDich} (maGiaoDich=${giaodichlist.maGiaoDich})}" style="color: red">Chi tiet</a>
+            </td>
+        </tr>
+
+        <tr th:if="${giaoDichSearchList}" th:each="giaodichsearchlist:${giaoDichSearchList}">
+            <td th:text="${giaodichsearchlist.maGiaoDich}"></td>
+            <td th:text="${giaodichsearchlist.khachHang.tenKhachHang}"></td>
+            <td th:text="${giaodichsearchlist.ngayGiaoDich}"></td>
+            <td th:text="${giaodichsearchlist.loaiDichVu.tenLoaiDichVu}"></td>
+            <td th:text="${giaodichsearchlist.donGia}"></td>
+            <td th:text="${giaodichsearchlist.dienTich}"></td>
+            <td>
+                <a th:href="@{/detail/{maGiaoDich} (maGiaoDich=${giaodichsearchlist.maGiaoDich})}" style="color: red">Chi tiet</a>
+            </td>
+        </tr>
+
+        </tbody>
+
+    </table>
+</div>
+</body>
+</html>

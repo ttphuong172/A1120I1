@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<html lang="en">
+<head>
+    <div th:replace="fragments::head"></div>
+    <meta charset="UTF-8">
+    <title>Chi tiet vi tri</title>
+</head>
+<body>
+<div class="container">
+    <div style="display: flex;justify-content: space-between">
+        <h3>Chi tiết vị trí</h3>
+        <a th:href="@{/vitri/edit/{idViTri} (idViTri=${idViTri}) }">
+            <button class="btn btn-info">Edit</button>
+        </a>
+    </div>
+<div style="font-size: 18px; margin-left: 50px">
+    <span>- Khu: </span>
+    <span th:text="${viTri.khu.tenKhu}"></span>
+    <br>
+    <span> - Vị trí: </span>
+    <span th:text="${viTri.tenViTri}"></span>
+    <br>
+    <span>- Mã vị trí: </span>
+    <span th:text="${viTri.maViTri}"></span>
+</div>
+
+    <h3>Danh sách thiết bị</h3>
+    <div class="row" style="margin: 10px 0">
+        <div class="col-md-2"></div>
+        <div class="col-md-2"></div>
+        <div class="col-md-2"></div>
+        <div class="col-md-2"></div>
+        <div class="col-md-2">
+            <p></p>
+            <button style="width: 100%" class="btn btn-info" id="btnpreforward">Điều chuyển</button>
+        </div>
+        <div class="col-md-2">
+            <p></p>
+            <button style="width: 100%" class="btn btn-danger" id="btnpredelete">Xóa</button>
+        </div>
+    </div>
+
+
+    <div class="table-responsive">
+        <table class="table table-bordered">
+            <thead>
+            <td>STT</td>
+            <td>Tên thiết bị</td>
+            <td>Mã thiết bị</td>
+            <td>Serial number</td>
+            <td>Hãng sản xuất</td>
+            <td>Ngày trang bị</td>
+            <td>Edit</td>
+            <td>Chọn</td>
+            </thead>
+            <tbody>
+                <tr th:each="thietbilist:${viTri.thietBiList}" th:id="${thietbilist.idThietBi}"
+                    th:name="${thietbilist.tenThietBi}">
+                    <td th:text="${thietbilistStat.index + 1}"></td>
+                    <td th:text="${thietbilist.tenThietBi}"></td>
+                    <td th:text="${thietbilist.maThietBi}"></td>
+                    <td th:text="${thietbilist.serialThietBi}"></td>
+                    <td th:text="${thietbilist.hangSanXuat.tenHangSanXuat}"></td>
+                    <td th:text="${#temporals.format(thietbilist.ngayTrangBi, 'dd-MM-yyyy')}"></td>
+                    <td>
+                        <a th:href="@{/thietbi/edit/{idThietBi} (idThietBi=${thietbilist.idThietBi}) }">
+                            <button class="btn btn-info">Edit</button>
+                        </a>
+                    </td>
+                    <td>
+                        <input type="checkbox" name="idThietBi" th:value="${thietbilist.idThietBi}">
+                    </td>
+                </tr>
+
+
+            </tbody>
+        </table>
+    </div>
+    <div class="row">
+        <div class="col-md-2"></div>
+        <div class="col-md-2"></div>
+        <div class="col-md-2"></div>
+        <div class="col-md-2">
+        </div>
+        <div class="col-md-2">
+            <p></p>
+            <a th:href="@{/thietbi/create/{idViTri} (idViTri=${idViTri}) }">
+                <button style="width: 100%" class="btn btn-primary">
+                    Thêm mới
+                </button>
+            </a>
+        </div>
+        <div class="col-md-2">
+            <p></p>
+            <a th:href="@{/khu/detail/{idKhu} (idKhu=${viTri.khu.idKhu})}">
+                <button style="width: 100%" class="btn btn-success">
+                    Cancel
+                </button>
+            </a>
+        </div>
+    </div>
+</div>
+
+
+<!-- Delete Modal -->
+<div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+     aria-hidden="true">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabel">Xóa thiết bị</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <span>Bạn có muốn xóa: </span>
+                <span id="deletelist"></span>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                <button type="button" id="btndelete" class="btn btn-danger">Delete</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Forward Modal -->
+<div class="modal fade" id="forwardModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+     aria-hidden="true">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="forwardModalLabel">Điều chuyển thiết bị</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <p>Điều chuyển các thiết bị: </p>
+                <div id="forwardlist"></div>
+                <span>Đến vị trí</span>
+                <select name="" id="idvitri">
+                    <option value="" th:each="vitrilist:${viTriList}"
+                            th:value="${vitrilist.idViTri}"
+                            th:text="${vitrilist.tenViTri}"
+                    ></option>
+                </select>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                <button type="button" id="btnforward" class="btn btn-primary">Điều chuyển</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+    $(document).ready(function () {
+        var val = [];
+        var idList = [];
+        $("#btnpredelete").click(function () {
+            val = [];
+            idList = [];
+            $(':checkbox:checked').each(function (i) {
+                val[i] = $(this).closest('tr').attr('name');
+                idList[i] = $(this).closest('tr').attr('id');
+            });
+            var myString = "";
+            for (i = 0; i < val.length; i++) {
+                myString += "<p>" + val[i] + "</p>"
+            }
+            $('#deletelist').html(myString);
+            $('#exampleModal').modal();
+        });
+        $("#btndelete").click(function () {
+            $.ajax({
+                type: 'post',
+                url: '/thietbi/delete/',
+                data: {idDeleteList: idList},
+                success: function (data) {
+                    document.location.reload();
+                }
+            })
+        });
+
+        $('#btnpreforward').click(function () {
+            val = [];
+            idList = [];
+            $(':checkbox:checked').each(function (i) {
+                val[i] = $(this).closest('tr').attr('name');
+                idList[i] = $(this).closest('tr').attr('id');
+            });
+            var myString = "<ol>";
+            for (i = 0; i < val.length; i++) {
+                myString += "<li>" + val[i] + "</li>"
+            }
+            myString+="</ol>"
+            $('#forwardlist').html(myString)
+            $('#forwardModal').modal();
+        })
+        $('#btnforward').click(function () {
+            var idvitri = $('#idvitri :selected').val();
+            console.log(idvitri)
+            $.ajax({
+                type: 'post',
+                url: '/thietbi/forward/',
+                data: {idForwardList: idList, idvitri},
+                success: function (data) {
+                    document.location.reload();
+                }
+            })
+        })
+    });
+</script>
+
+</body>
+</html>

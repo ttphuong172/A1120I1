@@ -102,6 +102,7 @@ public class ContractController {
         model.addAttribute("customername",customername);
         model.addAttribute("startdate",startdate.orElse(null));
         model.addAttribute("enddate",enddate.orElse(null));
+        System.out.println(startdate);
         model.addAttribute("contractSearchList",contractService.findCustom(customername,startdate.orElse(null),enddate.orElse(null)));
         return "contract/list";
     }

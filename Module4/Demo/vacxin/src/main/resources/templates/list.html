@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <link href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.8.1/themes/base/jquery-ui.css" rel="stylesheet"/>
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.8.1/jquery-ui.min.js"></script>
+    <title>Danh sach nguoi dan dang ky vacxin</title>
+</head>
+<body>
+<div class="container">
+    <h3>ĐĂNG KÝ TIÊM VACXIN</h3>
+    <form action="/save" method="post" th:object="${nguoiDan}">
+        <div class="row">
+            <div class="col-md-4">
+                <label for="">Họ và tên</label>
+            </div>
+            <div class="col-md-8">
+                <input class="form-control" type="text" id="enddate" th:field="*{ten}">
+                <p></p>
+                <p style="color: red" th:if="${#fields.hasErrors('ten')}" th:errors="*{ten}"></p>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-4">
+                <label for="">Ngày sinh</label>
+            </div>
+            <div class="col-md-8">
+                <input class="form-control" type="text" id="birthday" th:field="*{ngaySinh}">
+                <p style="color: red" th:if="${#fields.hasErrors('ngaySinh')}" th:errors="*{ngaySinh}"></p>
+                <p></p>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-4">
+                <label for="">Số nhà</label>
+            </div>
+            <div class="col-md-8">
+                <input class="form-control" type="number" th:field="*{soNha}">
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-4">
+                <label for="">Tên đường</label>
+            </div>
+            <div class="col-md-8">
+                <select class="form-control" name="" id="" th:field="*{duong}">
+                    <option value="">Chọn tên đường</option>
+                    <option value="" th:each="duonglist:${duongList}"
+                            th:value="${duonglist.idDuong}" th:text="${duonglist.tenDuong}">
+                    </option>
+                </select>
+                <p style="color: red" th:if="${#fields.hasErrors('duong')}" th:errors="*{duong}"></p>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-4">
+                <label for="">Số CMND</label>
+            </div>
+            <div class="col-md-8">
+                <input class="form-control" type="number" placeholder="Định dạng 9 số hoặc 12 số" th:field="*{soCMND}">
+                <p style="color: red" th:if="${#fields.hasErrors('soCMND')}" th:errors="*{soCMND}"></p>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-4">
+                <label for="">Số BHYT</label>
+            </div>
+            <div class="col-md-8">
+                <input class="form-control" type="text" th:field="*{soBHYT}">
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-4">
+                <label for="">Số Điện Thoại</label>
+            </div>
+            <div class="col-md-8">
+                <input class="form-control" type="number" th:field="*{soDienThoai}">
+                <p style="color: red" th:if="${#fields.hasErrors('soDienThoai')}" th:errors="*{soDienThoai}"></p>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-4">
+                <label for="">Nghề nghiệp</label>
+            </div>
+            <div class="col-md-8">
+                <input class="form-control" type="text" th:field="*{ngheNghiep}">
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-2"></div>
+            <div class="col-md-2"></div>
+            <div class="col-md-2"></div>
+            <div class="col-md-2"></div>
+            <div class="col-md-2">
+                <p></p>
+                <button style="width: 100%;" class="btn btn-primary" type="submit"><i class="fa fa-floppy-o"></i> &nbsp;
+                    Save
+                </button>
+            </div>
+            <div class="col-md-2">
+                <p></p>
+                <a href="/">
+                    <button style="width: 100%;" class="btn btn-success" type="button">Cancel</button>
+                </a>
+            </div>
+        </div>
+
+
+    </form>
+    <h3>
+        DANH SÁCH NGƯỜI DÂN ĐĂNG KÝ TIÊM VACXIN
+    </h3>
+    <div class="table-responsive-md">
+        <table class="table table-striped">
+            <thead>
+            <th>ID</th>
+            <th>Họ và tên</th>
+            <th>Ngày sinh</th>
+            <th>Địa chỉ</th>
+            <th>Số CMND</th>
+            <th>Số BHYT</th>
+            <th>Số ĐT</th>
+            <th>Nghề nghiệp</th>
+            </thead>
+            <tbody>
+            <tr th:each="nguoidanlist:${nguoiDanList}">
+                <td th:text="${nguoidanlist.idNguoiDan}"></td>
+                <td th:text="${nguoidanlist.ten}"></td>
+                <td th:text="${#temporals.format(nguoidanlist.ngaySinh, 'dd-MM-yyyy')}"></td>
+                <td th:text="${nguoidanlist.soNha+nguoidanlist.duong.tenDuong}"></td>
+                <td th:text="${nguoidanlist.soCMND}"></td>
+                <td th:text="${nguoidanlist.soBHYT}"></td>
+                <td th:text="${nguoidanlist.soDienThoai}"></td>
+                <td th:text="${nguoidanlist.ngheNghiep}"></td>
+            </tr>
+            </tbody>
+        </table>
+    </div>
+</div>
+<script>
+    $(document).ready(function () {
+        $('#birthday').datepicker({
+            dateFormat: 'dd/mm/yy',			// Date Format "dd/mm/yy"
+            changeMonth: true,
+            changeYear: true,
+            yearRange: "-100:+0"
+        });
+    });
+</script>
+
+</body>
+</html>

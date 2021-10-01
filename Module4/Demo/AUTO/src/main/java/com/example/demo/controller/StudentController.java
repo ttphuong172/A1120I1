@@ -12,19 +12,25 @@ import org.springframework.web.bind.annotation.PostMapping;
 public class StudentController {
     @Autowired
     private StudentRepository studentRepository;
+
     @GetMapping("create")
-    public String createStudent(Student student, Model model){
+    public String createStudent(Student student, Model model) {
         model.addAttribute("student", new Student());
         return "create";
     }
+
     @PostMapping("save")
-    public String saveStudent(Student student){
+    public String saveStudent(Student student) {
+        System.out.println(student.getBirthday().getYear());
+        System.out.println(student.getBirthday().getMonthValue());
+        System.out.println(student.getBirthday().getDayOfMonth());
         studentRepository.save(student);
         return "redirect:/list";
     }
+
     @GetMapping("list")
-    public String listStudent(Model model){
-        model.addAttribute("listStudent",studentRepository.findAll());
+    public String listStudent(Model model) {
+        model.addAttribute("listStudent", studentRepository.findAll());
         return "list";
     }
 }

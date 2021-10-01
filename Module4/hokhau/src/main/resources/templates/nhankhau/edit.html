@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<html lang="en">
+<head>
+    <div th:replace="fragments::head"></div>
+    <title>Chỉnh sửa nhân khẩu</title>
+ 
+</head>
+<body>
+<div class="container">
+    <div th:replace="fragments::header"></div>
+    <div class="row">
+        <div class="col-md-3">
+<!--            <a th:href="@{/hogiadinh}">-->
+<!--                <button style="width: 100%" class="btn btn-success">Danh sách hộ gia đình</button>-->
+<!--            </a>-->
+        </div>
+        <div class="col-md-3"></div>
+        <div class="col-md-3"></div>
+        <div class="col-md-3"></div>
+    </div>
+    <form th:action="@{/nhankhau/save (url=${url})} " method="post" th:object="${nhanKhau}">
+        <div class="row">
+            <div class="col-sm-6">
+                <label>Họ và tên</label>
+                <input type="text" value="" hidden th:field="*{nhanKhauId}">
+                <input type="text" class="form-control" name="" th:field="*{hoTen}">
+                <p th:if = "${#fields.hasErrors('hoTen')}" th:errors = "*{hoTen}"></p>
+            </div>
+            <div class="col-sm-6">
+                <label>Ngày sinh</label>
+                <input type="text" class="form-control" name="" id="birthday" th:field="*{ngaySinh}">
+                <p th:if = "${#fields.hasErrors('ngaySinh')}" th:errors = "*{ngaySinh}"></p>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-sm-6">
+                <label>Giới tính</label>
+                <select class="form-control" name="" id="" th:field="*{gioiTinh}">
+                    <option value="">Chọn giới tính</option>
+                    <option value="" th:each="gioitinhlist:${gioiTinhList}"
+                            th:text="${gioitinhlist.gioiTinhTen}"
+                            th:value="${gioitinhlist.gioiTinhId}"></option>
+                </select>
+                <p th:if = "${#fields.hasErrors('gioiTinh')}" th:errors = "*{gioiTinh}"></p>
+            </div>
+            <div class="col-sm-6">
+                <label>Hộ gia đình</label>
+                <select class="form-control" name="" id="" th:field="*{hoGiaDinh}">
+                    <option value="">Chọn hộ gia đình</option>
+                    <option th:each="hogiadinhlist:${hoGiaDinhList}"
+                            th:text="${hogiadinhlist.hoGiaDinhTen}"
+                            th:value="${hogiadinhlist.hoGiaDinhId}">
+                    </option>
+                </select>
+                <p th:if = "${#fields.hasErrors('hoGiaDinh')}" th:errors = "*{hoGiaDinh}"></p>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-sm-6">
+                <label for="">Quan hệ với chủ hộ</label>
+                <select class="form-control" name="" th:field="*{quanHe}">
+                    <option value="">Chọn quan hệ</option>
+                    <option value="" th:each="quanhelist:${quanHeList}"
+                            th:text="${quanhelist.quanHeTen}"
+                            th:value="${quanhelist.quanHeId}"></option>
+                </select>
+                <p th:if = "${#fields.hasErrors('quanHe')}" th:errors = "*{quanHe}"></p>
+            </div>
+            <div class="col-sm-6">
+                <label for="">Số điện thoại</label>
+                <input type="text" class="form-control" th:field="*{soDienThoai}">
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-6">
+                <label for="">Ngày tiêm mũi 1</label>
+                <input type="text" class="form-control" name="" id="vacxin1" th:field="*{vacxin1}">
+            </div>
+            <div class="col-md-6">
+                <label for="">Ngày tiêm mũi 2</label>
+                <input type="text" class="form-control" name="" id="vacxin2" th:field="*{vacxin2}">
+            </div>
+
+        </div>
+        <div class="row">
+            <div class="col-md-3"></div>
+            <div class="col-md-3"></div>
+
+            <div class="col-md-3">
+                <p></p>
+<!--                <a th:href="@{http://localhost:8080/nhankhau/detail/{nhanKhauId} (nhanKhauId=${nhanKhau.nhanKhauId}) }">-->
+<!--                    <button style="width: 100%" class="btn btn-success" type="button">Cancel</button>-->
+<!--                </a>-->
+
+            </div>
+            <div class="col-md-3">
+                <p></p>
+                <button style="width: 100%" class="btn btn-primary btn-big" type="submit">Update</button>
+            </div>
+        </div>
+    </form>
+</div>
+<script>
+    $(document).ready(function () {
+        $('#birthday').datepicker({
+            dateFormat: 'dd/mm/yy',			// Date Format "dd/mm/yy"
+            changeMonth: true,
+            changeYear: true,
+            yearRange: "-100:+0"
+        });
+    });
+    $(document).ready(function () {
+        $('#vacxin1').datepicker({
+            dateFormat: 'dd/mm/yy',			// Date Format "dd/mm/yy"
+            changeMonth: true,
+            changeYear: true,
+            yearRange: "-100:+0"
+        });
+    });
+    $(document).ready(function () {
+        $('#vacxin2').datepicker({
+            dateFormat: 'dd/mm/yy',			// Date Format "dd/mm/yy"
+            changeMonth: true,
+            changeYear: true,
+            yearRange: "-100:+0"
+        });
+    });
+</script>
+</body>
+</html>

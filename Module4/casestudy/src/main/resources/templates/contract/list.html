@@ -39,6 +39,7 @@
     <h3>Danh sach hop dong</h3>
     <a href="/contract/create">Tao moi hop dong</a>
     <p th:text="${msg}"></p>
+    <div class="table-responsive-md">
     <table class="table table-bordered">
         <thead>
         <th>ID</th>
@@ -104,9 +105,11 @@
                     Delete
                 </button>
             </td>
+
         </tr>
         </tbody>
     </table>
+    </div>
     <!-- Delete Modal -->
     <div class="modal fade" id="deleteModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
          aria-hidden="true">

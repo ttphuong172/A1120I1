@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<html lang="en">
+<head>
+    <div th:replace="fragments::head"></div>
+    <meta charset="UTF-8">
+    <title>Chi tiet khu</title>
+</head>
+<body>
+<div class="container">
+    <div th:replace="fragments::header"></div>
+    <div style="display: flex; justify-content: space-between">
+        <h3>Chi tiết khu</h3>
+        <a th:href="@{/khu/edit/{idKhu} (idKhu=${idKhu}) }">
+            <button style="width: 100%" class="btn btn-info btn-sm"><i class="fa fa-edit"></i> Edit</button>
+        </a>
+    </div>
+
+
+    <div style="margin-left: 50px; text-transform: uppercase; font-weight: bold">
+        <div style="display: flex">
+            <h6 th:text="${khu.tenKhu}"></h6>
+            <h6>-</h6>
+            <h6  th:text="${khu.coSo.tenCoso}"></h6>
+        </div>
+
+    </div>
+    <h3>Danh sách vị trí</h3>
+    <div class="row">
+        <div class="col-md-2" th:each="vitrilist:${viTriList}" style="text-align: center; margin: 10px 0">
+            <a th:href="@{/vitri/detail/{idViTri} (idViTri=${vitrilist.idViTri}) }" style="text-decoration: none">
+            <img src="" style="width: 50px;height: 50px; border-radius: 50px; border: solid 1px black"
+                 alt="">
+            <h5 style="text-transform: uppercase; padding-top: 10px" th:text="${vitrilist.tenViTri}"></h5>
+            <p th:text="${vitrilist.maViTri}"></p>
+            </a>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-2"></div>
+        <div class="col-md-2"></div>
+        <div class="col-md-2"></div>
+        <div class="col-md-2">
+        </div>
+        <div class="col-md-2">
+            <p></p>
+            <a th:href="@{/vitri/create/{idKhu} (idKhu=${idKhu}) }">
+                <button style="width: 100%" class="btn btn-primary">
+                    <i class="fa fa-sticky-note-o"></i> Thêm mới
+                </button>
+            </a>
+        </div>
+        <div class="col-md-2">
+            <p></p>
+            <a th:href="@{/khu}">
+                <button style="width: 100%" class="btn btn-success">
+                    <i class="fa fa-reply"></i> Cancel
+                </button>
+            </a>
+        </div>
+    </div>
+</div>
+</body>
+</html>

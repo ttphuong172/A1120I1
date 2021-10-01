@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<html lang="en">
+<head>
+    <div th:replace="fragments::head"></div>
+    <title>Thống kê nhân khẩu</title>
+    <style>
+        th {
+            text-align: center;
+            vertical-align: middle;
+        }
+    </style>
+</head>
+<body>
+<div class="container">
+    <div th:replace="fragments::header"></div>
+    <h5>DANH SÁCH THỐNG KÊ</h5>
+
+    <form action="/nhankhau/search" method="get">
+        <div class="row" style="margin-bottom: 20px;display: flex;align-items: center">
+            <div class="col-md-1">Tên</div>
+            <div class="col-md-2">
+                <input type="text" th:value="${hoten}" name="hoten" class="form-control">
+            </div>
+
+            <div class="col-md-1">Giới tính</div>
+            <div class="col-md-2">
+                <select class="form-control" name="gioitinhid" id="">
+                    <option value="">Chọn giới tính</option>
+                    <option th:if="${gioitinhid}==${gioitinhlist.gioiTinhId}" selected value="" th:each="gioitinhlist:${gioiTinhList}"
+                            th:text="${gioitinhlist.gioiTinhTen}"
+                            th:value="${gioitinhlist.gioiTinhId}"></option>
+                    <option th:unless="${gioitinhid}==${gioitinhlist.gioiTinhId}" value="" th:each="gioitinhlist:${gioiTinhList}"
+                            th:text="${gioitinhlist.gioiTinhTen}"
+                            th:value="${gioitinhlist.gioiTinhId}"></option>
+                </select>
+            </div>
+            <div class="col-md-1">Hộ GĐ</div>
+            <div class="col-md-2">
+                <select class="form-control" th:value="${hogiadinhid}" name="hogiadinhid" id="">
+                    <option value="">Chọn hộ gia đình</option>
+                    <option th:if="${hogiadinhid==hogiadinhlist.hoGiaDinhId}" selected th:each="hogiadinhlist:${hoGiaDinhList}"
+                            th:text="${hogiadinhlist.hoGiaDinhTen}"
+                            th:value="${hogiadinhlist.hoGiaDinhId}">
+                    </option>
+                    <option th:unless="${hogiadinhid==hogiadinhlist.hoGiaDinhId}" th:each="hogiadinhlist:${hoGiaDinhList}"
+                            th:text="${hogiadinhlist.hoGiaDinhTen}"
+                            th:value="${hogiadinhlist.hoGiaDinhId}">
+                    </option>
+                </select>
+            </div>
+            <div class="col-md-1">Quan hệ</div>
+            <div class="col-md-2">
+                <select class="form-control" th:value="${quanheid}" name="quanheid">
+                    <option value="">Chọn quan hệ</option>
+                    <option th:if="${quanheid==quanhelist.quanHeId}" selected value="" th:each="quanhelist:${quanHeList}"
+                            th:text="${quanhelist.quanHeTen}"
+                            th:value="${quanhelist.quanHeId}"></option>
+                    <option th:unless="${quanheid==quanhelist.quanHeId}"  value="" th:each="quanhelist:${quanHeList}"
+                            th:text="${quanhelist.quanHeTen}"
+                            th:value="${quanhelist.quanHeId}"></option>
+                </select>
+            </div>
+        </div>
+        <div class="row" style="margin-bottom: 20px">
+            <div class="col-md-1">Đường</div>
+            <div class="col-md-2">
+                <select  class="form-control" th:value="${duongid}" name="duongid">
+                    <option value="">Chọn tên đường</option>
+                    <option th:if="${duongid==duonglist.duongId}" selected th:each="duonglist:${duongList}"
+                            th:text="${duonglist.tenDuong}"
+                            th:value="${duonglist.duongId}"></option>
+                    <option th:unless="${duongid==duonglist.duongId}" th:each="duonglist:${duongList}"
+                            th:text="${duonglist.tenDuong}"
+                            th:value="${duonglist.duongId}"></option>
+                </select>
+            </div>
+            <div class="col-md-1">Tuổi từ</div>
+            <div class="col-md-1">
+                <input class="form-control" type="number" min="0" max="120" th:value="${beginage}" name="beginage">
+            </div>
+            <div class="col-md-1">đến</div>
+            <div class="col-md-1">
+                <input class="form-control" type="number"  min="0" max="120" th:value="${endage}" name="endage">
+            </div>
+            <div class="col-md-1"></div>
+            <div class="col-md-1"></div>
+            <div class="col-md-1">
+                <p></p>
+            </div>
+            <div class="col-md-2">
+                <button style="width: 100%" class="btn btn-primary">Tìm kiếm</button>
+            </div>
+        </div>
+
+    </form>
+
+    <div class="table-responsive">
+        <table class="table table-bordered">
+            <thead class="thead-light">
+            <tr>
+                <th>STT</th>
+                <th>Tên nhân khẩu</th>
+                <th>Giới tính</th>
+                <th>Ngày sinh</th>
+                <th>Tuổi</th>
+                <th>Số điện thoại</th>
+                <th>Hộ gia đình</th>
+                <th>Quan hệ với chủ hộ</th>
+                <th>Địa chỉ</th>
+                <th>Vacxin 1</th>
+                <th>Vacxin 2</th>
+            </tr>
+            </thead>
+            <tbody>
+<!--            Danh sach mac dinh-->
+            <tr th:if="${nhanKhauList}" th:each="nhankhaulist:${nhanKhauList}">
+                <td style="text-align: center" th:text="${nhankhaulistStat.index + 1}"></td>
+                <td th:text="${nhankhaulist.hoTen}"></td>
+                <td th:text="${nhankhaulist.gioiTinh.gioiTinhTen}"></td>
+                <td th:text="${#temporals.format(nhankhaulist.ngaySinh, 'dd-MM-yyyy')}"></td>
+                <td th:text="${nhankhaulist.nhanKhauTuoi()}"></td>
+                <td th:text="${nhankhaulist.soDienThoai}"></td>
+                <td th:text="${nhankhaulist.hoGiaDinh.hoGiaDinhTen}"></td>
+                <td th:text="${nhankhaulist.quanHe.quanHeTen}"></td>
+                <td th:text="${nhankhaulist.hoGiaDinh.soNha} + ' ' + ${nhankhaulist.hoGiaDinh.duong.tenDuong}"></td>
+                <td th:text="${#temporals.format(nhankhaulist.vacxin1, 'dd-MM-yyyy')}"></td>
+                <td th:text="${#temporals.format(nhankhaulist.vacxin2, 'dd-MM-yyyy')}"></td>
+            </tr>
+<!--        Danh sach tim kiem-->
+            <tr th:if="${nhanKhauListSearch}" th:each="nhankhaulistsearch:${nhanKhauListSearch}">
+                <td style="text-align: center" th:text="${nhankhaulistsearchStat.index + 1}"></td>
+                <td th:text="${nhankhaulistsearch.hoTen}"></td>
+                <td th:text="${nhankhaulistsearch.gioiTinh.gioiTinhTen}"></td>
+                <td th:text="${#temporals.format(nhankhaulistsearch.ngaySinh, 'dd-MM-yyyy')}"></td>
+<!--                <td th:text="${nhankhaulistsearch.nhanKhauTuoi()}"></td>-->
+                <td th:text="${nhankhaulistsearch.age}"></td>
+                <td th:text="${nhankhaulistsearch.soDienThoai}"></td>
+                <td th:text="${nhankhaulistsearch.hoGiaDinh.hoGiaDinhTen}"></td>
+                <td th:text="${nhankhaulistsearch.quanHe.quanHeTen}"></td>
+                <td th:text="${nhankhaulistsearch.hoGiaDinh.soNha} + ' ' + ${nhankhaulistsearch.hoGiaDinh.duong.tenDuong}"></td>
+                <td th:text="${#temporals.format(nhankhaulistsearch.vacxin1, 'dd-MM-yyyy')}"></td>
+                <td th:text="${#temporals.format(nhankhaulistsearch.vacxin2, 'dd-MM-yyyy')}"></td>
+            </tr>
+
+            </tbody>
+        </table>
+    </div>
+</div>
+
+</body>
+</html>

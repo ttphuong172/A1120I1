@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<html lang="en">
+<head>
+    <div th:replace="fragments::head"></div>
+    <title>Lich su dieu chuyen</title>
+</head>
+<body>
+<div class="container">
+    <div th:replace="fragments::header"></div>
+    <h3>Lịch sử điều chuyển</h3>
+    <div class="table-responsive">
+        <table class="table table-bordered">
+            <thead>
+            <th>ID</th>
+            <th>Tên thiết bị</th>
+            <th>Mã thiết bị</th>
+            <th>Serial Number</th>
+            <th>Nơi đi</th>
+            <th>Nơi đến</th>
+            <th>Ngày</th>
+            </thead>
+            <tbody>
+            <tr th:each="listdieuchuyen:${listDieuChuyen}">
+                <td th:text="${listdieuchuyen.idDieuChuyen}"></td>
+                <td th:text="${listdieuchuyen.thietBi.tenThietBi}"></td>
+                <td th:text="${listdieuchuyen.thietBi.maThietBi}"></td>
+                <td th:text="${listdieuchuyen.thietBi.serialThietBi}"></td>
+                <td th:text="${listdieuchuyen.tenCoSoCu} +'-'+ ${listdieuchuyen.tenKhuCu} +'-'+${listdieuchuyen.tenViTriCu}"></td>
+                <td th:text="${listdieuchuyen.tenCoSoMoi} +'-'+ ${listdieuchuyen.tenKhuMoi} +'-'+${listdieuchuyen.tenViTriMoi}"></td>
+                <td th:text="${#temporals.format(listdieuchuyen.ngayDieuChuyen, 'dd-MM-yyyy')}"></td>
+            </tr>
+
+            </tbody>
+        </table>
+    </div>
+</div>
+</body>
+</html>

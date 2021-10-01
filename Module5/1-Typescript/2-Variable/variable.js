@@ -1,0 +1,13 @@
+var isFound = true;
+var x = 5;
+var s1 = "My name";
+var s2 = 'is Phuong';
+console.log(isFound);
+console.log(x);
+console.log(s1 + s2);
+var y = 1;
+console.log(y);
+y = false;
+console.log(y);
+console.log(s1 + " " + s2 + x + y);
+console.log("Hi " + s1 + " " + s2);

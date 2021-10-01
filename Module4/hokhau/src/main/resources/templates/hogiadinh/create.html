@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<html lang="en">
+<head>
+    <div th:replace="fragments::head"></div>
+    <title>Thêm mới hộ gia đình</title>
+</head>
+<body>
+    <div class="container">
+        <div th:replace="fragments::header"></div>
+        <h3>Thêm mới hộ gia đình</h3>
+        <form th:action="@{/hogiadinh/save}" method="post" th:object="${hoGiaDinh}">
+            <div class="row">
+                <div class="col-md-6">
+                    <label for="">Tên chủ hộ</label>
+                    <input type="text" class="form-control" th:field="*{hoGiaDinhTen}">
+                </div>
+                <div class="col-md-6">
+                    <label for="">Số nhà</label>
+                    <input type="number" class="form-control" th:field="*{soNha}">
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-6">
+                    <label for="">Tên đường</label>
+                    <select  class="form-control" name="" id="" th:field="*{duong}">
+                        <option value="">Chọn tên đường</option>
+                        <option th:each="duonglist:${duongList}" th:text="${duonglist.tenDuong}" th:value="${duonglist.duongId}"></option>
+                    </select>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-3"></div>
+                <div class="col-md-3"></div>
+                <div class="col-md-3">
+                    <p></p>
+                    <button style="width: 100%" class="btn btn-primary btn-big" type="submit">Save</button>
+                </div>
+                <div class="col-md-3">
+<!--                    <p></p>-->
+<!--                    <a th:href="${url}">-->
+<!--                        <button style="width: 100%" class="btn btn-success" type="button">Cancel</button>-->
+<!--                    </a>-->
+                </div>
+            </div>
+        </form>
+        <div th:replace="fragments::footer"></div>
+    </div>
+</body>
+</html>

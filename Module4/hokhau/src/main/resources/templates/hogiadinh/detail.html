@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<html lang="en">
+<head>
+    <div th:replace="fragments::head"></div>
+    <title>Chi tiết hộ gia dinh</title>
+</head>
+<body>
+<div class="container">
+    <div th:replace="fragments::header"></div>
+    <div class="row">
+        <div class="col-md-3">
+            <a th:href="@{/hogiadinh}">
+                <button style="width: 100%" class="btn btn-success btn-big">Danh sách hộ gia đình</button>
+            </a>
+        </div>
+        <div class="col-md-3"></div>
+        <div class="col-md-3"></div>
+        <div class="col-md-3"></div>
+    </div>
+    <div>
+        <div style="display: flex;justify-content: space-between;margin: 10px 0">
+            <h4>Thông tin: </h4>
+            <div style="display: flex;justify-content: flex-end">
+                <div style="margin-right: 20px">
+                    <a th:href="@{/hogiadinh/edit/{hoGiaDinhId} (hoGiaDinhId=${hoGiaDinh.hoGiaDinhId})}">
+                        <button style="width: 100%;" class="btn btn-info">Edit</button>
+                    </a>
+                </div>
+                <div>
+                        <button class="btn btn-danger" data-toggle="modal" data-target="#exampleModal"
+                                th:onclick="prepareDelete([[${hoGiaDinh.hoGiaDinhId}]],[[${hoGiaDinh.hoGiaDinhTen}]])">Xóa</button>
+                </div>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-md-12">
+                <div style="margin-left: 50px">
+                    <div style="display: flex; font-size: 20px; font-weight: bold">
+                        <p>Tên chủ hộ: &nbsp; </p>
+                        <p th:text="${hoGiaDinh.hoGiaDinhTen}"></p>
+                    </div>
+                    <div style="display: flex">
+                        <p>Số thành viên: &nbsp; </p>
+                        <p th:text="${hoGiaDinh.nhanKhauList.size()}"></p>
+                    </div>
+                    <div style="display: flex">
+                        <p>Địa chỉ: &nbsp;</p>
+                        <p th:text="${hoGiaDinh.soNha} +' '+${hoGiaDinh.duong.tenDuong} "></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-md-3">
+                <!--                <a th:href="@{/hogiadinh/edit/{hoGiaDinhId} (hoGiaDinhId=${hoGiaDinh.hoGiaDinhId})}">-->
+                <!--                    <button style="width: 100%" class="btn btn-info btn-big">Edit</button>-->
+                <!--                </a>-->
+            </div>
+            <div class="col-md-3"></div>
+            <div class="col-md-3"></div>
+            <div class="col-md-3"></div>
+        </div>
+    </div>
+    <div>
+        <h4>Thành viên:</h4>
+        <div class="row">
+            <div class="col-md-3">
+                <a th:href="@{/nhankhau/create/{hoGiaDinhId} (hoGiaDinhId=${hoGiaDinh.hoGiaDinhId}) }">
+                    <button style="width: 100%" class="btn btn-success btn-big">Thêm mới nhân khẩu</button>
+                </a>
+            </div>
+            <div class="col-md-3"></div>
+            <div class="col-md-3"></div>
+            <div class="col-md-3"></div>
+        </div>
+        <p style="color: red; font-style: italic" th:if="${msg}" th:text="${msg}"></p>
+        <div class="row">
+            <div class="col-md-2" th:each="nhankhaulistbyid : ${nhanKhauListById}" style="text-align: center">
+                <div style="margin: 20px;position: relative">
+                    <a th:href="@{/nhankhau/detail/{nhanKhauId} (nhanKhauId=${nhankhaulistbyid.nhanKhauId})}"
+                       style="text-decoration: none">
+
+                        <div th:if="${nhankhaulistbyid.vacxin2} and ${nhankhaulistbyid.vacxin1}"
+                             style="background-color: green">
+                            <img th:if="${nhankhaulistbyid.gioiTinh.gioiTinhId==2}"
+                                 src="/images/female.jpg"
+                                 style="width: 100px;height: 100px; border-radius: 50px; border: solid 1px black"
+                                 alt="">
+                            <img th:if="${nhankhaulistbyid.gioiTinh.gioiTinhId==1}"
+                                 src="/images/male.jpg"
+                                 style="width: 100px;height: 100px; border-radius: 50px; border: solid 1px black"
+                                 alt="">
+                        </div>
+                        <div th:if="!${nhankhaulistbyid.vacxin2} and ${nhankhaulistbyid.vacxin1}"
+                             style="background-color: yellow">
+                            <img th:if="${nhankhaulistbyid.gioiTinh.gioiTinhId==2}"
+                                 src="/images/female.jpg"
+                                 style="width: 100px;height: 100px; border-radius: 50px; border: solid 1px black"
+                                 alt="">
+                            <img th:if="${nhankhaulistbyid.gioiTinh.gioiTinhId==1}"
+                                 src="/images/male.jpg"
+                                 style="width: 100px;height: 100px; border-radius: 50px; border: solid 1px black"
+                                 alt="">
+                        </div>
+                        <div th:if="!${nhankhaulistbyid.vacxin2} and !${nhankhaulistbyid.vacxin1}"
+                             style="background-color: white">
+                            <img th:if="${nhankhaulistbyid.gioiTinh.gioiTinhId==2}"
+                                 src="/images/female.jpg"
+                                 style="width: 100px;height: 100px; border-radius: 50px; border: solid 1px black"
+                                 alt="">
+                            <img th:if="${nhankhaulistbyid.gioiTinh.gioiTinhId==1}"
+                                 src="/images/male.jpg"
+                                 style="width: 100px;height: 100px; border-radius: 50px; border: solid 1px black"
+                                 alt="">
+                        </div>
+
+
+                        <h5 style="text-transform: uppercase; padding-top: 10px"
+                            th:text="${nhankhaulistbyid.hoTen}"></h5>
+                        <p th:text="${nhankhaulistbyid.soDienThoai}"></p>
+                        <span>Tuổi: </span>
+<!--                        <span th:text="${nhankhaulistbyid.nhanKhauTuoi()}"></span>-->
+                        <span th:text="${nhankhaulistbyid.age}"></span>
+
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div th:replace="fragments::footer"></div>
+</div>
+
+<!-- Modal -->
+<div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <p hidden id="hoGiaDinhId"></p>
+                <span>Bạn có muốn xóa hộ:</span>
+                <span id="hoGiaDinhTen"></span>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                <button type="button" class="btn btn-danger" data-dismiss="modal"
+                        onclick="deleteHoGiaDinh($('#hoGiaDinhId').html())">Xóa</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+    function prepareDelete(hoGiaDinhId,hoGiaDinhTen) {
+        // console.log(hoGiaDinhId)
+        // console.log(hoGiaDinhTen)
+        $('#hoGiaDinhId').html(hoGiaDinhId);
+        $('#hoGiaDinhTen').html(hoGiaDinhTen);
+    }
+    function deleteHoGiaDinh(hoGiaDinhId){
+        console.log(hoGiaDinhId);
+        $.ajax({
+            type:'get',
+            url:'/hogiadinh/delete/'+ hoGiaDinhId,
+            success: function () {
+                window.location.href="/hogiadinh"
+            }
+        })
+    }
+</script>
+
+</body>
+</html>

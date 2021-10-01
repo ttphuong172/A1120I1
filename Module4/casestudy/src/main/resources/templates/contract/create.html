@@ -16,12 +16,12 @@
             <div class="col-md-6">
                 <p>Ngày bat dau</p>
                 <input class="form-control" type="text" id="startdate" th:field="*{contractStartDate}">
-                <p th:if = "${#fields.hasErrors('contractStartDate')}" th:errors = "*{contractStartDate}"></p>
+                <p th:if="${#fields.hasErrors('contractStartDate')}" th:errors="*{contractStartDate}"></p>
             </div>
             <div class="col-md-6">
                 <p>Ngay ket thuc</p>
-                <input class="form-control" type="text" id="enddate" th:field="*{contractEndDate}" >
-                <p th:if = "${#fields.hasErrors('contractEndDate')}" th:errors = "*{contractEndDate}"></p>
+                <input class="form-control" type="text" id="enddate" th:field="*{contractEndDate}">
+                <p th:if="${#fields.hasErrors('contractEndDate')}" th:errors="*{contractEndDate}"></p>
             </div>
 
         </div>
@@ -34,7 +34,7 @@
                             th:value="${employeelist.employeeId}" th:text="${employeelist.employeeName}">
                     </option>
                 </select>
-                <p th:if = "${#fields.hasErrors('employee')}" th:errors = "*{employee}"></p>
+                <p th:if="${#fields.hasErrors('employee')}" th:errors="*{employee}"></p>
             </div>
             <div class="col-md-6">
                 <p>Dich vu</p>
@@ -44,7 +44,7 @@
                             th:value="${servicelist.serviceId}" th:text="${servicelist.serviceName}">
                     </option>
                 </select>
-                <p th:if = "${#fields.hasErrors('service')}" th:errors = "*{service}"></p>
+                <p th:if="${#fields.hasErrors('service')}" th:errors="*{service}"></p>
             </div>
         </div>
         <div class="row">
@@ -56,7 +56,7 @@
                             th:value="${customerlist.customerId}" th:text="${customerlist.customerName}">
                     </option>
                 </select>
-                <p th:if = "${#fields.hasErrors('customer')}" th:errors = "*{customer}"></p>
+                <p th:if="${#fields.hasErrors('customer')}" th:errors="*{customer}"></p>
             </div>
             <div class="col-md-6">
                 <p>Tra truoc</p>
@@ -90,16 +90,16 @@
     </form>
 </div>
 <script>
-$(document).ready(function () {
-$('#startdate').datepicker({
-dateFormat: 'dd/mm/yy'			// Date Format "dd/mm/yy"
-});
-});
-$(document).ready(function () {
-$('#enddate').datepicker({
-dateFormat: 'dd/mm/yy'			// Date Format "dd/mm/yy"
-});
-});
+    $(document).ready(function () {
+        $('#startdate').datepicker({
+            dateFormat: 'dd/mm/yy'			// Date Format "dd/mm/yy"
+        });
+    });
+    $(document).ready(function () {
+        $('#enddate').datepicker({
+            dateFormat: 'dd/mm/yy'			// Date Format "dd/mm/yy"
+        });
+    });
 </script>
 </body>
 </html>

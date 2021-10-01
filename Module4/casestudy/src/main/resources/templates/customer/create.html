@@ -17,7 +17,7 @@
             </div>
             <div class="col-md-6">
                 <p>Ngay sinh</p>
-                <input class="form-control" type="text" id="customerbirthday" th:field="*{customerBirthday}">
+                <input class="form-control" type="text" placeholder="dd/mm/yyyy" id="customerbirthday" th:field="*{customerBirthday}">
             </div>
         </div>
         <div class="row">
@@ -83,7 +83,10 @@
 <script>
     $(document).ready(function () {
         $('#customerbirthday').datepicker({
-            dateFormat: 'dd/mm/yy'			// Date Format "dd/mm/yy"
+            dateFormat: 'dd/mm/yy',		// Date Format "dd/mm/yy"
+            changeMonth: true,
+            changeYear: true,
+            yearRange: "-100:+0"
         });
     });
 </script>

@@ -8,9 +8,11 @@
 <body>
 <h3>Tao moi sinh vien</h3>
 <form action="/save" method="post" th:object="${student}">
-<label for="">Ten</label>
-<input type="text" th:field="*{name}">
-<button type="submit">Add</button>
+    <label for="">Ten</label>
+    <input type="text" th:field="*{name}">
+    <label for="">Ngay sinh</label>
+    <input type="datetime-local" th:field="*{birthday}">
+    <button type="submit">Add</button>
 </form>
 </body>
 </html>

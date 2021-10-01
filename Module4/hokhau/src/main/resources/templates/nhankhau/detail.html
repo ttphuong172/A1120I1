@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<html lang="en">
+<head>
+    <div th:replace="fragments::head"></div>
+    <title>Chi tiết nhân khẩu</title>
+
+</head>
+<body>
+    <div class="container">
+        <div th:replace="fragments::header"></div>
+        <div class="row">
+            <div class="col-md-3">
+<!--                <a th:href="${urlDetail}">-->
+                <a th:href="@{/hogiadinh/detail/{hoGiaDinhId} (hoGiaDinhId=${nhanKhau.hoGiaDinh.hoGiaDinhId}) }">
+                    <button style="width: 100%" class="btn btn-success btn-big">Chi tiết hộ</button>
+                </a>
+            </div>
+            <div class="col-md-3">
+                <!--                <a th:href="@{/hogiadinh}">-->
+                <!--                    <button style="width: 100%" class="btn btn-success btn-big">Danh sách hộ gia đình</button>-->
+                <!--                </a>-->
+            </div>
+            <div class="col-md-3"></div>
+            <div class="col-md-3"></div>
+        </div>
+        <div style="display: flex;justify-content: space-between;margin: 10px 0">
+            <h3>Chi tiết nhân khẩu</h3>
+            <button class="btn btn-danger" data-toggle="modal" data-target="#exampleModal" th:onclick="prepareDelete([[${nhanKhau.nhanKhauId}]],[[${nhanKhau.hoGiaDinh.hoGiaDinhId}]])">Xóa</button>
+        </div>
+        <div class="row">
+            <div class="col-md-4">
+            </div>
+            <div class="col-md-8">
+                    <table style="font-size: 16px" class="table">
+                        <tr style="font-weight: bold;font-size: 18px">
+                            <td style="width: 40%">Họ và tên</td>
+                            <td style="width: 60%" th:text="${nhanKhau.hoTen}"></td>
+                        </tr>
+                        <tr>
+                            <td>Ngày sinh</td>
+                            <td th:text="${#temporals.format(nhanKhau.ngaySinh, 'dd-MM-yyyy')}"></td>
+                        </tr>
+                        <tr>
+                            <td>Giới tính</td>
+                            <td th:text="${nhanKhau.gioiTinh.gioiTinhTen}"></td>
+                        </tr>
+                        <tr>
+                            <td>Số điện thoại</td>
+                            <td th:text="${nhanKhau.soDienThoai}"></td>
+                        </tr>
+                        <tr>
+                            <td>Thuộc hộ</td>
+                            <td th:text="${nhanKhau.hoGiaDinh.hoGiaDinhTen}"></td>
+                        </tr>
+                        <tr>
+                            <td>Quan hệ với chủ hộ</td>
+                            <td th:text="${nhanKhau.quanHe.quanHeTen}"></td>
+                        </tr>
+                        <tr>
+                            <td>Ngày tiêm vacxin mũi 1</td>
+                            <td th:text="${#temporals.format(nhanKhau.vacxin1, 'dd-MM-yyyy')}"></td>
+                        </tr>
+                        <tr>
+                            <td>Ngày tiêm vacxin mũi 2</td>
+                            <td th:text="${#temporals.format(nhanKhau.vacxin2, 'dd-MM-yyyy')}"></td>
+                        </tr>
+
+                    </table>
+            </div>
+        </div>
+        <div class="row">
+           <div class="col-md-3"></div>
+            <div class="col-md-3">
+<!--                               <a th:href="@{http://localhost:8080/hogiadinh/detail/{hoGiaDinhId} (hoGiaDinhId=${nhanKhau.hoGiaDinh.hoGiaDinhId})}">-->
+<!--                                   <p></p>-->
+<!--                                   <button type="button" style="width: 100%" class="btn btn-success">Cancel</button>-->
+<!--                               </a>-->
+            </div>
+
+           <div class="col-md-3">
+<!--               <a href="">-->
+<!--                   <p></p>-->
+<!--                   <button style="width: 100%" class="btn btn-danger">Delete</button>-->
+<!--               </a>-->
+           </div>
+            <div class="col-md-3">
+                <a th:href="@{/nhankhau/edit/{nhanKhauId} (nhanKhauId=${nhanKhau.nhanKhauId})}">
+                    <p></p>
+                    <button style="width: 100%" class="btn btn-info btn-big">Edit</button>
+                </a>
+            </div>
+        </div>
+        <div th:replace="fragments::footer"></div>
+    </div>
+
+    <!-- Modal Delete -->
+    <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Xóa nhân khẩu</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <p hidden id="nhanKhauId"></p>
+                    <p hidden id="hoGiaDinhId"></p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Hủy</button>
+                    <button type="button" class="btn btn-danger"  data-dismiss="modal" onclick="deleteNhanKhau($('#nhanKhauId').html(),$('#hoGiaDinhId').html())">Xóa</button>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</body>
+<script>
+    function prepareDelete(nhanKhauId,hoGiaDinhId){
+        $('#nhanKhauId').html(nhanKhauId)
+        $('#hoGiaDinhId').html(hoGiaDinhId)
+    }
+    function deleteNhanKhau(nhanKhauId,hoGiaDinhId){
+        console.log(nhanKhauId);
+        $.ajax({
+            type:'get',
+            url:'/nhankhau/delete/'+ nhanKhauId,
+            success: function () {
+                window.location.href="/hogiadinh/detail/"+hoGiaDinhId
+            }
+        })
+    }
+</script>
+</html>

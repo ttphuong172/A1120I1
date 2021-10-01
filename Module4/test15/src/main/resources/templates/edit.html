@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <link href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.8.1/themes/base/jquery-ui.css" rel="stylesheet"/>
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.8.1/jquery-ui.min.js"></script>
+    <title>Điều chỉnh thông tin</title>
+    <style>
+        input{
+            margin-bottom: 10px;
+        }
+        select{
+            margin-bottom: 10px;
+        }
+    </style>
+</head>
+<body>
+<div class="container">
+    <h3>ĐIỀU CHỈNH THÔNG TIN</h3>
+<!--    Chạy local-->
+    <form action="/save" method="post" th:object="${nguoiDan}">
+<!--        Đưa lên AWS-->
+<!--    <form action="/vacxin-0.0.1-SNAPSHOT/save" method="post" th:object="${nguoiDan}">-->
+        <div class="row">
+            <div class="col-md-4">
+                <label for="">Họ và tên</label>
+            </div>
+            <div class="col-md-8">
+                <input type="text" hidden th:field="*{idNguoiDan}">
+                <input class="form-control" type="text" id="enddate" th:field="*{ten}">
+                <p style="color: red" th:if="${#fields.hasErrors('ten')}" th:errors="*{ten}"></p>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-4">
+                <label for="">Ngày sinh</label>
+            </div>
+            <div class="col-md-8">
+                <input class="form-control" type="text" id="birthday" th:field="*{ngaySinh}">
+                <p style="color: red" th:if="${#fields.hasErrors('ngaySinh')}" th:errors="*{ngaySinh}"></p>
+
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-4">
+                <label for="">Số nhà</label>
+            </div>
+            <div class="col-md-8">
+                <input class="form-control" type="number" th:field="*{soNha}">
+                <p style="color: red" th:if="${#fields.hasErrors('soNha')}" th:errors="*{soNha}"></p>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-4">
+                <label for="">Tên đường</label>
+            </div>
+            <div class="col-md-8">
+                <select class="form-control" name="" id="" th:field="*{duong}">
+                    <option value="">Chọn tên đường</option>
+                    <option value="" th:each="duonglist:${duongList}"
+                            th:value="${duonglist.idDuong}" th:text="${duonglist.tenDuong}">
+                    </option>
+                </select>
+                <p style="color: red" th:if="${#fields.hasErrors('duong')}" th:errors="*{duong}"></p>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-4">
+                <label for="">Số CMND</label>
+            </div>
+            <div class="col-md-8">
+                <input class="form-control" type="number" placeholder="Định dạng 9 số hoặc 12 số" th:field="*{soCMND}">
+                <p style="color: red"  th:if="${#fields.hasErrors('soCMND')}" th:errors="*{soCMND}"></p>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-4">
+                <label for="">Số BHYT</label>
+            </div>
+            <div class="col-md-8">
+                <input class="form-control" type="text" th:field="*{soBHYT}">
+                <p style="color: red"  th:if="${#fields.hasErrors('soBHYT')}" th:errors="*{soBHYT}"></p>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-4">
+                <label for="">Số Điện Thoại</label>
+            </div>
+            <div class="col-md-8">
+                <input class="form-control" type="number" th:field="*{soDienThoai}">
+                <p style="color: red" th:if="${#fields.hasErrors('soDienThoai')}" th:errors="*{soDienThoai}"></p>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-4">
+                <label for="">Nghề nghiệp</label>
+            </div>
+            <div class="col-md-8">
+                <input class="form-control" type="text" th:field="*{ngheNghiep}">
+                <p style="color: red" th:if="${#fields.hasErrors('ngheNghiep')}" th:errors="*{ngheNghiep}"></p>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-2"></div>
+            <div class="col-md-2"></div>
+            <div class="col-md-2"></div>
+            <div class="col-md-2"></div>
+            <div class="col-md-2">
+                <p></p>
+                <button style="width: 100%;" class="btn btn-primary" type="submit"><i class="fa fa-floppy-o"></i> &nbsp;
+                    Update
+                </button>
+            </div>
+            <div class="col-md-2">
+                <p></p>
+                <a th:href="${url}">
+                    <button style="width: 100%;" class="btn btn-success" type="button">Cancel</button>
+                </a>
+            </div>
+        </div>
+    </form>
+</div>
+<script>
+    $(document).ready(function () {
+        $('#birthday').datepicker({
+            dateFormat: 'dd/mm/yy',			// Date Format "dd/mm/yy"
+            changeMonth: true,
+            monthNames: ["1","2","3","4","5","6","7","8","9","10","11","12"],
+            changeYear: true,
+            yearRange: "-100:+0"
+        });
+    });
+</script>
+</body>
+</html>

@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<html lang="en">
+<head>
+    <div th:replace="fragments::head"></div>
+    <title>Chinh sua vi tri</title>
+</head>
+<body>
+    <div class="container">
+        <div th:replace="fragments::header"></div>
+        <h3>Chỉnh sửa vị trí</h3>
+        <form action="/vitri/save" method="post" th:object="${viTri}">
+            <div class="row">
+                <div class="col-md-6">
+                    <label for="">Tên vị trí</label>
+                    <input hidden="" class="form-control" type="text" th:field="*{idViTri}">
+                    <input class="form-control" type="text" th:field="*{tenViTri}">
+                </div>
+                <div class="col-md-6">
+                    <label for="">Mã vị trí</label>
+                    <input class="form-control" type="text" th:field="*{maViTri}">
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-6">
+                    <label for="">Khu</label>
+                    <select class="form-control" name="" id="" th:field="*{khu}">
+                        <option th:each="khulist:${khuList}"
+                                th:value="${khulist.idKhu}"
+                                th:text="${khulist.tenKhu}"
+                        ></option>
+                    </select>
+                </div>
+
+            </div>
+            <div class="row">
+                <div class="col-md-2"></div>
+                <div class="col-md-2"></div>
+                <div class="col-md-2"></div>
+                <div class="col-md-2"></div>
+                <div class="col-md-2">
+                    <p></p>
+                    <button style="width: 100%" class="btn btn-primary" type="submit">
+                        Save
+                    </button>
+                </div>
+                <div class="col-md-2">
+                    <p></p>
+                    <a th:href="@{/vitri/detail/{idViTri} (idViTri=${idViTri}) }">
+                        <button style="width: 100%" class="btn btn-success" type="button">
+                            Cancel
+                        </button>
+                    </a>
+                </div>
+            </div>
+        </form>
+    </div>
+</body>
+</html>

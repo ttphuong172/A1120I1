@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+
+    <title>Them moi giao dich</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <link href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.8.1/themes/base/jquery-ui.css" rel="stylesheet"/>
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.8.1/jquery-ui.min.js"></script>
+</head>
+<body>
+<div class="container">
+    <h3>Them moi giao dich</h3>
+    <form action="/save" method="post" th:object="${giaoDich}">
+        <label for="">Ten khach hang</label>
+        <select class="form-control" name="" id="" th:field="*{khachHang}">
+            <option value="">Chon khach hang</option>
+            <option value="" th:each="khachhanglist:${khachHangList}"
+                    th:value="${khachhanglist.maKhachHang}" th:text="${khachhanglist.tenKhachHang}">
+            </option>
+        </select>
+
+        <label for="">Loai dich vu</label>
+        <select class="form-control" name="" id="" th:field="*{loaiDichVu}">
+            <option value="">Chon loai dich vu</option>
+            <option value="" th:each="loaidichvulist:${loaiDichVuList}"
+                    th:value="${loaidichvulist.idLoaiDichVu}" th:text="${loaidichvulist.tenLoaiDichVu}">
+            </option>
+        </select>
+
+        <label for="">Ngay giao dich</label>
+        <input class="form-control" type="text" id="ngaygiaodich" th:field="*{ngayGiaoDich}">
+        <p style="color:red" th:if = "${#fields.hasErrors('ngayGiaoDich')}" th:errors = "*{ngayGiaoDich}"></p>
+
+        <label for="">Don gia</label>
+        <input class="form-control" type="number"  th:field="*{donGia}">
+        <p style="color:red" th:if = "${#fields.hasErrors('donGia')}" th:errors = "*{donGia}"></p>
+
+        <label for="">Dien tich</label>
+        <input class="form-control" type="number"  th:field="*{dienTich}">
+        <p style="color:red" th:if = "${#fields.hasErrors('dienTich')}" th:errors = "*{dienTich}"></p>
+        <div class="row">
+            <div class="col-md-2"></div>
+            <div class="col-md-2"></div>
+            <div class="col-md-2"></div>
+            <div class="col-md-2"></div>
+            <div class="col-md-2">
+                <p></p>
+                <button style="width: 100%;" class="btn btn-primary" type="submit"><i class="fa fa-floppy-o"></i> &nbsp;
+                    Save
+                </button>
+            </div>
+            <div class="col-md-2">
+                <p></p>
+                <a href="/">
+                    <button style="width: 100%;" class="btn btn-success" type="button">Cancel</button>
+                </a>
+            </div>
+        </div>
+    </form>
+</div>
+<script>
+    $(document).ready(function () {
+        $('#ngaygiaodich').datepicker({
+            dateFormat: 'dd/mm/yy'			// Date Format "dd/mm/yy"
+        });
+    });
+</script>
+</body>
+</html>

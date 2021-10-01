@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<html lang="en">
+<head>
+    <div th:replace="fragments::head"></div>
+    <title>Them moi thiet bi</title>
+    <script>
+        $(document).ready(function () {
+            jQuery('#ngaytrangbi').datepicker({
+                dateFormat: 'dd/mm/yy',
+                changeMonth: true,
+                changeYear: true,
+            })
+            $('#ui-datepicker-div').css('display', 'none');
+        });
+    </script>
+</head>
+<body>
+<div class="container">
+    <div th:replace="fragments::header"></div>
+    <h3>Thêm mới thiết bị</h3>
+    <form action="/thietbi/save" method="post" th:object="${thietBi}">
+        <div class="row">
+            <div class="col-md-6">
+                <label for="">Tên thiết bị</label>
+                <input class="form-control" type="text" th:field="*{tenThietBi}">
+            </div>
+            <div class="col-md-6">
+                <label for="">Mã thiết bị</label>
+                <input class="form-control" type="text" th:field="*{maThietBi}">
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-6">
+                <label for="">Serial number</label>
+                <input class="form-control" type="text" th:field="*{serialThietBi}">
+            </div>
+
+            <div class="col-md-6">
+                <label for="">Hãng sản xuất</label>
+                <select class="form-control" name="" id="" th:field="*{hangSanXuat}">
+                    <option value="">Chọn hãng sản xuất</option>
+                    <option th:each="hangsanxuatlist:${hangSanXuatList}"
+                            th:value="${hangsanxuatlist.idHangSanXuat}"
+                            th:text="${hangsanxuatlist.tenHangSanXuat}"
+                            value="">
+                    </option>
+                </select>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-6">
+                <label for="">Vị trí</label>
+                <input class="form-control" hidden type="text" th:value="${idViTri}" id="viTri" name="viTri"/>
+                <input class="form-control" type="text" th:value="${tenViTri}" readonly>
+            </div>
+            <div class="col-md-6">
+                <label for="">Ngày trang bị</label>
+                <input type="text" class="form-control" name="" id="ngaytrangbi" th:field="*{ngayTrangBi}">
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-md-2"></div>
+            <div class="col-md-2"></div>
+            <div class="col-md-2"></div>
+            <div class="col-md-2"></div>
+            <div class="col-md-2">
+                <p></p>
+                <button style="width: 100%" class="btn btn-primary" type="submit">
+                    <i class="fa fa-floppy-o"></i> Save
+                </button>
+            </div>
+            <div class="col-md-2">
+                <p></p>
+                <a th:href="@{/vitri/detail/{idViTri} (idViTri=${idViTri}) }">
+                    <button style="width: 100%" class="btn btn-success" type="button">
+                        <i class="fa fa-reply"></i> Cancel
+                    </button>
+                </a>
+            </div>
+        </div>
+    </form>
+</div>
+
+</body>
+</html>

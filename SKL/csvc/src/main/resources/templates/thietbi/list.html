@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<html lang="en">
+<head>
+    <div th:replace="fragments::head"></div>
+    <title>Danh sách thiết bị</title>
+</head>
+<body>
+<div class="container">
+    <div th:replace="fragments::header"></div>
+    <table>
+        <thead>
+            <th>ID</th>
+            <th>Tên thiết bị</th>
+            <th>Serial Number</th>
+            <th>Hãng sản xuất</th>
+            <th>Khu</th>
+            <th>Vị trí</th>
+            <th>Ngày trang bị</th>
+
+        </thead>
+        <tbody>
+            <tr th:each="thietbilist:${thietBiList}">
+                <td th:text="${thietbilist.idThietBi}"></td>
+                <td th:text="${thietbilist.tenThietBi}"></td>
+                <td th:text="${thietbilist.serialThietBi}"></td>
+                <td th:text="${thietbilist.hangSanXuat.tenHangSanXuat}"></td>
+                <td th:text="${thietbilist.viTri.khu.tenKhu}"></td>
+                <td th:text="${thietbilist.viTri.tenViTri}"></td>
+                <td th:text="${thietbilist.ngayTrangBi}"></td>
+
+            </tr>
+        </tbody>
+    </table>
+</div>
+
+</body>
+</html>
