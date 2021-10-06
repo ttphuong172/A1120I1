@@ -31,4 +31,5 @@ public class KhuServiceImpl implements KhuService {
     public List<Khu> findAllByCoSo_IdCoso(int idCoSo) {
         return khuRepository.findAllByCoSo_IdCoso(idCoSo);
     }
+
 }

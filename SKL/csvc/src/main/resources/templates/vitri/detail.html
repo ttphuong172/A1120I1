@@ -229,6 +229,8 @@
         })
         $('#idcosomodal').change(function () {
             var idcoso=$( "#idcosomodal option:selected" ).val();
+            $('#idvitrimodal').html("");
+
             $.ajax({
                 type: 'post',
                 url: '/khu/getkhu/',
