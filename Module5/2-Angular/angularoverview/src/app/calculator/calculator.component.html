@@ -1,0 +1,16 @@
+<p>calculator works!</p>
+
+<input type="number" value="{{numberFirst}}" (change)="onChangeNumberFirst($event)">
+<select (change)="onChangeOperator($event)">
+  <option value="+">+</option>
+  <option value="-">-</option>
+  <option value="*">*</option>
+  <option value="/">/</option>
+</select>
+<input type="number" [(ngModel)]="numberSecond">
+<br>
+Result: {{result}}
+<br>
+<button (click)="calculator()">Thực thi</button>
+
+
