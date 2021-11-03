@@ -1,16 +1,17 @@
 <div class="container">
-  <h2>Today's article</h2>
+  <app-navbar>
+  </app-navbar>
+
   <hr>
   <div>
     <div class="row">
       <div class="col-5">
         <label for="">Title</label>
-        <textarea [(ngModel)]="titleTemp" cols="70"></textarea>
+        <textarea class="form-control" [(ngModel)]="titleTemp"></textarea>
       </div>
       <div class="col-5">
         <label for="">URL</label>
-
-        <textarea [(ngModel)]="urlTemp" cols="70"></textarea>
+        <textarea class="form-control" [(ngModel)]="urlTemp"></textarea>
       </div>
       <div class="col-2">
         <button class="btn-primary" (click)="addArticle()" type="submit">Add</button>
@@ -25,6 +26,11 @@
     </app-likes>
   </div>
 
-  @CodeGym, 2019
+  <hr>
+  <div style="text-align: center;">
+    <app-footer>
+    </app-footer>
+  </div>
+
 </div>
 
