@@ -1,3 +1,6 @@
 <p>color works!</p>
-<input type="color" value="{{color}}" [(ngModel)]="color">
-<div style="height: 100px;width: 100px" [style.background]="color" ></div>
+<div style="display: flex; justify-content: space-between">
+  <input type="color" value="{{color}}" [(ngModel)]="color">
+  <div style="height: 100px;width: 100px" [style.background]="color" ></div>
+</div>
+

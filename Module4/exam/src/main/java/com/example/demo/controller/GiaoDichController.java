@@ -20,10 +20,10 @@ import java.util.Optional;
 public class GiaoDichController {
     @Autowired
     private GiaoDichService giaoDichService;
-//    @Autowired
-//    private KhachHangService khachHangService;
-
-    KhachHangServiceImpl khachHangService=new KhachHangServiceImpl();
+    @Autowired
+    private KhachHangService khachHangService;
+//
+//    KhachHangServiceImpl khachHangService=new KhachHangServiceImpl();
 
 
     @Autowired

@@ -1,18 +1,15 @@
-var array=[]
-for (i=0;i<10;i++){
-    array[i]=Math.round(Math.random()*100)
-}
-document.getElementById('array').innerHTML=array;
+var array=[10,22,9,33,21,50,41,60,80]
+
 
 
 function minArray(arr) {
-    min=arr[0];
+    count=1;
     for (i=0;i<arr.length;i++){
-        if (arr[i]<min){
-            min=arr[i];
+        if (arr[i]<arr[i+1]){
+            count++;
         }
     }
-    return min
+    return count
 }
 var result=minArray(array);
 document.getElementById('result').innerHTML=result;

@@ -1,0 +1,20 @@
+We have following steps:
+
+1.First you need to install typescript
+
+npm install -g typescript
+2.Create one file helloworld.ts
+
+function hello(person){
+   return "Hello, " + person;
+}
+let user = "Aamod Tiwari";
+const result = hello(user);
+console.log("Result", result)
+3.Open command prompt and type the following command
+
+tsc helloworld.ts
+4.Again run the command
+
+node helloworld.js
+5.Result will display on console
