@@ -1,3 +1,4 @@
 <label for="item-input">Add an item:</label>
-<input type="text" id="item-input" #newItem>
+<input type="number" id="item-input" #newItem>
+<!--Tao mot event de lay gia tri cua the input-->
 <button (click)="addNewItem(newItem.value)">Add to parent's list</button>

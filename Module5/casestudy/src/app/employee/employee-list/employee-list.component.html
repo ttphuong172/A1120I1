@@ -1,0 +1,36 @@
+<div class="container">
+  <h3>Danh sách nhân viên</h3>
+  <table class="table table-bordered table-striped">
+    <thead>
+    <tr>
+      <th>ID</th>
+      <th>Tên NV</th>
+      <th>Ngày sinh</th>
+      <th>Số CMND</th>
+      <th>Lương</th>
+      <th>Số điện thoại</th>
+      <th>Email</th>
+      <th>Địa chỉ</th>
+      <th>Vị trí</th>
+      <th>Học vấn</th>
+      <th>Bộ phận</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr *ngFor="let employee of employees">
+      <td>{{employee.employeeId}}</td>
+      <td>{{employee.employeeName}}</td>
+      <td>{{employee.employeeBirthday | date:'dd/MM/yyyy'}}</td>
+      <td>{{employee.employeeIdCard}}</td>
+      <td>{{employee.employeeSalary | currency}}</td>
+      <td>{{employee.employeePhone}}</td>
+      <td>{{employee.employeeEmail}}</td>
+      <td>{{employee.employeeAddress}}</td>
+      <td>{{employee.employeePosition}}</td>
+      <td>{{employee.employeeEducationDegree}}</td>
+      <td>{{employee.employeeDivison}}</td>
+    </tr>
+    </tbody>
+  </table>
+</div>
+

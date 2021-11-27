@@ -1,0 +1,83 @@
+<div class="container register">
+  <div>
+    <img src="../../assets/images/logo.png" height="200"/>
+    <h3>User Registration</h3>
+
+  </div>
+  <div>
+    <form [formGroup]="registerForm" (ngSubmit)="onSubmit()">
+      <div class="form-group">
+        <label for="email">Email</label>
+        <input class="form-control" id="email" type="text" formControlName="email">
+      </div>
+      <div *ngIf="email.invalid && (email.dirty||email.touched)" class="alert alert-danger">
+        <div *ngIf="email.errors?.['required']">
+          Email is required.
+        </div>
+        <div *ngIf="email.errors?.['email']">
+          Not a email
+        </div>
+
+      </div>
+      <div formGroupName="pwGroup">
+        <div class="form-group">
+          <label for="password">Password</label>
+          <input class="form-control" id="password" type="text" formControlName="password">
+        </div>
+        <div class="form-group">
+          <label for="comfirmpassword">Cormfirm Password</label>
+          <input class="form-control" id="comfirmpassword" type="text" formControlName="comfirmPassword">
+        </div>
+      </div>
+
+      <div class="form-group">
+        <label>Country</label>
+        <select class="form-control" name="" id="country">
+          <option value="" >Chon</option>
+          <option value="My" >My</option>
+          <option value="Viet Nam" >VietNam</option>
+        </select>
+      </div>
+      <div class="form-group">
+        <label for="age">Age</label>
+        <input class="form-control" id="age" type="text" formControlName="age" formGroupName="age">
+      </div>
+      <div *ngIf="age.invalid && (age.dirty) || (age.touched)" class="alert alert-danger">
+        <div *ngIf="age.errors?.['required']">
+          Age is required.
+        </div>
+        <div *ngIf="age.errors?.['min']">
+          Age greater 18
+        </div>
+      </div>
+      <div>
+        <label>Gender:</label>
+        <div class="gender">
+          <input type="radio" id="male" name="gender" value="male" formControlName="gender">
+          <label for="male" >Male</label><br>
+          <input type="radio" id="female" name="gender" value="female" formControlName="gender">
+          <label for="female">Female</label>
+        </div>
+      </div>
+      <div class="form-group">
+        <label for="phone">Phone</label>
+        <input class="form-control" id="phone" type="text" formControlName="phone">
+      </div>
+      <div *ngIf="phone.invalid && (phone.dirty || phone.touched)" class="alert alert-danger">
+        <div *ngIf="phone.errors?.['required']">
+          Phone is required.
+        </div>
+        <div *ngIf="phone.errors?.['pattern']">
+         Phone is not Viet Nam
+        </div>
+
+      </div>
+      <br>
+      <button class="btn btn-info" type="submit">Submit</button>
+    </form>
+
+    {{this.registerForm.value}}
+
+  </div>
+
+</div>

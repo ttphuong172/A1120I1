@@ -1,0 +1,40 @@
+<div class="container">
+  <h3>Danh sach sinh vien</h3>
+  <table class="table table-bordered table-striped table-hover">
+    <thead>
+    <tr>
+      <td>Order</td>
+      <th>Name</th>
+      <th>Age</th>
+      <th>Mark</th>
+      <td>Result</td>
+      <td>Phone</td>
+      <td>Address</td>
+      <th>Action</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr *ngFor="let student of students; index as i" >
+      <td>{{i + 1}}</td>
+      <td>{{student.name}}</td>
+      <td>{{student.age}}</td>
+      <td>{{student.mark}}</td>
+      <td *ngIf="student.mark>=5" class="text-success">PASS</td>
+      <td *ngIf="student.mark<5" class="text-danger">FAIL</td>
+      <td>
+        <span *ngFor="let phone of student.phones">
+          {{phone}}
+        </span>
+      </td>
+      <td>{{student.address.street}}-{{student.address.city}}-{{student.address.state}}-{{student.address.zip}}</td>
+      <td>
+        <button class="btn btn-primary" (click)="selectStudent(student)">Detail</button>
+        <span>&nbsp;</span>
+        <button class="btn btn-danger">Delete</button>
+      </td>
+    </tr>
+    </tbody>
+  </table>
+</div>
+
+<app-student-detail [student]="selectedStudent"></app-student-detail>
