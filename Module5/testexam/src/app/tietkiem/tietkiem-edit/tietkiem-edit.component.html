@@ -1,0 +1,55 @@
+<div class="container">
+  <form [formGroup]="tietKiemForm" (ngSubmit)="submitUpdateTietKiem()">
+    <div>
+      <label for="id" class="customlabel">ID</label>
+      <input type="text" id="id" formControlName="id" readonly="readonly">
+    </div>
+
+    <div formGroupName="khachHang">
+      <div>
+        <label class="customlabel">ID khach hang</label>
+        <input type="text" formControlName="id" readonly="readonly">
+      </div>
+      <div>
+        <label class="customlabel">Ten khach hang</label>
+        <input type="text" formControlName="ten">
+        <span *ngIf="ten.errors?.['pattern']">Ten ko duoc co chu</span>
+      </div>
+    </div>
+    <div>
+      <label class="customlabel">Ngày mở sổ</label>
+      <input type="date" formControlName="ngayMoSo">
+    </div>
+    <div>
+      <label class="customlabel">Ngày bắt đầu</label>
+      <input type="date" formControlName="ngayBatDau">
+    </div>
+    <div>
+      <label class="customlabel">Kỳ hạn</label>
+      <select name="" id="" formControlName="kyHan">
+        <option  *ngFor="let kyhan of kyhans" [ngValue]="kyhan" [selected]="tietKiemForm.value.kyHan.id==kyhan.id">{{kyhan.thoigian}}</option>
+      </select>
+    </div>
+    <div>
+      <label class="customlabel">Số tiền</label>
+      <input type="text" formControlName="soTien">
+    </div>
+    <div>
+      <label class="customlabel">Lai suat</label>
+      <input type="text" formControlName="laiSuat">
+    </div>
+    <div>
+      <label class="customlabel">Uu dai</label>
+      <input type="text" formControlName="uuDai">
+    </div>
+
+    {{tietKiemForm.value | json}}
+
+    <div>
+      <button>Sua</button>
+      <span>&nbsp;&nbsp;</span>
+      <button>Tro ve danh sach</button>
+    </div>
+  </form>
+
+</div>

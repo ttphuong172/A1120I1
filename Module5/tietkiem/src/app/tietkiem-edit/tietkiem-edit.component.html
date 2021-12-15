@@ -1,0 +1,61 @@
+<form class="example-form" [formGroup]="formTietKiem" (ngSubmit)="onSubmitUpdate()" >
+  <mat-grid-list cols="2" rowHeight="100px">
+    <mat-grid-tile>
+
+      <mat-form-field class="example-full-width">
+        <mat-label>Ten khach hang</mat-label>
+        <mat-select formControlName="khachHang" [compareWith]="compareWith">
+          <mat-option *ngFor="let khachhang of khachhangs" [value]="khachhang" >
+            {{khachhang.ten}}
+          </mat-option>
+        </mat-select>
+      </mat-form-field>
+    </mat-grid-tile>
+    <mat-grid-tile>
+      <mat-form-field class="example-full-width">
+        <mat-label>Ngay mo so</mat-label>
+        <input matInput [matDatepicker]="picker1" formControlName="ngayMoSo">
+        <mat-datepicker-toggle matSuffix [for]="picker1"></mat-datepicker-toggle>
+        <mat-datepicker #picker1></mat-datepicker>
+      </mat-form-field>
+      <mat-form-field class="example-full-width">
+        <mat-label>Ngay bat dau</mat-label>
+        <input matInput [matDatepicker]="picker2" formControlName="ngayBatDau" >
+        <mat-datepicker-toggle matSuffix [for]="picker2"></mat-datepicker-toggle>
+        <mat-datepicker #picker2></mat-datepicker>
+      </mat-form-field>
+    </mat-grid-tile>
+    <mat-grid-tile>
+      <mat-form-field class="example-full-width">
+        <mat-label>Ky han</mat-label>
+        <mat-select formControlName="kyHan" [compareWith]="compareWith">
+          <mat-option *ngFor="let kyhan of kyhans" [value]="kyhan" >
+            {{kyhan.ten}}
+          </mat-option>
+        </mat-select>
+      </mat-form-field>
+    </mat-grid-tile>
+    <mat-grid-tile>
+      <mat-form-field class="example-full-width">
+        <mat-label>So tien</mat-label>
+        <input  mvndrMatCurrencyFormat
+                [allowNegative]="false"
+                [currencyCode]="'VND'" matInput value="Sushi" formControlName="soTien">
+        <mat-error *ngIf="this.formTietKiem.get('soTien')?.hasError('min')">Số tiền nhỏ hơn 10 triệu</mat-error>
+      </mat-form-field>
+
+      <mat-form-field class="example-full-width">
+        <mat-label>Lai suat</mat-label>
+        <input matInput formControlName="laiSuat">
+      </mat-form-field>
+
+    </mat-grid-tile>
+  </mat-grid-list>
+
+  <mat-dialog-actions align="end">
+    <button mat-raised-button color="primary" type="submit">Cập nhật</button>
+  </mat-dialog-actions>
+
+</form>
+
+{{formTietKiem.value | json}}

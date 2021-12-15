@@ -1,0 +1,5 @@
+npm i bootstrap@4.6.1
+
+add this line into style.css
+
+@import "~bootstrap/dist/css/bootstrap.css";

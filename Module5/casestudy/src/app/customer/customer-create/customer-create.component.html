@@ -1,6 +1,131 @@
 <div class="container">
-<h3>Them moi khach hang</h3>
-<form>
+  <h3>Them moi khach hang</h3>
+  <form [formGroup]="customerForm" (ngSubmit)="submitAddCustomer()">
 
-</form>
+    <div class="row createform">
+      <div class="col-1"></div>
+      <div class="col-2">
+        <label for="name">Name</label>
+      </div>
+      <div class="col-6">
+        <input class="form-control" type="text" id="name" formControlName="name">
+      </div>
+      <div class="col-3">
+        <div *ngIf="name.invalid && (name.dirty || name.touched)" class="alert alert-danger">
+          <div *ngIf="name.errors?.['required']">
+              Name is not empty
+          </div>
+          <div *ngIf="name.errors?.['pattern']">
+            Name not contain number
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="row createform">
+      <div class="col-1"></div>
+      <div class="col-2">
+        <label for="birthday">Birthday</label>
+      </div>
+      <div class="col-6">
+        <input class="form-control" type="date" id="birthday" formControlName="birthday">
+      </div>
+      <div class="col-3">
+        <div *ngIf="birthday.invalid && (birthday.dirty || birthday.touched)" class="alert alert-danger">
+          <div *ngIf="birthday.errors?.['required']">
+            Birthday is not empty
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="row createform">
+      <div class="col-1"></div>
+      <div class="col-2">
+        <label for="idcard">ID Card</label>
+      </div>
+      <div class="col-6">
+        <input class="form-control" type="number" id="idcard" formControlName="idCard">
+      </div>
+      <div class="col-3">
+        <div *ngIf="idCard.invalid && (idCard.dirty || idCard.touched)" class="alert alert-danger">
+          <div *ngIf="idCard.errors?.['required']">
+            ID Card is not empty
+          </div>
+          <div *ngIf="idCard.errors?.['pattern']">
+            ID Card must 9 or 12 number
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="row createform">
+      <div class="col-1"></div>
+      <div class="col-2">
+        <label for="phone">Phone</label>
+      </div>
+      <div class="col-6">
+        <input class="form-control" type="text" id="phone" formControlName="phone">
+      </div>
+      <div class="col-3">
+        <div *ngIf="phone.invalid && (phone.dirty || phone.touched)" class="alert alert-danger">
+          <div *ngIf="phone.errors?.['required']">
+            Phone is not empty
+          </div>
+          <div *ngIf="phone.errors?.['pattern']">
+            Phone must 10 number
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="row createform">
+      <div class="col-1"></div>
+      <div class="col-2">
+        <label for="email">Email</label>
+      </div>
+      <div class="col-6">
+        <input class="form-control" type="text" id="email" formControlName="email">
+      </div>
+      <div class="col-3">
+        <div *ngIf="email.invalid && (email.dirty || email.touched)" class="alert alert-danger">
+          <div *ngIf="email.errors?.['required']">
+            Email is not empty
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="row createform">
+      <div class="col-1"></div>
+      <div class="col-2">
+        <label for="address">Address</label>
+      </div>
+      <div class="col-6">
+        <input class="form-control" type="text" id="address" formControlName="address">
+      </div>
+      <div class="col-3">
+        <div *ngIf="address.invalid && (address.dirty || address.touched)" class="alert alert-danger">
+          <div *ngIf="address.errors?.['required']">
+            Address is not empty
+          </div>
+        </div>
+      </div>
+    </div>
+
+    {{customerForm.value | json}}
+    <p>Valid{{customerForm.valid}}</p>
+
+    <div class="row createform">
+      <div class="col-1"></div>
+      <div class="col-2"></div>
+      <div class="col-6" style="display: flex; justify-content: flex-end">
+        <div>
+          <button [routerLink]="['/customer']" class="btn btn-success btn-action">Hủy bỏ</button>
+          <button [disabled]="!customerForm.valid" type="submit" class="btn btn-primary btn-action">Thêm mới</button>
+        </div>
+      </div>
+      <div class="col-3"></div>
+    </div>
+  </form>
 </div>

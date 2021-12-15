@@ -1,0 +1,51 @@
+<!--<h3>Tạo mới Entity</h3>-->
+<!--  <form [formGroup]="entityForm" (ngSubmit)="saveEntity()">-->
+<!--    <div class="row">-->
+<!--    <div class="col-6">-->
+<!--      <div>-->
+<!--        <label>Name</label>-->
+<!--        <input id="name" type="text" formControlName="name">-->
+<!--      </div>-->
+<!--      <div *ngIf="entityForm.get('name')?.hasError('required')">-->
+<!--         Vui lòng nhập tên-->
+<!--      </div>-->
+<!--    </div>-->
+<!--      <div>-->
+<!--        <label>Lãi suất</label>-->
+<!--        <select formControlName="laiSuat">-->
+<!--          <option *ngFor=" let laiSuat of laiSuats" [value]="laiSuat">{{laiSuat}}</option>-->
+<!--        </select>-->
+<!--      </div>-->
+<!--      <div>-->
+<!--        <label>Ngày</label>-->
+<!--        <input type="date" formControlName="ngay" [min]="nowDate">-->
+<!--      </div>-->
+<!--    <div class="col-6">-->
+<!--      <div>-->
+<!--        <label>Child Entity</label>-->
+<!--        <select formControlName="childEntity">-->
+<!--          <option *ngFor="let childEntity of childEntities" [ngValue]="childEntity">{{childEntity.name}}</option>-->
+<!--        </select>-->
+<!--      </div>-->
+<!--      <div *ngIf="entityForm.get('childEntity')?.hasError('required')">-->
+<!--        Vui lòng chọn childEntity-->
+<!--      </div>-->
+<!--    </div>-->
+<!--</div>-->
+<!--    <div class="row">-->
+<!--      <div class="col-8">-->
+<!--      </div>-->
+<!--      <div class="col-2">-->
+<!--        <button class="btn btn-success" (click)="closeDialogCreate()">Hủy bỏ</button>-->
+<!--      </div>-->
+<!--      <div class="col-2">-->
+<!--        <button class="btn btn-primary">Thêm mới</button>-->
+<!--      </div>-->
+
+<!--    </div>-->
+
+<!--  </form>-->
+
+<!--{{entityForm.value | json}}-->
+
+

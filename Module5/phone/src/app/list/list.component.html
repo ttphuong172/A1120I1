@@ -1,0 +1,11 @@
+<a routerLink="/create">Them moi</a>
+<table>
+  <tr *ngFor="let phone of phones">
+    <td>{{phone.id}}</td>
+    <td>{{phone.producer}}</td>
+    <td>{{phone.model}}</td>
+    <td>{{phone.price}}</td>
+    <td><button (click)="deletePhone(phone)">Xoa</button></td>
+    <td><button   [routerLink]="['/detail', phone.id]">Chi tiet</button></td>
+  </tr>
+</table>

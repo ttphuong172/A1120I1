@@ -1,0 +1,34 @@
+{
+  "cinemas": [
+    {
+      "id": 1,
+      "idcinema": "CI-0001",
+      "film": {
+        "id": 1,
+        "name": "Cua Lai Vo Bau"
+      },
+      "date": "2021-12-01",
+      "tickets": 40
+    },
+    {
+      "idcinema": "1111111",
+      "film": {
+        "id": 1,
+        "name": "Cua Lai Vo Bau"
+      },
+      "date": "2021-12-09",
+      "tickets": "12",
+      "id": 2
+    }
+  ],
+  "films": [
+    {
+      "id": 1,
+      "name": "Cua Lai Vo Bau"
+    },
+    {
+      "id": 2,
+      "name": "Canh Dong Bat Tan"
+    }
+  ]
+}

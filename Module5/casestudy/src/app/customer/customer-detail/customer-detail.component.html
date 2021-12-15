@@ -1,0 +1,35 @@
+<div class="container">
+  <h3>Chi tiết khách hàng</h3>
+  <a [routerLink]="['/customer']">Danh sách khách hàng</a>
+  <table class="table table-bordered">
+    <tr>
+      <td>ID</td>
+      <td>{{customer.id}}</td>
+    </tr>
+    <tr>
+      <td>Name</td>
+      <td>{{customer.name}}</td>
+    </tr>
+    <tr>
+      <td>Birthday</td>
+      <td>{{customer.birthday|date:'dd/MM/yyyy'}}</td>
+    </tr>
+    <tr>
+      <td>ID Card</td>
+      <td>{{customer.idCard}}</td>
+    </tr>
+    <tr>
+      <td>Phone</td>
+      <td>{{customer.phone}}</td>
+    </tr>
+    <tr>
+      <td>Email</td>
+      <td>{{customer.email}}</td>
+    </tr>
+    <tr>
+      <td>Address</td>
+      <td>{{customer.address}}</td>
+    </tr>
+  </table>
+
+</div>

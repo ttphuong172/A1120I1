@@ -1,0 +1,29 @@
+<div class="container">
+  <h3>Danh sách suất chiếu</h3>
+  <a routerLink="/create">Thêm mới suất chiếu</a>
+  <table class="table table-bordered">
+    <thead>
+    <tr>
+      <th>ID</th>
+      <th>Film Name</th>
+      <th>Date</th>
+      <th>Quantity Ticket</th>
+      <th>Action</th>
+
+    </tr>
+    </thead>
+    <tbody>
+    <tr *ngFor="let cinema of cinemas">
+      <td>{{cinema.idcinema}}</td>
+      <td>{{cinema.film.name}}</td>
+      <td>{{cinema.date | date:'dd/MM/yyyy'}}</td>
+      <td>{{cinema.tickets}}</td>
+      <td>
+        <button class="btn btn-danger" (click)="openDialogDelete(cinema)">Delete</button>
+      </td>
+    </tr>
+    </tbody>
+  </table>
+</div>
+
+

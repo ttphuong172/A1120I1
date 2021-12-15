@@ -1,9 +1,9 @@
 export interface ICustomer{
-  customerId:number;
-  customerName:string;
-  customerBirthday:string;
-  customerIdCard:string;
-  customerPhone:string;
-  customerEmail:string;
-  customerAddress:string;
+  id:number;
+  name:string;
+  birthday:string;
+  idCard:string;
+  phone:string;
+  email:string;
+  address:string;
 }

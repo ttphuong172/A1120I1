@@ -1,0 +1,32 @@
+{
+  "lohangs": [
+    {
+      "id": 1,
+      "idLoHang": "LH-0001",
+      "sanPham": {
+        "ten": "OMO",
+        "xuatXu": "Viet Nam",
+        "giaTien": 5000,
+        "donVi": "bao"
+      },
+      "soLuong": 5,
+      "ngayNhapHang": "2021-12-01",
+      "ngaysanXuat": "2021-12-01",
+      "ngayHetHan": "2021-12-01"
+    }
+  ],
+  "sanphams": [
+    {
+      "ten": "OMO",
+      "xuatXu": "Viet Nam",
+      "giaTien": 5000,
+      "donVi": "bao"
+    },
+    {
+      "ten": "OTO",
+      "xuatXu": "Viet Nam",
+      "giaTien": 5000,
+      "donVi": "bao"
+    }
+  ]
+}

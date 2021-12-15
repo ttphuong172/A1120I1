@@ -1,0 +1,29 @@
+<div class="container">
+  <form [formGroup]="formCinema" (ngSubmit)="saveCinema()">
+    <div>
+      <label>ID</label>
+      <input type="text" formControlName="idcinema">
+    </div>
+    <div *ngIf="formCinema.get('idcinema')?.hasError('pattern')">
+          ABC
+    </div>
+    <div>
+      <label>Film</label>
+      <select formControlName="film">
+        <option *ngFor="let film of films" [ngValue]="film">{{film.name}}</option>
+      </select>
+    </div>
+    <div>
+      <label>Date</label>
+      <input type="date" formControlName="date">
+    </div>
+    <div>
+      <label>Quantity Ticket</label>
+      <input type="text" formControlName="tickets">
+    </div>
+
+      <button>SAVE</button>
+
+  </form>
+  {{formCinema.value | json}}
+</div>

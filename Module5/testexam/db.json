@@ -1,0 +1,74 @@
+{
+  "tietkiems": [
+    {
+      "id": 1,
+      "khachHang": {
+        "id": 1,
+        "ten": "Tran Thanh Phuong"
+      },
+      "ngayMoSo": "2012-01-31",
+      "ngayBatDau": "2013-01-26",
+      "kyHan": {
+        "id": 1,
+        "thoigian": "3 tháng"
+      },
+      "soTien": 20000000,
+      "laiSuat": 5.4,
+      "uuDai": "bcs"
+    },
+    {
+      "id": 2,
+      "khachHang": {
+        "id": 2,
+        "ten": "Vo Trung Trong"
+      },
+      "ngayMoSo": "2012-01-05",
+      "ngayBatDau": "2013-01-01",
+      "kyHan": {
+        "id": 3,
+        "thoigian": "1 năm"
+      },
+      "soTien": "20000000",
+      "laiSuat": 5.4,
+      "uuDai": "bsc"
+    },
+    {
+      "id": 3,
+      "khachHang": {
+        "id": 2,
+        "ten": "Vo Trung Trong"
+      },
+      "ngayMoSo": "2012-01-05",
+      "ngayBatDau": "2013-01-01",
+      "kyHan": {
+        "id": 4,
+        "thoigian": "5 năm"
+      },
+      "soTien": "400000000",
+      "laiSuat": 5.4,
+      "uuDai": "bsc"
+    }
+  ],
+  "kyhans": [
+    {
+      "id": 1,
+      "thoigian": "3 tháng"
+    },
+    {
+      "id": 2,
+      "thoigian": "6 tháng"
+    },
+    {
+      "id": 3,
+      "thoigian": "1 năm"
+    },
+    {
+      "id": 4,
+      "thoigian": "5 năm"
+    },
+    {
+      "id": 5,
+      "thoigian": "không kỳ hạn"
+    }
+  ]
+}

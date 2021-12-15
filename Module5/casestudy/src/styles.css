@@ -1,1 +1,12 @@
 /* You can add global styles to this file, and also import other style files */
+.createform{
+  margin: 10px 0;
+}
+.alert{
+  padding: 3px 0;
+}
+
+.btn-action{
+  width: 100px;
+  margin: 0 20px;
+}

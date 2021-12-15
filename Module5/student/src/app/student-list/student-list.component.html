@@ -1,9 +1,16 @@
 <div class="container">
+  <nav>
+    <a [routerLink]="['/create']">
+    Thêm mới sinh viên
+  </a>
+  </nav>
   <h3>Danh sach sinh vien</h3>
+
   <table class="table table-bordered table-striped table-hover">
     <thead>
     <tr>
-      <td>Order</td>
+      <th>Order</th>
+      <th>Id</th>
       <th>Name</th>
       <th>Age</th>
       <th>Mark</th>
@@ -16,6 +23,7 @@
     <tbody>
     <tr *ngFor="let student of students; index as i" >
       <td>{{i + 1}}</td>
+      <td>{{student.id}}</td>
       <td>{{student.name}}</td>
       <td>{{student.age}}</td>
       <td>{{student.mark}}</td>
@@ -28,7 +36,11 @@
       </td>
       <td>{{student.address.street}}-{{student.address.city}}-{{student.address.state}}-{{student.address.zip}}</td>
       <td>
-        <button class="btn btn-primary" (click)="selectStudent(student)">Detail</button>
+
+<!--                (click)="selectStudent(student)"-->
+        <a [routerLink]="['/students', student.id]">
+          <button class="btn btn-primary">Detail</button>
+        </a>
         <span>&nbsp;</span>
         <button class="btn btn-danger">Delete</button>
       </td>
@@ -37,4 +49,4 @@
   </table>
 </div>
 
-<app-student-detail [student]="selectedStudent"></app-student-detail>
+

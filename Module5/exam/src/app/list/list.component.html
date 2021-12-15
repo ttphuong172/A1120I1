@@ -1,0 +1,34 @@
+<div class="container">
+  <h3>Danh sách Entity</h3>
+  <a (click)="openDialogCreate()">Thêm mới Entity</a>
+  <table class="table table-bordered table-striped">
+    <thead>
+    <tr>
+      <th>ID</th>
+      <th>Name</th>
+      <th>Lãi suất</th>
+      <th>Ngày</th>
+      <th>ID Child</th>
+      <th>Name Child</th>
+      <th>Actions</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr *ngFor="let entity of entities | paginate: { itemsPerPage: 10, currentPage: p }">
+      <td>{{entity.id}}</td>
+      <td>{{entity.name}}</td>
+      <td>{{entity.laiSuat}}</td>
+      <td>{{entity.ngay}}</td>
+      <td>{{entity.childEntity.id}}</td>
+      <td>{{entity.childEntity.name}}</td>
+      <td style="display: flex; justify-content: space-between">
+        <button class="btn btn-info" (click)="openDialogDetail(entity)">Detail</button>
+        <button class="btn btn-warning" (click)="openDialogEdit(entity)">Edit</button>
+        <button class="btn btn-danger" (click)="openDialogDelete(entity)">Delete</button>
+      </td>
+    </tr>
+    </tbody>
+  </table>
+  <pagination-controls (pageChange)="p = $event"></pagination-controls>
+</div>
+

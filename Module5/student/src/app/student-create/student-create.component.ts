@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import {FormArray, FormControl, FormGroup, Validators} from "@angular/forms";
-import {studentDAO} from "../studentdao/studentDao";
+import {StudentService} from "../service/student.service";
+import {Router} from "@angular/router";
 
 @Component({
   selector: 'app-student-create',
@@ -13,10 +14,11 @@ export class StudentCreateComponent implements OnInit {
   studentForm!:FormGroup;
 
 
-  constructor() { }
+  constructor(private studentService:StudentService,private router: Router) { }
 
   ngOnInit(): void {
     this.studentForm = new FormGroup({
+      id:new FormControl(''),
       name:new FormControl('',[Validators.required]),
       age:new FormControl('',[Validators.required,Validators.min(18)]),
       mark: new FormControl('',[Validators.required,Validators.min(0),Validators.max(10)]),
@@ -32,9 +34,12 @@ export class StudentCreateComponent implements OnInit {
     })
   }
 
-
   onSubmit(){
-    studentDAO.push(this.studentForm.value);
+    if (this.studentForm.valid){
+      this.studentService.addStudent(this.studentForm.value);
+      this.router.navigateByUrl('/list');
+    }
+
   }
   get name (){
     return this.studentForm.get('name')!;
@@ -52,7 +57,6 @@ export class StudentCreateComponent implements OnInit {
 
   addPhone (){
    this.phones.push(new FormControl(''))
-
   }
 
 }

@@ -1,5 +1,6 @@
 <div class="container">
-<h3>Danh sách khách hàng</h3>
+  <h3>Danh sách khách hàng</h3>
+  <a [routerLink]="['/customer/create']">Thêm mới khách hàng</a>
   <table class="table table-bordered table-striped">
     <thead>
     <tr>
@@ -10,17 +11,47 @@
       <th>Điện thoại</th>
       <th>Email</th>
       <th>Địa chỉ</th>
+      <th>Action</th>
     </tr>
     </thead>
     <tbody>
     <tr *ngFor="let customer of customers">
-      <td>{{customer.customerId}}</td>
-      <td>{{customer.customerName}}</td>
-      <td>{{customer.customerBirthday | date:'dd/MM/yyyy'}}</td>
-      <td>{{customer.customerIdCard}}</td>
-      <td>{{customer.customerPhone}}</td>
-      <td>{{customer.customerEmail}}</td>
-      <td>{{customer.customerAddress}}</td>
+      <td>{{customer.id}}</td>
+      <td>{{customer.name}}</td>
+      <td>{{customer.birthday | date:'dd/MM/yyyy'}}</td>
+      <td>{{customer.idCard}}</td>
+      <td>{{customer.phone}}</td>
+      <td>{{customer.email}}</td>
+      <td>{{customer.address}}</td>
+      <td>
+        <button class="btn btn-info" [routerLink]="['/customer/detail',customer.id]">Detail</button>
+        <span>&nbsp;</span>
+        <button class="btn btn-warning" [routerLink]="['/customer/edit',customer.id]">Edit</button>
+        <span>&nbsp;</span>
+        <button class="btn btn-danger" data-toggle="modal" data-target="#exampleModal" (click)="prepareDelete(customer.id,customer.name)">Delete</button>
+      </td>
+
+      <!-- Modal -->
+      <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+           aria-hidden="true">
+        <div class="modal-dialog" role="document">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+              </button>
+            </div>
+            <div class="modal-body">
+              <p>Bạn có muon xoa {{nameDelete}}</p>
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-primary" data-dismiss="modal">Close</button>
+              <button type="button" class="btn btn-danger" (click)="onDelete(idDelete)">Delete</button>
+            </div>
+          </div>
+        </div>
+      </div>
     </tr>
     </tbody>
   </table>

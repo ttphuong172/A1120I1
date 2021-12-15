@@ -14,26 +14,19 @@ import java.time.LocalDateTime;
 import java.util.List;
 
 @RestController
-@RequestMapping("phone")
+@CrossOrigin(origins = "http://localhost:4200")
+@RequestMapping("phones")
 public class PhoneController {
     @Autowired
     private PhoneService phoneService;
-    @GetMapping("list")
+    @GetMapping("")
     public ResponseEntity<List<Phone>> loadPhone(){
         List<Phone> phoneList=phoneService.selectAllPhone();
        return new ResponseEntity<>(phoneList,HttpStatus.OK);
     }
 
-    @GetMapping("create")
-    public ModelAndView createPhone(){
-        ModelAndView modelAndView=new ModelAndView();
-        LocalDateTime localDateTime = LocalDateTime.now();
-        modelAndView.addObject("time",localDateTime);
-        modelAndView.setViewName("create.html");
-        return modelAndView;
-    }
 
-    @PostMapping("save")
+    @PostMapping("")
     public ResponseEntity<?> savePhone(@Valid @RequestBody Phone phone, BindingResult bindingResult){
         if(bindingResult.hasErrors()){
 
@@ -41,16 +34,20 @@ public class PhoneController {
         phoneService.savePhone(phone);
         return new ResponseEntity<>(HttpStatus.OK);
     }
-    @DeleteMapping("delete/{id}")
+
+    @DeleteMapping("/{id}")
     public ResponseEntity<?>deletePhone(@PathVariable int id){
         phoneService.deletePhone(id);
         return new ResponseEntity<>(HttpStatus.OK);
     }
-    @GetMapping("edit/{id}")
+
+    @GetMapping("/{id}")
     public ResponseEntity<Phone> editPhone(@PathVariable int id){
         Phone phone=phoneService.findPhoneById(id);
         return new ResponseEntity<>(phone,HttpStatus.OK);
     }
+
+
     @PutMapping("update/{id}")
     public ResponseEntity<?> updateCustomer(@PathVariable int id, @RequestBody Phone phone){
         Phone currentPhone=phoneService.findPhoneById(id);

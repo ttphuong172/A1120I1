@@ -1,5 +1,9 @@
 import {Component, EventEmitter, Input, OnInit, Output} from '@angular/core';
 import {IStudent} from "../model/student";
+import { ActivatedRoute } from '@angular/router';
+import {StudentService} from "../service/student.service";
+import { Location } from '@angular/common';
+
 
 @Component({
   selector: 'app-student-detail',
@@ -8,12 +12,27 @@ import {IStudent} from "../model/student";
 })
 export class StudentDetailComponent implements OnInit {
 
-  constructor() { }
+  student?:IStudent;
 
-  ngOnInit(): void {
+
+  constructor(
+    private studentSerivice:StudentService,
+    private route: ActivatedRoute,
+    private location: Location
+  ) {
+
   }
 
-  @Input() student?:IStudent
+  ngOnInit(): void {
+    const routeParams = this.route.snapshot.paramMap;
+    const idFromRoute = Number(routeParams.get('id'));
+    this.student = this.studentSerivice.findStudentById(idFromRoute) ;
+    console.log(this.student)
+  }
+  goBack(): void {
+    this.location.back();
+  }
+
 
 
 }

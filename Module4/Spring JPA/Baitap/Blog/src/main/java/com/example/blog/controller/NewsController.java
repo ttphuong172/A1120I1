@@ -79,7 +79,4 @@ public class NewsController {
         model.addAttribute("news",newsService.findNewsById(id));
         return "detail";
     }
-
-
-
 }

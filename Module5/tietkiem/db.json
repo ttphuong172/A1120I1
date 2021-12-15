@@ -1,0 +1,40 @@
+{
+  "tietkiems": [
+    {
+      "id": 2,
+      "khachHang": {
+        "id": 1,
+        "ten": "Tran Thanh Phuong"
+      },
+      "ngayMoSo": "2021-01-01",
+      "ngayBatDau": "2021-01-01",
+      "kyHan": {
+        "id": 2,
+        "ten": "6 thang"
+      },
+      "soTien": "100000000",
+      "laiSuat": "50",
+      "uuDai": "ao mua"
+    }
+  ],
+  "khachhangs": [
+    {
+      "id": 1,
+      "ten": "Tran Thanh Phuong"
+    },
+    {
+      "id": 2,
+      "ten": "Vo Trung Trong"
+    }
+  ],
+  "kyhans": [
+    {
+      "id": 1,
+      "ten": "3 thang"
+    },
+    {
+      "id": 2,
+      "ten": "6 thang"
+    }
+  ]
+}
