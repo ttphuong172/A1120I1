@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Title</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+  <script>
+    function myFunction() {
+      var x = document.getElementById('menu');
+      if (x.style.display === "block") {
+        x.style.display = "none";
+      } else {
+        x.style.display = "block";
+      }
+    }
+  </script>
+</head>
+<body>
+<div class="container">
+  <div style="height: 70px;display: flex;justify-content: space-between">
+    <div>
+      <h3>LOGO</h3>
+      <button (click)="logout()">Dang xuat</button>
+    </div>
+    <div>
+      <div class="dropdown">
+        <p class="dropdown-toggle" type="button" data-toggle="dropdown">Nguyễn Văn A
+          <span class="caret"></span></p>
+        <ul class="dropdown-menu">
+          <li><a href="#">Đổi mật khẩu</a></li>
+          <li><a href="#">Đăng xuất</a></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+  <div class="row" style="margin: 0;padding: 0">
+    <div class="col-md-3" style="display: flex; justify-content: end">
+
+      <div class="menu" id="menu">
+        <ul>
+          <li class="layer1-menu"><a href="">Danh sách phòng họp</a></li>
+          <li class="layer1-menu">
+            <a href="">Đăng ký phòng họp</a>
+            <div class="layer2-menu">
+              <ul>
+                <li><a href="">Tìm kiếm phòng họp</a></li>
+                <li><a href="">Đăng ký phòng họp</a></li>
+                <li><a href="">Lịch sử đăng ký</a></li>
+
+              </ul>
+            </div>
+          </li>
+          <li class="layer1-menu">
+            <a href="">Thông báo</a>
+
+          </li>
+          <li class="layer1-menu"><a href="">Phản hồi</a></li>
+        </ul>
+      </div>
+      <a class="fa-bars" onclick="myFunction()">
+        <i class="fa fa-bars"></i>
+      </a>
+    </div>
+
+    <div class="row col-md-9" style="margin: 0;padding: 0">
+
+      <div class="col-md-7">
+
+        <h3 class="bde">NEWS</h3>
+        <a href="">
+          <h5>Gần 240.000 người có thể phải sơ tán vì bão Rai</h5>
+          <span>07:52</span>
+          <span>12/12/2021</span>
+          <p>Hai kịch bản của bão Rai đều có điểm chung là mưa lớn cho Trung và Nam Trung Bộ trong
+            ngày 18-19/12. Phó thủ tướng Lê Văn Thành yêu cầu không chủ quan khi ứng phó.</p>
+        </a>
+        <a href="">
+          <h5>Gần 240.000 người có thể phải sơ tán vì bão Rai</h5>
+          <span>07:52</span>
+          <span>12/12/2021</span>
+          <p>Hai kịch bản của bão Rai đều có điểm chung là mưa lớn cho Trung và Nam Trung Bộ trong
+            ngày 18-19/12. Phó thủ tướng Lê Văn Thành yêu cầu không chủ quan khi ứng phó.</p>
+        </a>
+        <a href="">
+          <h5>Gần 240.000 người có thể phải sơ tán vì bão Rai</h5>
+          <span>07:52</span>
+          <span>12/12/2021</span>
+          <p>Hai kịch bản của bão Rai đều có điểm chung là mưa lớn cho Trung và Nam Trung Bộ trong
+            ngày 18-19/12. Phó thủ tướng Lê Văn Thành yêu cầu không chủ quan khi ứng phó.</p>
+        </a>
+
+      </div>
+
+      <div class="col-md-5">
+        INTRO
+      </div>
+    </div>
+  </div>
+  <div style="height: 50px">
+    FOOTER
+  </div>
+</div>
+
+<style>
+  @media screen and (max-width: 767px) {
+    .menu {
+      display: none;
+    }
+
+    .fa-bars {
+      display: block;
+    }
+
+    a.fa-bars::before {
+      display: none;
+    }
+  }
+
+  @media screen and (min-width: 767px) {
+    .menu {
+      display: block;
+    }
+
+  }
+</style>
+
+
+</body>
+</html>
