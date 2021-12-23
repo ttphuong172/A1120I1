@@ -4,127 +4,108 @@
     <meta charset="UTF-8">
     <title>Title</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
+
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <link rel="stylesheet" href="style/css/style.css">
-    <script>
-        function myFunction(){
-            var x= document.getElementById('menu');
-            if (x.style.display === "block") {
-                x.style.display = "none";
-            } else {
-                x.style.display = "block";
-            }
-        }
-    </script>
+    <link href='https://fonts.googleapis.com/css?family=Roboto' rel='stylesheet'>
+    <link rel="stylesheet" href="style/css/main.css">
+
 </head>
 <body>
-<div class="container">
-    <div style="height: 70px;display: flex;justify-content: space-between">
-        <div>
-            <h3>LOGO</h3>
-        </div>
-        <div>
-            <div class="dropdown">
-                <p class="dropdown-toggle" type="button" data-toggle="dropdown">Nguyễn Văn A
-                    <span class="caret"></span></p>
-                <ul class="dropdown-menu">
-                    <li><a href="#">Đổi mật khẩu</a></li>
-                    <li><a href="#">Đăng xuất</a></li>
-                </ul>
-            </div>
-        </div>
+<div class="row header" style="">
+    <div class="col-md-2 logo" style="">
+        <img src="style/images/logo.png" height="100px"/>
     </div>
-    <div class="row" style="margin: 0;padding: 0">
-        <div class="col-md-3" style="display: flex; justify-content: end">
-
-            <div class="menu" id="menu">
-                <ul>
-                    <li class="layer1-menu"><a href="">Danh sách phòng họp</a></li>
-                    <li class="layer1-menu">
-                        <a href="">Đăng ký phòng họp</a>
-                        <div class="layer2-menu">
-                            <ul>
-                                <li><a href="">Tìm kiếm phòng họp</a></li>
-                                <li><a href="">Đăng ký phòng họp</a></li>
-                                <li><a href="">Lịch sử đăng ký</a></li>
-
-                            </ul>
-                        </div>
-                    </li>
-                    <li class="layer1-menu">
-                        <a href="">Thông báo</a>
-
-                    </li>
-                    <li class="layer1-menu"><a href="">Phản hồi</a></li>
-                </ul>
-            </div>
-            <a class="fa-bars" onclick="myFunction()">
-                <i class="fa fa-bars"></i>
-            </a>
+    <div class="row col-md-10">
+        <div class="col-md-7 title">
+            <h2>HỆ THỐNG QUẢN LÝ PHÒNG HỌP</h2>
         </div>
-
-        <div class="row col-md-9" style="margin: 0;padding: 0">
-
-            <div class="col-md-7">
-
-                <h3 class="bde">NEWS</h3>
-                <a href="">
-                    <h5>Gần 240.000 người có thể phải sơ tán vì bão Rai</h5>
-                    <span>07:52</span>
-                    <span>12/12/2021</span>
-                    <p>Hai kịch bản của bão Rai đều có điểm chung là mưa lớn cho Trung và Nam Trung Bộ trong
-                        ngày 18-19/12. Phó thủ tướng Lê Văn Thành yêu cầu không chủ quan khi ứng phó.</p>
-                </a>
-                <a href="">
-                    <h5>Gần 240.000 người có thể phải sơ tán vì bão Rai</h5>
-                    <span>07:52</span>
-                    <span>12/12/2021</span>
-                    <p>Hai kịch bản của bão Rai đều có điểm chung là mưa lớn cho Trung và Nam Trung Bộ trong
-                        ngày 18-19/12. Phó thủ tướng Lê Văn Thành yêu cầu không chủ quan khi ứng phó.</p>
-                </a>
-                <a href="">
-                    <h5>Gần 240.000 người có thể phải sơ tán vì bão Rai</h5>
-                    <span>07:52</span>
-                    <span>12/12/2021</span>
-                    <p>Hai kịch bản của bão Rai đều có điểm chung là mưa lớn cho Trung và Nam Trung Bộ trong
-                        ngày 18-19/12. Phó thủ tướng Lê Văn Thành yêu cầu không chủ quan khi ứng phó.</p>
-                </a>
-
-            </div>
-
-            <div class="col-md-5">
-                INTRO
-            </div>
+        <div class="col-md-4 search" >
+            <input type="text" placeholder="Tìm kiếm" class="form-control">
         </div>
-    </div>
-    <div style="height: 50px">
-        FOOTER
+        <div class="col-md-1"></div>
     </div>
 </div>
+<div class="row main">
+    <div class=" menu col-md-2">
+        <ul>
+            <li class="menu1"  style="">
+                <a href="">Danh sách phòng họp</a>
+            </li>
+            <li class="menu1">
+                <a href="">Tìm kiếm phòng họp</a>
+                    <ul class="menu2"  style="list-style-type: none;width: 100%">
+                        <li><a href="">ABC</a></li>
+                        <li><a href="">ABC</a></li>
+                    </ul>
+            </li>
+            <a href="">
+                <li class="menu1">Tìm kiếm phòng họp</li>
+            </a>
+            <a href="">
+                <li class="menu1">Tìm kiếm phòng họp</li>
+            </a>
+        </ul>
+    </div>
+    <div class="row col-md-10">
+        <div class="col-md-8">
+            <div class="content">
+                <h3>Tin tức nổi bật</h3>
+                <a href="">
+                    <h5>Gần 240.000 người có thể phải sơ tán vì bão Rai</h5>
+                    <span>07:52</span>
+                    <span>12/12/2021</span>
+                    <p>Hai kịch bản của bão Rai đều có điểm chung là mưa lớn cho Trung và Nam Trung Bộ trong
+                        ngày 18-19/12. Phó thủ tướng Lê Văn Thành yêu cầu không chủ quan khi ứng phó.</p>
+                </a>
+            </div>
+            <div class="content">
+                <a href="">
+                    <h5>Gần 240.000 người có thể phải sơ tán vì bão Rai</h5>
+                    <span>07:52</span>
+                    <span>12/12/2021</span>
+                    <p>Hai kịch bản của bão Rai đều có điểm chung là mưa lớn cho Trung và Nam Trung Bộ trong
+                        ngày 18-19/12. Phó thủ tướng Lê Văn Thành yêu cầu không chủ quan khi ứng phó.</p>
+                </a>
+            </div>
+            <div class="content">
+                <a href="">
+                    <h5>Gần 240.000 người có thể phải sơ tán vì bão Rai</h5>
+                    <span>07:52</span>
+                    <span>12/12/2021</span>
+                    <p>Hai kịch bản của bão Rai đều có điểm chung là mưa lớn cho Trung và Nam Trung Bộ trong
+                        ngày 18-19/12. Phó thủ tướng Lê Văn Thành yêu cầu không chủ quan khi ứng phó.</p>
+                </a>
+            </div>
 
-<style>
-    @media screen and (max-width: 767px) {
-        .menu {
-            display: none;
-        }
-        .fa-bars {
-            display: block;
-        }
-        a.fa-bars::before{
-            display: none;
-        }
-    }
-    @media screen and (min-width: 767px) {
-        .menu {
-            display: block;
-        }
+        </div>
 
-    }
-</style>
+        <div class="col-md-4 introduce">
+            <img src="style/images/intro-logo.png" width="50%"/>
+            <p style="text-align: justify">Phát triển các giải pháp học tập hiện đại và hiệu quả thông qua các mô hình
+                đào tạo tiên tiến trên nền tảng công nghệ giáo dục và sự cộng tác sâu rộng giữa các bên liên quan, đặc
+                biệt là doanh nghiệp. Qua đó, CodeGym giúp người học phát triển tay nghề vững vàng, sẵn sàng làm việc,
+                và có khả năng tự học suốt đời hiệu quả, thích ứng với cuộc Cách mạng Công nghiệp 4.0.</p>
+        </div>
+    </div>
+</div>
+<div class="footer">
+    <div class="row">
+    <div class="col-md-4"></div>
+    <div class="col-md-4">
+        <img src="https://img.icons8.com/fluency/48/000000/facebook-new.png"/>
+        <img src="https://img.icons8.com/color/48/000000/google-logo.png"/>
+        <span>Copyright &copy; A0121I1</span>
+    </div>
+        <div class="col-md-4"></div>
+    </div>
+
+
+
+</div>
 
 
 </body>
